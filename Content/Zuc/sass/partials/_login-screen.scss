@@ -1,0 +1,43 @@
+/* Login screen*/
+
+.srs-login-container{
+	width:40%;
+	margin-top:12%;
+
+	.srs-login-content{
+		.zuc-modal-subtitle{
+			font-size: 2.5em;
+			font-family: $para-fonts;
+			padding:1em 0;
+		}
+		.zuc-input-group{
+			padding:10px 0;
+			.zuc-input-name{
+				font-family: $para-fonts;
+				font-size:1.5em;
+			}
+			input[type=date], input[type=email], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url]{
+				height:70px;
+				background-color: rgba(163, 172, 255,0.2);
+				border:0;
+				color: $grey-text;
+			}
+			a{
+				font-size:0.95em;
+				position: relative;
+				top:10px;
+				padding-bottom: 10px;
+			}
+		}
+			.remember-me{
+				margin:5% 0 0 0;
+				input[type="checkbox"]{
+					margin:0 auto;
+				}
+
+			}
+			.form-buttons{
+				margin-top:5%;
+			}	
+	}
+}

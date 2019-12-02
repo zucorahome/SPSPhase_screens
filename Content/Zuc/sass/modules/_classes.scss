@@ -1,0 +1,90 @@
+/*Common classes*/
+.purple-background{
+		background-color: $zucora-purple;
+
+		h2{
+			color: white;
+			font-size: 18px;
+			padding:1em;
+			font-family: $para-fonts;
+			font-weight: 700;
+		}
+	}
+.purple-text{
+				color: $zucora-purple;
+				font-weight: 500;
+				font-family: $para-fonts;
+			}
+
+.grey-text{
+	color:$grey-text !important;
+}
+.profileBox-heading{
+	font-family: $para-fonts;
+	color: $zucora-purple;
+	font-size:24px;
+	font-weight:700;
+
+}
+.two-grid-column{
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+.srs-heading{
+	font-family: $header-fonts;
+	font-weight: 700;
+	color: $zucora-purple;
+	font-size:3.2em;
+	margin-top:7%;
+	text-align: center;
+	margin-bottom:1%;
+}
+.simple-link{
+	@extend %simple-link;
+}
+
+.margin-10{
+	@include margin(10px);
+}
+.u-underline{
+	text-decoration: underline;
+}
+
+.light-grey-text{
+					color:#898A8D;
+					font-weight:300;
+				}
+
+/*Header*/
+.srs-nav-container .zuc-main-nav{
+	padding:1em 8%;
+}
+
+.dotted-line-text{
+
+	p{
+		width: 100%;
+         text-align: center;
+         border-bottom: 1px dashed $grey-text;
+         line-height: 0.1em;
+         margin: 20px 0 20px;
+
+        span{
+          background:#fff;
+          padding:0 10px;
+        }
+	}
+}
+
+.warning-text{
+			color:red;
+
+}
+
+.grey{
+	color:grey;
+}
+
+.width-80{
+	margin:0 auto;
+}

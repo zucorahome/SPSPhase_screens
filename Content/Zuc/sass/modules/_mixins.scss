@@ -1,0 +1,72 @@
+
+@mixin margin($property){
+	margin:$property;
+}
+
+%modal{
+	position: fixed;
+		z-index:1;
+		left:0;
+		top:0;
+		width:100%;
+		height: 100%;
+		overflow:auto;
+		background-color: rgba(0,0,0,0.4);
+}
+
+%modal-background{
+			border:2px solid $grey-text;
+			background:white;
+			width:60%;
+			margin:15% auto;
+}
+
+%label{
+	font-family: "aktiv-grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: right;
+    margin-right: 1em;
+    // word-break: break-word;
+}
+
+%select{
+			width:70%;
+			height: 50px;
+	    	border: 2px solid $grey-text;
+		    border-radius: 10px;
+		    background-color: $light-purple;
+		    color: $grey-text;
+		    font-size: 16px;
+		    font-family: $para-fonts;
+}
+
+%input{
+				background-color: #FFFFFF;
+				border: 2px solid $grey-text;
+				width:70%;
+				font-size: 16px;
+				font-family: $para-fonts;
+}
+
+%simple-link{
+			text-transform: uppercase;
+    		text-decoration: underline;
+    		font-family: $para-fonts;
+    		font-weight: 700;
+    		color:$grey-text;
+}
+
+%form-cross{
+			content:'X';
+			float: right;
+			color: $zucora-mint-green;
+			font-weight: 300;
+			cursor: pointer;
+			font-family: cursive;
+
+
+
+
+}

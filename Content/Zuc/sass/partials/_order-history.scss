@@ -1,0 +1,81 @@
+.order-history-container{
+    width:85%;
+    max-width:100%;
+	margin:0 auto;
+
+    .filter-box{
+        border:2px solid $grey-text;
+        height:auto;
+        width:85%;
+        margin:3em auto;
+
+
+        .planRegis-form{
+            width:100%;
+            display: grid;
+            grid-template-columns: 40% 40% 20%;
+            padding:10px;
+            align-items: center;
+            div{justify-content: center;}
+
+            .date-filter{
+                display: flex;
+                flex-direction: column;
+
+                div:nth-child(1){
+                    p{
+                        width: 90%;
+                        text-align: center;
+                        border-bottom: 1px dashed #36384B;
+                        line-height: 0.1px;
+                        margin:10px auto;
+
+                        span{
+                            background:#fff;
+                            padding:0 5px;
+                        }
+                    }
+                }
+            }
+            label{
+                text-align: center;
+            }
+
+            .select-location{
+                    width:100%;
+                    padding:0 10px;
+                }
+        }
+    }
+
+    /*order-history-table*/
+
+    .order-history-table-container{
+        width:100%;
+        margin:3em auto;
+        border:2px solid $grey-text;
+
+        .new-planAdd-detail{
+            display: block;
+            border:2px solid #d3d3df;
+        }
+    }
+}
+
+
+@media screen and(max-width:$laptop-width){
+    .order-history-container{
+        width:100%;
+
+        .filter-box{
+            width:100%;
+            .planRegis-form{
+                grid-template-columns: auto;
+
+                .select-location{
+                    margin:1em 0;
+                }
+            }
+        }
+    }
+}

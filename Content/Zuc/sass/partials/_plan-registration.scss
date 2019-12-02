@@ -1,0 +1,399 @@
+/*Plan registration styling*/
+.plan-registration-container {
+	border: 2px solid #36384B;
+	height: auto;
+}
+
+.planRegis-form {
+	width: 60%;
+	margin: 0 auto;
+	padding: 2em 0;
+
+	div {
+		i {
+			font-size: 1.5em;
+			color: $zucora-purple;
+			margin-right: 10px;
+		}
+	}
+
+	.planRegis-divStyle {
+		padding: 5px 0;
+		display: grid;
+		grid-template-columns: 20% 80%;
+
+	}
+
+	.info-circle {
+		color: #70E9B2;
+		margin:1em 0 0 10px;
+		cursor: pointer;
+	}
+
+	.info-text-container {
+		display: none;
+		position: absolute;
+		background-color: #E2FBF0;
+		padding: 10px 15px;
+		top: 42%;
+		left: 81%;
+		width: 30%;
+		z-index: 1000;
+
+		p {
+			font-size: 13px;
+			color: $grey-text;
+		}
+
+		i {
+			position: absolute;
+			color: #E2FBF0;
+			left: 50%;
+			top: -30px;
+			font-size: 3em;
+		}
+	}
+
+	.twoInput-fields {
+		display: grid;
+		grid-template-columns: 20% 40% 40%;
+		input {
+			width: 60%;
+		}
+
+		input:nth-of-type(2) {
+			
+		}
+	}
+
+	.grey-field {
+		color: #898A8D;
+		padding-top: 10px;
+
+		select {
+			background-color: #C8C8C8;
+		}
+	}
+
+	.info-grid {
+		display: grid;
+		grid-template-columns: 20% 64% 0;
+
+		i {
+			
+		}
+
+		input {
+			width:100%;
+		}
+	}
+
+	label {
+		@extend %label;
+	}
+
+	select {
+		@extend %select;
+		margin-bottom: 0;
+		width:80%;
+		&:focus{
+			color:inherit;
+			border-color: #a3acff;
+			background-color: white;
+		}
+	}
+
+	input {
+		@extend %input;
+		width:80%;
+		&:focus{
+			color:inherit;
+			border-color: #a3acff;
+			background-color: white;
+		}
+	}
+
+input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus{
+		color:inherit;
+		border-color: #a3acff;
+		background-color: white;
+}
+	.formField-data-controller {
+		width: 80%;
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		grid-template-columns: 50% 50%;
+		margin:0 auto;
+
+		.fillForm-button{
+			grid-template-columns: auto;
+			justify-content: flex-start;
+			margin-left:-20px;
+		}
+
+		.clearform-button{
+			grid-template-columns: auto;
+			justify-content: center;
+			/*margin-left:5em;*/
+			display: grid;
+		}
+	}
+
+	input[type="checkbox"] {
+		width: 50px;
+		height: 50px;
+	}
+
+	.planRegis-button{
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		width:85%;
+		margin:1em 0;
+	}
+
+	.hidden-field{
+		display: none;
+	}
+}
+
+.plan-registration-box {
+	height: auto;
+	border: 2px solid #36384B;
+	width: 90%;
+	margin-bottom: 2em;
+	display: none;
+
+	.purple-background {
+		background-color: $zucora-purple;
+
+		h2 {
+			color: white;
+			font-size: 18px;
+			padding: 1em;
+			font-family: $para-fonts;
+		}
+	}
+
+	.new-planAdd-title {
+		padding: 0 10px 14px;
+		transition: all ease-in 0.5s;
+		-webkit-transition: all ease-in 0.5s;
+
+		p {
+			font-family: $para-fonts;
+			font-weight: 700;
+			cursor: pointer;
+
+			span {
+				text-transform: uppercase;
+				padding-left: 5px;
+			}
+
+			i {
+				font-size: 1.5em;
+				color: $grey-text;
+			}
+		}
+	}
+}
+
+.new-planAdd-detail {
+	display: none;
+	border: 1px solid $grey-text;
+	margin: 10px;
+
+	table {
+		border-collapse: collapse;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		table-layout: fixed;
+
+		tr {
+			text-align: center;
+			font-family: $para-fonts;
+		}
+
+		td,
+		th {
+			padding: 5px;
+			line-height: 22px;
+			//overflow: hidden;
+			word-break: break-word;
+			text-align: left;
+
+			i {
+				color: $zucora-purple;
+			}
+		}
+
+		th {
+			color: $zucora-purple;
+			font-weight: 700;
+		}
+
+tbody{
+		tr:hover{
+			background-color: $zucora-mint-green;
+			transition: background-color ease-in 0.5s;
+			cursor: pointer;
+		}
+	}
+	}
+}
+
+.planRegis-controls {
+	visibility: hidden;
+	display: flex;
+	width: 80%;
+	margin: 0 auto;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2em 0;
+
+	div {
+		a{
+			@extend %simple-link;
+		}
+	}
+}
+
+.popup-modals-container {
+	/*This is pop up section class*/
+	.addItem-modal {
+		@extend %modal;
+		/*This is all modal div class*/
+		.addItem-form {
+			@extend %modal-background;
+
+			.purple-background {
+				h2::after {
+					@extend %form-cross;
+					padding: 0;
+					font-weight: 700;
+				}
+			}
+
+			.planRegis-form {
+				width: 90%;
+
+				div {
+					/*padding:0;*/
+				}
+
+				.addItem-quantity {
+					.label {
+						font-family: $para-fonts;
+						font-weight: bold;
+						font-size: 18px;
+						line-height: 22px;
+						background: none;
+						color: $grey-text;
+						text-shadow: none;
+						margin-right: 1em;
+					}
+
+					.button-minus,
+					.button-plus {
+						border-radius: 50%;
+						width: auto;
+						margin: 5px;
+						font-size: 2em;
+						vertical-align: middle;
+						text-align: center;
+					}
+
+					.button-minus {
+						padding: 2px 8px 8px;
+					}
+
+					.button-plus {
+						padding: 5px;
+					}
+
+					.quantity-input {
+						width: 15%;
+						text-align: center;
+						color: $grey-text;
+						border-radius: 0;
+						border: 2px solid #C8C8C8;
+						//color: #898A8D;
+						padding: 0;
+						margin: 0;
+					}
+				}
+
+				.formField-data-controller{
+					div:nth-child(2){
+					display: grid;
+					grid-template-columns: 30% 65%;
+					margin-left:0;
+				}
+			}
+
+				.margin-10 {
+					@include margin(10px);
+				}
+			}
+		}
+	}
+	/*Congratulation modal*/
+	.mainSubmit-modal-container,
+	.remove-planModal-container {
+		@extend %modal;
+
+		.mainSubmit-modal,
+		.remove-planModal {
+			@extend %modal-background;
+
+			h2 {
+				font-family: $header-fonts;
+				font-weight: 900;
+				font-size: 3em;
+				color: $zucora-purple;
+				text-align: center;
+				padding: 1em;
+			}
+
+			.cross {
+				@extend %form-cross;
+				font-size: 1.5em;
+				padding: 10px;
+			}
+
+			p {
+				width: 75%;
+				text-align: center;
+				margin: 0 auto;
+				font-size: 1.75em;
+			}
+
+			div {
+				text-align: center;
+				padding: 1em;
+			}
+		}
+	}
+
+	.remove-planModal-container {
+		.remove-planModal {
+			h3 {
+				text-align: center;
+				margin-top: 1em;
+			}
+
+			div {
+				a {
+					margin: 0 10px;
+				}
+
+				.zuc-btn-hollow {
+					border: 2px solid $zucora-purple;
+					color: $zucora-purple;
+				}
+			}
+		}
+	}
+}

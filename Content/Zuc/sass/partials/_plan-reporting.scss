@@ -1,0 +1,53 @@
+.planPending-registrations-container{
+	.status-report-container{
+		width:85%;
+		max-height:100%;
+		height:auto;
+		border:2px solid $grey-text;
+		margin:2% auto;
+
+		.status-report-table-container{
+			.invoice-title{
+				p{
+					@include margin(10px);
+				}
+			}
+
+			.new-planAdd-detail{
+				display: block;
+				border:2px solid #d1d1e0;
+			}
+
+			.box-total{
+				width:auto;	
+				display: flex;
+				justify-content: center;
+				margin-bottom: 10px;
+				p{
+					border:2px solid #d1d1e0;
+					color:$grey-text;
+					padding:10px;
+					font-weight: 900;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+@media screen and (max-width: $mobile-width){
+	.planPending-registrations-container{
+		.status-report-container{
+			width:100%;
+
+
+			.status-report-table-container{
+
+			}
+		}
+	}
+}
+

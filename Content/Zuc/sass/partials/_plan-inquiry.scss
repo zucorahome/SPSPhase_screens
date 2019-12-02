@@ -1,0 +1,334 @@
+/*Plan inquiry screen*/
+.plan-inquiry-container{
+	width:85%;
+	max-width:100%;
+	/*padding:0 1em;*/
+
+	.search-container{
+		/*margin-top:7%;*/
+		/*grid-gap: 2em 2em;*/
+	}
+
+	.manual-search-container{
+		    width:100%;
+		    max-width:100%;
+		    height:auto;
+		    display: grid;
+		    grid-row-gap: 2em;
+		    padding: 10px;
+		    margin:0 auto;
+
+		.inquiry-date-filter{
+			border:2px solid $grey-text;
+      		height:auto;
+
+      		form{
+      			color:$grey-text;
+      			font-family: $para-fonts;
+      			i{
+      				color:$zucora-purple;
+      				font-size:1.5em;
+      				padding:5px;
+      			}
+						input{
+							width:90%;
+						}
+      			/*.inquiry-search-3{
+      				width:100%;
+      				margin:2em auto;
+      				display: grid;
+      				grid-template-columns: 33% 34% 33%;
+
+      				label{
+      					@extend %label;
+      				}
+
+      				select{
+      					@extend %select;
+      				}
+
+      			}*/
+
+
+			    .filter-param-box{
+			        display: grid;
+			        grid-template-columns: 30% 30% 30%;
+			        justify-content: center;
+			        grid-gap:1em 1em;
+			        max-width:100%;
+			        height:auto;
+			        margin-top:1em;
+
+
+			        .filter-box{
+								margin-top:10px;
+			          border:2px solid $grey-text;
+			          background-color: white;
+			          min-height: 210px;
+			          height:auto;
+			          overflow-y: scroll;
+
+			          p{
+			            padding:5px;
+			            cursor: pointer;
+									font-size: 16px;
+			            &:hover{
+			              background-color: $zucora-mint-green;
+			              transition: all ease-in 0.5;
+			            }
+			          }
+			        }
+
+			      .selected{
+			        background-color: $zucora-mint-green;
+			        transition: all ease-in 0.5;
+			      }
+			      ::-webkit-scrollbar-thumb{
+						border-radius:10px;
+						background:$zucora-purple;
+					}
+			    }
+      		}
+
+      		.width-80{
+      			margin:0 auto;
+      		}
+		}
+
+	}
+
+	.advance-search-container{
+		width:100%;
+		max-width:100%;
+		height:auto;
+		display: grid;
+		grid-row-gap: 2em;
+		padding:10px;
+		margin:0 auto;
+
+		.advance-search-form{
+			border:2px solid $grey-text;
+
+			.planRegis-form{
+				width:90%;
+				padding:1em 0;
+				div{
+					padding:0;
+					// justify-content: flex-end;
+				}
+				.planRegis-divStyle{
+					grid-template-columns: 30% 70%;
+				}
+				label{
+					@extend %label;
+				}
+
+				input{
+					@extend %input;
+					width:80%;
+				}
+
+				select{
+					@extend %select;
+					width:80%;
+				}
+
+				a{
+					margin:10px;
+				}
+			}
+		}
+	}
+
+	.allPlans-container{
+		width:100%;
+		margin:3em auto;
+		border:2px solid $grey-text;
+
+		.title{
+			p{
+				margin:0 10px;
+			}
+		}
+
+		.new-planAdd-detail{
+			display: block;
+			border:2px solid #d3d3df;
+
+			table{
+				td{
+					i{
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*.popup-modal-container{*/
+	.cancelation-modal{
+		@extend %modal;
+
+		.plan-cancelation-container{
+			@extend %modal-background;
+			width:95%;
+
+			.srs-heading{
+				margin-top:2%;
+			}
+
+			.cross{
+				@extend %form-cross;
+				font-size: 1.5em;
+				padding: 10px;
+			}
+				.plan-cancelation{
+
+				display: grid;
+				grid-template-columns: 45% 55%;
+				justify-content: center;
+				align-items: flex-start;
+
+				.plan-search-field{
+
+					height:auto;
+					padding:0 2em;
+					width:100%;
+
+					.search-form{
+						div{
+							margin-top:12px;
+							input{
+								margin:0;
+							}
+
+							button{
+								height: 50px;
+							    border: 2px solid $grey-text;
+							    border-radius: 10px;
+							    background: $zucora-purple;
+							    position: relative;
+							    left: -50px;
+							    width: 25%;
+
+							    i{
+						    	    font-size: 1.5em;
+    								color: white;
+							    }
+							}
+						}
+					}
+					.search-param-result{
+
+					}
+				}
+				.reason-container{
+
+					height:auto;
+					padding:0 2em;
+					width:100%;
+
+					textarea{
+						border:2px solid $grey-text;
+						border-radius: 0;
+						height:350px;
+						font-size:16px;
+					}
+				}
+			}
+			/*Plan cenlation ends*/
+
+			.search-plan-details{
+				margin-top:3em;
+					.plan-registration-box{
+						display: block;
+						width:95%;
+						margin-bottom: 0;
+
+						.new-planAdd-detail{
+							/*display: block;*/
+						}
+					}
+				}
+		}
+	}
+
+	.cancel-caution-container{
+		@extend %modal;
+
+		.cancel-caution{
+			@extend %modal-background;
+		}
+	}
+/*}*/
+
+.planRegistration-modal-container{
+			@extend %modal;
+
+			.planRegistration-modal{
+				@extend %modal-background;
+				width:85%;
+
+				.srs-heading{
+					margin-top:1%;
+				}
+
+				.cross{
+					@extend %form-cross;
+					padding:10px;
+					font-size: 1.5em;
+				}
+
+				.addItem-form{
+					// margin-bottom: 2em;
+						.planRegis-form {
+							.formField-data-controller{
+								div:nth-child(2){
+								display: grid;
+								grid-template-columns: 30% 65%;
+								margin-left:0;
+							}
+						}
+					}
+				}
+			}
+		}
+
+
+@media screen and (max-width:$mobile-width){
+.plan-inquiry-container{
+	.manual-search-container{
+		.inquiry-date-filter{
+			form{
+				.filter-param-box{
+					display: grid;
+					grid-template-columns: 90%;
+				}
+			}
+		}
+	}
+}
+
+.planRegistration-modal-container{
+	.planRegistration-modal{
+		width:100%;
+			.addItem-form{
+				// margin-bottom: 2em;
+					.planRegis-form {
+						.formField-data-controller{
+							grid-template-columns: 100%;
+							div:nth-child(1){
+								justify-content: space-between;
+							}
+							div:nth-child(2){
+								display: grid;
+								grid-template-columns: 35% 65%;
+							}
+						}
+					}
+				}
+			}
+}
+
+}

@@ -1,0 +1,208 @@
+
+.order-entry-container{
+	width:85%;
+	max-width:100%;
+	height: auto;
+	margin:0 auto;
+	
+	.two-grid-column{
+		margin-top:4em;
+		.add-item-info{
+			height:auto;
+			width:100%;
+			padding:0 1em 0 0;
+			.planRegis-form{
+				
+				div{
+					/*justify-content: space-between;*/
+				}
+
+				label{
+					text-align: left;
+					width:25%;
+				}
+
+				select{
+					margin-bottom: 0;
+				}
+
+			}
+		}
+
+		.shipping-instructions{
+			height:auto;
+			width:100%;
+			padding:0 0 0 1em;
+
+			textarea{
+				font-size:16px;
+			}
+
+			.two-grid-column{
+				margin-top:0;
+			}
+		}
+	}
+	.planRegis-form{
+				width:100%;
+				padding:0;
+			}
+
+	.order-table-container{
+		width:100%;
+		border:2px solid $grey-text;
+		margin: 3% auto;
+
+		.new-planAdd-detail{
+			display: block;
+			border:0;
+			table{
+				th,td{
+					/*text-align: left;*/
+					word-break: break-word;
+				}
+				th{
+					width:10%;
+				}
+				th:nth-child(3){
+					width:25%;
+				}
+				th:nth-child(4),th:nth-child(7),th:nth-child(8){
+					width:5%;
+				}
+			}
+		}
+	}
+
+	.orderEntry-controls{
+		margin-bottom:2em;
+		p{
+			padding-left:30%;
+			text-align: right;
+		}
+	}
+
+}
+
+
+		.editOrder-modal-container{
+			@extend %modal;
+			
+			.editOrder-modal{
+			
+				@extend %modal-background;
+				
+				.purple-background{
+					h2::after{
+						@extend %form-cross;
+					}
+				}
+
+				.planRegis-form{
+					width:90%;
+					div{
+						justify-content: center;
+					}
+
+					input{
+						width:80%;
+					}
+
+					.addItem-quantity{
+						
+						.label{
+							font-family: $para-fonts;
+							font-weight: bold;
+							font-size: 18px;
+							line-height: 22px;
+							background: none;
+							color: $grey-text;
+							text-shadow: none;
+							margin-right:1em;
+						}
+
+						.button-minus, .button-plus{
+						    border-radius: 50%;
+						    width: auto;
+						    margin: 5px;
+						    font-size: 2em;
+						    vertical-align: middle;
+						    text-align: center;
+						    
+						}
+						.button-minus{
+							padding:2px 8px 8px 8px;
+						}
+						.button-plus{
+							padding:5px;
+						}
+
+						.quantity-input{
+							width:15%;
+							text-align: center;
+							color: $grey-text;
+							border-radius: 0;
+							border: 2px solid #C8C8C8;
+							//color: #898A8D;
+							padding:0;
+							margin:0;
+						}
+					}
+
+					.item-found{
+						border:1px solid #d1d1e0;
+						padding:0;
+						width:60%;
+						margin:0 auto;
+
+						p{
+							font-size:14px;
+							font-family: $para-fonts;
+							color: $grey-text;
+							border-bottom: 1px solid #d1d1e0;
+
+							&:hover{
+								background:$zucora-mint-green;
+							}
+						}
+					}
+				}
+			}
+		}
+
+@media screen and (max-width:$mobile-width){
+	.order-entry-container{
+			margin-top:10%;
+			width:100%;
+			height:auto;
+
+			.new-planAdd-detail{
+				display: block;
+				border:0;
+				table{
+					td{
+						text-align: right;
+					}
+				}
+			}
+
+			.orderEntry-controls{
+			display: flex;
+			flex-direction: column;
+			margin-bottom:2em;
+		
+			p{
+
+				padding-left:0;
+				text-align: right;
+			}
+		}
+		.two-grid-column{
+				grid-template-columns: 100%;
+			}	
+	}
+
+}
+
+
+		

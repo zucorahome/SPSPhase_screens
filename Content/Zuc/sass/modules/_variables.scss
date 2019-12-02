@@ -1,0 +1,33 @@
+/* variables*/
+$header-fonts: 'PublicoHeadline', aktiv-grotesk, Helvetica, sans-serif;
+$para-fonts: 'aktiv-grotesk', Helvetica, sans-serif;
+
+
+$mobile-width: 768px;
+$tablet-width:769px;
+$laptop-width:980px;
+$max-laptop-width:1200px;
+$desktop-width:1440px;
+$desktop-large-width:1980px;
+
+$light-purple:#A3ACFF;
+$zucora-purple:#434DA0;
+$zucora-mint-green:#70E9B2;
+$grey-text: #36384B;
+
+
+/* Default styling*/
+
+h1, h2, h3, h4, h5, h6{
+	font-family: $header-fonts;
+}
+p {
+  font-family: $para-fonts;
+  font-size: 18px;
+}
+
+input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus, select:focus{
+		color:inherit;
+		border-color: #a3acff;
+		background-color: white;
+}

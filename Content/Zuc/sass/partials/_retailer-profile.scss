@@ -1,0 +1,371 @@
+/*Retailer Profile*/
+	.retailer-profile-container{
+		width:80%;
+		margin:0 auto;
+
+		.two-grid-column{
+			align-items: center;
+		/*div{
+			padding:0 10px;
+		}*/
+		.retailer-info-form{
+			div{
+				/*padding:5px 0;*/
+				justify-content: flex-end;
+
+				p{
+					width:70%;
+					font-weight: bold;
+				}
+			}
+			label{
+				@extend %label;
+				}
+
+				input{
+					@extend %input;
+				}
+
+				select{
+					@extend %select;
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.profile-boxStyle{
+			border:2px solid $grey-text;
+			height:auto;
+		}
+
+		.profile-address{
+			padding:10px;
+			div{
+				padding:5px;
+			}
+			label{
+				@extend %label;
+				word-break: break-word;
+
+			}
+
+			input{
+				@extend %input;
+			}
+
+			select{
+				@extend %select;
+				&:focus{
+					color:inherit;
+					border-color: #a3acff;
+					background-color: white;
+				}
+			}
+
+		}
+		.locations-container{
+			.new-planAdd-detail{
+				display: block;
+				/*margin:0 auto;*/
+				padding: 0;
+
+				table{
+					tr{
+						text-align: left;
+					}
+
+					thead{
+						tr{
+							th:nth-child(1){
+								width:10%;
+
+							}
+							th:nth-child(2){
+								width:20%;
+							}
+							th:nth-child(3){
+								width: 30%;
+							}
+							th:nth-child(4){
+								width: 20%;
+							}
+						}
+					}
+				}
+			}
+		}
+		.contacts-container{
+			margin-top:3%;
+			.grey{
+				color:grey;
+			}
+			padding:0;
+			.new-planAdd-detail{
+				display: block;
+
+			table{
+				thead{
+					tr{
+						th{
+							border-right:1px solid #d3d3df;
+							text-align: center;
+						}
+					}
+				}
+				tbody{
+					tr{
+						td{
+								border-right:1px solid #d3d3df;
+								text-align: center;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.shipping-locations-modal{
+		@extend %modal;
+
+		.shipping-locations-form{
+			@extend %modal-background;
+
+			.purple-background{
+				h2::after{
+					@extend %form-cross;
+				}
+			}
+
+			.planRegis-form{
+				width: 85%;
+				margin:0 auto;
+
+				input{
+					width:100%;
+				}
+
+				select{
+					width:100%;
+				}
+
+				.formField-data-controller{
+					
+					
+				}
+
+				input[type="checkbox"]{
+					width:30px;
+					height:30px;
+				}
+
+				.profileLocation-province{
+					margin-left:4em;
+
+					select{
+						width:150px;
+					}
+				}
+
+
+			}
+	}
+}
+	.contacts-form-modal{
+		@extend %modal;
+
+		.contacts-form{
+			@extend %modal-background;
+			.purple-background{
+				h2::after{
+					@extend %form-cross;
+				}
+			}
+
+			.planRegis-form{
+				width:100%;
+				padding:1em;
+
+				.div-sixty-forty{
+					display: grid;
+					grid-template-columns: 60% 40%;
+				}
+
+				div{
+		            justify-content: center;
+		            width:90%;
+		            margin:0 auto;
+		          }
+		          label{
+		            @extend %label;
+		            padding:0 5px;
+		            text-align: left;
+		            margin:0;
+		            width:30%;
+		            word-break: unset;
+
+		          }
+
+		          input{
+		            @extend %input;
+		            width:100%;
+		          }
+
+		          select{
+		            @extend %select;
+		            width:100%;
+		            margin-top:10px;
+		          }
+
+		          .purple-text{
+		          	font-weight: 700;
+		          }
+	          .permissions{
+	          	width:100%;
+	          	border:2px solid $grey-text;
+	  			display: grid;
+	  			grid-template-columns: 20% 30% 20% 30%;
+	  			justify-content: center;
+	  			align-items: flex-start;
+
+	  			label{
+	  				color: $zucora-purple;
+	  				font-size: 14px;
+	  				font-weight: 300;
+	  				font-family: $para-fonts;
+	  				text-align: center;
+	  				width:100%;
+	  				min-height: 40px;
+	  			}
+
+	  			input[type="checkbox"]{
+	  				width:20px;
+	  				height:20px;
+	  				margin:10px auto;
+	  			}
+	  			p{
+	  				font-size:16px;
+	  				text-align: center;
+	  				min-height:50px;
+	  			}
+
+	          }
+			}
+
+		}
+	}
+
+
+@media screen and (max-width: $mobile-width){
+
+	.retailer-profile-container{
+			.contacts-container{
+				.new-planAdd-detail{
+					table{
+						thead{
+
+						}
+						tbody{
+							tr{
+								td{
+									border-bottom:1px solid #d3d3df;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.shipping-locations-modal{
+						
+
+			.shipping-locations-form{
+
+			.planRegis-form{
+				width: 85%;
+				margin:0 auto;
+
+				input{
+					width:100%;
+				}
+
+				select{
+					width:100%;
+				}
+
+				.formField-data-controller{
+					grid-template-columns: 100%;	
+					
+				}
+
+				input[type="checkbox"]{
+					width:30px;
+					height:30px;
+				}
+
+				.profileLocation-province{
+					margin-left:0;
+
+						select{
+							width:100%;
+						}
+					}
+
+
+				}
+			}
+			
+		}
+
+
+
+			.contacts-form-modal{
+				.contacts-form{
+					.planRegis-form{
+						div{
+							width:100%;
+						}
+
+						label{
+							/*word-break: break-word;*/
+						}
+						select{
+							margin-top:10px;
+						}
+
+						.div-sixty-forty, .formField-data-controller{
+							grid-template-columns: 100%;
+						}
+
+						.permissions{
+							grid-template-columns: 100%;
+						}
+					}
+				}
+			}
+}
+
+
+@media screen and (max-width:$laptop-width){
+	.contacts-form-modal{
+				.contacts-form{
+					.planRegis-form{
+						div{
+							width:100%;
+						}
+
+						label{
+							/*word-break: break-word;*/
+						}
+
+						.div-sixty-forty{
+							grid-template-columns: 100%;
+						}
+
+						.permissions{
+							grid-template-columns: 100%;
+						}
+					}
+				}
+			}
+}

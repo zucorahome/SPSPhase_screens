@@ -1,0 +1,114 @@
+.rep-profile-container{
+  width:85%;
+  margin:0 auto;
+  padding:0;
+.rep-profile{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-items: flex-start;
+  grid-gap:1em 2em;
+}
+
+  .organization-container{
+    width:100%;
+    height:auto;
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    max-width:100%;
+  }
+
+  .other-details-container{
+    width:100%;
+    height:auto;
+    margin:0;
+    padding:0;
+    max-width:100%;
+    .info-circle{
+      color:$zucora-mint-green;
+    }
+  }
+
+  .profile-boxStyle{
+    border:2px solid $grey-text;
+    padding:10px;
+
+    p{
+      font-weight: 700;
+      margin-top:10px;
+    }
+    .planRegis-form{
+      width:auto;
+      padding:0;
+
+      select{
+        margin-top:5px;
+      }
+    }
+  }
+
+  .margin-left{
+    margin-left:5px;
+  }
+  .margin-right{
+    margin-right:5px;
+  }
+
+  .transit-input{
+    width:100%;
+    input{
+      width:98%;
+    }
+  }
+
+  .partner-profiles{
+    h3{
+      margin:10px;
+    }
+    .new-planAdd-detail{
+      display: block;
+      margin:0;
+
+      th:first-of-type, td:first-of-type{
+            border-right: 1px solid #d3d3df;
+      }
+    }
+  }
+
+  .agreement{
+    h3{
+      margin:10px 0;
+    }
+    .profile-boxStyle{
+      input[type="checkbox"]{
+        width:30px;
+        height:30px;
+      }
+      p{
+        margin:0 0 0 10px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #36384B;
+        font-family: $para-fonts;
+      }
+      a{
+        color: $zucora-mint-green;
+        text-decoration: underline;
+        margin-left: 3em;
+        font-weight: 700;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width:$mobile-width){
+  .rep-profile-container{
+    .rep-profile{
+      display: grid;
+      grid-template-columns: 100%;
+    }
+  }
+}

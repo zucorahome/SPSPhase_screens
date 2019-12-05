@@ -1,22 +1,19 @@
 /* variables*/
 /* Default styling*/
 h1, h2, h3, h4, h5, h6 {
-  font-family: "PublicoHeadline", aktiv-grotesk, Helvetica, sans-serif;
-}
+  font-family: "PublicoHeadline", aktiv-grotesk, Helvetica, sans-serif; }
 
 p {
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
-  font-size: 18px;
-}
+  font-size: 18px; }
 
 input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus, select:focus {
   color: inherit;
   border-color: #a3acff;
-  background-color: white;
-}
+  background-color: white; }
 
-.editOrder-modal-container, .planRegistration-modal-container, .cancel-caution-container, .cancelation-modal, .contacts-form-modal, .shipping-locations-modal, .popup-modals-container .mainSubmit-modal-container,
-.popup-modals-container .remove-planModal-container, .popup-modals-container .addItem-modal {
+.popup-modals-container .addItem-modal, .popup-modals-container .mainSubmit-modal-container,
+.popup-modals-container .remove-planModal-container, .shipping-locations-modal, .contacts-form-modal, .cancelation-modal, .cancel-caution-container, .planRegistration-modal-container, .editOrder-modal-container, .popup-modals-container .partner-profile-modal-container, .popup-modals-container .agreementReader-modal-container, .popup-modals-container .financial-details-modal-container {
   position: fixed;
   z-index: 1;
   left: 0;
@@ -24,29 +21,26 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-}
+  background-color: rgba(0, 0, 0, 0.4); }
 
-.editOrder-modal-container .editOrder-modal, .planRegistration-modal-container .planRegistration-modal, .cancel-caution-container .cancel-caution, .cancelation-modal .plan-cancelation-container, .contacts-form-modal .contacts-form, .shipping-locations-modal .shipping-locations-form, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal,
+.popup-modals-container .addItem-modal .addItem-form, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal,
 .popup-modals-container .mainSubmit-modal-container .remove-planModal,
 .popup-modals-container .remove-planModal-container .mainSubmit-modal,
-.popup-modals-container .remove-planModal-container .remove-planModal, .popup-modals-container .addItem-modal .addItem-form {
+.popup-modals-container .remove-planModal-container .remove-planModal, .shipping-locations-modal .shipping-locations-form, .contacts-form-modal .contacts-form, .cancelation-modal .plan-cancelation-container, .cancel-caution-container .cancel-caution, .planRegistration-modal-container .planRegistration-modal, .editOrder-modal-container .editOrder-modal, .popup-modals-container .partner-profile-modal-container .partner-profile-modal, .popup-modals-container .agreementReader-modal-container .agreementReader-modal, .popup-modals-container .financial-details-modal-container .financial-details-modal {
   border: 2px solid #36384B;
   background: white;
   width: 60%;
-  margin: 15% auto;
-}
+  margin: 15% auto; }
 
-.plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form label, .contacts-form-modal .contacts-form .planRegis-form label, .retailer-profile-container .profile-address label, .retailer-profile-container .two-grid-column .retailer-info-form label, .planRegis-form label {
+.planRegis-form label, .retailer-profile-container .two-grid-column .retailer-info-form label, .retailer-profile-container .profile-address label, .contacts-form-modal .contacts-form .planRegis-form label, .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form label {
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
   text-align: right;
-  margin-right: 1em;
-}
+  margin-right: 1em; }
 
-.plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form select, .contacts-form-modal .contacts-form .planRegis-form select, .retailer-profile-container .profile-address select, .retailer-profile-container .two-grid-column .retailer-info-form select, .planRegis-form select {
+.planRegis-form select, .retailer-profile-container .two-grid-column .retailer-info-form select, .retailer-profile-container .profile-address select, .contacts-form-modal .contacts-form .planRegis-form select, .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form select {
   width: 70%;
   height: 50px;
   border: 2px solid #36384B;
@@ -54,189 +48,104 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
   background-color: #A3ACFF;
   color: #36384B;
   font-size: 16px;
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-}
+  font-family: "aktiv-grotesk", Helvetica, sans-serif; }
 
-.plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form input, .contacts-form-modal .contacts-form .planRegis-form input, .retailer-profile-container .profile-address input, .retailer-profile-container .two-grid-column .retailer-info-form input, .planRegis-form input {
+.planRegis-form input, .retailer-profile-container .two-grid-column .retailer-info-form input, .retailer-profile-container .profile-address input, .contacts-form-modal .contacts-form .planRegis-form input, .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form input {
   background-color: #FFFFFF;
   border: 2px solid #36384B;
   width: 70%;
   font-size: 16px;
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-}
+  font-family: "aktiv-grotesk", Helvetica, sans-serif; }
 
-.planRegis-controls div a, .simple-link {
+.simple-link, .planRegis-controls div a {
   text-transform: uppercase;
   text-decoration: underline;
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
   font-weight: 700;
-  color: #36384B;
-}
+  color: #36384B; }
 
-.editOrder-modal-container .editOrder-modal .purple-background h2::after, .planRegistration-modal-container .planRegistration-modal .cross, .cancelation-modal .plan-cancelation-container .cross, .contacts-form-modal .contacts-form .purple-background h2::after, .shipping-locations-modal .shipping-locations-form .purple-background h2::after, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal .cross,
+.popup-modals-container .addItem-modal .addItem-form .purple-background h2::after, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal .cross,
 .popup-modals-container .mainSubmit-modal-container .remove-planModal .cross,
 .popup-modals-container .remove-planModal-container .mainSubmit-modal .cross,
-.popup-modals-container .remove-planModal-container .remove-planModal .cross, .popup-modals-container .addItem-modal .addItem-form .purple-background h2::after {
-  content: "X";
+.popup-modals-container .remove-planModal-container .remove-planModal .cross, .shipping-locations-modal .shipping-locations-form .purple-background h2::after, .contacts-form-modal .contacts-form .purple-background h2::after, .cancelation-modal .plan-cancelation-container .cross, .planRegistration-modal-container .planRegistration-modal .cross, .editOrder-modal-container .editOrder-modal .purple-background h2::after, .popup-modals-container .partner-profile-modal-container .partner-profile-modal .purple-background h2::after, .popup-modals-container .agreementReader-modal-container .agreementReader-modal .purple-background h2::after, .popup-modals-container .financial-details-modal-container .financial-details-modal .purple-background h2::after {
+  content: 'X';
   float: right;
   color: #70E9B2;
   font-weight: 300;
   cursor: pointer;
-  font-family: cursive;
-}
+  font-family: cursive; }
 
 /*Common classes*/
 .purple-background {
-  background-color: #434DA0;
-}
-.purple-background h2 {
-  color: white;
-  font-size: 18px;
-  padding: 1em;
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-  font-weight: 700;
-}
+  background-color: #434DA0; }
+  .purple-background h2 {
+    color: white;
+    font-size: 18px;
+    padding: 1em;
+    font-family: "aktiv-grotesk", Helvetica, sans-serif;
+    font-weight: 700; }
 
 .purple-text {
   color: #434DA0;
   font-weight: 500;
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-}
+  font-family: "aktiv-grotesk", Helvetica, sans-serif; }
 
 .grey-text {
-  color: #36384B !important;
-}
+  color: #36384B !important; }
 
 .profileBox-heading {
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
   color: #434DA0;
   font-size: 24px;
-  font-weight: 700;
-}
+  font-weight: 700; }
 
 .two-grid-column {
   display: grid;
-  grid-template-columns: 50% 50%;
-}
+  grid-template-columns: 50% 50%; }
 
 .srs-heading {
   font-family: "PublicoHeadline", aktiv-grotesk, Helvetica, sans-serif;
   font-weight: 700;
   color: #434DA0;
-  font-size: 3.2em;
+  font-size: 3.2vh;
   margin-top: 7%;
   text-align: center;
-  margin-bottom: 1%;
-}
+  margin-bottom: 1%; }
 
 .margin-10 {
-  margin: 10px;
-}
+  margin: 10px; }
 
 .u-underline {
-  text-decoration: underline;
-}
+  text-decoration: underline; }
 
 .light-grey-text {
   color: #898A8D;
-  font-weight: 300;
-}
+  font-weight: 300; }
 
 /*Header*/
 .srs-nav-container .zuc-main-nav {
-  padding: 1em 8%;
-}
+  padding: 1em 8%; }
 
 .dotted-line-text p {
   width: 100%;
   text-align: center;
   border-bottom: 1px dashed #36384B;
   line-height: 0.1em;
-  margin: 20px 0 20px;
-}
-.dotted-line-text p span {
-  background: #fff;
-  padding: 0 10px;
-}
+  margin: 20px 0 20px; }
+  .dotted-line-text p span {
+    background: #fff;
+    padding: 0 10px; }
 
 .warning-text {
-  color: red;
-}
+  color: red; }
 
 .grey {
-  color: grey;
-}
+  color: grey; }
 
 .width-80 {
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
-/* Login screen*/
-.srs-login-container {
-  width: 40%;
-  margin-top: 12%;
-}
-.srs-login-container .srs-login-content .zuc-modal-subtitle {
-  font-size: 2.5em;
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-  padding: 1em 0;
-}
-.srs-login-container .srs-login-content .zuc-input-group {
-  padding: 10px 0;
-}
-.srs-login-container .srs-login-content .zuc-input-group .zuc-input-name {
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-  font-size: 1.5em;
-}
-.srs-login-container .srs-login-content .zuc-input-group input[type=date], .srs-login-container .srs-login-content .zuc-input-group input[type=email], .srs-login-container .srs-login-content .zuc-input-group input[type=password], .srs-login-container .srs-login-content .zuc-input-group input[type=search], .srs-login-container .srs-login-content .zuc-input-group input[type=tel], .srs-login-container .srs-login-content .zuc-input-group input[type=text], .srs-login-container .srs-login-content .zuc-input-group input[type=url] {
-  height: 70px;
-  background-color: rgba(163, 172, 255, 0.2);
-  border: 0;
-  color: #36384B;
-}
-.srs-login-container .srs-login-content .zuc-input-group a {
-  font-size: 0.95em;
-  position: relative;
-  top: 10px;
-  padding-bottom: 10px;
-}
-.srs-login-container .srs-login-content .remember-me {
-  margin: 5% 0 0 0;
-}
-.srs-login-container .srs-login-content .remember-me input[type=checkbox] {
-  margin: 0 auto;
-}
-.srs-login-container .srs-login-content .form-buttons {
-  margin-top: 5%;
-}
-
-/*Plan registration styling*/
-.plan-registration-container {
-  border: 2px solid #36384B;
-  height: auto;
-}
-
-.planRegis-form {
-  width: 60%;
-  margin: 0 auto;
-  padding: 2em 0;
-}
-.planRegis-form div i {
-  font-size: 1.5em;
-  color: #434DA0;
-  margin-right: 10px;
-}
-.planRegis-form .planRegis-divStyle {
-  padding: 5px 0;
-  display: grid;
-  grid-template-columns: 20% 80%;
-}
-.planRegis-form .info-circle {
-  color: #70E9B2;
-  margin: 1em 0 0 10px;
-  cursor: pointer;
-}
-.planRegis-form .info-text-container {
+.info-text-container {
   display: none;
   position: absolute;
   background-color: #E2FBF0;
@@ -244,167 +153,194 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
   top: 42%;
   left: 81%;
   width: 30%;
-  z-index: 1000;
-}
-.planRegis-form .info-text-container p {
-  font-size: 13px;
-  color: #36384B;
-}
-.planRegis-form .info-text-container i {
-  position: absolute;
-  color: #E2FBF0;
-  left: 50%;
-  top: -30px;
-  font-size: 3em;
-}
-.planRegis-form .twoInput-fields {
-  display: grid;
-  grid-template-columns: 20% 40% 40%;
-}
-.planRegis-form .twoInput-fields input {
+  z-index: 1000; }
+
+/* Login screen*/
+.srs-login-container {
+  width: 40%;
+  margin-top: 12%; }
+  .srs-login-container .srs-login-content .zuc-modal-subtitle {
+    font-size: 2.5em;
+    font-family: "aktiv-grotesk", Helvetica, sans-serif;
+    padding: 1em 0; }
+  .srs-login-container .srs-login-content .zuc-input-group {
+    padding: 10px 0; }
+    .srs-login-container .srs-login-content .zuc-input-group .zuc-input-name {
+      font-family: "aktiv-grotesk", Helvetica, sans-serif;
+      font-size: 1.5em; }
+    .srs-login-container .srs-login-content .zuc-input-group input[type=date], .srs-login-container .srs-login-content .zuc-input-group input[type=email], .srs-login-container .srs-login-content .zuc-input-group input[type=password], .srs-login-container .srs-login-content .zuc-input-group input[type=search], .srs-login-container .srs-login-content .zuc-input-group input[type=tel], .srs-login-container .srs-login-content .zuc-input-group input[type=text], .srs-login-container .srs-login-content .zuc-input-group input[type=url] {
+      height: 70px;
+      background-color: rgba(163, 172, 255, 0.2);
+      border: 0;
+      color: #36384B; }
+    .srs-login-container .srs-login-content .zuc-input-group a {
+      font-size: 0.95em;
+      position: relative;
+      top: 10px;
+      padding-bottom: 10px; }
+  .srs-login-container .srs-login-content .remember-me {
+    margin: 5% 0 0 0; }
+    .srs-login-container .srs-login-content .remember-me input[type="checkbox"] {
+      margin: 0 auto; }
+  .srs-login-container .srs-login-content .form-buttons {
+    margin-top: 5%; }
+
+/*Plan registration styling*/
+.plan-registration-container {
+  border: 2px solid #36384B;
+  height: auto; }
+
+.planRegis-form {
   width: 60%;
-}
-.planRegis-form .grey-field {
-  color: #898A8D;
-  padding-top: 10px;
-}
-.planRegis-form .grey-field select {
-  background-color: #C8C8C8;
-}
-.planRegis-form .info-grid {
-  display: grid;
-  grid-template-columns: 20% 64% 0;
-}
-.planRegis-form .info-grid input {
-  width: 100%;
-}
-.planRegis-form select {
-  margin-bottom: 0;
-  width: 80%;
-}
-.planRegis-form select:focus {
-  color: inherit;
-  border-color: #a3acff;
-  background-color: white;
-}
-.planRegis-form input {
-  width: 80%;
-}
-.planRegis-form input:focus {
-  color: inherit;
-  border-color: #a3acff;
-  background-color: white;
-}
-.planRegis-form input:focus:invalid:focus, .planRegis-form textarea:focus:invalid:focus, .planRegis-form select:focus:invalid:focus {
-  color: inherit;
-  border-color: #a3acff;
-  background-color: white;
-}
-.planRegis-form .formField-data-controller {
-  width: 80%;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: 50% 50%;
   margin: 0 auto;
-}
-.planRegis-form .formField-data-controller .fillForm-button {
-  grid-template-columns: auto;
-  justify-content: flex-start;
-  margin-left: -20px;
-}
-.planRegis-form .formField-data-controller .clearform-button {
-  grid-template-columns: auto;
-  justify-content: center;
-  /*margin-left:5em;*/
-  display: grid;
-}
-.planRegis-form input[type=checkbox] {
-  width: 30px;
-  height: 30px;
-}
-.planRegis-form .planRegis-button {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 85%;
-  margin: 1em 0;
-}
-.planRegis-form .hidden-field {
-  display: none;
-}
+  padding: 2em 0; }
+  .planRegis-form div i {
+    font-size: 1.5em;
+    color: #434DA0;
+    margin-right: 10px; }
+  .planRegis-form .planRegis-divStyle {
+    padding: 5px 0;
+    display: grid;
+    grid-template-columns: 20% 80%; }
+  .planRegis-form .info-circle {
+    color: #70E9B2;
+    margin: 1em 0 0 10px;
+    cursor: pointer; }
+  .planRegis-form .info-text-container {
+    display: none;
+    position: absolute;
+    background-color: #E2FBF0;
+    padding: 10px 15px;
+    top: 42%;
+    left: 81%;
+    width: 30%;
+    z-index: 1000; }
+    .planRegis-form .info-text-container p {
+      font-size: 13px;
+      color: #36384B; }
+    .planRegis-form .info-text-container i {
+      position: absolute;
+      color: #E2FBF0;
+      left: 50%;
+      top: -30px;
+      font-size: 3em; }
+  .planRegis-form .twoInput-fields {
+    display: grid;
+    grid-template-columns: 20% 40% 40%; }
+    .planRegis-form .twoInput-fields input {
+      width: 60%; }
+  .planRegis-form .grey-field {
+    color: #898A8D;
+    padding-top: 10px; }
+    .planRegis-form .grey-field select {
+      background-color: #C8C8C8; }
+  .planRegis-form .info-grid {
+    display: grid;
+    grid-template-columns: 20% 64% 0; }
+    .planRegis-form .info-grid input {
+      width: 100%; }
+  .planRegis-form select {
+    margin-bottom: 0;
+    width: 80%; }
+    .planRegis-form select:focus {
+      color: inherit;
+      border-color: #a3acff;
+      background-color: white; }
+  .planRegis-form input {
+    width: 80%; }
+    .planRegis-form input:focus {
+      color: inherit;
+      border-color: #a3acff;
+      background-color: white; }
+  .planRegis-form input:focus:invalid:focus, .planRegis-form textarea:focus:invalid:focus, .planRegis-form select:focus:invalid:focus {
+    color: inherit;
+    border-color: #a3acff;
+    background-color: white; }
+  .planRegis-form .formField-data-controller {
+    width: 80%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 50% 50%;
+    margin: 0 auto; }
+    .planRegis-form .formField-data-controller .fillForm-button {
+      grid-template-columns: auto;
+      justify-content: flex-start;
+      margin-left: -20px; }
+    .planRegis-form .formField-data-controller .clearform-button {
+      grid-template-columns: auto;
+      justify-content: center;
+      /*margin-left:5em;*/
+      display: grid; }
+  .planRegis-form input[type="checkbox"] {
+    width: 30px;
+    height: 30px; }
+  .planRegis-form .planRegis-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 85%;
+    margin: 1em 0; }
+  .planRegis-form .hidden-field {
+    display: none; }
 
 .plan-registration-box {
   height: auto;
   border: 2px solid #36384B;
   width: 90%;
   margin-bottom: 2em;
-  display: none;
-}
-.plan-registration-box .purple-background {
-  background-color: #434DA0;
-}
-.plan-registration-box .purple-background h2 {
-  color: white;
-  font-size: 18px;
-  padding: 1em;
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-}
-.plan-registration-box .new-planAdd-title {
-  padding: 0 10px 14px;
-  transition: all ease-in 0.5s;
-  -webkit-transition: all ease-in 0.5s;
-}
-.plan-registration-box .new-planAdd-title p {
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-  font-weight: 700;
-  cursor: pointer;
-}
-.plan-registration-box .new-planAdd-title p span {
-  text-transform: uppercase;
-  padding-left: 5px;
-}
-.plan-registration-box .new-planAdd-title p i {
-  font-size: 1.5em;
-  color: #36384B;
-}
+  display: none; }
+  .plan-registration-box .purple-background {
+    background-color: #434DA0; }
+    .plan-registration-box .purple-background h2 {
+      color: white;
+      font-size: 18px;
+      padding: 1em;
+      font-family: "aktiv-grotesk", Helvetica, sans-serif; }
+  .plan-registration-box .new-planAdd-title {
+    padding: 0 10px 14px;
+    transition: all ease-in 0.5s;
+    -webkit-transition: all ease-in 0.5s; }
+    .plan-registration-box .new-planAdd-title p {
+      font-family: "aktiv-grotesk", Helvetica, sans-serif;
+      font-weight: 700;
+      cursor: pointer; }
+      .plan-registration-box .new-planAdd-title p span {
+        text-transform: uppercase;
+        padding-left: 5px; }
+      .plan-registration-box .new-planAdd-title p i {
+        font-size: 1.5em;
+        color: #36384B; }
 
 .new-planAdd-detail {
   display: none;
   border: 1px solid #36384B;
-  margin: 10px;
-}
-.new-planAdd-detail table {
-  border-collapse: collapse;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  table-layout: fixed;
-}
-.new-planAdd-detail table tr {
-  text-align: center;
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-}
-.new-planAdd-detail table td,
-.new-planAdd-detail table th {
-  padding: 5px;
-  line-height: 22px;
-  word-break: break-word;
-  text-align: left;
-}
-.new-planAdd-detail table td i,
-.new-planAdd-detail table th i {
-  color: #434DA0;
-}
-.new-planAdd-detail table th {
-  color: #434DA0;
-  font-weight: 700;
-}
-.new-planAdd-detail table tbody tr:hover {
-  background-color: #70E9B2;
-  transition: background-color ease-in 0.5s;
-  cursor: pointer;
-}
+  margin: 10px; }
+  .new-planAdd-detail table {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed; }
+    .new-planAdd-detail table tr {
+      text-align: center;
+      font-family: "aktiv-grotesk", Helvetica, sans-serif; }
+    .new-planAdd-detail table td,
+    .new-planAdd-detail table th {
+      padding: 5px;
+      line-height: 22px;
+      word-break: break-word;
+      text-align: left; }
+      .new-planAdd-detail table td i,
+      .new-planAdd-detail table th i {
+        color: #434DA0; }
+    .new-planAdd-detail table th {
+      color: #434DA0;
+      font-weight: 700; }
+    .new-planAdd-detail table tbody tr:hover {
+      background-color: #70E9B2;
+      transition: background-color ease-in 0.5s;
+      cursor: pointer; }
 
 .planRegis-controls {
   visibility: hidden;
@@ -413,1135 +349,939 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  padding: 2em 0;
-}
+  padding: 2em 0; }
+
 .popup-modals-container {
   /*This is pop up section class*/
-  /*Congratulation modal*/
-}
-.popup-modals-container .addItem-modal {
-  /*This is all modal div class*/
-}
-.popup-modals-container .addItem-modal .addItem-form .purple-background h2::after {
-  padding: 0;
-  font-weight: 700;
-}
-.popup-modals-container .addItem-modal .addItem-form .planRegis-form {
-  width: 90%;
-}
-.popup-modals-container .addItem-modal .addItem-form .planRegis-form div {
-  /*padding:0;*/
-}
-.popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .label {
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
-  background: none;
-  color: #36384B;
-  text-shadow: none;
-  margin-right: 1em;
-}
-.popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .button-minus,
-.popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .button-plus {
-  border-radius: 50%;
-  width: auto;
-  margin: 5px;
-  font-size: 2em;
-  vertical-align: middle;
-  text-align: center;
-}
-.popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .button-minus {
-  padding: 2px 8px 8px;
-}
-.popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .button-plus {
-  padding: 5px;
-}
-.popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .quantity-input {
-  width: 15%;
-  text-align: center;
-  color: #36384B;
-  border-radius: 0;
-  border: 2px solid #C8C8C8;
-  padding: 0;
-  margin: 0;
-}
-.popup-modals-container .addItem-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(2) {
-  display: grid;
-  grid-template-columns: 30% 65%;
-  margin-left: 0;
-}
-.popup-modals-container .addItem-modal .addItem-form .planRegis-form .margin-10 {
-  margin: 10px;
-}
-.popup-modals-container .mainSubmit-modal-container .mainSubmit-modal h2,
-.popup-modals-container .mainSubmit-modal-container .remove-planModal h2,
-.popup-modals-container .remove-planModal-container .mainSubmit-modal h2,
-.popup-modals-container .remove-planModal-container .remove-planModal h2 {
-  font-family: "PublicoHeadline", aktiv-grotesk, Helvetica, sans-serif;
-  font-weight: 900;
-  font-size: 3em;
-  color: #434DA0;
-  text-align: center;
-  padding: 1em;
-}
-.popup-modals-container .mainSubmit-modal-container .mainSubmit-modal .cross,
-.popup-modals-container .mainSubmit-modal-container .remove-planModal .cross,
-.popup-modals-container .remove-planModal-container .mainSubmit-modal .cross,
-.popup-modals-container .remove-planModal-container .remove-planModal .cross {
-  font-size: 1.5em;
-  padding: 10px;
-}
-.popup-modals-container .mainSubmit-modal-container .mainSubmit-modal p,
-.popup-modals-container .mainSubmit-modal-container .remove-planModal p,
-.popup-modals-container .remove-planModal-container .mainSubmit-modal p,
-.popup-modals-container .remove-planModal-container .remove-planModal p {
-  width: 75%;
-  text-align: center;
-  margin: 0 auto;
-  font-size: 1.75em;
-}
-.popup-modals-container .mainSubmit-modal-container .mainSubmit-modal div,
-.popup-modals-container .mainSubmit-modal-container .remove-planModal div,
-.popup-modals-container .remove-planModal-container .mainSubmit-modal div,
-.popup-modals-container .remove-planModal-container .remove-planModal div {
-  text-align: center;
-  padding: 1em;
-}
-.popup-modals-container .remove-planModal-container .remove-planModal h3 {
-  text-align: center;
-  margin-top: 1em;
-}
-.popup-modals-container .remove-planModal-container .remove-planModal div a {
-  margin: 0 10px;
-}
-.popup-modals-container .remove-planModal-container .remove-planModal div .zuc-btn-hollow {
-  border: 2px solid #434DA0;
-  color: #434DA0;
-}
+  /*Congratulation modal*/ }
+  .popup-modals-container .addItem-modal {
+    /*This is all modal div class*/ }
+    .popup-modals-container .addItem-modal .addItem-form .purple-background h2::after {
+      padding: 0;
+      font-weight: 700; }
+    .popup-modals-container .addItem-modal .addItem-form .planRegis-form {
+      width: 90%; }
+      .popup-modals-container .addItem-modal .addItem-form .planRegis-form div {
+        /*padding:0;*/ }
+      .popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .label {
+        font-family: "aktiv-grotesk", Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        background: none;
+        color: #36384B;
+        text-shadow: none;
+        margin-right: 1em; }
+      .popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .button-minus,
+      .popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .button-plus {
+        border-radius: 50%;
+        width: auto;
+        margin: 5px;
+        font-size: 2em;
+        vertical-align: middle;
+        text-align: center; }
+      .popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .button-minus {
+        padding: 2px 8px 8px; }
+      .popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .button-plus {
+        padding: 5px; }
+      .popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .quantity-input {
+        width: 15%;
+        text-align: center;
+        color: #36384B;
+        border-radius: 0;
+        border: 2px solid #C8C8C8;
+        padding: 0;
+        margin: 0; }
+      .popup-modals-container .addItem-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(2) {
+        display: grid;
+        grid-template-columns: 30% 65%;
+        margin-left: 0; }
+      .popup-modals-container .addItem-modal .addItem-form .planRegis-form .margin-10 {
+        margin: 10px; }
+  .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal h2,
+  .popup-modals-container .mainSubmit-modal-container .remove-planModal h2,
+  .popup-modals-container .remove-planModal-container .mainSubmit-modal h2,
+  .popup-modals-container .remove-planModal-container .remove-planModal h2 {
+    font-family: "PublicoHeadline", aktiv-grotesk, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 3em;
+    color: #434DA0;
+    text-align: center;
+    padding: 1em; }
+  .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal .cross,
+  .popup-modals-container .mainSubmit-modal-container .remove-planModal .cross,
+  .popup-modals-container .remove-planModal-container .mainSubmit-modal .cross,
+  .popup-modals-container .remove-planModal-container .remove-planModal .cross {
+    font-size: 1.5em;
+    padding: 10px; }
+  .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal p,
+  .popup-modals-container .mainSubmit-modal-container .remove-planModal p,
+  .popup-modals-container .remove-planModal-container .mainSubmit-modal p,
+  .popup-modals-container .remove-planModal-container .remove-planModal p {
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.75em; }
+  .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal div,
+  .popup-modals-container .mainSubmit-modal-container .remove-planModal div,
+  .popup-modals-container .remove-planModal-container .mainSubmit-modal div,
+  .popup-modals-container .remove-planModal-container .remove-planModal div {
+    text-align: center;
+    padding: 1em; }
+  .popup-modals-container .remove-planModal-container .remove-planModal h3 {
+    text-align: center;
+    margin-top: 1em; }
+  .popup-modals-container .remove-planModal-container .remove-planModal div a {
+    margin: 0 10px; }
+  .popup-modals-container .remove-planModal-container .remove-planModal div .zuc-btn-hollow {
+    border: 2px solid #434DA0;
+    color: #434DA0; }
 
 /*Retailer Profile*/
 .retailer-profile-container {
   width: 80%;
-  margin: 0 auto;
-}
-.retailer-profile-container .two-grid-column {
-  align-items: center;
-  /*div{
-  	padding:0 10px;
-  }*/
-}
-.retailer-profile-container .two-grid-column .retailer-info-form div {
-  /*padding:5px 0;*/
-  justify-content: flex-end;
-}
-.retailer-profile-container .two-grid-column .retailer-info-form div p {
-  width: 70%;
-  font-weight: bold;
-}
-.retailer-profile-container .two-grid-column .retailer-info-form select {
-  margin-bottom: 0;
-}
-.retailer-profile-container .profile-boxStyle {
-  border: 2px solid #36384B;
-  height: auto;
-}
-.retailer-profile-container .profile-address {
-  padding: 10px;
-}
-.retailer-profile-container .profile-address div {
-  padding: 5px;
-}
-.retailer-profile-container .profile-address label {
-  word-break: break-word;
-}
-.retailer-profile-container .profile-address select:focus {
-  color: inherit;
-  border-color: #a3acff;
-  background-color: white;
-}
-.retailer-profile-container .locations-container .new-planAdd-detail {
-  display: block;
-  /*margin:0 auto;*/
-  padding: 0;
-}
-.retailer-profile-container .locations-container .new-planAdd-detail table tr {
-  text-align: left;
-}
-.retailer-profile-container .locations-container .new-planAdd-detail table thead tr th:nth-child(1) {
-  width: 10%;
-}
-.retailer-profile-container .locations-container .new-planAdd-detail table thead tr th:nth-child(2) {
-  width: 20%;
-}
-.retailer-profile-container .locations-container .new-planAdd-detail table thead tr th:nth-child(3) {
-  width: 30%;
-}
-.retailer-profile-container .locations-container .new-planAdd-detail table thead tr th:nth-child(4) {
-  width: 20%;
-}
-.retailer-profile-container .contacts-container {
-  margin-top: 3%;
-  padding: 0;
-}
-.retailer-profile-container .contacts-container .grey {
-  color: grey;
-}
-.retailer-profile-container .contacts-container .new-planAdd-detail {
-  display: block;
-}
-.retailer-profile-container .contacts-container .new-planAdd-detail table thead tr th {
-  border-right: 1px solid #d3d3df;
-  text-align: center;
-}
-.retailer-profile-container .contacts-container .new-planAdd-detail table tbody tr td {
-  border-right: 1px solid #d3d3df;
-  text-align: center;
-}
+  margin: 0 auto; }
+  .retailer-profile-container .two-grid-column {
+    align-items: center;
+    /*div{
+    	padding:0 10px;
+    }*/ }
+    .retailer-profile-container .two-grid-column .retailer-info-form div {
+      /*padding:5px 0;*/
+      justify-content: flex-end; }
+      .retailer-profile-container .two-grid-column .retailer-info-form div p {
+        width: 70%;
+        font-weight: bold; }
+    .retailer-profile-container .two-grid-column .retailer-info-form select {
+      margin-bottom: 0; }
+  .retailer-profile-container .profile-boxStyle {
+    border: 2px solid #36384B;
+    height: auto; }
+  .retailer-profile-container .profile-address {
+    padding: 10px; }
+    .retailer-profile-container .profile-address div {
+      padding: 5px; }
+    .retailer-profile-container .profile-address label {
+      word-break: break-word; }
+    .retailer-profile-container .profile-address select:focus {
+      color: inherit;
+      border-color: #a3acff;
+      background-color: white; }
+  .retailer-profile-container .locations-container .new-planAdd-detail {
+    display: block;
+    /*margin:0 auto;*/
+    padding: 0; }
+    .retailer-profile-container .locations-container .new-planAdd-detail table tr {
+      text-align: left; }
+    .retailer-profile-container .locations-container .new-planAdd-detail table thead tr th:nth-child(1) {
+      width: 10%; }
+    .retailer-profile-container .locations-container .new-planAdd-detail table thead tr th:nth-child(2) {
+      width: 20%; }
+    .retailer-profile-container .locations-container .new-planAdd-detail table thead tr th:nth-child(3) {
+      width: 30%; }
+    .retailer-profile-container .locations-container .new-planAdd-detail table thead tr th:nth-child(4) {
+      width: 20%; }
+  .retailer-profile-container .contacts-container {
+    margin-top: 3%;
+    padding: 0; }
+    .retailer-profile-container .contacts-container .grey {
+      color: grey; }
+    .retailer-profile-container .contacts-container .new-planAdd-detail {
+      display: block; }
+      .retailer-profile-container .contacts-container .new-planAdd-detail table thead tr th {
+        border-right: 1px solid #d3d3df;
+        text-align: center; }
+      .retailer-profile-container .contacts-container .new-planAdd-detail table tbody tr td {
+        border-right: 1px solid #d3d3df;
+        text-align: center; }
 
 .shipping-locations-modal .shipping-locations-form .planRegis-form {
   width: 85%;
-  margin: 0 auto;
-}
-.shipping-locations-modal .shipping-locations-form .planRegis-form input {
-  width: 100%;
-}
-.shipping-locations-modal .shipping-locations-form .planRegis-form select {
-  width: 100%;
-}
-.shipping-locations-modal .shipping-locations-form .planRegis-form input[type=checkbox] {
-  width: 30px;
-  height: 30px;
-}
-.shipping-locations-modal .shipping-locations-form .planRegis-form .profileLocation-province {
-  margin-left: 4em;
-}
-.shipping-locations-modal .shipping-locations-form .planRegis-form .profileLocation-province select {
-  width: 150px;
-}
+  margin: 0 auto; }
+  .shipping-locations-modal .shipping-locations-form .planRegis-form input {
+    width: 100%; }
+  .shipping-locations-modal .shipping-locations-form .planRegis-form select {
+    width: 100%; }
+  .shipping-locations-modal .shipping-locations-form .planRegis-form input[type="checkbox"] {
+    width: 30px;
+    height: 30px; }
+  .shipping-locations-modal .shipping-locations-form .planRegis-form .profileLocation-province {
+    margin-left: 4em; }
+    .shipping-locations-modal .shipping-locations-form .planRegis-form .profileLocation-province select {
+      width: 150px; }
 
 .contacts-form-modal .contacts-form .planRegis-form {
   width: 100%;
-  padding: 1em;
-}
-.contacts-form-modal .contacts-form .planRegis-form .div-sixty-forty {
-  display: grid;
-  grid-template-columns: 60% 40%;
-}
-.contacts-form-modal .contacts-form .planRegis-form div {
-  justify-content: center;
-  width: 90%;
-  margin: 0 auto;
-}
-.contacts-form-modal .contacts-form .planRegis-form label {
-  padding: 0 5px;
-  text-align: left;
-  margin: 0;
-  width: 30%;
-  word-break: unset;
-}
-.contacts-form-modal .contacts-form .planRegis-form input {
-  width: 100%;
-}
-.contacts-form-modal .contacts-form .planRegis-form select {
-  width: 100%;
-  margin-top: 10px;
-}
-.contacts-form-modal .contacts-form .planRegis-form .purple-text {
-  font-weight: 700;
-}
-.contacts-form-modal .contacts-form .planRegis-form .permissions {
-  width: 100%;
-  border: 2px solid #36384B;
-  display: grid;
-  grid-template-columns: 20% 30% 20% 30%;
-  justify-content: center;
-  align-items: flex-start;
-}
-.contacts-form-modal .contacts-form .planRegis-form .permissions label {
-  color: #434DA0;
-  font-size: 14px;
-  font-weight: 300;
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-  text-align: center;
-  width: 100%;
-  min-height: 40px;
-}
-.contacts-form-modal .contacts-form .planRegis-form .permissions input[type=checkbox] {
-  width: 20px;
-  height: 20px;
-  margin: 10px auto;
-}
-.contacts-form-modal .contacts-form .planRegis-form .permissions p {
-  font-size: 16px;
-  text-align: center;
-  min-height: 50px;
-}
+  padding: 1em; }
+  .contacts-form-modal .contacts-form .planRegis-form .div-sixty-forty {
+    display: grid;
+    grid-template-columns: 60% 40%; }
+  .contacts-form-modal .contacts-form .planRegis-form div {
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto; }
+  .contacts-form-modal .contacts-form .planRegis-form label {
+    padding: 0 5px;
+    text-align: left;
+    margin: 0;
+    width: 30%;
+    word-break: unset; }
+  .contacts-form-modal .contacts-form .planRegis-form input {
+    width: 100%; }
+  .contacts-form-modal .contacts-form .planRegis-form select {
+    width: 100%;
+    margin-top: 10px; }
+  .contacts-form-modal .contacts-form .planRegis-form .purple-text {
+    font-weight: 700; }
+  .contacts-form-modal .contacts-form .planRegis-form .permissions {
+    width: 100%;
+    border: 2px solid #36384B;
+    display: grid;
+    grid-template-columns: 20% 30% 20% 30%;
+    justify-content: center;
+    align-items: flex-start; }
+    .contacts-form-modal .contacts-form .planRegis-form .permissions label {
+      color: #434DA0;
+      font-size: 14px;
+      font-weight: 300;
+      font-family: "aktiv-grotesk", Helvetica, sans-serif;
+      text-align: center;
+      width: 100%;
+      min-height: 40px; }
+    .contacts-form-modal .contacts-form .planRegis-form .permissions input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin: 10px auto; }
+    .contacts-form-modal .contacts-form .planRegis-form .permissions p {
+      font-size: 16px;
+      text-align: center;
+      min-height: 50px; }
 
 @media screen and (max-width: 768px) {
   .retailer-profile-container .contacts-container .new-planAdd-detail table tbody tr td {
-    border-bottom: 1px solid #d3d3df;
-  }
+    border-bottom: 1px solid #d3d3df; }
 
   .shipping-locations-modal .shipping-locations-form .planRegis-form {
     width: 85%;
-    margin: 0 auto;
-  }
-  .shipping-locations-modal .shipping-locations-form .planRegis-form input {
-    width: 100%;
-  }
-  .shipping-locations-modal .shipping-locations-form .planRegis-form select {
-    width: 100%;
-  }
-  .shipping-locations-modal .shipping-locations-form .planRegis-form .formField-data-controller {
-    grid-template-columns: 100%;
-  }
-  .shipping-locations-modal .shipping-locations-form .planRegis-form input[type=checkbox] {
-    width: 30px;
-    height: 30px;
-  }
-  .shipping-locations-modal .shipping-locations-form .planRegis-form .profileLocation-province {
-    margin-left: 0;
-  }
-  .shipping-locations-modal .shipping-locations-form .planRegis-form .profileLocation-province select {
-    width: 100%;
-  }
+    margin: 0 auto; }
+    .shipping-locations-modal .shipping-locations-form .planRegis-form input {
+      width: 100%; }
+    .shipping-locations-modal .shipping-locations-form .planRegis-form select {
+      width: 100%; }
+    .shipping-locations-modal .shipping-locations-form .planRegis-form .formField-data-controller {
+      grid-template-columns: 100%; }
+    .shipping-locations-modal .shipping-locations-form .planRegis-form input[type="checkbox"] {
+      width: 30px;
+      height: 30px; }
+    .shipping-locations-modal .shipping-locations-form .planRegis-form .profileLocation-province {
+      margin-left: 0; }
+      .shipping-locations-modal .shipping-locations-form .planRegis-form .profileLocation-province select {
+        width: 100%; }
 
   .contacts-form-modal .contacts-form .planRegis-form div {
-    width: 100%;
-  }
+    width: 100%; }
   .contacts-form-modal .contacts-form .planRegis-form label {
-    /*word-break: break-word;*/
-  }
+    /*word-break: break-word;*/ }
   .contacts-form-modal .contacts-form .planRegis-form select {
-    margin-top: 10px;
-  }
+    margin-top: 10px; }
   .contacts-form-modal .contacts-form .planRegis-form .div-sixty-forty, .contacts-form-modal .contacts-form .planRegis-form .formField-data-controller {
-    grid-template-columns: 100%;
-  }
+    grid-template-columns: 100%; }
   .contacts-form-modal .contacts-form .planRegis-form .permissions {
-    grid-template-columns: 100%;
-  }
-}
+    grid-template-columns: 100%; } }
 @media screen and (max-width: 980px) {
   .contacts-form-modal .contacts-form .planRegis-form div {
-    width: 100%;
-  }
+    width: 100%; }
   .contacts-form-modal .contacts-form .planRegis-form label {
-    /*word-break: break-word;*/
-  }
+    /*word-break: break-word;*/ }
   .contacts-form-modal .contacts-form .planRegis-form .div-sixty-forty {
-    grid-template-columns: 100%;
-  }
+    grid-template-columns: 100%; }
   .contacts-form-modal .contacts-form .planRegis-form .permissions {
-    grid-template-columns: 100%;
-  }
-}
+    grid-template-columns: 100%; } }
 /*Plan inquiry screen*/
 .plan-inquiry-container {
   width: 85%;
   max-width: 100%;
-  /*padding:0 1em;*/
-}
-.plan-inquiry-container .search-container {
-  /*margin-top:7%;*/
-  /*grid-gap: 2em 2em;*/
-}
-.plan-inquiry-container .manual-search-container {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: grid;
-  grid-row-gap: 2em;
-  padding: 10px;
-  margin: 0 auto;
-}
-.plan-inquiry-container .manual-search-container .inquiry-date-filter {
-  border: 2px solid #36384B;
-  height: auto;
-}
-.plan-inquiry-container .manual-search-container .inquiry-date-filter form {
-  color: #36384B;
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-  /*.inquiry-search-3{
-  	width:100%;
-  	margin:2em auto;
-  	display: grid;
-  	grid-template-columns: 33% 34% 33%;
-
-  	label{
-  		@extend %label;
-  	}
-
-  	select{
-  		@extend %select;
-  	}
-
-  }*/
-}
-.plan-inquiry-container .manual-search-container .inquiry-date-filter form i {
-  color: #434DA0;
-  font-size: 1.5em;
-  padding: 5px;
-}
-.plan-inquiry-container .manual-search-container .inquiry-date-filter form input {
-  width: 90%;
-}
-.plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box {
-  display: grid;
-  grid-template-columns: 30% 30% 30%;
-  justify-content: center;
-  grid-gap: 1em 1em;
-  max-width: 100%;
-  height: auto;
-  margin-top: 1em;
-}
-.plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box .filter-box {
-  margin-top: 10px;
-  border: 2px solid #36384B;
-  background-color: white;
-  min-height: 210px;
-  height: auto;
-  overflow-y: scroll;
-}
-.plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box .filter-box p {
-  padding: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-.plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box .filter-box p:hover {
-  background-color: #70E9B2;
-  transition: all ease-in 0.5;
-}
-.plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box .selected {
-  background-color: #70E9B2;
-  transition: all ease-in 0.5;
-}
-.plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: #434DA0;
-}
-.plan-inquiry-container .manual-search-container .inquiry-date-filter .width-80 {
-  margin: 0 auto;
-}
-.plan-inquiry-container .advance-search-container {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: grid;
-  grid-row-gap: 2em;
-  padding: 10px;
-  margin: 0 auto;
-}
-.plan-inquiry-container .advance-search-container .advance-search-form {
-  border: 2px solid #36384B;
-}
-.plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form {
-  width: 90%;
-  padding: 1em 0;
-}
-.plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form div {
-  padding: 0;
-}
-.plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form .planRegis-divStyle {
-  grid-template-columns: 30% 70%;
-}
-.plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form input {
-  width: 80%;
-}
-.plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form select {
-  width: 80%;
-}
-.plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form a {
-  margin: 10px;
-}
-.plan-inquiry-container .allPlans-container {
-  width: 100%;
-  margin: 3em auto;
-  border: 2px solid #36384B;
-}
-.plan-inquiry-container .allPlans-container .title p {
-  margin: 0 10px;
-}
-.plan-inquiry-container .allPlans-container .new-planAdd-detail {
-  display: block;
-  border: 2px solid #d3d3df;
-}
-.plan-inquiry-container .allPlans-container .new-planAdd-detail table td i {
-  cursor: pointer;
-}
-
-/*.popup-modal-container{*/
-.cancelation-modal .plan-cancelation-container {
-  width: 95%;
-  /*Plan cenlation ends*/
-}
-.cancelation-modal .plan-cancelation-container .srs-heading {
-  margin-top: 2%;
-}
-.cancelation-modal .plan-cancelation-container .cross {
-  font-size: 1.5em;
-  padding: 10px;
-}
-.cancelation-modal .plan-cancelation-container .plan-cancelation {
-  display: grid;
-  grid-template-columns: 45% 55%;
-  justify-content: center;
-  align-items: flex-start;
-}
-.cancelation-modal .plan-cancelation-container .plan-cancelation .plan-search-field {
-  height: auto;
-  padding: 0 2em;
-  width: 100%;
-}
-.cancelation-modal .plan-cancelation-container .plan-cancelation .plan-search-field .search-form div {
-  margin-top: 12px;
-}
-.cancelation-modal .plan-cancelation-container .plan-cancelation .plan-search-field .search-form div input {
-  margin: 0;
-}
-.cancelation-modal .plan-cancelation-container .plan-cancelation .plan-search-field .search-form div button {
-  height: 50px;
-  border: 2px solid #36384B;
-  border-radius: 10px;
-  background: #434DA0;
-  position: relative;
-  left: -50px;
-  width: 25%;
-}
-.cancelation-modal .plan-cancelation-container .plan-cancelation .plan-search-field .search-form div button i {
-  font-size: 1.5em;
-  color: white;
-}
-.cancelation-modal .plan-cancelation-container .plan-cancelation .reason-container {
-  height: auto;
-  padding: 0 2em;
-  width: 100%;
-}
-.cancelation-modal .plan-cancelation-container .plan-cancelation .reason-container textarea {
-  border: 2px solid #36384B;
-  border-radius: 0;
-  height: 350px;
-  font-size: 16px;
-}
-.cancelation-modal .plan-cancelation-container .search-plan-details {
-  margin-top: 3em;
-}
-.cancelation-modal .plan-cancelation-container .search-plan-details .plan-registration-box {
-  display: block;
-  width: 95%;
-  margin-bottom: 0;
-}
-.cancelation-modal .plan-cancelation-container .search-plan-details .plan-registration-box .new-planAdd-detail {
-  /*display: block;*/
-}
-
-/*}*/
-.planRegistration-modal-container .planRegistration-modal {
-  width: 85%;
-}
-.planRegistration-modal-container .planRegistration-modal .srs-heading {
-  margin-top: 1%;
-}
-.planRegistration-modal-container .planRegistration-modal .cross {
-  padding: 10px;
-  font-size: 1.5em;
-}
-.planRegistration-modal-container .planRegistration-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(2) {
-  display: grid;
-  grid-template-columns: 30% 65%;
-  margin-left: 0;
-}
-
-@media screen and (max-width: 768px) {
-  .plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box {
-    display: grid;
-    grid-template-columns: 90%;
-  }
-
-  .planRegistration-modal-container .planRegistration-modal {
-    width: 100%;
-  }
-  .planRegistration-modal-container .planRegistration-modal .addItem-form .planRegis-form .formField-data-controller {
-    grid-template-columns: 100%;
-  }
-  .planRegistration-modal-container .planRegistration-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(1) {
-    justify-content: space-between;
-  }
-  .planRegistration-modal-container .planRegistration-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(2) {
-    display: grid;
-    grid-template-columns: 35% 65%;
-  }
-}
-.order-entry-container {
-  width: 85%;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-.order-entry-container .two-grid-column {
-  margin-top: 4em;
-}
-.order-entry-container .two-grid-column .add-item-info {
-  height: auto;
-  width: 100%;
-  padding: 0 1em 0 0;
-}
-.order-entry-container .two-grid-column .add-item-info .planRegis-form div {
-  /*justify-content: space-between;*/
-}
-.order-entry-container .two-grid-column .add-item-info .planRegis-form label {
-  text-align: left;
-  width: 25%;
-}
-.order-entry-container .two-grid-column .add-item-info .planRegis-form select {
-  margin-bottom: 0;
-}
-.order-entry-container .two-grid-column .shipping-instructions {
-  height: auto;
-  width: 100%;
-  padding: 0 0 0 1em;
-}
-.order-entry-container .two-grid-column .shipping-instructions textarea {
-  font-size: 16px;
-}
-.order-entry-container .two-grid-column .shipping-instructions .two-grid-column {
-  margin-top: 0;
-}
-.order-entry-container .planRegis-form {
-  width: 100%;
-  padding: 0;
-}
-.order-entry-container .order-table-container {
-  width: 100%;
-  border: 2px solid #36384B;
-  margin: 3% auto;
-}
-.order-entry-container .order-table-container .new-planAdd-detail {
-  display: block;
-  border: 0;
-}
-.order-entry-container .order-table-container .new-planAdd-detail table th, .order-entry-container .order-table-container .new-planAdd-detail table td {
-  /*text-align: left;*/
-  word-break: break-word;
-}
-.order-entry-container .order-table-container .new-planAdd-detail table th {
-  width: 10%;
-}
-.order-entry-container .order-table-container .new-planAdd-detail table th:nth-child(3) {
-  width: 25%;
-}
-.order-entry-container .order-table-container .new-planAdd-detail table th:nth-child(4), .order-entry-container .order-table-container .new-planAdd-detail table th:nth-child(7), .order-entry-container .order-table-container .new-planAdd-detail table th:nth-child(8) {
-  width: 5%;
-}
-.order-entry-container .orderEntry-controls {
-  margin-bottom: 2em;
-}
-.order-entry-container .orderEntry-controls p {
-  padding-left: 30%;
-  text-align: right;
-}
-
-.editOrder-modal-container .editOrder-modal .planRegis-form {
-  width: 90%;
-}
-.editOrder-modal-container .editOrder-modal .planRegis-form div {
-  justify-content: center;
-}
-.editOrder-modal-container .editOrder-modal .planRegis-form input {
-  width: 80%;
-}
-.editOrder-modal-container .editOrder-modal .planRegis-form .addItem-quantity .label {
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
-  background: none;
-  color: #36384B;
-  text-shadow: none;
-  margin-right: 1em;
-}
-.editOrder-modal-container .editOrder-modal .planRegis-form .addItem-quantity .button-minus, .editOrder-modal-container .editOrder-modal .planRegis-form .addItem-quantity .button-plus {
-  border-radius: 50%;
-  width: auto;
-  margin: 5px;
-  font-size: 2em;
-  vertical-align: middle;
-  text-align: center;
-}
-.editOrder-modal-container .editOrder-modal .planRegis-form .addItem-quantity .button-minus {
-  padding: 2px 8px 8px 8px;
-}
-.editOrder-modal-container .editOrder-modal .planRegis-form .addItem-quantity .button-plus {
-  padding: 5px;
-}
-.editOrder-modal-container .editOrder-modal .planRegis-form .addItem-quantity .quantity-input {
-  width: 15%;
-  text-align: center;
-  color: #36384B;
-  border-radius: 0;
-  border: 2px solid #C8C8C8;
-  padding: 0;
-  margin: 0;
-}
-.editOrder-modal-container .editOrder-modal .planRegis-form .item-found {
-  border: 1px solid #d1d1e0;
-  padding: 0;
-  width: 60%;
-  margin: 0 auto;
-}
-.editOrder-modal-container .editOrder-modal .planRegis-form .item-found p {
-  font-size: 14px;
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-  color: #36384B;
-  border-bottom: 1px solid #d1d1e0;
-}
-.editOrder-modal-container .editOrder-modal .planRegis-form .item-found p:hover {
-  background: #70E9B2;
-}
-
-@media screen and (max-width: 768px) {
-  .order-entry-container {
-    margin-top: 10%;
-    width: 100%;
-    height: auto;
-  }
-  .order-entry-container .new-planAdd-detail {
-    display: block;
-    border: 0;
-  }
-  .order-entry-container .new-planAdd-detail table td {
-    text-align: right;
-  }
-  .order-entry-container .orderEntry-controls {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2em;
-  }
-  .order-entry-container .orderEntry-controls p {
-    padding-left: 0;
-    text-align: right;
-  }
-  .order-entry-container .two-grid-column {
-    grid-template-columns: 100%;
-  }
-}
-.planPending-registrations-container .status-report-container {
-  width: 85%;
-  max-height: 100%;
-  height: auto;
-  border: 2px solid #36384B;
-  margin: 2% auto;
-}
-.planPending-registrations-container .status-report-container .status-report-table-container .invoice-title p {
-  margin: 10px;
-}
-.planPending-registrations-container .status-report-container .status-report-table-container .new-planAdd-detail {
-  display: block;
-  border: 2px solid #d1d1e0;
-}
-.planPending-registrations-container .status-report-container .status-report-table-container .box-total {
-  width: auto;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-.planPending-registrations-container .status-report-container .status-report-table-container .box-total p {
-  border: 2px solid #d1d1e0;
-  color: #36384B;
-  padding: 10px;
-  font-weight: 900;
-  text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-  .planPending-registrations-container .status-report-container {
-    width: 100%;
-  }
-}
-.order-history-container {
-  width: 85%;
-  max-width: 100%;
-  margin: 0 auto;
-  /*order-history-table*/
-}
-.order-history-container .filter-box {
-  border: 2px solid #36384B;
-  height: auto;
-  width: 85%;
-  margin: 3em auto;
-}
-.order-history-container .filter-box .planRegis-form {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 40% 40% 20%;
-  padding: 10px;
-  align-items: center;
-}
-.order-history-container .filter-box .planRegis-form div {
-  justify-content: center;
-}
-.order-history-container .filter-box .planRegis-form .date-filter {
-  display: flex;
-  flex-direction: column;
-}
-.order-history-container .filter-box .planRegis-form .date-filter div:nth-child(1) p {
-  width: 90%;
-  text-align: center;
-  border-bottom: 1px dashed #36384B;
-  line-height: 0.1px;
-  margin: 10px auto;
-}
-.order-history-container .filter-box .planRegis-form .date-filter div:nth-child(1) p span {
-  background: #fff;
-  padding: 0 5px;
-}
-.order-history-container .filter-box .planRegis-form label {
-  text-align: center;
-}
-.order-history-container .filter-box .planRegis-form .select-location {
-  width: 100%;
-  padding: 0 10px;
-}
-.order-history-container .order-history-table-container {
-  width: 100%;
-  margin: 3em auto;
-  border: 2px solid #36384B;
-}
-.order-history-container .order-history-table-container .new-planAdd-detail {
-  display: block;
-  border: 2px solid #d3d3df;
-}
-
-@media screen and (max-width: 980px) {
-  .order-history-container {
-    width: 100%;
-  }
-  .order-history-container .filter-box {
-    width: 100%;
-  }
-  .order-history-container .filter-box .planRegis-form {
-    grid-template-columns: auto;
-  }
-  .order-history-container .filter-box .planRegis-form .select-location {
-    margin: 1em 0;
-  }
-}
-.rep-profile-container {
-  width: 85%;
-  margin: 0 auto;
-  padding: 0;
-}
-.rep-profile-container .rep-profile {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  justify-content: center;
-  align-items: flex-start;
-  grid-gap: 1em 2em;
-}
-.rep-profile-container .organization-container {
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-}
-.rep-profile-container .other-details-container {
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
-}
-.rep-profile-container .other-details-container .info-circle {
-  color: #70E9B2;
-}
-.rep-profile-container .profile-boxStyle {
-  border: 2px solid #36384B;
-  padding: 10px;
-}
-.rep-profile-container .profile-boxStyle p {
-  font-weight: 700;
-  margin-top: 10px;
-}
-.rep-profile-container .profile-boxStyle .planRegis-form {
-  width: auto;
-  padding: 0;
-}
-.rep-profile-container .profile-boxStyle .planRegis-form select {
-  margin-top: 5px;
-}
-.rep-profile-container .margin-left {
-  margin-left: 5px;
-}
-.rep-profile-container .margin-right {
-  margin-right: 5px;
-}
-.rep-profile-container .transit-input {
-  width: 100%;
-}
-.rep-profile-container .transit-input input {
-  width: 98%;
-}
-.rep-profile-container .partner-profiles h3 {
-  margin: 10px;
-}
-.rep-profile-container .partner-profiles .new-planAdd-detail {
-  display: block;
-  margin: 0;
-}
-.rep-profile-container .partner-profiles .new-planAdd-detail th:first-of-type, .rep-profile-container .partner-profiles .new-planAdd-detail td:first-of-type {
-  border-right: 1px solid #d3d3df;
-}
-.rep-profile-container .agreement h3 {
-  margin: 10px 0;
-}
-.rep-profile-container .agreement .profile-boxStyle input[type=checkbox] {
-  width: 30px;
-  height: 30px;
-}
-.rep-profile-container .agreement .profile-boxStyle p {
-  margin: 0 0 0 10px;
-  font-weight: 500;
-  font-size: 16px;
-  color: #36384B;
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-}
-.rep-profile-container .agreement .profile-boxStyle a {
-  color: #70E9B2;
-  text-decoration: underline;
-  margin-left: 3em;
-  font-weight: 700;
-}
-
-@media screen and (max-width: 768px) {
-  .rep-profile-container .rep-profile {
-    display: grid;
-    grid-template-columns: 100%;
-  }
-}
-/*Media queries */
-@media screen and (max-width: 768px) {
-  .srs-login-container {
-    width: 90%;
-    margin-top: 20%;
-  }
-
-  .srs-heading {
-    margin-top: 10%;
-  }
-
-  .planRegis-form {
-    width: 90%;
-  }
-  .planRegis-form div .info-text-container {
-    width: 100%;
-    top: 40%;
-    left: 0;
-  }
-  .planRegis-form .planRegis-divStyle {
-    grid-template-columns: 35% 65%;
-    display: grid;
-  }
-  .planRegis-form .planRegis-divStyle input {
-    width: 100%;
-  }
-  .planRegis-form .planRegis-divStyle select {
-    width: 100%;
-  }
-  .planRegis-form .info-grid {
-    display: grid;
-    grid-template-columns: 35% 56% 0%;
-  }
-  .planRegis-form label {
-    text-align: left;
-    margin-right: 10px;
-  }
-  .planRegis-form .formField-data-controller {
-    width: 100%;
-  }
-  .planRegis-form .formField-data-controller .fillForm-button {
-    margin-left: 0;
-  }
-  .planRegis-form .formField-data-controller .clearForm-button {
-    margin-left: 0;
-    justify-content: flex-end;
-  }
-  .planRegis-form .twoInput-fields {
-    grid-template-columns: 35% 65%;
-  }
-  .planRegis-form .twoInput-fields input:nth-of-type(1) {
-    margin-left: 0;
-  }
-  .planRegis-form .twoInput-fields input:nth-of-type(2) {
-    margin-left: 0;
-  }
-  .planRegis-form .twoInput-fields input {
-    width: 100%;
-  }
-  .planRegis-form .planRegis-button {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  .planRegis-form .hidden-field {
-    display: block;
-    visibility: hidden;
-  }
-
-  .new-planAdd-detail {
-    border: none;
-  }
-  .new-planAdd-detail table {
-    border: 0;
-  }
-  .new-planAdd-detail table thead {
-    border: none;
-    clip: react(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-  }
-  .new-planAdd-detail table tr {
-    border-bottom: 1px solid #36384B;
-    display: block;
-    padding: 5px 0;
-  }
-  .new-planAdd-detail table td {
-    display: block;
-    font-size: 0.8em;
-    text-align: right;
-  }
-  .new-planAdd-detail table td::before {
-    content: attr(data-label);
-    float: left;
-    font-weight: 700;
-    color: #434DA0;
-  }
-
-  .popup-modals-container {
-    /*This is pop up section class*/
-  }
-  .popup-modals-container .addItem-modal {
-    overflow: auto;
-  }
-  .popup-modals-container .addItem-modal .addItem-form {
-    width: 90%;
-    margin: 30% auto;
-  }
-  .popup-modals-container .addItem-modal .addItem-form .planRegis-form .formField-data-controller {
-    grid-template-columns: 100%;
-  }
-  .popup-modals-container .addItem-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(1) {
-    justify-content: space-between;
-  }
-  .popup-modals-container .addItem-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(2) {
-    display: grid;
-    grid-template-columns: 35% 65%;
-  }
-  .popup-modals-container .addItem-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(2) input {
-    width: 100%;
-  }
-
-  .mobile-column {
-    flex-direction: column;
-    grid-template-columns: 100%;
-  }
-
-  .retailer-profile-container {
-    width: 100%;
-  }
-
-  .shipping-locations-modal .shipping-locations-form {
-    width: 90%;
-    margin-top: 30%;
-  }
-  .shipping-locations-modal .shipping-locations-form .planRegis-form div {
-    width: 100%;
-  }
-  .shipping-locations-modal .shipping-locations-form .planRegis-form input {
-    width: 100%;
-  }
-  .shipping-locations-modal .shipping-locations-form .planRegis-form select {
-    width: 100%;
-  }
-  .shipping-locations-modal .width-45 {
-    width: 100%;
-  }
-
-  .plan-inquiry-container .manual-search-container .date-filter-box .date-filter-form {
-    flex-flow: column;
-  }
-
-  .plan-cancelation-container {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
-  .plan-cancelation-container .container-border .plan-cancelation {
-    display: grid;
-    grid-template-columns: 100%;
-    justify-content: center;
-  }
-  .plan-cancelation-container .container-border .plan-cancelation .reason-container {
-    margin-top: 2em;
-  }
-  .plan-cancelation-container .container-border .plan-cancelation .reason-container textarea {
-    border: 2px solid #36384B;
-    border-radius: 0;
-    height: 350px;
-  }
-
-  .popup-modals-container .addItem-modal .addItem-form, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal, .popup-modals-container .mainSubmit-modal-container .remove-planModal, .popup-modals-container .remove-planModal-container .mainSubmit-modal, .popup-modals-container .remove-planModal-container .remove-planModal, .shipping-locations-modal .shipping-locations-form, .contacts-form-modal .contacts-form {
-    width: 100%;
-    margin: 50% auto;
-  }
-}
-@media screen and (min-width: 769px) {
-  .srs-nav-container .zuc-main-nav .zuc-nav-brand {
-    width: 22vw;
-    max-width: 100%;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .plan-inquiry-container {
-    width: 100%;
-    padding: 0 1em;
-  }
+  /*padding:0 1em;*/ }
   .plan-inquiry-container .search-container {
-    margin-top: 7%;
-    grid-template-columns: 100%;
-  }
+    /*margin-top:7%;*/
+    /*grid-gap: 2em 2em;*/ }
   .plan-inquiry-container .manual-search-container {
     width: 100%;
     max-width: 100%;
     height: auto;
     display: grid;
     grid-row-gap: 2em;
-  }
-  .plan-inquiry-container .manual-search-container .filter-param-box {
-    grid-template-columns: auto;
-  }
+    padding: 10px;
+    margin: 0 auto; }
+    .plan-inquiry-container .manual-search-container .inquiry-date-filter {
+      border: 2px solid #36384B;
+      height: auto; }
+      .plan-inquiry-container .manual-search-container .inquiry-date-filter form {
+        color: #36384B;
+        font-family: "aktiv-grotesk", Helvetica, sans-serif;
+      			/*.inquiry-search-3{
+      				width:100%;
+      				margin:2em auto;
+      				display: grid;
+      				grid-template-columns: 33% 34% 33%;
+
+      				label{
+      					@extend %label;
+      				}
+
+      				select{
+      					@extend %select;
+      				}
+
+      			}*/ }
+        .plan-inquiry-container .manual-search-container .inquiry-date-filter form i {
+          color: #434DA0;
+          font-size: 1.5em;
+          padding: 5px; }
+        .plan-inquiry-container .manual-search-container .inquiry-date-filter form input {
+          width: 90%; }
+        .plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box {
+          display: grid;
+          grid-template-columns: 30% 30% 30%;
+          justify-content: center;
+          grid-gap: 1em 1em;
+          max-width: 100%;
+          height: auto;
+          margin-top: 1em; }
+          .plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box .filter-box {
+            margin-top: 10px;
+            border: 2px solid #36384B;
+            background-color: white;
+            min-height: 210px;
+            height: auto;
+            overflow-y: scroll; }
+            .plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box .filter-box p {
+              padding: 5px;
+              cursor: pointer;
+              font-size: 16px; }
+              .plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box .filter-box p:hover {
+                background-color: #70E9B2;
+                transition: all ease-in 0.5; }
+          .plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box .selected {
+            background-color: #70E9B2;
+            transition: all ease-in 0.5; }
+          .plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: #434DA0; }
+      .plan-inquiry-container .manual-search-container .inquiry-date-filter .width-80 {
+        margin: 0 auto; }
   .plan-inquiry-container .advance-search-container {
     width: 100%;
     max-width: 100%;
     height: auto;
-  }
+    display: grid;
+    grid-row-gap: 2em;
+    padding: 10px;
+    margin: 0 auto; }
+    .plan-inquiry-container .advance-search-container .advance-search-form {
+      border: 2px solid #36384B; }
+      .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form {
+        width: 90%;
+        padding: 1em 0; }
+        .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form div {
+          padding: 0; }
+        .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form .planRegis-divStyle {
+          grid-template-columns: 30% 70%; }
+        .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form input {
+          width: 80%; }
+        .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form select {
+          width: 80%; }
+        .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form a {
+          margin: 10px; }
   .plan-inquiry-container .allPlans-container {
     width: 100%;
-  }
-}
+    margin: 3em auto;
+    border: 2px solid #36384B; }
+    .plan-inquiry-container .allPlans-container .title p {
+      margin: 0 10px; }
+    .plan-inquiry-container .allPlans-container .new-planAdd-detail {
+      display: block;
+      border: 2px solid #d3d3df; }
+      .plan-inquiry-container .allPlans-container .new-planAdd-detail table td i {
+        cursor: pointer; }
+
+/*.popup-modal-container{*/
+.cancelation-modal .plan-cancelation-container {
+  width: 95%;
+  /*Plan cenlation ends*/ }
+  .cancelation-modal .plan-cancelation-container .srs-heading {
+    margin-top: 2%; }
+  .cancelation-modal .plan-cancelation-container .cross {
+    font-size: 1.5em;
+    padding: 10px; }
+  .cancelation-modal .plan-cancelation-container .plan-cancelation {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    justify-content: center;
+    align-items: flex-start; }
+    .cancelation-modal .plan-cancelation-container .plan-cancelation .plan-search-field {
+      height: auto;
+      padding: 0 2em;
+      width: 100%; }
+      .cancelation-modal .plan-cancelation-container .plan-cancelation .plan-search-field .search-form div {
+        margin-top: 12px; }
+        .cancelation-modal .plan-cancelation-container .plan-cancelation .plan-search-field .search-form div input {
+          margin: 0; }
+        .cancelation-modal .plan-cancelation-container .plan-cancelation .plan-search-field .search-form div button {
+          height: 50px;
+          border: 2px solid #36384B;
+          border-radius: 10px;
+          background: #434DA0;
+          position: relative;
+          left: -50px;
+          width: 25%; }
+          .cancelation-modal .plan-cancelation-container .plan-cancelation .plan-search-field .search-form div button i {
+            font-size: 1.5em;
+            color: white; }
+    .cancelation-modal .plan-cancelation-container .plan-cancelation .reason-container {
+      height: auto;
+      padding: 0 2em;
+      width: 100%; }
+      .cancelation-modal .plan-cancelation-container .plan-cancelation .reason-container textarea {
+        border: 2px solid #36384B;
+        border-radius: 0;
+        height: 350px;
+        font-size: 16px; }
+  .cancelation-modal .plan-cancelation-container .search-plan-details {
+    margin-top: 3em; }
+    .cancelation-modal .plan-cancelation-container .search-plan-details .plan-registration-box {
+      display: block;
+      width: 95%;
+      margin-bottom: 0; }
+      .cancelation-modal .plan-cancelation-container .search-plan-details .plan-registration-box .new-planAdd-detail {
+        /*display: block;*/ }
+
+/*}*/
+.planRegistration-modal-container .planRegistration-modal {
+  width: 85%; }
+  .planRegistration-modal-container .planRegistration-modal .srs-heading {
+    margin-top: 1%; }
+  .planRegistration-modal-container .planRegistration-modal .cross {
+    padding: 10px;
+    font-size: 1.5em; }
+  .planRegistration-modal-container .planRegistration-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(2) {
+    display: grid;
+    grid-template-columns: 30% 65%;
+    margin-left: 0; }
+
+@media screen and (max-width: 768px) {
+  .plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box {
+    display: grid;
+    grid-template-columns: 90%; }
+
+  .planRegistration-modal-container .planRegistration-modal {
+    width: 100%; }
+    .planRegistration-modal-container .planRegistration-modal .addItem-form .planRegis-form .formField-data-controller {
+      grid-template-columns: 100%; }
+      .planRegistration-modal-container .planRegistration-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(1) {
+        justify-content: space-between; }
+      .planRegistration-modal-container .planRegistration-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(2) {
+        display: grid;
+        grid-template-columns: 35% 65%; } }
+.order-entry-container {
+  width: 85%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto; }
+  .order-entry-container .two-grid-column {
+    margin-top: 4em; }
+    .order-entry-container .two-grid-column .add-item-info {
+      height: auto;
+      width: 100%;
+      padding: 0 1em 0 0; }
+      .order-entry-container .two-grid-column .add-item-info .planRegis-form div {
+        /*justify-content: space-between;*/ }
+      .order-entry-container .two-grid-column .add-item-info .planRegis-form label {
+        text-align: left;
+        width: 25%; }
+      .order-entry-container .two-grid-column .add-item-info .planRegis-form select {
+        margin-bottom: 0; }
+    .order-entry-container .two-grid-column .shipping-instructions {
+      height: auto;
+      width: 100%;
+      padding: 0 0 0 1em; }
+      .order-entry-container .two-grid-column .shipping-instructions textarea {
+        font-size: 16px; }
+      .order-entry-container .two-grid-column .shipping-instructions .two-grid-column {
+        margin-top: 0; }
+  .order-entry-container .planRegis-form {
+    width: 100%;
+    padding: 0; }
+  .order-entry-container .order-table-container {
+    width: 100%;
+    border: 2px solid #36384B;
+    margin: 3% auto; }
+    .order-entry-container .order-table-container .new-planAdd-detail {
+      display: block;
+      border: 0; }
+      .order-entry-container .order-table-container .new-planAdd-detail table th, .order-entry-container .order-table-container .new-planAdd-detail table td {
+        /*text-align: left;*/
+        word-break: break-word; }
+      .order-entry-container .order-table-container .new-planAdd-detail table th {
+        width: 10%; }
+      .order-entry-container .order-table-container .new-planAdd-detail table th:nth-child(3) {
+        width: 25%; }
+      .order-entry-container .order-table-container .new-planAdd-detail table th:nth-child(4), .order-entry-container .order-table-container .new-planAdd-detail table th:nth-child(7), .order-entry-container .order-table-container .new-planAdd-detail table th:nth-child(8) {
+        width: 5%; }
+  .order-entry-container .orderEntry-controls {
+    margin-bottom: 2em; }
+    .order-entry-container .orderEntry-controls p {
+      padding-left: 30%;
+      text-align: right; }
+
+.editOrder-modal-container .editOrder-modal .planRegis-form {
+  width: 90%; }
+  .editOrder-modal-container .editOrder-modal .planRegis-form div {
+    justify-content: center; }
+  .editOrder-modal-container .editOrder-modal .planRegis-form input {
+    width: 80%; }
+  .editOrder-modal-container .editOrder-modal .planRegis-form .addItem-quantity .label {
+    font-family: "aktiv-grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    background: none;
+    color: #36384B;
+    text-shadow: none;
+    margin-right: 1em; }
+  .editOrder-modal-container .editOrder-modal .planRegis-form .addItem-quantity .button-minus, .editOrder-modal-container .editOrder-modal .planRegis-form .addItem-quantity .button-plus {
+    border-radius: 50%;
+    width: auto;
+    margin: 5px;
+    font-size: 2em;
+    vertical-align: middle;
+    text-align: center; }
+  .editOrder-modal-container .editOrder-modal .planRegis-form .addItem-quantity .button-minus {
+    padding: 2px 8px 8px 8px; }
+  .editOrder-modal-container .editOrder-modal .planRegis-form .addItem-quantity .button-plus {
+    padding: 5px; }
+  .editOrder-modal-container .editOrder-modal .planRegis-form .addItem-quantity .quantity-input {
+    width: 15%;
+    text-align: center;
+    color: #36384B;
+    border-radius: 0;
+    border: 2px solid #C8C8C8;
+    padding: 0;
+    margin: 0; }
+  .editOrder-modal-container .editOrder-modal .planRegis-form .item-found {
+    border: 1px solid #d1d1e0;
+    padding: 0;
+    width: 60%;
+    margin: 0 auto; }
+    .editOrder-modal-container .editOrder-modal .planRegis-form .item-found p {
+      font-size: 14px;
+      font-family: "aktiv-grotesk", Helvetica, sans-serif;
+      color: #36384B;
+      border-bottom: 1px solid #d1d1e0; }
+      .editOrder-modal-container .editOrder-modal .planRegis-form .item-found p:hover {
+        background: #70E9B2; }
+
+@media screen and (max-width: 768px) {
+  .order-entry-container {
+    margin-top: 10%;
+    width: 100%;
+    height: auto; }
+    .order-entry-container .new-planAdd-detail {
+      display: block;
+      border: 0; }
+      .order-entry-container .new-planAdd-detail table td {
+        text-align: right; }
+    .order-entry-container .orderEntry-controls {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2em; }
+      .order-entry-container .orderEntry-controls p {
+        padding-left: 0;
+        text-align: right; }
+    .order-entry-container .two-grid-column {
+      grid-template-columns: 100%; } }
+.planPending-registrations-container .status-report-container {
+  width: 85%;
+  max-height: 100%;
+  height: auto;
+  border: 2px solid #36384B;
+  margin: 2% auto; }
+  .planPending-registrations-container .status-report-container .status-report-table-container .invoice-title p {
+    margin: 10px; }
+  .planPending-registrations-container .status-report-container .status-report-table-container .new-planAdd-detail {
+    display: block;
+    border: 2px solid #d1d1e0; }
+  .planPending-registrations-container .status-report-container .status-report-table-container .box-total {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .planPending-registrations-container .status-report-container .status-report-table-container .box-total p {
+      border: 2px solid #d1d1e0;
+      color: #36384B;
+      padding: 10px;
+      font-weight: 900;
+      text-align: center; }
+
+@media screen and (max-width: 768px) {
+  .planPending-registrations-container .status-report-container {
+    width: 100%; } }
+.order-history-container {
+  width: 85%;
+  max-width: 100%;
+  margin: 0 auto;
+  /*order-history-table*/ }
+  .order-history-container .filter-box {
+    border: 2px solid #36384B;
+    height: auto;
+    width: 85%;
+    margin: 3em auto; }
+    .order-history-container .filter-box .planRegis-form {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 40% 40% 20%;
+      padding: 10px;
+      align-items: center; }
+      .order-history-container .filter-box .planRegis-form div {
+        justify-content: center; }
+      .order-history-container .filter-box .planRegis-form .date-filter {
+        display: flex;
+        flex-direction: column; }
+        .order-history-container .filter-box .planRegis-form .date-filter div:nth-child(1) p {
+          width: 90%;
+          text-align: center;
+          border-bottom: 1px dashed #36384B;
+          line-height: 0.1px;
+          margin: 10px auto; }
+          .order-history-container .filter-box .planRegis-form .date-filter div:nth-child(1) p span {
+            background: #fff;
+            padding: 0 5px; }
+      .order-history-container .filter-box .planRegis-form label {
+        text-align: center; }
+      .order-history-container .filter-box .planRegis-form .select-location {
+        width: 100%;
+        padding: 0 10px; }
+  .order-history-container .order-history-table-container {
+    width: 100%;
+    margin: 3em auto;
+    border: 2px solid #36384B; }
+    .order-history-container .order-history-table-container .new-planAdd-detail {
+      display: block;
+      border: 2px solid #d3d3df; }
+
+@media screen and (max-width: 980px) {
+  .order-history-container {
+    width: 100%; }
+    .order-history-container .filter-box {
+      width: 100%; }
+      .order-history-container .filter-box .planRegis-form {
+        grid-template-columns: auto; }
+        .order-history-container .filter-box .planRegis-form .select-location {
+          margin: 1em 0; } }
+.rep-profile-container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 0; }
+  .rep-profile-container .rep-profile {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: flex-start;
+    grid-gap: 1em 2em; }
+  .rep-profile-container .organization-container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%; }
+  .rep-profile-container .other-details-container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    max-width: 100%; }
+  .rep-profile-container .financial-details .financial-info-circle {
+    color: #70E9B2; }
+  .rep-profile-container .profile-boxStyle {
+    border: 2px solid #36384B;
+    padding: 10px; }
+    .rep-profile-container .profile-boxStyle p {
+      font-weight: 700;
+      margin-top: 10px; }
+    .rep-profile-container .profile-boxStyle .planRegis-form {
+      width: auto;
+      padding: 0; }
+      .rep-profile-container .profile-boxStyle .planRegis-form select {
+        margin-top: 5px; }
+  .rep-profile-container .margin-left {
+    margin-left: 5px; }
+  .rep-profile-container .margin-right {
+    margin-right: 5px; }
+  .rep-profile-container .transit-input {
+    width: 100%; }
+    .rep-profile-container .transit-input input {
+      width: 98%; }
+  .rep-profile-container .partner-profiles h3 {
+    margin: 10px; }
+  .rep-profile-container .partner-profiles .new-planAdd-detail {
+    display: block;
+    margin: 0; }
+    .rep-profile-container .partner-profiles .new-planAdd-detail th:first-of-type, .rep-profile-container .partner-profiles .new-planAdd-detail td:first-of-type {
+      border-right: 1px solid #d3d3df; }
+  .rep-profile-container .agreement h3 {
+    margin: 10px 0; }
+  .rep-profile-container .agreement .profile-boxStyle input[type="checkbox"] {
+    width: 30px;
+    height: 30px; }
+  .rep-profile-container .agreement .profile-boxStyle p {
+    margin: 0 0 0 10px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #36384B;
+    font-family: "aktiv-grotesk", Helvetica, sans-serif; }
+  .rep-profile-container .agreement .profile-boxStyle a {
+    color: #70E9B2;
+    text-decoration: underline;
+    margin-left: 3em;
+    font-weight: 700; }
+
+.popup-modals-container .partner-profile-modal-container .partner-profile-modal .purple-background h2::after {
+  padding: 0;
+  font-weight: 700; }
+.popup-modals-container .partner-profile-modal-container .partner-profile-modal p {
+  margin-left: 1em; }
+.popup-modals-container .partner-profile-modal-container .partner-profile-modal .new-planAdd-detail {
+  display: block;
+  border: 2px solid #d3d3df; }
+.popup-modals-container .agreementReader-modal-container .agreementReader-modal .purple-background h2::after {
+  padding: 0;
+  font-weight: 700; }
+.popup-modals-container .agreementReader-modal-container .agreementReader-modal .padding-1 {
+  padding: 1em; }
+.popup-modals-container .agreementReader-modal-container .agreementReader-modal .agreement-text {
+  max-width: 100%;
+  padding: 10px 1em;
+  border: 2px solid #d3d3df;
+  overflow-y: scroll;
+  max-height: 300px; }
+  .popup-modals-container .agreementReader-modal-container .agreementReader-modal .agreement-text p {
+    margin: 10px 0;
+    font-size: 16px; }
+.popup-modals-container .agreementReader-modal-container .agreementReader-modal .agreement-radioButtons form {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .popup-modals-container .agreementReader-modal-container .agreementReader-modal .agreement-radioButtons form div {
+    margin: 0 10px; }
+  .popup-modals-container .agreementReader-modal-container .agreementReader-modal .agreement-radioButtons form label {
+    color: #434DA0;
+    font-weight: 700; }
+  .popup-modals-container .agreementReader-modal-container .agreementReader-modal .agreement-radioButtons form input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    color: #434DA0; }
+.popup-modals-container .agreementReader-modal-container .agreementReader-modal .agreement-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .popup-modals-container .agreementReader-modal-container .agreementReader-modal .agreement-actions i {
+    color: #434DA0;
+    font-size: 1.5em;
+    margin: 0 10px; }
+.popup-modals-container .financial-details-modal-container .financial-details-modal .purple-background h2::after {
+  padding: 0;
+  font-weight: 700; }
+.popup-modals-container .financial-details-modal-container .financial-details-modal .checkbook-content {
+  padding: 1em; }
+  .popup-modals-container .financial-details-modal-container .financial-details-modal .checkbook-content img {
+    margin-top: 10px; }
+
+@media screen and (max-width: 768px) {
+  .rep-profile-container .rep-profile {
+    display: grid;
+    grid-template-columns: 100%; }
+
+  .popup-modals-container .partner-profile-modal-container .partner-profile-modal {
+    width: 90%;
+    margin: 35% auto; }
+  .popup-modals-container .agreementReader-modal-container .agreementReader-modal {
+    width: 90%;
+    margin: 35% auto; }
+    .popup-modals-container .agreementReader-modal-container .agreementReader-modal .agreement-actions {
+      margin-top: 1em; }
+  .popup-modals-container .financial-details-modal-container .financial-details-modal {
+    width: 90%;
+    margin: 35% auto; } }
+@media screen and (min-width: 1200px) {
+  .rep-profile-container {
+    width: 65%; } }
+/*Media queries */
+@media screen and (max-width: 768px) {
+  .srs-login-container {
+    width: 90%;
+    margin-top: 20%; }
+
+  .srs-heading {
+    margin-top: 10%; }
+
+  .planRegis-form {
+    width: 90%; }
+    .planRegis-form div .info-text-container {
+      width: 100%;
+      top: 40%;
+      left: 0; }
+    .planRegis-form .planRegis-divStyle {
+      grid-template-columns: 35% 65%;
+      display: grid; }
+      .planRegis-form .planRegis-divStyle input {
+        width: 100%; }
+      .planRegis-form .planRegis-divStyle select {
+        width: 100%; }
+    .planRegis-form .info-grid {
+      display: grid;
+      grid-template-columns: 35% 56% 0%; }
+    .planRegis-form label {
+      text-align: left;
+      margin-right: 10px; }
+    .planRegis-form .formField-data-controller {
+      width: 100%; }
+      .planRegis-form .formField-data-controller .fillForm-button {
+        margin-left: 0; }
+      .planRegis-form .formField-data-controller .clearForm-button {
+        margin-left: 0;
+        justify-content: flex-end; }
+    .planRegis-form .twoInput-fields {
+      grid-template-columns: 35% 65%; }
+      .planRegis-form .twoInput-fields input:nth-of-type(1) {
+        margin-left: 0; }
+      .planRegis-form .twoInput-fields input:nth-of-type(2) {
+        margin-left: 0; }
+      .planRegis-form .twoInput-fields input {
+        width: 100%; }
+    .planRegis-form .planRegis-button {
+      width: 100%;
+      justify-content: center;
+      align-items: center; }
+    .planRegis-form .hidden-field {
+      display: block;
+      visibility: hidden; }
+
+  .new-planAdd-detail {
+    border: none; }
+    .new-planAdd-detail table {
+      border: 0; }
+      .new-planAdd-detail table thead {
+        border: none;
+        clip: react(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute; }
+      .new-planAdd-detail table tr {
+        border-bottom: 1px solid #36384B;
+        display: block;
+        padding: 5px 0; }
+      .new-planAdd-detail table td {
+        display: block;
+        font-size: 0.8em;
+        text-align: right; }
+      .new-planAdd-detail table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: 700;
+        color: #434DA0; }
+
+  .popup-modals-container {
+    /*This is pop up section class*/ }
+    .popup-modals-container .addItem-modal {
+      overflow: auto; }
+      .popup-modals-container .addItem-modal .addItem-form {
+        width: 90%;
+        margin: 30% auto; }
+        .popup-modals-container .addItem-modal .addItem-form .planRegis-form .formField-data-controller {
+          grid-template-columns: 100%; }
+          .popup-modals-container .addItem-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(1) {
+            justify-content: space-between; }
+          .popup-modals-container .addItem-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(2) {
+            display: grid;
+            grid-template-columns: 35% 65%; }
+            .popup-modals-container .addItem-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(2) input {
+              width: 100%; }
+
+  .mobile-column {
+    flex-direction: column;
+    grid-template-columns: 100%; }
+
+  .retailer-profile-container {
+    width: 100%; }
+
+  .shipping-locations-modal .shipping-locations-form {
+    width: 90%;
+    margin-top: 30%; }
+    .shipping-locations-modal .shipping-locations-form .planRegis-form div {
+      width: 100%; }
+    .shipping-locations-modal .shipping-locations-form .planRegis-form input {
+      width: 100%; }
+    .shipping-locations-modal .shipping-locations-form .planRegis-form select {
+      width: 100%; }
+  .shipping-locations-modal .width-45 {
+    width: 100%; }
+
+  .plan-inquiry-container .manual-search-container .date-filter-box .date-filter-form {
+    flex-flow: column; }
+
+  .plan-cancelation-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto; }
+    .plan-cancelation-container .container-border .plan-cancelation {
+      display: grid;
+      grid-template-columns: 100%;
+      justify-content: center; }
+      .plan-cancelation-container .container-border .plan-cancelation .reason-container {
+        margin-top: 2em; }
+        .plan-cancelation-container .container-border .plan-cancelation .reason-container textarea {
+          border: 2px solid #36384B;
+          border-radius: 0;
+          height: 350px; }
+
+  .popup-modals-container .addItem-modal .addItem-form, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal, .popup-modals-container .mainSubmit-modal-container .remove-planModal, .popup-modals-container .remove-planModal-container .mainSubmit-modal, .popup-modals-container .remove-planModal-container .remove-planModal, .shipping-locations-modal .shipping-locations-form, .contacts-form-modal .contacts-form {
+    width: 100%;
+    margin: 50% auto; } }
+@media screen and (min-width: 769px) {
+  .srs-nav-container .zuc-main-nav .zuc-nav-brand {
+    width: 22vw;
+    max-width: 100%; } }
+@media screen and (max-width: 1200px) {
+  .plan-inquiry-container {
+    width: 100%;
+    padding: 0 1em; }
+    .plan-inquiry-container .search-container {
+      margin-top: 7%;
+      grid-template-columns: 100%; }
+    .plan-inquiry-container .manual-search-container {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: grid;
+      grid-row-gap: 2em; }
+      .plan-inquiry-container .manual-search-container .filter-param-box {
+        grid-template-columns: auto; }
+    .plan-inquiry-container .advance-search-container {
+      width: 100%;
+      max-width: 100%;
+      height: auto; }
+    .plan-inquiry-container .allPlans-container {
+      width: 100%; } }
 @media screen and (max-width: 769px) {
   .planRegis-form div .info-text-container {
     width: 100%;
     top: 40%;
-    left: 0;
-  }
-}
+    left: 0; } }
 
 /*# sourceMappingURL=SRS-system.css.map */

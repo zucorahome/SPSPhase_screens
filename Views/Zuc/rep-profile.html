@@ -176,7 +176,7 @@
       <div class="other-details-container">
         <div class="financial-details">
           <div class="flex flex-row flex-vert-center">
-            <h3 class="profileBox-heading">Financial Details <i class="fa fa-info-circle info-circle"></i></h3>
+            <h3 class="profileBox-heading">Financial Details <i class="fa fa-info-circle financial-info-circle"></i></h3>
           </div>
           <div class="profile-boxStyle">
             <!-- <form> -->
@@ -209,11 +209,11 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr class="open-partnerProfileModal">
                   <td data-label="Name">Partner (Independent)</td>
                   <td data-label="Status">Active</td>
                 </tr>
-                <tr>
+                <tr class="open-partnerProfileModal">
                   <td data-label="Name">Real Estate</td>
                   <td data-label="Status">Inactive</td>
                 </tr>
@@ -228,20 +228,142 @@
               <input type="checkbox" name="agreement-checked" for="agreement-check"></input>
               <p>I have read and accept the Representative Terms & Conditions.</p>
             </div>
-            <a href="#/">View Terms & Conditions</a>
+            <a href="#/" class="open-agreementModal">View Terms & Conditions</a>
           </div>
 
         </div>
       </div>
       <!--other details container ends-->
     </div>
-    <div class="flex flex-vert-center flex-hor-between orderEntry-controls mobile-column margin-bottom-2">
+    <div class="flex flex-vert-center flex-hor-between orderEntry-controls mobile-column margin-bottom-2 margin-top-1">
       <div class="">
-        <a href="#/" class="simple-link u-uppercase" style="margin-left:10px;">Change password</a>&nbsp;<i class="fa fa-pencil-alt purple-text"></i>
+        <a href="change-passwordFromCurrent.html" class="simple-link u-uppercase" style="margin-left:10px;">Change password</a>&nbsp;<i class="fa fa-pencil-alt purple-text"></i>
       </div>
 
       <div class="flex flex-vert-center flex-hor-center margin-top-1">
         <button class="zuc-btn zuc-btn-secondary u-soft-shadow" type="submit">Save</button></div>
+    </div>
+  </section>
+  <section class="popup-modals-container">
+    <div class="partner-profile-modal-container non-visible">
+      <div class="partner-profile-modal">
+        <div class="purple-background">
+          <h2>Partner Profile Details</h2>
+        </div>
+        <p class="u-bold">Plan ID: ZHR200101</p>
+        <div class="new-planAdd-detail">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Product Category</th>
+                <th scope="col">Comm %</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Name" class="u-bold">Independent Partner</td>
+                <td data-label="Product Category">Furniture & Mattress Plans</td>
+                <td data-label="Comm %">8%</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td data-label="Product Category">Appliances</td>
+                <td data-label="Comm %">5%</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td data-label="Product Category">Adjustable Base</td>
+                <td data-label="Comm %">8%</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td data-label="Product Category">Products</td>
+                <td data-label="Comm %">8%</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td data-label="Product Category">Smarter Living</td>
+                <td data-label="Comm %">2%</td>
+              </tr>
+              <tr>
+                <td data-label="Name" class="u-bold">Bob's Furniture</td>
+                <td data-label="Location" class="u-bold">101 Westmall</td>
+                <td data-label=""></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td data-label="Product Category">Classic Plans</td>
+                <td data-label="Comm %">6%</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td data-label="Product Category">Product</td>
+                <td data-label="Comm %">10%</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td data-label="Location" class="u-bold">102 Sunnyridge</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td data-label="Product Category">Smarter Living</td>
+                <td data-label="Comm %">3%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="agreementReader-modal-container non-visible">
+      <div class="agreementReader-modal">
+        <div class="purple-background">
+          <h2>Representative Agreement</h2>
+        </div>
+        <div class="padding-1">
+          <div class="agreement-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id interdum urna, quis elementum elit. In hac habitasse platea dictumst. Quisque at metus in massa iaculis finibus. Nullam semper mauris vehicula dui congue pretium. Etiam tempus est libero, quis laoreet libero tempus vel. Pellentesque tincidunt ipsum vel risus porta blandit. Praesent tempor sapien et rhoncus posuere.</p>
+
+            <p>Nunc ultrices ut felis nec consectetur. Aliquam sit amet pulvinar urna, eget ornare lacus. Proin id lectus neque. Nulla finibus scelerisque justo quis cursus. Suspendisse fringilla nisi non ante sodales pellentesque. In vel metus vehicula, euismod neque ac, posuere elit. Nulla odio nisl, luctus in ipsum id, sodales venenatis neque. Etiam vel semper dui. Donec mollis mi sed sapien dapibus, sed dictum augue tristique. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum hendrerit nunc non porttitor pharetra. Sed rutrum mollis arcu sed consectetur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla velit erat, ullamcorper quis urna vel, facilisis pellentesque turpis. Phasellus id ligula aliquam mauris imperdiet egestas. Nam at sem nisi.</p>
+
+            <p>Nam non ornare nisi. Nullam vitae eleifend justo, eget maximus ipsum. Donec a augue a mauris vulputate mattis at in nisi. In tortor lorem, molestie sed tempus id, sagittis a mauris. Quisque semper convallis tortor, at viverra magna. Pellentesque feugiat libero et diam lacinia, ac cursus justo tempor. Nunc sed pulvinar metus. Quisque quis magna eget ante gravida mollis. Cras eu turpis non arcu porta feugiat. Praesent metus lacus, molestie vel lorem eu, pretium vehicula diam. Etiam volutpat mauris a ex aliquam, eu euismod lorem commodo. Vivamus malesuada mollis feugiat. Vivamus lacus lorem, suscipit vitae diam ac, tincidunt vulputate libero. Nulla consectetur ipsum vel iaculis imperdiet. Sed pulvinar, ligula ac lacinia cursus, dolor metus bibendum urna, vel tempus ante eros et erat. Praesent id ante vulputate, bibendum nisl id, rhoncus ante.</p>
+          </div>
+          <!--  -->
+          <div class="flex flex-vert-center flex-hor-between margin-top-1 mobile-column">
+
+            <div class="agreement-radioButtons">
+              <form>
+                <div class="flex fle-row flex-vert-center">
+                  <label for="checkfor-agreement">I Do Not Agree</label>
+                  <input type="radio" name="yesOrNo-agreement-check" value="no">
+                </div>
+                <div class="flex flex-row flex-vert-center">
+                  <label for="checkfor-agreement">I Agree</label>
+                  <input type="radio" name="yesOrNo-agreement-check" value="yes">
+                </div>
+              </form>
+            </div>
+
+            <div class="agreement-actions">
+                <a href="http://www.africau.edu/images/default/sample.pdf" target="_blank"><i class="fas fa-print"></i></a>
+                <a href="../../Content/Zuc/documents/sample.pdf" download="Agreement"><i class="fas fa-download"></i></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="financial-details-modal-container non-visible">
+      <div class="financial-details-modal">
+        <div class="purple-background">
+          <h2>Financial Details</h2>
+        </div>
+        <div class="checkbook-content">
+          <p>Your monthly commission for active enrolments are automatically deposited into the account sidentified here. Your HST/GST number is required for payment of appropriate sales tax.</p>
+          <img src="../../Images/Zuc/images/cheque_sample.png" alt="checkbook image with all explanation." class="center">
+        </div>
+      </div>
     </div>
   </section>
   <!-- main page content ends -->

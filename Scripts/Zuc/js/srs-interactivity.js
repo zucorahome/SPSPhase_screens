@@ -61,7 +61,7 @@ let shippingCross = $('.shipping-locations-form').find('.purple-background h2');
 
 shippingCross.bind('click',{key:'.shipping-locations-modal'},closeModal);
 
-//Contact form  
+//Contact form
 
 $('.contact-form-button').bind('click',{key:'.contacts-form-modal'},openModal);
 $('.contact-form-edit').bind('click',{key:'.contacts-form-modal'},openModal);
@@ -78,7 +78,7 @@ let orderAddButton = $('.editOrder-modal').find('.purple-background h2');
 orderAddButton.bind('click',{key:'.editOrder-modal-container'},closeModal);
 
 // Plan reporting: pending registrations
- 
+
 let todayDate = new Date();
 let twoDigitMonth  = (todayDate.getMonth() >= 10) ? (todayDate.getMonth()+1) : '0'+(todayDate.getMonth()+1);
 let currentDate = twoDigitMonth + '/' + todayDate.getDate() + '/' + todayDate.getFullYear();
@@ -102,7 +102,7 @@ $('.cancelPlan-Button').click(function(){
 	//add non visible class
 	$('.cancelation-modal').addClass('non-visible');
 	$('.cancel-caution-container').removeClass('non-visible');
-	
+
 });
 
 $('.open-PlanRegis').click(function(){
@@ -111,4 +111,25 @@ $('.open-PlanRegis').click(function(){
 });
 $('.planRegistration-modal').find('.close-modal').bind('click',{key:'.planRegistration-modal-container'},closeModal);
 
+// SPS Phase screens
+
+$('.open-partnerProfileModal').click(function(){
+	$('.partner-profile-modal-container').removeClass('non-visible');
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+});
+
+
+$('.partner-profile-modal').find('.purple-background h2').click(function(){
+	$('.partner-profile-modal-container').addClass('non-visible');
+});
+
+$('.open-agreementModal').bind('click',{key:'.agreementReader-modal-container'},openModal);
+let closeAgreementModal = $('.agreementReader-modal').find('.purple-background h2');
+
+closeAgreementModal.bind('click',{key:'.agreementReader-modal-container'},closeModal);
+
+$('.financial-info-circle').bind('click',{key:'.financial-details-modal-container'},openModal);
+let closeFinancialInfoModal = $('.financial-details-modal').find(".purple-background h2");
+
+closeFinancialInfoModal.bind('click',{key:'.financial-details-modal-container'},closeModal);
 });

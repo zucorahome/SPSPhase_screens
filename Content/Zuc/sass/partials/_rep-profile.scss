@@ -26,11 +26,17 @@
     margin:0;
     padding:0;
     max-width:100%;
-    .info-circle{
-      color:$zucora-mint-green;
-    }
+
   }
 
+.financial-details{
+  .financial-info-circle{
+    color:$zucora-mint-green;
+  }
+  .info-text-container{
+
+  }
+}
   .profile-boxStyle{
     border:2px solid $grey-text;
     padding:10px;
@@ -104,11 +110,154 @@
 
 }
 
+.popup-modals-container{
+  .partner-profile-modal-container{
+    @extend %modal;
+
+    .partner-profile-modal{
+      @extend %modal-background;
+      .purple-background {
+				h2::after {
+					@extend %form-cross;
+					padding: 0;
+					font-weight: 700;
+				}
+			}
+      p{
+        margin-left:1em;
+      }
+      .new-planAdd-detail{
+        display: block;
+        border: 2px solid #d3d3df;
+      }
+    }
+  }
+
+  .agreementReader-modal-container{
+    @extend %modal;
+    .agreementReader-modal{
+      @extend %modal-background;
+
+        .purple-background{
+          h2::after{
+            @extend %form-cross;
+            padding:0;
+            font-weight: 700;
+          }
+        }
+        .padding-1{
+          padding:1em;
+        }
+        .agreement-text{
+          max-width:100%;
+          padding:10px 1em;
+          border:2px solid $light-grey;
+          overflow-y:scroll;
+          max-height:300px;
+
+          p{
+            margin:10px 0;
+            font-size:16px;
+          }
+        }
+
+        .agreement-radioButtons{
+          form{
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+
+              div{
+                margin:0 10px;
+              }
+              label{
+                color:$zucora-purple;
+                font-weight: 700;
+              }
+              input[type="radio"]{
+                  width:20px;
+                  height: 20px;
+                  margin-left:5px;
+                  color:$zucora-purple;
+              }
+            }
+        }
+
+        .agreement-actions{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          i{
+            color:$zucora-purple;
+            font-size:1.5em;
+            margin:0 10px;
+
+          }
+        }
+    }
+  }
+
+  .financial-details-modal-container{
+    @extend %modal;
+    .financial-details-modal{
+      @extend %modal-background;
+
+        .purple-background{
+          h2::after{
+            @extend %form-cross;
+            padding:0;
+            font-weight: 700;
+          }
+        }
+        .checkbook-content{
+          padding:1em;
+          img{
+            margin-top:10px;
+          }
+        }
+    }
+  }
+}
+
 @media screen and (max-width:$mobile-width){
   .rep-profile-container{
     .rep-profile{
       display: grid;
       grid-template-columns: 100%;
     }
+  }
+  .popup-modals-container{
+    .partner-profile-modal-container{
+      .partner-profile-modal{
+        width:90%;
+        margin:35% auto;
+      }
+    }
+
+    .agreementReader-modal-container{
+      .agreementReader-modal{
+        width:90%;
+        margin:35% auto;
+
+        .agreement-radioButtons{
+
+        }
+        .agreement-actions{
+          margin-top:1em;
+        }
+      }
+    }
+    .financial-details-modal-container{
+      .financial-details-modal{
+        width:90%;
+        margin:35% auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:$max-laptop-width){
+.rep-profile-container{
+      width:65%;
   }
 }

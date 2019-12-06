@@ -125,11 +125,37 @@ $('.partner-profile-modal').find('.purple-background h2').click(function(){
 
 $('.open-agreementModal').bind('click',{key:'.agreementReader-modal-container'},openModal);
 let closeAgreementModal = $('.agreementReader-modal').find('.purple-background h2');
-
 closeAgreementModal.bind('click',{key:'.agreementReader-modal-container'},closeModal);
+
+//when i do not agree link is clicked
+$('.agreement-doNotCheck').bind('click',{key:'.agreementReader-modal-container'},closeModal);
+
+//when I agree clicked
+$('.agreement-check').click(function(){
+	$('input[name="agreement-checked"]').attr('checked',true);
+	$('.agreementReader-modal-container').addClass('non-visible');
+});
+
 
 $('.financial-info-circle').bind('click',{key:'.financial-details-modal-container'},openModal);
 let closeFinancialInfoModal = $('.financial-details-modal').find(".purple-background h2");
 
 closeFinancialInfoModal.bind('click',{key:'.financial-details-modal-container'},closeModal);
+
+// agreement modal
+let agreementText = $('.agreement-text');
+		agreementText.scroll(function(){
+			// console.log("scroll function called");
+			let modalScrollTop= agreementText.scrollTop();
+			let modalScrollHeight = agreementText.prop('scrollHeight');
+			let modalInnerHeight = agreementText.innerHeight();
+
+			// console.log('modalScrollTop is : '+ modalScrollTop+' modalScrollHeight is ' + modalScrollHeight +' And Modal Inner Height is ' + modalInnerHeight);
+			if(modalScrollTop + modalInnerHeight >= (modalScrollHeight -50)){
+				$('.agreement-controls').show(1000);
+			}else{
+				$('.agreement-controls').hide();
+			}
+		});
+
 });

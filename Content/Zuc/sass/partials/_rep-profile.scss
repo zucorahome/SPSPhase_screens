@@ -160,7 +160,10 @@
             font-size:16px;
           }
         }
-
+        .agreement-controls{
+          display: none;
+          // visibility: hidden;
+        }
         .agreement-radioButtons{
           form{
               display: flex;

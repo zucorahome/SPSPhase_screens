@@ -15,6 +15,10 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
   background-color: white;
 }
 
+body {
+  color: #36384B;
+}
+
 .popup-modals-container .financial-details-modal-container, .popup-modals-container .agreementReader-modal-container, .popup-modals-container .partner-profile-modal-container, .editOrder-modal-container, .planRegistration-modal-container, .cancel-caution-container, .cancelation-modal, .contacts-form-modal, .shipping-locations-modal, .popup-modals-container .mainSubmit-modal-container,
 .popup-modals-container .remove-planModal-container, .popup-modals-container .addItem-modal {
   position: fixed;
@@ -1431,6 +1435,19 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
   justify-content: center;
   align-items: center;
   grid-gap: 3em 1.5em;
+}
+
+.rep-landingPage-container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 0;
+}
+.rep-landingPage-container .rep-landingPage {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 1em 2em;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 /*Media queries */

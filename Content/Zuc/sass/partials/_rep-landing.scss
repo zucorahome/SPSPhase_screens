@@ -1,0 +1,14 @@
+.rep-landingPage-container{
+  width:85%;
+  margin:0 auto;
+  padding:0;
+
+  .rep-landingPage{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap:1em 2em;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+}

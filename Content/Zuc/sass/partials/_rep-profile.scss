@@ -31,8 +31,9 @@
   }
 
 .financial-details{
-  .financial-info-circle{
+ .rp-financial-details-info-icon{
     color:$zucora-mint-green;
+    margin-left:10px;
   }
   .info-text-container{
 
@@ -42,7 +43,7 @@
     border:2px solid $grey-text;
     padding:10px;
 
-    p{
+    p, label{
       font-weight: 700;
       margin-top:10px;
     }
@@ -72,7 +73,7 @@
 
   .partner-profiles{
     h3{
-      margin:10px;
+      margin:10px 0;
     }
     .new-planAdd-detail{
       display: block;
@@ -93,17 +94,18 @@
         width:30px;
         height:30px;
       }
-      p{
+      label{
         margin:0 0 0 10px;
         font-weight: 500;
         font-size: 16px;
         color: #36384B;
         font-family: $para-fonts;
+        margin-bottom:10px;
       }
       a{
         color: $zucora-mint-green;
         text-decoration: underline;
-        margin-left: 3em;
+        margin-left: 2.5em;
         font-weight: 700;
       }
     }
@@ -112,17 +114,20 @@
 }
 
 .popup-modals-container{
-  .partner-profile-modal-container{
+  .rp-partner-profile-details-modal-container{
     @extend %modal;
-
-    .partner-profile-modal{
+    .rp-partner-profile-details-modal{
       @extend %modal-background;
       .purple-background {
-				h2::after {
-					@extend %form-cross;
-					padding: 0;
-					font-weight: 700;
-				}
+				h2{
+            margin-bottom: 0;
+          }
+          .close-modal{
+            @extend %form-cross;
+            padding:0;
+            font-weight: 700;
+            margin-right:1em;
+          }
 			}
       p{
         margin-left:1em;
@@ -134,22 +139,26 @@
     }
   }
 
-  .agreementReader-modal-container{
+  .rp-agreement-modal-container{
     @extend %modal;
-    .agreementReader-modal{
+    .rp-agreement-modal{
       @extend %modal-background;
 
         .purple-background{
-          h2::after{
+          h2{
+            margin-bottom:0;
+          }
+          .close-modal{
             @extend %form-cross;
             padding:0;
             font-weight: 700;
+            margin-right:1em;
           }
         }
         .padding-1{
           padding:1em;
         }
-        .agreement-text{
+        .rp-agreement-text{
           max-width:100%;
           padding:10px 1em;
           border:2px solid $light-grey;
@@ -163,15 +172,14 @@
         }
         .agreement-controls{
           display: none;
-          // visibility: hidden;
         }
         .agreement-radioButtons{
-          form{
+         
               display: flex;
               flex-direction: row;
               align-items: center;
 
-              div{
+             /* div{
                 margin:0 10px;
               }
               label{
@@ -183,8 +191,8 @@
                   height: 20px;
                   margin-left:5px;
                   color:$zucora-purple;
-              }
-            }
+              }*/
+            
         }
 
         .agreement-actions{
@@ -201,19 +209,25 @@
     }
   }
 
-  .financial-details-modal-container{
+  .rp-financial-details-modal-container{
     @extend %modal;
-    .financial-details-modal{
+    .rp-financial-details-modal{
       @extend %modal-background;
-
+       border:none;
         .purple-background{
-          h2::after{
+          h2{
+            margin-bottom: 0;
+          }
+          .close-modal{
             @extend %form-cross;
             padding:0;
             font-weight: 700;
+            margin-right:1em;
           }
         }
         .checkbook-content{
+          border:2px solid $grey-text;
+          border-top:none;
           padding:1em;
           img{
             margin-top:10px;
@@ -231,15 +245,15 @@
     }
   }
   .popup-modals-container{
-    .partner-profile-modal-container{
-      .partner-profile-modal{
+    .rp-partner-profile-details-modal-container{
+      .rp-partner-profile-details-modal{
         width:90%;
         margin:35% auto;
       }
     }
 
-    .agreementReader-modal-container{
-      .agreementReader-modal{
+    .rp-agreement-modal-container{
+      .rp-agreement-modal{
         width:90%;
         margin:35% auto;
 
@@ -251,8 +265,8 @@
         }
       }
     }
-    .financial-details-modal-container{
-      .financial-details-modal{
+    .rp-financial-details-modal-container{
+      .rp-financial-details-modal{
         width:90%;
         margin:35% auto;
       }

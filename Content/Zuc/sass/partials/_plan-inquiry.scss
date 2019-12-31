@@ -22,7 +22,7 @@
 			border:2px solid $grey-text;
       		height:auto;
 
-      		form{
+      		div{
       			color:$grey-text;
       			font-family: $para-fonts;
       			i{
@@ -247,7 +247,7 @@
 						margin-bottom: 0;
 
 						.new-planAdd-detail{
-							/*display: block;*/
+							display: block;
 						}
 					}
 				}
@@ -300,7 +300,7 @@
 .plan-inquiry-container{
 	.manual-search-container{
 		.inquiry-date-filter{
-			form{
+			div{
 				.filter-param-box{
 					display: grid;
 					grid-template-columns: 90%;

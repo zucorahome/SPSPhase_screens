@@ -1,0 +1,178 @@
+﻿@{
+    Layout = "~/Views/Shared/_ZucSRSLayout.cshtml";
+    ViewBag.Title = "Representative Profile";
+}
+
+<section class="rep-profile-container">
+    <h1 class="srs-heading">@ViewBag.Title</h1>
+    <div class="rep-profile margin-top-2">
+        <div class="organization-container">
+          <h3 class="profileBox-heading">Organization</h3>
+        <div class="profile-boxStyle">
+             <div class="flex flex-row"><input name="rp-business-legal-name" placeholder="Business Legal Name" type="text"/></div>
+             <p class="purple-text">Name:</p>
+            <div class="flex flex-row flex-vert-center flex-hor-center">
+                <input name="rp-first-name" placeholder="First" type="text" class="margin-right"/>
+                <input name="rp-last-name" placeholder="Last" type="text" class="margin-left"/>
+            </div>
+            <div class="flex flex-row">
+              <input name="rp-phone" placeholder="Phone Number" type="text" />
+            </div>
+            <div class="flex flex-row">
+              <input name="rp-email" placeholder="Email" type="email" />
+            </div>
+            <p class="purple-text">Primary Mailing Address:</p>
+            <div class="flex flex-row">
+              <input name="rp-address-1" placeholder="Address 1" type="text" />
+            </div>
+            <div class="flex flex-row">
+              <input name="rp-address-2" placeholder="Address 2" type="text" />
+            </div>
+            <div class="flex flex-row">
+              <input name="rp-city" placeholder="City" type="text" />
+            </div>
+            <!-- [name="rp-province"] will be populated via JS with elements like this: <option value="332">Ontario</option> -->
+            <div class="flex flex-row flex-vert-center flex-hor-center planRegis-form">
+              <select name="rp-province" class="margin-right">
+                <option value="">Province</option>
+              </select>
+              <input name="rp-postal" placeholder="Postal Code" type="text" class="margin-left"/>
+            </div>
+            
+        </div>
+    </div>
+    <div class="other-details-container">
+      <div class="financial-details">
+          <div class="flex flex-row flex-vert-center">
+            <h3 class="profileBox-heading">Financial Details<i class="fa fa-info-circle rp-financial-details-info-icon"></i></h3>
+          </div>
+        <div class="profile-boxStyle"> 
+          <div class="flex flex-row flex-vert-center flex-hor-center">
+              <div class="transit-input">
+                <label for="rp-institution-number" class="purple-text">Institution ID</label>
+                <input name="rp-institution-number" type="text" />
+              </div>
+              <div class="transit-input">
+                <label for="rp-transit-number" class="purple-text">Transit #</label>
+                <input name="rp-transit-number" type="text" />
+              </div>
+          </div>
+          <div class="flex flex-row">
+            <input name="rp-account-number" placeholder="Account Number" type="text" />
+          </div>
+          <label for="rp-hst-gst-number">HST/GST Number</label>
+          <input name="rp-hst-gst-number" placeholder="Number" type="text" />
+        </div>
+      </div>
+      <div class="partner-profiles">
+          <h3 class="profileBox-heading">Partner Profiles</h3>
+          <div class="profile-boxStyle new-planAdd-detail">
+            <table class="rp-partner-profiles">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <!--
+                    <tbody> will be populated via JS with elements as follows:
+                        <tr data-lt-id="389518" class="open-partnerProfileModal">
+                            <td data-label="Name">[Data]</td>
+                            <td data-label="Status">[Data]</td>
+                        </tr>
+                -->
+                <tbody></tbody>
+            </table>
+        </div>
+      </div>
+      <div class="agreement">
+          <h3 class="profileBox-heading">Agreement</h3>
+          <div class="profile-boxStyle">
+            <div class="flex flex-vert-center">
+                <input type="checkbox" name="rp-have-read-and-accept" />
+                <label for="rp-have-read-and-accept">I have read and accept the Representative Terms and Conditions.</label>
+            </div>
+            <a class="rp-view-terms-and-conditions">View Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+    <!--other details container ends-->
+  </div> <!--rep profile class ends-->
+  <!-- buttons outside the main box -->
+  <div class="flex flex-vert-center flex-hor-between orderEntry-controls mobile-column margin-bottom-2 margin-top-1">
+    <div>
+        <a href="~/Account/Manage" class="simple-link u-uppercase" style="margin-left:10px;">Change Password</a>
+        <i class="fa fa-pencil-alt purple-text"></i>
+    </div>
+    <div class="flex flex-vert-center flex-hor-center margin-top-1">
+      <button class="rp-update zuc-btn zuc-btn-secondary u-soft-shadow" type="submit">Save</button>
+    </div>
+</div>
+</section>
+<section class="popup-modals-container">
+  <div class="rp-partner-profile-details-modal-container non-visible">
+    <div class="rp-partner-profile-details-modal">
+        <div class="purple-background flex flex-vert-center flex-hor-between">
+          <h2>Partner Profile Details</h2>
+          <span class="close-modal">X</span>
+      </div>
+        <p class="u-bold">Plan ID <span class="rp-partner-profile-details-plan-id"></span></p>
+        <div class="new-planAdd-detail">
+          <table class="rp-partner-profile-details-commission-breakdown">
+              <thead>
+                  <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Product Category</th>
+                      <th scope="col">Comm %</th>
+                  </tr>
+              </thead>
+              <!--
+                  <tbody> will be populated via JS with elements as follows (with probably additions of data attributes):
+                      <tr>
+                          <td rowspan="5" data-label="Name" class="u-bold">[Data]</td>
+                          <td data-label="Product Category">[Data]</td>
+                          <td data-label="Comm %">[Data]</td>
+                      </tr>
+              -->
+              <tbody></tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+  <div class="rp-agreement-modal-container non-visible">
+    <div class="rp-agreement-modal">
+      <div class="purple-background flex flex-vert-center flex-hor-between">
+        <h2>Representative Agreement</h2>
+        <span class="close-modal">X</span>
+      </div>
+        <div class="padding-1">
+          <div class="rp-agreement-text"></div>
+        
+        <div class="flex flex-vert-center flex-hor-between margin-top-1 mobile-column">
+            <div class="agreement-radioButtons">
+              <button class="rp-agreement-disagree zuc-btn zuc-btn-secondary u-soft-shadow">I Do Not Agree</button>
+              <button class="rp-agreement-agree zuc-btn zuc-btn-secondary u-soft-shadow">I Agree</button>
+            </div>
+            <div class="agreement-actions">
+              <i class="rp-agreement-print fas fa-print"></i>
+              <i class="rp-agreement-download fas fa-download"></i>
+            </div>
+        </div>
+
+        </div><!--padding 1 ends-->
+    </div>
+  </div>
+  <div class="rp-financial-details-modal-container non-visible">
+    <div class="rp-financial-details-modal">
+        <div class="purple-background">
+          <h2>Financial Details</h2>
+           <span class="close-modal">X</span>
+        </div>
+       
+         <div class="checkbook-content">
+          <p>Your monthly commission for active enrollments is automatically deposited into the account identified here. Your HST/GST number is required for payment of appropriate sales tax.</p>
+          <img class="center" src="" alt=""/>
+        </div>
+    </div>
+  </div>
+</section>

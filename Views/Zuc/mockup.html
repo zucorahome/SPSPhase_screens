@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zucora Home: Event page</title>
+    <meta content="" name="description">
+   	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="../../Content/Zuc/styles/bootstrap.min.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/styles9d66868d59cc90dfcd5c.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/new_styles.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/SRS-system.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- [ FONTS ]-->
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <link href="https://use.typekit.net/ovc0ozw.css" rel="stylesheet">
+</head>
+<body>
+<!-- Site Navigation-->
+    <div class="zuc-nav-wrapper srs-nav-container" data-nav-height>
+      <!-- Main Navigation-->
+      <nav class="zuc-main-nav flex flex-hor-start flex-hor-between flex-vert-center u-uppercase" data-main-navigation>
+        <!-- Nav Branding-->
+        <a class="zuc-nav-brand" href="#"><img src="../../Images/Zuc/images/ZucoraHome-brand-white.svg"></a>
+        <!-- Nav Links-->
+        <div class="zuc-nav-links flex flex-hor-end flex-hor-between flex-no-wrap flex-vert-center">
+          <!-- First -->
+          <div class="zuc-nav-dropdown"><span class="u-uppercase">Plans</span>
+             <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+                <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                  <!-- Dropdown links -->
+                  <div class="zuc-dropdown-column">
+                    <a href="~/zuc/planregistration" title="Plan Registration" aria-role="menu-item">Plan Registration</a>
+                    <a href="~/zuc/planinquiry" title="Plan Registration Inquiry" aria-role="menu-item">Plan Inquiry</a>
+                    <a href="plan-pending-registrations.html" title="Registration History" aria-role="menu-item">Registration History</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="zuc-nav-dropdown"><span class="u-uppercase">Orders</span>
+            <!-- Drop Down-->
+            <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+              <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                <!-- Dropdown links -->
+                <div class="zuc-dropdown-column">
+                  <a href="order-entry.html" title="Order Entry" aria-role="menuitem">Entry</a>
+                  <a href="order-history.html" title="Order History" aria-role="menuitem">Order History</a>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div class="zuc-nav-dropdown "><i class="fa fa-user-alt"></i><span class="u-uppercase"> @User.Identity.Name</span>
+            <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+              <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                <!-- Dropdown links -->
+                <div class="zuc-dropdown-column">
+                  <a href="~/zuc/retailerprofile">Profile</a>
+                  <a href="~/Account/Manage">Change Password</a>
+                  <a href="javascript:document.getElementById('logoutForm').submit()">Log out</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile Nav Button-->
+        <div class="zuc-menu">
+          <div class="zuc-menu-open" role="button" data-open-menu aria-label="Mobile Navigation"><span class="hidden" aria-hidden="true" aria-label="Open mobile menu">Mobile Menu</span>
+          </div>
+        </div>
+      </nav>
+      <!-- Mobile Navigation-->
+      <div class="zuc-mobile-nav" data-mobile-menu>
+        <!-- Top Branding CTA-->
+        <div class="zuc-mobile-nav-content">
+          <a href="https://zucorahome.com/" title="Zucora Home">
+            <img src="~/Images/Zuc/images/ZucoraHome-brand-white.svg" alt="Zucora Home">
+          </a>
+        </div>
+        <div class="zuc-accordion-nav" role="menu" aria-role="menu">
+          <!--Plans Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title">Plans<i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="~/zuc/planregistration" title="Plan Registration" aria-role="menuitem">Plan Registration</a>
+                <a class="zuc-accordion-link" href="~/zuc/planinquiry" title="Plan Registration Inquiry" aria-role="menuitem">Plan Registration Inquiry</a>
+                <a class="zuc-accordion-link" href="plan-reporting.html" title="Registration History" aria-role="menuitem">Registration History/a>
+              </div>
+            </div>
+            <!--Orders Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title">Orders<i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="order-entry.html" title="Order Entry" aria-role="menuitem">Order Entry</a>
+                <a class="zuc-accordion-link" href="order-history.html" title="Order History" aria-role="menuitem">Order History</a>
+              </div>
+            </div>
+              <!--Username Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title"><i class="fa fa-user-alt"></i><i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="~/zuc/retailerprofile" title="Profile" aria-role="menuitem">Profile</a>
+                <a class="zuc-accordion-link" href="~/Account/Manage" title="Change Password" aria-role="menuitem">Change Password</a>
+                <a class="zuc-accordion-link" href="javascript:document.getElementById('logoutForm').submit()" title="Log Out" aria-role="menuitem">Log Out</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main page content-->
+</body>
+<!-- main page content ends -->
+    <!-- Site Footer -->
+    <footer class=""></footer>  
+    <script type="text/javascript" src="~/Content/Zuc/js/build9d66868d59cc90dfcd5c.js"></script>
+    <script type="text/javascript" src="~/Scripts/Zuc/js/srs-interactivity.js"></script>
+</body>
+</html>

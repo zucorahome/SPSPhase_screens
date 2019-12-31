@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zucora Home: Event page</title>
+    <meta content="" name="description">
+   	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="../../Content/Zuc/styles/bootstrap.min.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/styles9d66868d59cc90dfcd5c.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/new_styles.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/SRS-system.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- [ FONTS ]-->
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <link href="https://use.typekit.net/ovc0ozw.css" rel="stylesheet">
+</head>
+<body>
+<!-- Site Navigation-->
+    <div class="zuc-nav-wrapper srs-nav-container" data-nav-height>
+      <!-- Main Navigation-->
+      <nav class="zuc-main-nav flex flex-hor-start flex-hor-between flex-vert-center u-uppercase" data-main-navigation>
+        <!-- Nav Branding-->
+        <a class="zuc-nav-brand" href="#"><img src="../../Images/Zuc/images/ZucoraHome-brand-white.svg"></a>
+        <!-- Nav Links-->
+        <div class="zuc-nav-links flex flex-hor-end flex-hor-between flex-no-wrap flex-vert-center">
+          <!-- First -->
+          <div class="zuc-nav-dropdown"><span class="u-uppercase">Plans</span>
+             <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+                <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                  <!-- Dropdown links -->
+                  <div class="zuc-dropdown-column">
+                    <a href="~/zuc/planregistration" title="Plan Registration" aria-role="menu-item">Plan Registration</a>
+                    <a href="~/zuc/planinquiry" title="Plan Registration Inquiry" aria-role="menu-item">Plan Inquiry</a>
+                    <a href="plan-pending-registrations.html" title="Registration History" aria-role="menu-item">Registration History</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="zuc-nav-dropdown"><span class="u-uppercase">Orders</span>
+            <!-- Drop Down-->
+            <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+              <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                <!-- Dropdown links -->
+                <div class="zuc-dropdown-column">
+                  <a href="order-entry.html" title="Order Entry" aria-role="menuitem">Entry</a>
+                  <a href="order-history.html" title="Order History" aria-role="menuitem">Order History</a>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div class="zuc-nav-dropdown "><i class="fa fa-user-alt"></i><span class="u-uppercase"> @User.Identity.Name</span>
+            <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+              <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                <!-- Dropdown links -->
+                <div class="zuc-dropdown-column">
+                  <a href="~/zuc/retailerprofile">Profile</a>
+                  <a href="~/Account/Manage">Change Password</a>
+                  <a href="javascript:document.getElementById('logoutForm').submit()">Log out</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile Nav Button-->
+        <div class="zuc-menu">
+          <div class="zuc-menu-open" role="button" data-open-menu aria-label="Mobile Navigation"><span class="hidden" aria-hidden="true" aria-label="Open mobile menu">Mobile Menu</span>
+          </div>
+        </div>
+      </nav>
+      <!-- Mobile Navigation-->
+      <div class="zuc-mobile-nav" data-mobile-menu>
+        <!-- Top Branding CTA-->
+        <div class="zuc-mobile-nav-content">
+          <a href="https://zucorahome.com/" title="Zucora Home">
+            <img src="~/Images/Zuc/images/ZucoraHome-brand-white.svg" alt="Zucora Home">
+          </a>
+        </div>
+        <div class="zuc-accordion-nav" role="menu" aria-role="menu">
+          <!--Plans Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title">Plans<i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="~/zuc/planregistration" title="Plan Registration" aria-role="menuitem">Plan Registration</a>
+                <a class="zuc-accordion-link" href="~/zuc/planinquiry" title="Plan Registration Inquiry" aria-role="menuitem">Plan Registration Inquiry</a>
+                <a class="zuc-accordion-link" href="plan-reporting.html" title="Registration History" aria-role="menuitem">Registration History/a>
+              </div>
+            </div>
+            <!--Orders Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title">Orders<i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="order-entry.html" title="Order Entry" aria-role="menuitem">Order Entry</a>
+                <a class="zuc-accordion-link" href="order-history.html" title="Order History" aria-role="menuitem">Order History</a>
+              </div>
+            </div>
+              <!--Username Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title"><i class="fa fa-user-alt"></i><i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="~/zuc/retailerprofile" title="Profile" aria-role="menuitem">Profile</a>
+                <a class="zuc-accordion-link" href="~/Account/Manage" title="Change Password" aria-role="menuitem">Change Password</a>
+                <a class="zuc-accordion-link" href="javascript:document.getElementById('logoutForm').submit()" title="Log Out" aria-role="menuitem">Log Out</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main page content-->
+    <section class="order-entry-container">
+      <h1 class="srs-heading">@ViewBag.Title</h1>
+      <div class="two-grid-column">
+        <div class="add-item-info">
+          <div class="planRegis-form">
+            <div class="flex flex-row flex-vert-center">
+              <label for="oe-location">Location*:</label>
+              <select id="oe-location" required>
+                  <option value="">Location</option>
+              </select>
+            </div>
+            <div class="flex flex-row flex-vert-center">
+              <label for="oe-po-ref">PO/Ref*:</label>
+              <input id="oe-po-ref" required type="text" />
+            </div>
+            <div class="flex flex-row flex-vert-center">
+              <label for="oe-auth">Buying Group Authorization</label>
+              <input id="oe-auth" type="text" />
+            </div>
+            <p class="light-grey-text u-text-center">(Required if requested by Buying Group)</p>
+            <div class="flex flex-hor-end">
+              <button class="oe-add-item zuc-btn zuc-btn-secondary u-soft-shadow">Add Item</button>
+            </div>
+          </div>
+        </div>
+        <div class="shipping-instructions">
+            <div class="flex flex-column">
+              <label for="oe-shipping-instructions" class="profileBox-heading">Shipping Instructions:</label>
+              <textarea id="oe-shipping-instructions" cols="50" rows="10" placeholder="Customer decided they could not wait for special order Sofa and Chair."></textarea>
+            </div>
+            <p class="light-grey-text">(If not specified, most economical shipping method will be selected.)</p>
+            <div class="two-grid-column mobile-column flex-vert-center flex-hor-center">
+              <div class="planRegis-form">
+                <div class="flex flex-row flex-vert-center">              
+                  <label for="oe-ship-after-date">Ship After Date (Optional):</label>
+                  <input id="oe-ship-after-date" type="date" />
+                </div>
+              </div>
+              <div class="planRegis-form">
+                <div class="flex flex-row flex-vert-center">
+                  <input id="oe-request-expedited-shipping" type="checkbox" />
+                  <label for="oe-request-expedited-shipping">
+                    <strong>Request Expedited Shipping</strong><br>
+                   <span style="font-size: 12px;font-weight: 300;"> Note: Expedited Shipping incurs additional cost which will be determined at time of order completion.</span>
+                </label>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- two grid ends -->
+    </div>
+        <!-- NOTE: Grouping and subtotals intentionally left out -->
+    <div class="order-table-container">
+      <div class="order-table">
+          <div class="purple-background">
+                  <h2>@title</h2>
+          </div>
+          <div class="new-planAdd-detail">
+            <table class="oe-items">
+                <thead>
+                    <tr>
+                        <th scope="col">Item Type</th>
+                        <th scope="col">SKU Number</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">QTY</th>
+                        <th scope="col">Unit Price</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Edit</th>
+                    </tr>
+                </thead>
+                <!--
+                    <tbody> will be populated via JS with elements as follows:
+                        <tr data-lt-id="389518">
+                            <td data-label="Item Type">[Data]</td>
+                            <td data-label="SKU Number">[Data]</td>
+                            <td data-label="Description">[Data]</td>
+                            <td data-label="QTY">[Data]</td>
+                            <td data-label="Unit Price">[Data]</td>
+                            <td data-label="Total">[Data]</td>
+                            <td><i class="oe-item-edit fa fa-pencil-alt"></i></td>
+                        </tr>
+                -->
+                <tbody></tbody>
+                <tfoot>
+                    <tr>
+                      <td colspan="4" ></td>
+                        <td style="font-size:22px;">Order total:</td>
+                        <td class="oe-items-total" data-label="Order total:" style="font-size:22px;"></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+          </div>
+      </div>
+        <!-- table container ends -->
+      </div>
+
+        <div class="flex flex-vert-center flex-hor-between orderEntry-controls mobile-column">
+            <div><a class="oe-remove-order simple-link">Remove Order</a></div>
+            <div>
+              <p>Final order confirmation including shipping costs and taxes will be emailed once the order has been finalized.</p>
+               <div class="flex flex-hor-end">
+                <button class="oe-submit zuc-btn zuc-btn-secondary u-soft-shadow">Submit</button>
+                </div>
+            </div>
+        </div>
+</section>
+        <div class="oe-add-item-modal modal" style="display: none;">
+            <h2>Add Item</h2>
+            <span class="close-modal">X</span>
+            <label for="oe-add-item-item">Item*:</label>
+            <input id="oe-add-item-item" list="oe-add-item-item-options" required />
+            <!-- <datalist> will be populated via JS with elements like this: <option value="Description (ZFES3050)" data-lt-value="19198"></option> -->
+            <datalist id="oe-add-item-item-options"></datalist>
+            <label for="oe-add-item-unit-quantity">Unit Quantity:</label>
+            <div>
+                <input id="oe-add-item-unit-quantity" type="number" />
+                X
+                <input id="oe-add-item-unit-quantity-amount" type="number" disabled />
+            </div>
+            <label for="oe-add-item-case-quantity">Case Quantity:</label>
+            <div>
+                <input id="oe-add-item-case-quantity" type="number" />
+                X
+                <input id="oe-add-item-case-quantity-amount" type="number" disabled />
+            </div>
+            <p>Cases contain <span class="oe-add-item-case-units"></span></p>
+            <p>Units to be Added: <span class="oe-add-item-total-units"></span></p>
+            <p>Quantity Available: <span class="oe-add-item-available-units"></span></p>
+            <p>Do you wish to Backorder out of stock items?</p>
+            <input id="oe-add-item-do-backorder" type="checkbox" name="oe-add-item-backorder" value="yes" checked />
+            <label for="oe-add-item-do-backorder">Yes</label>
+            <input id="oe-add-item-do-not-backorder" type="checkbox" name="oe-add-item-backorder" value="no" />
+            <label for="oe-add-item-do-not-backorder">No</label>
+            <button class="oe-add-item-add-more">Add More</button>
+            <button class="oe-add-item-add">Add</button>
+        </div>
+        <div class="oe-cancel-order-conf-modal modal" style="display: none;">
+            <h2>Caution!</h2>
+            <span class="close-modal">X</span>
+            <p>Removing Order will remove all data associated with this order including selected Items.</p>
+            <h3>Do you wish to continue?</h3>
+            <button class="oe-cancel-order-conf-yes">Yes</button>
+            <button class="oe-cancel-order-conf-no">No</button>
+        </div>
+        <div class="oe-backorder-warning-modal modal" style="display: none;">
+            <h2>Backorder Warning</h2>
+            <span class="close-modal">X</span>
+            <p>Please note your order contains Backordered items and will be shipped when they become available.</p>
+            <table class="oe-backorder-warning-items">
+                <thead>
+                    <tr>
+                        <th scope="col">SKU</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">QTY Ordered</th>
+                        <th scope="col">QTY Available</th>
+                    </tr>
+                </thead>
+                <!--
+                    <tbody> will be populated via JS with elements as follows:
+                        <tr data-lt-id="389518">
+                            <td data-label="SKU">[Data]</td>
+                            <td data-label="Description">[Data]</td>
+                            <td data-label="QTY Ordered">[Data]</td>
+                            <td data-label="QTY Available">[Data]</td>
+                        </tr>
+                -->
+                <tbody></tbody>
+            </table>
+            <button class="oe-backorder-warning-proceed">Proceed with Backorder</button>
+        </div>
+<!-- main page content ends -->
+    <!-- Site Footer -->
+    <footer class=""></footer>  
+    <script type="text/javascript" src="~/Content/Zuc/js/build9d66868d59cc90dfcd5c.js"></script>
+    <script type="text/javascript" src="~/Scripts/Zuc/js/srs-interactivity.js"></script>
+</body>
+</html>

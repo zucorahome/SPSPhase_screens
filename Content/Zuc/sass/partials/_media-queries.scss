@@ -8,16 +8,22 @@
 	.srs-heading{
 		margin-top:20%;
 	}
-
+	.videoLink{
+		position: relative;
+		text-align: center;
+		left:0;
+		top:0;
+		margin:1.5em 0;
+	}
 	.planRegis-form{
 		width:90%;
 
 		div{
-			// justify-content: space-between;
+			//justify-content: space-between;
 
 			.info-text-container{
 				width:100%;
-				top:40%;
+				top:38%;
 				left:0;
 			}
 		}
@@ -140,6 +146,22 @@
 							}
 						}
 					}
+					.serial-text-container{
+							width:100%;
+							top:70%;
+							left:0;
+					}
+				}
+			}
+		}
+
+		.video-modal-container{
+			.video-modal{
+				width: 95%;
+				margin-top:70%;
+
+				iframe{
+					height: 200px;
 				}
 			}
 		}
@@ -283,8 +305,13 @@
 			}
 		}
 	}
+.popup-modals-container .addItem-modal .addItem-form .planRegis-form .serial-text-container{
+				width:100%;
+				top:70%;
+				left:0;
+				}
+			
 }
-
 	.welcome-message-container { position: relative; }
 	.employer-full-name {
 		color: #36384b;

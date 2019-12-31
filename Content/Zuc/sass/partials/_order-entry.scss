@@ -12,23 +12,29 @@
 			width:100%;
 			padding:0 1em 0 0;
 			.planRegis-form{
-				
 				div{
-					/*justify-content: space-between;*/
+					/*justify-content: space-around;*/
 				}
-
 				label{
 					text-align: left;
-					width:25%;
+					width: 25%;
 				}
 
 				select{
 					margin-bottom: 0;
+					
+				}
+				input{
+					
 				}
 
 			}
 		}
-
+.light-grey-text{
+					font-family: $para-fonts;
+					font-size:16px;
+					margin:10px 0;
+				}
 		.shipping-instructions{
 			height:auto;
 			width:100%;
@@ -40,6 +46,11 @@
 
 			.two-grid-column{
 				margin-top:0;
+				grid-column-gap: 1.5em;
+
+				label{
+					text-align: left;
+				}
 			}
 		}
 	}
@@ -173,7 +184,7 @@
 @media screen and (max-width:$mobile-width){
 	.order-entry-container{
 			margin-top:10%;
-			width:100%;
+			width:95%;
 			height:auto;
 
 			.new-planAdd-detail{
@@ -199,6 +210,24 @@
 		}
 		.two-grid-column{
 				grid-template-columns: 100%;
+				
+				.add-item-info{
+					
+
+					.planRegis-form{
+						label{
+							width:35%;
+						}
+					}
+				}
+			}
+
+			.shipping-instructions{
+				margin-top:2em;
+
+				input[type="checkbox"]{
+					margin:0 10px;
+				}
 			}	
 	}
 

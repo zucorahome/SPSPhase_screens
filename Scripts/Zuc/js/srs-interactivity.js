@@ -158,4 +158,10 @@ let agreementText = $('.agreement-text');
 			}
 		});
 
+  //Video link for plan registration
+    $('.videoLink a').bind('click',{key:'.video-modal-container'},openModal);
+    $('.video-modal .cross').bind('click',{key:'.video-modal-container'},closeModal);
+    //addItem modal seriel info
+    $('.serial-info').click(function(){
+    $('.serial-text-container').toggle(500);
 });

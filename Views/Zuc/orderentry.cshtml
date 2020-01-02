@@ -1,0 +1,132 @@
+﻿@{
+    Layout = "~/Views/Shared/_ZucSRSLayout.cshtml";
+    ViewBag.Title = "Order Entry";
+}
+<h1>@ViewBag.Title</h1>
+<div>
+    <label for="oe-location">Location*:</label>
+    <select id="oe-location" required>
+        <option value="">Location</option>
+    </select>
+    <label for="oe-po-ref">PO/Ref*:</label>
+    <input id="oe-po-ref" required />
+    <label for="oe-auth">Buying Group Authorization</label>
+    <input id="oe-auth" />
+    <p>(Required if requested by Buying Group)</p>
+    <button class="oe-add-item">Add Item</button>
+</div>
+<div>
+    <label for="oe-shipping-instructions">Shipping Instructions:</label>
+    <textarea id="oe-shipping-instructions"></textarea>
+    <p>(If not specified, most economical shipping method will be selected.)</p>
+    <label for="oe-ship-after-date">Ship After Date (Optional):</label>
+    <input id="oe-ship-after-date" type="date" />
+    <input id="oe-request-expedited-shipping" type="checkbox" />
+    <label for="oe-request-expedited-shipping">
+        <strong>Request Expedited Shipping</strong><br />
+        Note: Expedited Shipping incurs additional cost which will be determined at time of order completion.
+    </label>
+</div>
+<!-- NOTE: Grouping and subtotals intentionally left out -->
+<table class="oe-items">
+    <thead>
+        <tr>
+            <th scope="col">Item Type</th>
+            <th scope="col">SKU Number</th>
+            <th scope="col">Description</th>
+            <th scope="col">QTY</th>
+            <th scope="col">Unit Price</th>
+            <th scope="col">Total</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <!--
+        <tbody> will be populated via JS with elements as follows:
+            <tr data-lt-id="389518">
+                <td data-label="Item Type">[Data]</td>
+                <td data-label="SKU Number">[Data]</td>
+                <td data-label="Description">[Data]</td>
+                <td data-label="QTY">[Data]</td>
+                <td data-label="Unit Price">[Data]</td>
+                <td data-label="Total">[Data]</td>
+                <td><i class="oe-item-edit"></i></td>
+            </tr>
+    -->
+    <tbody></tbody>
+    <tfoot>
+        <tr>
+            <td colspan="5">Order total:</td>
+            <td class="oe-items-total"></td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+<div>
+    <a class="oe-remove-order">Remove Order</a>
+    <p>Final order confirmation including shipping costs and taxes will be emailed once the order has been finalized.</p>
+    <button class="oe-submit">Submit</button>
+</div>
+<div class="oe-add-item-modal modal">
+    <h2>Add Item</h2>
+    <span class="close-modal">X</span>
+    <label for="oe-add-item-item">Item*:</label>
+    <input id="oe-add-item-item" list="oe-add-item-item-options" required />
+    <!-- <datalist> will be populated via JS with elements like this: <option value="Description (ZFES3050)" data-lt-value="19198"></option> -->
+    <datalist id="oe-add-item-item-options"></datalist>
+    <label for="oe-add-item-unit-quantity">Unit Quantity:</label>
+    <div>
+        <input id="oe-add-item-unit-quantity" type="number" />
+        X
+        <input id="oe-add-item-unit-quantity-amount" type="number" disabled />
+    </div>
+    <label for="oe-add-item-case-quantity">Case Quantity:</label>
+    <div>
+        <input id="oe-add-item-case-quantity" type="number" />
+        X
+        <input id="oe-add-item-case-quantity-amount" type="number" disabled />
+    </div>
+    <p>Cases contain <span class="oe-add-item-case-units"></span></p>
+    <p>Units to be Added: <span class="oe-add-item-total-units"></span></p>
+    <p>Quantity Available: <span class="oe-add-item-available-units"></span></p>
+    <p>Do you wish to Backorder out of stock items?</p>
+    <input id="oe-add-item-do-backorder" type="checkbox" name="oe-add-item-backorder" value="yes" checked />
+    <label for="oe-add-item-do-backorder">Yes</label>
+    <input id="oe-add-item-do-not-backorder" type="checkbox" name="oe-add-item-backorder" value="no" />
+    <label for="oe-add-item-do-not-backorder">No</label>
+    <button class="oe-add-item-add-more">Add More</button>
+    <button class="oe-add-item-add">Add</button>
+</div>
+<div class="oe-cancel-order-conf-modal modal">
+    <h2>Caution!</h2>
+    <span class="close-modal">X</span>
+    <p>Removing Order will remove all data associated with this order including selected Items.</p>
+    <h3>Do you wish to continue?</h3>
+    <button class="oe-cancel-order-conf-yes">Yes</button>
+    <button class="oe-cancel-order-conf-no">No</button>
+</div>
+<div class="oe-backorder-warning-modal modal">
+    <h2>Backorder Warning</h2>
+    <span class="close-modal">X</span>
+    <p>Please note your order contains Backordered items and will be shipped when they become available.</p>
+    <table class="oe-backorder-warning-items">
+        <thead>
+            <tr>
+                <th scope="col">SKU</th>
+                <th scope="col">Description</th>
+                <th scope="col">QTY Ordered</th>
+                <th scope="col">QTY Available</th>
+            </tr>
+        </thead>
+        <!--
+            <tbody> will be populated via JS with elements as follows:
+                <tr data-lt-id="389518">
+                    <td data-label="SKU">[Data]</td>
+                    <td data-label="Description">[Data]</td>
+                    <td data-label="QTY Ordered">[Data]</td>
+                    <td data-label="QTY Available">[Data]</td>
+                </tr>
+        -->
+        <tbody></tbody>
+    </table>
+    <button class="oe-backorder-warning-proceed">Proceed with Backorder</button>
+</div>

@@ -96,13 +96,12 @@
 }
 
 
-		.editOrder-modal-container{
+.editOrder-modal-container{
 			@extend %modal;
 			
 			.editOrder-modal{
 			
 				@extend %modal-background;
-				
 				.purple-background{
 					h2::after{
 						@extend %form-cross;
@@ -179,7 +178,16 @@
 					}
 				}
 			}
-		}
+}
+
+
+.oe-add-item-modal-container{
+	@extend %modal;
+	.oe-add-item-modal{
+		@extend %modal-background;
+
+	}
+}
 
 @media screen and (max-width:$mobile-width){
 	.order-entry-container{

@@ -1,0 +1,95 @@
+﻿@{
+    Layout = "~/Views/Shared/_ZucSRSLayout.cshtml";
+    ViewBag.Title = "Smart Ship";
+}
+<section class="smartShip-container">
+  <h1 class="srs-heading">@ViewBag.Title</h1>
+<div class="profile-box">
+  <!-- left side -->
+    <div class="customer-details-container">
+        <h3 class="profileBox-heading">Customer Details</h3>
+        <div class="profile-boxStyle">
+            <h4 class="purple-text">Name:</h4>
+            <div class="flex flex-row flex-vert-center flex-hor-center">
+                <input id="ss-first-name" placeholder="First" type="text" class="margin-right" />
+                <input id="ss-last-name" placeholder="Last" type="text" class="margin-left" />
+            </div>
+            <input id="ss-phone" placeholder="Phone Number" type="text" />
+            <input id="ss-email" placeholder="Email" type="text" />
+
+            <h4 class="purple-text">Ship to Address:</h4>
+            <input id="ss-address-1" placeholder="Address 1" type="text" />
+            <input id="ss-address-2" placeholder="Address 2" type="text" />
+            <input id="ss-city" placeholder="City" type="text" />
+            <!-- will be populated via JS with elements like this: <option value="332">Ontario</option> -->
+            <div class="flex flex-row flex-vert-center flex-hor-center planRegis-form">
+              <select id="ss-province" class="margin-right margin-top">
+                <option value="">Province</option>
+              </select>
+              <input id="ss-postal" placeholder="Postal Code" type="text" class="margin-left" />
+            </div>
+        </div>
+    </div>
+
+<!-- right side -->
+<div class="right-side">   
+      <label for="ss-item">Item*:</label>
+     <div class="itemNumber">
+      <input id="ss-item" list="ss-item-options" required type="text" />
+      <input id="ss-item-quantity" type="number" />
+      <a class="ss-item-save">+</a>
+    </div>
+    <!-- will be populated via JS -->
+    <datalist id="ss-item-options"></datalist>
+    <div class="new-planAdd-detail">
+    <table class="ss-item-list">
+      
+        <thead>
+            <tr>
+                <th scope="col" style="width: 20%;">Product</th>
+                <th scope="col" style="width:20%;">Quantity</th>
+                <th scope="col" style="width:20%;">Unit Price</th>
+                <th scope="col" style="width:20%;">Subtotal</th>
+                <th scope="col" style="width: 5%;"></th>
+                <th scope="col" style="width: 5%;"></th>
+            </tr>
+        </thead>
+        <!--
+            will be populated via JS with elements like:
+            <tr data-lt-id="1980912">
+                <td data-label="Product">[Data]</td>
+                <td data-label="Quantity">[Data]</td>
+                <td data-label="Unit Price">[Data]</td>
+                <td data-label="Subtotal">[Data]</td>
+                <td data-label="Edit"><a class="ss-item-edit"><i class="fa fa-pencil-alt"></i></a></td>
+                <td data-label="Remove"><a class="ss-item-remove"><i class="fa fa-trash-alt"></i></a></td>
+            </tr>
+        -->
+
+        <tbody></tbody>
+        
+    </table>
+  </div>
+  <table class="total-bill">
+    <tfoot>
+            <tr>
+                <td colspan="3">Taxes:</td>
+                <td></td>
+                <td></td>
+                <td class="ss-item-list-taxes">123</td>
+            </tr>
+           <span class="bottom-border"></span>
+            <tr>
+                <td colspan="3">Total:</td>
+                <td></td>
+                <td></td>
+                <td class="ss-item-list-total">123</td>
+            </tr>
+        </tfoot>
+  </table>
+  <div class="flex flex-hor-end">
+      <button class="ss-checkout zuc-btn zuc-btn-secondary u-soft-shadow">Checkout</button>
+    </div>
+<!-- border div ends -->
+</div>
+</section>

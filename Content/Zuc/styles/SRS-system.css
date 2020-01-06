@@ -16,7 +16,7 @@ body {
   color: #36384B; }
 
 .popup-modals-container .addItem-modal, .popup-modals-container .mainSubmit-modal-container,
-.popup-modals-container .remove-planModal-container, .popup-modals-container .video-modal-container, .shipping-locations-modal, .contacts-form-modal, .cancelation-modal, .cancel-caution-container, .planRegistration-modal-container, .editOrder-modal-container, .oe-add-item-modal-container, .popup-modals-container .rp-partner-profile-details-modal-container, .popup-modals-container .rp-agreement-modal-container, .popup-modals-container .rp-financial-details-modal-container, .market-partners-container .mp-add-product-service-modal-container, .market-partners-container .mp-invite-modal-container, .market-partners-container .mp-add-note-modal-container, .market-partners-container .mp-invite-sent-modal-container {
+.popup-modals-container .remove-planModal-container, .popup-modals-container .video-modal-container, .shipping-locations-modal, .contacts-form-modal, .cancelation-modal, .cancel-caution-container, .planRegistration-modal-container, .editOrder-modal-container, .oe-add-item-modal-container, .oe-cancel-order-conf-modal-container, .oe-backorder-warning-modal-container, .popup-modals-container .rp-partner-profile-details-modal-container, .popup-modals-container .rp-agreement-modal-container, .popup-modals-container .rp-financial-details-modal-container, .market-partners-container .mp-add-product-service-modal-container, .market-partners-container .mp-invite-modal-container, .market-partners-container .mp-add-note-modal-container, .market-partners-container .mp-invite-sent-modal-container {
   position: fixed;
   z-index: 1;
   left: 0;
@@ -29,13 +29,13 @@ body {
 .popup-modals-container .addItem-modal .addItem-form, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal,
 .popup-modals-container .mainSubmit-modal-container .remove-planModal,
 .popup-modals-container .remove-planModal-container .mainSubmit-modal,
-.popup-modals-container .remove-planModal-container .remove-planModal, .popup-modals-container .video-modal-container .video-modal, .shipping-locations-modal .shipping-locations-form, .contacts-form-modal .contacts-form, .cancelation-modal .plan-cancelation-container, .cancel-caution-container .cancel-caution, .planRegistration-modal-container .planRegistration-modal, .editOrder-modal-container .editOrder-modal, .oe-add-item-modal-container .oe-add-item-modal, .popup-modals-container .rp-partner-profile-details-modal-container .rp-partner-profile-details-modal, .popup-modals-container .rp-agreement-modal-container .rp-agreement-modal, .popup-modals-container .rp-financial-details-modal-container .rp-financial-details-modal, .market-partners-container .mp-add-product-service-modal-container .mp-add-product-service-modal, .market-partners-container .mp-add-product-service-modal-container .mp-invite-modal, .market-partners-container .mp-add-product-service-modal-container .mp-add-note-modal, .market-partners-container .mp-invite-modal-container .mp-add-product-service-modal, .market-partners-container .mp-invite-modal-container .mp-invite-modal, .market-partners-container .mp-invite-modal-container .mp-add-note-modal, .market-partners-container .mp-add-note-modal-container .mp-add-product-service-modal, .market-partners-container .mp-add-note-modal-container .mp-invite-modal, .market-partners-container .mp-add-note-modal-container .mp-add-note-modal, .market-partners-container .mp-invite-sent-modal-container .mp-invite-sent-modal {
+.popup-modals-container .remove-planModal-container .remove-planModal, .popup-modals-container .video-modal-container .video-modal, .shipping-locations-modal .shipping-locations-form, .contacts-form-modal .contacts-form, .cancelation-modal .plan-cancelation-container, .cancel-caution-container .cancel-caution, .planRegistration-modal-container .planRegistration-modal, .editOrder-modal-container .editOrder-modal, .oe-add-item-modal-container .oe-add-item-modal, .oe-cancel-order-conf-modal-container .oe-cancel-order-conf-modal, .oe-cancel-order-conf-modal-container .oe-backorder-warning-modal, .oe-backorder-warning-modal-container .oe-cancel-order-conf-modal, .oe-backorder-warning-modal-container .oe-backorder-warning-modal, .popup-modals-container .rp-partner-profile-details-modal-container .rp-partner-profile-details-modal, .popup-modals-container .rp-agreement-modal-container .rp-agreement-modal, .popup-modals-container .rp-financial-details-modal-container .rp-financial-details-modal, .market-partners-container .mp-add-product-service-modal-container .mp-add-product-service-modal, .market-partners-container .mp-add-product-service-modal-container .mp-invite-modal, .market-partners-container .mp-add-product-service-modal-container .mp-add-note-modal, .market-partners-container .mp-invite-modal-container .mp-add-product-service-modal, .market-partners-container .mp-invite-modal-container .mp-invite-modal, .market-partners-container .mp-invite-modal-container .mp-add-note-modal, .market-partners-container .mp-add-note-modal-container .mp-add-product-service-modal, .market-partners-container .mp-add-note-modal-container .mp-invite-modal, .market-partners-container .mp-add-note-modal-container .mp-add-note-modal, .market-partners-container .mp-invite-sent-modal-container .mp-invite-sent-modal {
   border: 2px solid #36384B;
   background: white;
   width: 60%;
   margin: 15% auto; }
 
-.planRegis-form label, .retailer-profile-container .two-grid-column .retailer-info-form label, .retailer-profile-container .profile-address label, .shipping-locations-modal .shipping-locations-form .planRegis-form label, .contacts-form-modal .contacts-form .planRegis-form label, .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form label, .market-partners-container .partner-data-container .planRegis-form label, .market-partners-container .partner-data-container .planRegis-form dt, .market-partners-container .partner-data-container .planRegis-form span, .market-partners-container .mp-invite-modal .planRegis-form label, .market-partners-container .mp-invite-modal .planRegis-form dt, .market-partners-container .mp-invite-modal .planRegis-form span {
+.planRegis-form label, .retailer-profile-container .two-grid-column .retailer-info-form label, .retailer-profile-container .profile-address label, .shipping-locations-modal .shipping-locations-form .planRegis-form label, .contacts-form-modal .contacts-form .planRegis-form label, .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form label, .market-partners-container .partner-data-container .planRegis-form label, .market-partners-container .partner-data-container .planRegis-form dt, .market-partners-container .partner-data-container .planRegis-form span, .market-partners-container .mp-invite-modal .planRegis-form label, .market-partners-container .mp-invite-modal .planRegis-form dt, .market-partners-container .mp-invite-modal .planRegis-form span, .smartShip-container .right-side label {
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -70,7 +70,7 @@ body {
 .popup-modals-container .addItem-modal .addItem-form .purple-background h2::after, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal .cross,
 .popup-modals-container .mainSubmit-modal-container .remove-planModal .cross,
 .popup-modals-container .remove-planModal-container .mainSubmit-modal .cross,
-.popup-modals-container .remove-planModal-container .remove-planModal .cross, .popup-modals-container .video-modal-container .video-modal .cross, .shipping-locations-modal .shipping-locations-form .purple-background h2::after, .contacts-form-modal .contacts-form .purple-background h2::after, .cancelation-modal .plan-cancelation-container .cross, .planRegistration-modal-container .planRegistration-modal .cross, .editOrder-modal-container .editOrder-modal .purple-background h2::after, .popup-modals-container .rp-partner-profile-details-modal-container .rp-partner-profile-details-modal .purple-background .close-modal, .popup-modals-container .rp-agreement-modal-container .rp-agreement-modal .purple-background .close-modal, .popup-modals-container .rp-financial-details-modal-container .rp-financial-details-modal .purple-background .close-modal, .market-partners-container .mp-add-product-service-modal-container .close-modal, .market-partners-container .mp-invite-modal-container .close-modal, .market-partners-container .mp-add-note-modal-container .close-modal, .market-partners-container .mp-invite-sent-modal-container .mp-invite-sent-modal .close-modal {
+.popup-modals-container .remove-planModal-container .remove-planModal .cross, .popup-modals-container .video-modal-container .video-modal .cross, .shipping-locations-modal .shipping-locations-form .purple-background h2::after, .contacts-form-modal .contacts-form .purple-background h2::after, .cancelation-modal .plan-cancelation-container .cross, .planRegistration-modal-container .planRegistration-modal .cross, .editOrder-modal-container .editOrder-modal .purple-background h2::after, .oe-add-item-modal-container .oe-add-item-modal .purple-background .close-modal, .oe-cancel-order-conf-modal-container .oe-cancel-order-conf-modal .close-modal, .oe-cancel-order-conf-modal-container .oe-backorder-warning-modal .close-modal, .oe-backorder-warning-modal-container .oe-cancel-order-conf-modal .close-modal, .oe-backorder-warning-modal-container .oe-backorder-warning-modal .close-modal, .popup-modals-container .rp-partner-profile-details-modal-container .rp-partner-profile-details-modal .purple-background .close-modal, .popup-modals-container .rp-agreement-modal-container .rp-agreement-modal .purple-background .close-modal, .popup-modals-container .rp-financial-details-modal-container .rp-financial-details-modal .purple-background .close-modal, .market-partners-container .mp-add-product-service-modal-container .close-modal, .market-partners-container .mp-invite-modal-container .close-modal, .market-partners-container .mp-add-note-modal-container .close-modal, .market-partners-container .mp-invite-sent-modal-container .mp-invite-sent-modal .close-modal {
   content: 'X';
   float: right;
   color: #70E9B2;
@@ -157,6 +157,9 @@ body {
   left: 81%;
   width: 30%;
   z-index: 1000; }
+
+.zuc-btn {
+  padding: 15px 30px; }
 
 /* Login screen*/
 .srs-login-container {
@@ -936,6 +939,49 @@ body {
       .editOrder-modal-container .editOrder-modal .planRegis-form .item-found p:hover {
         background: #70E9B2; }
 
+.oe-add-item-modal-container .oe-add-item-modal .purple-background h2 {
+  margin-bottom: 0; }
+.oe-add-item-modal-container .oe-add-item-modal .purple-background .close-modal {
+  padding: 0;
+  font-weight: 700;
+  margin-right: 1em; }
+.oe-add-item-modal-container .oe-add-item-modal .planRegis-form {
+  width: 80%; }
+  .oe-add-item-modal-container .oe-add-item-modal .planRegis-form .two-grid-column {
+    grid-column-gap: 1.5em; }
+.oe-add-item-modal-container .oe-add-item-modal .quantity-input {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin-bottom: 15px;
+  align-items: center; }
+  .oe-add-item-modal-container .oe-add-item-modal .quantity-input label {
+    text-align: left;
+    margin-right: 0; }
+
+.oe-cancel-order-conf-modal-container .oe-cancel-order-conf-modal h2, .oe-cancel-order-conf-modal-container .oe-backorder-warning-modal h2, .oe-backorder-warning-modal-container .oe-cancel-order-conf-modal h2, .oe-backorder-warning-modal-container .oe-backorder-warning-modal h2 {
+  font-family: "PublicoHeadline", aktiv-grotesk, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 3em;
+  color: #434DA0;
+  text-align: center;
+  padding: 1em; }
+.oe-cancel-order-conf-modal-container .oe-cancel-order-conf-modal .close-modal, .oe-cancel-order-conf-modal-container .oe-backorder-warning-modal .close-modal, .oe-backorder-warning-modal-container .oe-cancel-order-conf-modal .close-modal, .oe-backorder-warning-modal-container .oe-backorder-warning-modal .close-modal {
+  font-size: 1.5em;
+  padding: 10px; }
+.oe-cancel-order-conf-modal-container .oe-cancel-order-conf-modal p, .oe-cancel-order-conf-modal-container .oe-backorder-warning-modal p, .oe-backorder-warning-modal-container .oe-cancel-order-conf-modal p, .oe-backorder-warning-modal-container .oe-backorder-warning-modal p {
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.75em; }
+.oe-cancel-order-conf-modal-container .oe-cancel-order-conf-modal h3, .oe-cancel-order-conf-modal-container .oe-backorder-warning-modal h3, .oe-backorder-warning-modal-container .oe-cancel-order-conf-modal h3, .oe-backorder-warning-modal-container .oe-backorder-warning-modal h3 {
+  text-align: center;
+  padding: 1em;
+  color: #434DA0;
+  font-weight: 700;
+  font-family: "aktiv-grotesk", Helvetica, sans-serif; }
+.oe-cancel-order-conf-modal-container .oe-cancel-order-conf-modal .new-planAdd-detail, .oe-cancel-order-conf-modal-container .oe-backorder-warning-modal .new-planAdd-detail, .oe-backorder-warning-modal-container .oe-cancel-order-conf-modal .new-planAdd-detail, .oe-backorder-warning-modal-container .oe-backorder-warning-modal .new-planAdd-detail {
+  display: block; }
+
 @media screen and (max-width: 768px) {
   .order-entry-container {
     margin-top: 10%;
@@ -960,7 +1006,11 @@ body {
     .order-entry-container .shipping-instructions {
       margin-top: 2em; }
       .order-entry-container .shipping-instructions input[type="checkbox"] {
-        margin: 0 10px; } }
+        margin: 0 10px; }
+
+  .oe-add-item-modal-container .oe-add-item-modal, .oe-add-item-modal-container .oe-cancel-order-conf-modal, .oe-cancel-order-conf-modal-container .oe-add-item-modal, .oe-cancel-order-conf-modal-container .oe-cancel-order-conf-modal {
+    width: 95%;
+    margin: 35% auto; } }
 .planPending-registrations-container .status-report-container {
   width: 85%;
   max-height: 100%;
@@ -1328,6 +1378,249 @@ body {
     width: 95%; }
     .market-partners-container .first-filter.planRegis-form {
       width: 100%; } }
+.smartShip-container {
+  width: 85%;
+  margin: 0 auto;
+  display: block; }
+  .smartShip-container .profile-box {
+    border: 2px solid #36384B;
+    margin: 2em 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 1.5em;
+    padding: 1em 3em;
+    /*align-items: center;*/
+    /*justify-content: flex-start;*/ }
+  .smartShip-container .customer-details-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%; }
+    .smartShip-container .customer-details-container .purple-text {
+      font-weight: 700;
+      margin-top: 10px;
+      margin-bottom: 0; }
+    .smartShip-container .customer-details-container .planRegis-form {
+      width: auto;
+      padding: 0; }
+  .smartShip-container .profile-boxStyle {
+    border: 2px solid #36384B;
+    padding: 15px; }
+  .smartShip-container .margin-right {
+    margin-right: 5px; }
+  .smartShip-container .margin-left {
+    margin-left: 5px; }
+  .smartShip-container .margin-top {
+    margin-top: 5px; }
+  .smartShip-container .right-side .planRegis-form {
+    width: 100%;
+    padding: 0; }
+  .smartShip-container .right-side label {
+    text-align: left;
+    margin-right: 0; }
+  .smartShip-container .right-side .itemNumber {
+    display: grid;
+    grid-template-columns: 60% 30% 10%;
+    align-items: center;
+    justify-content: space-between; }
+    .smartShip-container .right-side .itemNumber input {
+      margin: 0; }
+    .smartShip-container .right-side .itemNumber input[type="text"] {
+      width: 90%; }
+    .smartShip-container .right-side .itemNumber input[type="number"] {
+      width: 70%; }
+    .smartShip-container .right-side .itemNumber a {
+      text-align: center;
+      border-radius: 50%;
+      width: 35px;
+      font-size: 2em;
+      vertical-align: middle;
+      text-align: center;
+      border: 2px solid #36384B; }
+  .smartShip-container .right-side .new-planAdd-detail {
+    display: block; }
+    .smartShip-container .right-side .new-planAdd-detail thead {
+      background-color: #434DA0; }
+      .smartShip-container .right-side .new-planAdd-detail thead tr th {
+        color: white; }
+  .smartShip-container .right-side .total-bill {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px; }
+    .smartShip-container .right-side .total-bill td {
+      padding: 10px;
+      font-weight: 700;
+      font-family: "aktiv-grotesk", Helvetica, sans-serif; }
+    .smartShip-container .right-side .total-bill tr:first-child {
+      border-bottom: 1px solid #36384B; }
+
+@media screen and (max-width: 768px) {
+  .smartShip-container {
+    width: 100%;
+    margin: 0 auto; }
+    .smartShip-container .profile-box {
+      grid-template-columns: 100%;
+      padding: 1em;
+      border: none; }
+    .smartShip-container .right-side {
+      margin-top: 2em; } }
+.advisor-profile-container {
+  width: 70%;
+  margin: 0 auto;
+  display: block; }
+  .advisor-profile-container .pf-picture-container {
+    position: relative; }
+    .advisor-profile-container .pf-picture-container .pf-picture-to-upload {
+      width: 100% !important;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .advisor-profile-container .pf-picture-container .pf-picture {
+      width: 60%;
+      display: block;
+      margin: 0 auto; }
+    .advisor-profile-container .pf-picture-container p {
+      font-size: 14px; }
+  .advisor-profile-container .pf-nickname-info-icon, .advisor-profile-container .pf-sin-info-icon {
+    color: #70E9B2;
+    margin-left: 10px;
+    font-size: 1.5em; }
+  .advisor-profile-container .profile-boxStyle {
+    border: 2px solid #36384B;
+    padding: 10px; }
+    .advisor-profile-container .profile-boxStyle .margin-right {
+      margin-right: 5px; }
+    .advisor-profile-container .profile-boxStyle .margin-left {
+      margin-left: 5px; }
+  .advisor-profile-container .pf-nickname-info-container {
+    /*display: block;*/
+    /*display: none;*/
+    position: relative;
+    background-color: #E2FBF0;
+    padding: 10px 15px;
+    /*top: 36%;*/
+    /*left: 48%;*/
+    width: 50%;
+    z-index: 1000;
+    transition: all 0.5s ease-in;
+    margin-left: 1em; }
+    .advisor-profile-container .pf-nickname-info-container i {
+      position: absolute;
+      color: #E2FBF0;
+      left: -15px;
+      /*top:-30px;*/
+      font-size: 3em; }
+    .advisor-profile-container .pf-nickname-info-container .info-text {
+      font-size: 13px;
+      color: #36384B; }
+  .advisor-profile-container .purple-text {
+    font-weight: 700;
+    margin-top: 10px;
+    font-size: 18px; }
+  .advisor-profile-container .pf-sin-info-container {
+    /*position: absolute;*/
+    background-color: #E2FBF0;
+    padding: 10px 15px;
+    /*top: 41%;*/
+    /*left: 64%;*/
+    /*width: 25%;*/
+    z-index: 1000;
+    transition: all 0.5s ease-in;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: auto; }
+    .advisor-profile-container .pf-sin-info-container i {
+      position: absolute;
+      color: #E2FBF0;
+      /*left:-15px;*/
+      /*top:0px;*/
+      left: 35%;
+      top: -30px;
+      font-size: 3em; }
+    .advisor-profile-container .pf-sin-info-container .info-text {
+      font-size: 14px;
+      color: #36384B; }
+  .advisor-profile-container .agreement-text input[type=checkbox] {
+    width: 25px;
+    height: 25px; }
+  .advisor-profile-container .agreement-text label {
+    font-family: "aktiv-grotesk", Helvetica, sans-serif;
+    color: #36384B;
+    font-weight: 500;
+    margin: 0 0 0 10px; }
+  .advisor-profile-container .agreement-text a {
+    color: #70E9B2;
+    text-decoration: underline;
+    margin-left: 2.5em;
+    font-weight: 700; }
+  .advisor-profile-container .profileBox-heading {
+    margin: 10px 0; }
+  .advisor-profile-container .permissions {
+    width: 100%;
+    border: 2px solid #36384B;
+    display: grid;
+    grid-template-columns: 20% 30% 20% 30%;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 15px; }
+    .advisor-profile-container .permissions div {
+      width: 90%;
+      margin: 0 auto;
+      justify-content: center; }
+    .advisor-profile-container .permissions label {
+      color: #434DA0;
+      font-size: 14px;
+      font-weight: 300;
+      font-family: "aktiv-grotesk", Helvetica, sans-serif;
+      text-align: center;
+      width: 100%;
+      min-height: 40px; }
+    .advisor-profile-container .permissions input[type=checkbox] {
+      width: 20px;
+      height: 20px; }
+  .advisor-profile-container .first-section {
+    padding-right: 15px; }
+  .advisor-profile-container .second-section {
+    padding-left: 15px; }
+
+@media screen and (max-width: 768px) {
+  .advisor-profile-container {
+    width: 95%; }
+    .advisor-profile-container .pf-sin-info-container {
+      width: auto;
+      position: relative;
+      left: 0;
+      top: 0;
+      max-width: 100%; }
+      .advisor-profile-container .pf-sin-info-container i {
+        position: absolute;
+        color: #E2FBF0;
+        left: 30%;
+        top: -30px;
+        font-size: 3em; }
+    .advisor-profile-container .permissions {
+      grid-template-columns: 100%; }
+      .advisor-profile-container .permissions div {
+        width: 100%; } }
+@media screen and (min-width: 769px) and (max-width: 980px) {
+  .advisor-profile-container .pf-sin-info-container {
+    width: auto;
+    top: 0;
+    position: relative;
+    left: 0; }
+    .advisor-profile-container .pf-sin-info-container i {
+      position: absolute;
+      color: #E2FBF0;
+      left: 30%;
+      top: -30px;
+      font-size: 3em; } }
 /*Media queries */
 @media screen and (max-width: 768px) {
   .srs-login-container {

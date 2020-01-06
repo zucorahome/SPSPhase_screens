@@ -165,3 +165,4 @@ let agreementText = $('.agreement-text');
     $('.serial-info').click(function(){
     $('.serial-text-container').toggle(500);
 });
+});

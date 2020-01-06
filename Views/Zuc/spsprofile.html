@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zucora Home: Event page</title>
+    <meta content="" name="description">
+   	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="../../Content/Zuc/styles/bootstrap.min.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/styles9d66868d59cc90dfcd5c.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/new_styles.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/SRS-system.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- [ FONTS ]-->
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <link href="https://use.typekit.net/ovc0ozw.css" rel="stylesheet">
+</head>
+<body>
+<!-- Site Navigation-->
+    <div class="zuc-nav-wrapper srs-nav-container" data-nav-height>
+      <!-- Main Navigation-->
+      <nav class="zuc-main-nav flex flex-hor-start flex-hor-between flex-vert-center u-uppercase" data-main-navigation>
+        <!-- Nav Branding-->
+        <a class="zuc-nav-brand" href="#"><img src="../../Images/Zuc/images/ZucoraHome-brand-white.svg"></a>
+        <!-- Nav Links-->
+        <div class="zuc-nav-links flex flex-hor-end flex-hor-between flex-no-wrap flex-vert-center">
+          <!-- First -->
+          <div class="zuc-nav-dropdown"><span class="u-uppercase">Plans</span>
+             <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+                <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                  <!-- Dropdown links -->
+                  <div class="zuc-dropdown-column">
+                    <a href="~/zuc/planregistration" title="Plan Registration" aria-role="menu-item">Plan Registration</a>
+                    <a href="~/zuc/planinquiry" title="Plan Registration Inquiry" aria-role="menu-item">Plan Inquiry</a>
+                    <a href="plan-pending-registrations.html" title="Registration History" aria-role="menu-item">Registration History</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="zuc-nav-dropdown"><span class="u-uppercase">Orders</span>
+            <!-- Drop Down-->
+            <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+              <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                <!-- Dropdown links -->
+                <div class="zuc-dropdown-column">
+                  <a href="order-entry.html" title="Order Entry" aria-role="menuitem">Entry</a>
+                  <a href="order-history.html" title="Order History" aria-role="menuitem">Order History</a>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div class="zuc-nav-dropdown "><i class="fa fa-user-alt"></i><span class="u-uppercase"> @User.Identity.Name</span>
+            <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+              <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                <!-- Dropdown links -->
+                <div class="zuc-dropdown-column">
+                  <a href="~/zuc/retailerprofile">Profile</a>
+                  <a href="~/Account/Manage">Change Password</a>
+                  <a href="javascript:document.getElementById('logoutForm').submit()">Log out</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile Nav Button-->
+        <div class="zuc-menu">
+          <div class="zuc-menu-open" role="button" data-open-menu aria-label="Mobile Navigation"><span class="hidden" aria-hidden="true" aria-label="Open mobile menu">Mobile Menu</span>
+          </div>
+        </div>
+      </nav>
+      <!-- Mobile Navigation-->
+      <div class="zuc-mobile-nav" data-mobile-menu>
+        <!-- Top Branding CTA-->
+        <div class="zuc-mobile-nav-content">
+          <a href="https://zucorahome.com/" title="Zucora Home">
+            <img src="~/Images/Zuc/images/ZucoraHome-brand-white.svg" alt="Zucora Home">
+          </a>
+        </div>
+        <div class="zuc-accordion-nav" role="menu" aria-role="menu">
+          <!--Plans Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title">Plans<i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="~/zuc/planregistration" title="Plan Registration" aria-role="menuitem">Plan Registration</a>
+                <a class="zuc-accordion-link" href="~/zuc/planinquiry" title="Plan Registration Inquiry" aria-role="menuitem">Plan Registration Inquiry</a>
+                <a class="zuc-accordion-link" href="plan-reporting.html" title="Registration History" aria-role="menuitem">Registration History/a>
+              </div>
+            </div>
+            <!--Orders Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title">Orders<i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="order-entry.html" title="Order Entry" aria-role="menuitem">Order Entry</a>
+                <a class="zuc-accordion-link" href="order-history.html" title="Order History" aria-role="menuitem">Order History</a>
+              </div>
+            </div>
+              <!--Username Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title"><i class="fa fa-user-alt"></i><i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="~/zuc/retailerprofile" title="Profile" aria-role="menuitem">Profile</a>
+                <a class="zuc-accordion-link" href="~/Account/Manage" title="Change Password" aria-role="menuitem">Change Password</a>
+                <a class="zuc-accordion-link" href="javascript:document.getElementById('logoutForm').submit()" title="Log Out" aria-role="menuitem">Log Out</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main page content-->
+<section class="advisor-profile-container">
+  <h1 class="srs-heading">@ViewBag.Title</h1>
+<!--
+    NOTE: Clicking anywhwere on .pf-picture-container will trigger the
+          file explorer to upload a new picture; .pf-add-picture-prompt
+          will only show if no picture has been added and .pf-picture
+          will only show if a picture has been uploaded.
+
+    NOTE: There is some inline styling below to assist with the picture upload.
+          Please feel free to move it into a stylesheet, if preferred.  It
+          helps with the logic, so I have included it here.
+-->
+<div class="flex flex-vert-center flex-hor-center margin-top-2 mobile-column">
+  <div class="pf-picture-container" style="position: relative;">
+      <img class="pf-picture" src="../../Images/Zuc/images/profile-icon.png" alt="Profile picture icon"/>
+      <div class="pf-add-picture-prompt">
+          <i></i>
+          <i></i>
+          <!-- Note: is it okay to change from span tag to <p> tag? -->
+          <span><p class="u-text-center">Add Image</p></span>
+      </div>
+      <input class="pf-picture-to-upload" type="file" />
+  </div>
+  <div class="flex flex-vert-center">
+      <input name="pf-nickname" placeholder="Nickname (displayed name)" type="text" />
+      <i class="pf-nickname-info-icon fa fa-info-circle"></i>
+      <div class="pf-nickname-info-container non-visible">
+          <i class="fa fa-caret-left"></i>
+          <p class="info-text">Enter a name you would like to use when displayed publicly, such as on the "Leader Board".</p>
+      </div>
+  </div>
+</div>
+<div class="two-grid-column mobile-column">
+  <!-- first section -->
+    <div class="first-section">
+        <h3 class="profileBox-heading">Profile</h3>
+        <div class="profile-boxStyle">
+            <h4 class="purple-text">Name:</h4>
+              <div class="flex flex-vert-center flex-hor-center">
+                <input name="pf-first-name" placeholder="First" type="text" class="margin-right" />
+                <input name="pf-last-name" placeholder="Last" type="text" class="margin-left" />
+            </div>
+            <input name="pf-phone" placeholder="Phone Number" type="text" />
+            <input name="pf-email" placeholder="Email" type="text" class="margin-bottom-1"/>
+        </div>
+    </div>
+<!-- second section -->
+  <div class="second-section">
+      <div>
+        <div class="flex flex-vert-center">
+          <h3 class="profileBox-heading">S.I.N. (Required)</h3>
+          <i class="pf-sin-info-icon fa fa-info-circle"></i>
+        </div>
+
+        <div class="pf-sin-info-container non-visible">
+            <i class="fa fa-caret-up"></i>
+            <p class="info-text">We need your Social Insurance Number so we can record and report Smarter Living Plan earnings on an annual basis.</p>
+        </div>
+
+        <div class="profile-boxStyle">
+            <h4 class="purple-text">Social Insurance Number</h4>
+            <input name="pf-sin" placeholder="Number" type="text" />
+        </div>
+    </div>
+
+    <div class="margin-top-1">
+        <h3 class="profileBox-heading">Agreement</h3>
+        <div class="profile-boxStyle agreement-text">
+          <div class="flex flex-vert-center">          
+            <input type="checkbox" name="pf-have-read-and-accept" />
+            <label for="pf-have-read-and-accept">I have read and accept the Advisor Terms and Conditions.</label>
+          </div>
+            <a href="#/" class="pf-view-terms-and-conditions">View Terms &amp; Conditions</a>
+        </div>
+    </div>
+    <!-- second section div closes -->
+  </div>
+    <!-- two grid-div ends -->
+</div>
+<div>
+    <h3 class="profileBox-heading">Permissions (Set by Owner)</h3>
+    <div class="permissions">
+        <div>
+            <p class="purple-text u-bold u-text-center">Order Product</p>
+            <div class="flex flex-column flex-vert-center">
+                <label for="pf-permission-products">Products</label>
+                <input type="checkbox" name="pf-permission-products" disabled />
+            </div>
+        </div>
+        <div>
+            <p class="purple-text u-bold u-text-center">Protection Plan</p>
+            <div class="flex flex-row flex-hor-center flex-vert-center">
+                <div class="flex flex-column flex-vert-center">
+                    <label for="pf-permission-register">Register</label>
+                    <input type="checkbox" name="pf-permission-register" data-lt-role-name="M-Plan Registration" disabled />
+                </div>
+                <div class="flex flex-column flex-vert-center">
+                    <label for="pf-permission-modify">Modify</label>
+                    <input type="checkbox" name="pf-permission-modify" data-lt-role-name="C-Plan Inquiry-Modify Plan" disabled />
+                </div>
+                <div class="flex flex-column flex-vert-center">
+                    <label for="pf-permission-cancel">Cancel</label>
+                    <input type="checkbox" name="pf-permission-cancel" data-lt-role-name="C-Plan Inquiry-Cancel Plan" disabled />
+                </div>
+            </div>
+        </div>
+        <div>
+            <p class="purple-text u-bold u-text-center">Smarter Living Plans</p>
+            <div class="flex flex-column flex-vert-center">
+                <label for="pf-permission-enroll">Enroll</label>
+                <input type="checkbox" name="pf-permission-enroll" disabled />
+            </div>
+        </div>
+        <div>
+            <p class="purple-text u-bold u-text-center">Reporting</p>
+            <div class="flex flex-row flex-hor-around flex-vert-center">
+                <div class="flex flex-column flex-vert-center">
+                    <label for="pf-permission-orders">Orders</label>
+                    <input type="checkbox" name="pf-permission-orders" disabled />
+                </div>
+                <div class="flex flex-column flex-vert-center">
+                    <label for="pf-permission-plans">Plans</label>
+                    <input type="checkbox" name="pf-permission-plans" data-lt-role-name="M-Plan Inquiry" disabled />
+                </div>
+                <div class="flex flex-column flex-vert-center">
+                    <label for="pf-permission-success-tracker">Success Tracker</label>
+                    <input type="checkbox" name="pf-permission-success-tracker" disabled />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- screen controllers -->
+<div class="flex flex-vert-center flex-hor-between mobile-column margin-bottom-2 margin-top-1">
+    <div>
+        <a href="~/Account/Manage" class="simple-link u-uppercase">Change Password</a>
+        <i class="fa fa-pencil-alt purple-text"></i>
+    </div>
+    <div class="flex flex-vert-center flex-hor-center margin-top-1">
+      <button class="pf-update zuc-btn zuc-btn-secondary u-soft-shadow">Save</button>
+    </div>
+</div>
+</section>
+<!-- main page content ends -->
+    <!-- Site Footer -->
+    <footer class=""></footer>  
+    <script type="text/javascript" src="~/Content/Zuc/js/build9d66868d59cc90dfcd5c.js"></script>
+    <script type="text/javascript" src="~/Scripts/Zuc/js/srs-interactivity.js"></script>
+</body>
+</html>

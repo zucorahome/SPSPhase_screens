@@ -219,72 +219,119 @@
             </div>
         </div>
 </section>
-      <div class="oe-add-item-modal-container">
+      <div class="oe-add-item-modal-container non-visible">
         <div class="oe-add-item-modal">
-            <h2>Add Item</h2>
-            <span class="close-modal">X</span>
-            <label for="oe-add-item-item">Item*:</label>
-            <input id="oe-add-item-item" list="oe-add-item-item-options" required />
+            <div class="purple-background flex flex-vert-center flex-hor-between">
+              <h2>Add Item</h2>
+              <span class="close-modal">X</span>
+            </div>
+          <div class="planRegis-form">
+            <div class="flex flex-vert-center"> 
+              <label for="oe-add-item-item">Item*:</label>
+              <input id="oe-add-item-item" list="oe-add-item-item-options" required type="text" />
+            </div>
             <!-- <datalist> will be populated via JS with elements like this: <option value="Description (ZFES3050)" data-lt-value="19198"></option> -->
-            <datalist id="oe-add-item-item-options"></datalist>
-            <label for="oe-add-item-unit-quantity">Unit Quantity:</label>
+              <div class="datalist">
+                <datalist id="oe-add-item-item-options"></datalist>
+              </div>
+            <div class="two-grid-column mobile-column margin-top-1">
+              <!-- first side -->
+            <div class="">  
+              <div class="quantity-input">
+                <!-- Moved datalist above because of two grid stucture -->
+                <label for="oe-add-item-unit-quantity">Unit Quantity:</label>
+                <div class="flex flex-vert-center">
+                  <input id="oe-add-item-unit-quantity" type="number" style="margin:0 5px;" />
+                  X
+                  <input id="oe-add-item-unit-quantity-amount" type="number" disabled  style="margin:0 5px;" />
+                </div>
+              </div>
+              <div class="quantity-input">
+                <label for="oe-add-item-case-quantity">Case Quantity:</label>
+                <div class="flex flex-vert-center">
+                    <input id="oe-add-item-case-quantity" type="number" style="margin:0 5px;" />
+                    X
+                    <input id="oe-add-item-case-quantity-amount" type="number" disabled style="margin:0 5px;" />
+                </div>
+              </div>
             <div>
-                <input id="oe-add-item-unit-quantity" type="number" />
-                X
-                <input id="oe-add-item-unit-quantity-amount" type="number" disabled />
+              <p style="font-size:14px;">Cases contain --<span class="oe-add-item-case-units"></span></p>
             </div>
-            <label for="oe-add-item-case-quantity">Case Quantity:</label>
-            <div>
-                <input id="oe-add-item-case-quantity" type="number" />
-                X
-                <input id="oe-add-item-case-quantity-amount" type="number" disabled />
+          </div>
+          <!-- second side -->
+          <div>
+            <p class="u-bold" style="font-size:22px;">Units to be Added: <span class="oe-add-item-total-units"></span></p>
+            <p class="u-bold" style="font-size:18px;">Quantity Available: <span class="oe-add-item-available-units"></span></p>
+            
+            <p style="font-size:14px;">Do you wish to Backorder out of stock items?</p>
+            <div class="flex flex-vert-center">
+              <div class="flex flex-vert-center">
+                <input id="oe-add-item-do-backorder" type="checkbox" name="oe-add-item-backorder" value="yes" checked />
+                <label for="oe-add-item-do-backorder">Yes</label>
+              </div>
+              <div class="flex flex-vert-center">
+                <input id="oe-add-item-do-not-backorder" type="checkbox" name="oe-add-item-backorder" value="no" />
+                <label for="oe-add-item-do-not-backorder">No</label>
+              </div>
             </div>
-            <p>Cases contain <span class="oe-add-item-case-units"></span></p>
-            <p>Units to be Added: <span class="oe-add-item-total-units"></span></p>
-            <p>Quantity Available: <span class="oe-add-item-available-units"></span></p>
-            <p>Do you wish to Backorder out of stock items?</p>
-            <input id="oe-add-item-do-backorder" type="checkbox" name="oe-add-item-backorder" value="yes" checked />
-            <label for="oe-add-item-do-backorder">Yes</label>
-            <input id="oe-add-item-do-not-backorder" type="checkbox" name="oe-add-item-backorder" value="no" />
-            <label for="oe-add-item-do-not-backorder">No</label>
-            <button class="oe-add-item-add-more">Add More</button>
-            <button class="oe-add-item-add">Add</button>
+            <div class="flex flex-vert-center margin-top-1">
+              <button class="oe-add-item-add-more zuc-btn zuc-btn-secondary" style="margin:0 5px;">Add More</button>
+              <button class="oe-add-item-add zuc-btn zuc-btn-secondary">Add</button>
+            </div>
+          </div>
+
+          </div>
+            <!-- two grid ends -->
+            </div>
+            <!-- main form div ends -->
         </div>
+        <!-- main modal div ends -->
       </div>
-        <div class="oe-cancel-order-conf-modal modal" style="display: none;">
+      <div class="oe-cancel-order-conf-modal-container non-visible">
+        <div class="oe-cancel-order-conf-modal">
+          <span class="close-modal">X</span>
             <h2>Caution!</h2>
-            <span class="close-modal">X</span>
             <p>Removing Order will remove all data associated with this order including selected Items.</p>
             <h3>Do you wish to continue?</h3>
-            <button class="oe-cancel-order-conf-yes">Yes</button>
-            <button class="oe-cancel-order-conf-no">No</button>
+            <div class="flex flex-vert-center flex-hor-center margin-bottom-1">
+              <button class="oe-cancel-order-conf-yes zuc-btn zuc-btn-secondary u-soft-shadow" style="margin:5px;">Yes</button>
+              <button class="oe-cancel-order-conf-no zuc-btn zuc-btn-secondary u-soft-shadow" style="margin:5px;">No</button>
+            </div>
         </div>
-        <div class="oe-backorder-warning-modal modal" style="display: none;">
+      </div>
+      <div class="oe-backorder-warning-modal-container">
+        <div class="oe-backorder-warning-modal">
+          <span class="close-modal">X</span>
             <h2>Backorder Warning</h2>
-            <span class="close-modal">X</span>
             <p>Please note your order contains Backordered items and will be shipped when they become available.</p>
-            <table class="oe-backorder-warning-items">
-                <thead>
-                    <tr>
-                        <th scope="col">SKU</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">QTY Ordered</th>
-                        <th scope="col">QTY Available</th>
-                    </tr>
-                </thead>
-                <!--
-                    <tbody> will be populated via JS with elements as follows:
-                        <tr data-lt-id="389518">
-                            <td data-label="SKU">[Data]</td>
-                            <td data-label="Description">[Data]</td>
-                            <td data-label="QTY Ordered">[Data]</td>
-                            <td data-label="QTY Available">[Data]</td>
-                        </tr>
-                -->
-                <tbody></tbody>
-            </table>
-            <button class="oe-backorder-warning-proceed">Proceed with Backorder</button>
+            <div class="new-planAdd-detail">
+              <table class="oe-backorder-warning-items">
+                  <thead>
+                      <tr>
+                          <th scope="col">SKU</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">QTY Ordered</th>
+                          <th scope="col">QTY Available</th>
+                      </tr>
+                  </thead>
+                  <!--
+                      <tbody> will be populated via JS with elements as follows:
+                          <tr data-lt-id="389518">
+                              <td data-label="SKU">[Data]</td>
+                              <td data-label="Description">[Data]</td>
+                              <td data-label="QTY Ordered">[Data]</td>
+                              <td data-label="QTY Available">[Data]</td>
+                          </tr>
+                  -->
+                  <tbody></tbody>
+              </table>
+              
+            </div>
+            <div class="flex-vert-center flex-hor-center flex margin-bottom-1 margin-top-2">
+              <button class="oe-backorder-warning-proceed zuc-btn zuc-btn-secondary u-soft-shadow">Proceed with Backorder</button>
+            </div>
         </div>
+      </div>
 <!-- main page content ends -->
     <!-- Site Footer -->
     <footer class=""></footer>  

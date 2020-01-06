@@ -1,0 +1,83 @@
+.smarterPartner-setup-container{
+	
+	/*first step*/
+	.su-step-1{
+		width:40%;
+		margin:0 auto;
+		display: block;
+
+		.step-box{
+			border:2px solid $grey-text;
+			background-color: #A3ACFF;
+			padding:1em;
+
+			h2,p{
+				/*color: white;*/
+				font-family: $para-fonts;
+				color: $grey-text;
+			}
+
+			p{
+				font-size: 30px;
+			}
+
+		}
+
+		.profileBox-style{
+			/*padding:1em;*/
+		}
+
+		.planRegis-form{
+			width:100%;
+			padding:10px;
+			margin:0 auto;
+
+			.form-div{
+				display: grid;
+				grid-template-columns: 20% 80%;
+				align-items: center;
+				justify-content: space-around;
+			}
+			input{
+				width: 100%;
+			}
+			select{
+				width:100%;
+				margin:.41667vw 0 0;
+			}
+
+			.two-grid-column{
+				margin-top:5px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width:$mobile-width){
+	.smarterPartner-setup-container{
+		.su-step-1{
+			width:95%;
+			margin:0 auto;
+			display: block;
+
+			.step-box{
+				margin-top:2em;
+			}
+			.planRegis-form{
+				.form-div{
+					grid-template-columns: 35% 65%;
+					word-break: break-word;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width:$tablet-width) and (max-width: $laptop-width){
+	.smarterPartner-setup-container{
+		.su-step-1{
+			width:80%;
+		}
+	}
+}

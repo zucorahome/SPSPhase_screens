@@ -116,3 +116,23 @@
 	font-family:$para-fonts;
 	font-size:18px;
 }
+
+.info-container-green{
+     position: absolute; 
+     /*position: relative;*/
+    background-color: #E2FBF0;
+    padding: 10px 15px;
+    /* top: 41%; */
+    /* left: 64%; */
+    /* width: 25%; */
+    z-index: 1000;
+    transition: all 0.5s ease-in;
+}
+
+.info-container-caret{
+    position: absolute;
+    color: #E2FBF0;
+    /*left: -15px; */
+     top: -30px; 
+    font-size: 3em;
+}

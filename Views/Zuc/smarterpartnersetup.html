@@ -186,20 +186,21 @@
     </div>
 </div>
 <div class="su-step-2">
-    <div>
-        <h2>Step 2 of 3.</h2>
-        <p>Identify each store and warehouse location (including the main location where sales occur and/or product may be delivered).</p>
+    <div class="step-box">
+        <h2 class="u-bold u-text-center">Step 2 of 3.</h2>
+        <p class="u-text-center">Identify each store and warehouse location (including the main location where sales occur and/or product may be delivered).</p>
     </div>
-    <div>
-        <h3>Our Locations <a class="su-locations-add">+</a></h3>
+    <div class="flex flex-column margin-top-1">
+        <h3 class="profileBox-heading">Our Locations <a class="su-locations-add">+</a></h3>
+        <div class="profileBox-style new-planAdd-detail">
         <table class="su-locations">
             <thead>
                 <tr>
-                    <th scope="col">Code</th>
-                    <th scope="col">Location Name</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col"></th>
+                    <th scope="col" style="width:15%">Code</th>
+                    <th scope="col" style="width: 20%;">Location Name</th>
+                    <th scope="col" style="width: 30%;">Address</th>
+                    <th scope="col" style="width: 20%">Phone</th>
+                    <th scope="col" style="width: 15%;">Edit</th>
                 </tr>
             </thead>
             <!--
@@ -214,66 +215,93 @@
             -->
             <tbody></tbody>
         </table>
+      </div>
     </div>
+    <div class="flex flex-hor-end margin-top-1 margin-bottom-1">
+      <button class="zuc-btn zuc-btn-secondary u-soft-shadow">Next</button>
+    </div>
+    <!-- maun su-step-2 ends -->
 </div>
 <div class="su-step-3">
-    <div>
-        <h2>Step 2 of 3.</h2>
-        <p>With the following financial details, we will be able to deposit commissions earned for Smarter Living Plans while making it easy to pay for Product Protection Plans and Products.</p>
+    <div class="step-box">
+        <h2 class="u-bold u-text-center">Step 3 of 3.</h2>
+        <p class="u-text-centera">With the following financial details, we will be able to deposit commissions earned for Smarter Living Plans while making it easy to pay for Product Protection Plans and Products.</p>
     </div>
-    <div>
-        <h3>Deposit &amp; Payment Preferences</h3>
-        <i class="su-deposit-payment-pref-info-circle"></i>
-        <div class="su-deposit-payment-pref-info-text-container">
-            <i></i>
+    <div class="flex flex-column margin-top-1">
+        <div class="flex flex-vert-center">
+          <h3 class="profileBox-heading">Deposit &amp; Payment Preferences</h3>
+          <i class="su-deposit-payment-pref-info-circle fa fa-info-circle"></i>
+        </div>
+        <div class="su-deposit-payment-pref-info-text-container non-visible">
+            <i class="fa fa-caret-up"></i>
             <p>
-                <b>Commission Earnings</b><br />
+                <b class="u-bold">Commission Earnings</b><br />
                 Amounts earned from enrollments to Smarter Living Plans are automatically deposited (EFT) to bank account.
             </p>
             <p>
-                <b>Plan Registrations</b>
+                <b class="u-bold">Plan Registrations</b><br/>
                 Payment for Product Protection Plans may be paid by either EFT (withdrawn from bank account) OR by Credit Card.
             </p>
             <p>
-                <b>Product Purchases</b>
+                <b class="u-bold">Product Purchases</b><br>
                 Payment for product purchases may be paid by EFT (withdrawn from bank account) OR by Credit Card used at time of Purchase OR by recognized Buying Group.
             </p>
         </div>
-        <div>
-            <h4>Commission Earnings</h4>
-            <input id="su-commission-payment-pref-eft" name="su-commission-payment-pref" type="checkbox" value="EFT" />
-            <label for="su-commission-payment-pref-eft">EFT (Deposited to Bank Account)</label>
-            <h4>Plan Registrations</h4>
-            <input id="su-plan-payment-pref-eft" name="su-plan-payment-pref" type="checkbox" value="EFT" />
-            <label for="su-plan-payment-pref-eft">EFT (Withdrawn from Bank Account)</label>
-            <input id="su-plan-payment-pref-credit-card" name="su-plan-payment-pref" type="checkbox" value="Credit Card" />
-            <label for="su-plan-payment-pref-credit-card">Credit Card</label>
-            <h4>Product Purchases</h4>
-            <input id="su-product-payment-pref-eft" name="su-product-payment-pref" type="checkbox" value="EFT" />
-            <label for="su-product-payment-pref-eft">EFT (Withdrawn from Bank Account)</label>
-            <input id="su-product-payment-pref-credit-card" name="su-product-payment-pref" type="checkbox" value="Credit Card" />
-            <label for="su-product-payment-pref-credit-card">Credit Card</label>
-            <input id="su-product-payment-pref-buying-group" name="su-product-payment-pref" type="checkbox" value="Buying Group" />
-            <label for="su-product-payment-pref-buying-group">Buying Group</label>
+        <div class="profileBox-style margin-top-1">
+            <p class="u-bold u-uppercase">Commission Earnings</p>
+            <div class="flex flex-vert-center margin-bottom-1">
+              <input id="su-commission-payment-pref-eft" name="su-commission-payment-pref" type="radio" value="EFT" />
+              <label for="su-commission-payment-pref-eft" class="purple-text">EFT (Deposited to Bank Account)</label>
+            </div>
+            <p class="u-bold u-uppercase">Plan Registrations</p>
+            <div class="flex flex-vert-center">
+              <input id="su-plan-payment-pref-eft" name="su-plan-payment-pref" type="radio" value="EFT" />
+              <label for="su-plan-payment-pref-eft" class="purple-text">EFT (Withdrawn from Bank Account)</label>
+            </div>
+            <div class="flex flex-vert-center margin-bottom-1">
+              <input id="su-plan-payment-pref-credit-card" name="su-plan-payment-pref" type="radio" value="Credit Card" />
+              <label for="su-plan-payment-pref-credit-card" class="purple-text">Credit Card</label>
+            </div>
+            <p class="u-bold u-uppercase">Product Purchases</p>
+              <div class="flex flex-vert-center">
+                <input id="su-product-payment-pref-eft" name="su-product-payment-pref" type="radio" value="EFT" />
+                <label for="su-product-payment-pref-eft" class="purple-text">EFT (Withdrawn from Bank Account)</label>
+              </div>
+              <div class="flex flex-vert-center">
+                <input id="su-product-payment-pref-credit-card" name="su-product-payment-pref" type="radio" value="Credit Card" />
+                <label for="su-product-payment-pref-credit-card" class="purple-text">Credit Card</label>
+              </div>
+              <div class="flex flex-vert-center margin-bottom-1">
+                <input id="su-product-payment-pref-buying-group" name="su-product-payment-pref" type="radio" value="Buying Group" />
+                <label for="su-product-payment-pref-buying-group" class="purple-text">Buying Group</label>
+              </div>
         </div>
     </div>
-    <div>
-        <h3>Banking Details</h3>
-        <i class="su-banking-details-info-circle"></i>
-        <div>
+    <div class="margin-top-1">
+      <div class="flex flex-vert-center">
+        <h3 class="profileBox-heading">Banking Details</h3>
+        <i class="su-banking-details-info-circle fa fa-info-circle"></i>
+      </div>
+        <div class="profileBox-style planRegis-form">
+          <div class="">
             <label for="su-bank-transit-number">Transit #:</label>
             <input id="su-bank-transit-number" type="number" />
+          </div>
+          <div>
             <label for="su-bank-institution-number">Institution #:</label>
             <input id="su-bank-institution-number" type="number" />
+          </div>
+          <div>
             <label for="su-bank-account-number">Account #:</label>
             <input id="su-bank-account-number" type="number" />
+          </div>
         </div>
     </div>
     <div>
         <h3>Credit Card Details <a class="su-credit-cards-add">+</a></h3>
-        <i class="su-credit-cards-info-circle"></i>
+        <i class="su-credit-cards-info-circle fa fa-info-circle"></i>
         <div class="su-credit-cards-info-text-container">
-            <i></i>
+            <i class="fa fa-caret-up"></i>
             <p>Credit Card information is required to provide payment of Smart3 Plan and Smart5 Plan registrations and online product purchases.</p>
             <p>If you are a member of a recognized Buying Group, products may be purchased on account through your Group. However, Credit Card payment is required for Smart3 Plan and Smart5 Plan registrations.</p>
         </div>

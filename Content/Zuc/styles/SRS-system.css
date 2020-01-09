@@ -19,7 +19,7 @@ body {
   color: #36384B;
 }
 
-.market-partners-container .mp-invite-sent-modal-container, .market-partners-container .mp-add-product-service-modal-container, .market-partners-container .mp-invite-modal-container, .market-partners-container .mp-add-note-modal-container, .popup-modals-container .rp-financial-details-modal-container, .popup-modals-container .rp-agreement-modal-container, .popup-modals-container .rp-partner-profile-details-modal-container, .oe-cancel-order-conf-modal-container, .oe-backorder-warning-modal-container, .oe-add-item-modal-container, .editOrder-modal-container, .planRegistration-modal-container, .cancel-caution-container, .cancelation-modal, .contacts-form-modal, .shipping-locations-modal, .popup-modals-container .video-modal-container, .popup-modals-container .mainSubmit-modal-container,
+.su-locations-add-modal-container, .market-partners-container .mp-invite-sent-modal-container, .market-partners-container .mp-add-product-service-modal-container, .market-partners-container .mp-invite-modal-container, .market-partners-container .mp-add-note-modal-container, .popup-modals-container .rp-financial-details-modal-container, .popup-modals-container .rp-agreement-modal-container, .popup-modals-container .rp-partner-profile-details-modal-container, .oe-cancel-order-conf-modal-container, .oe-backorder-warning-modal-container, .oe-add-item-modal-container, .editOrder-modal-container, .planRegistration-modal-container, .cancel-caution-container, .cancelation-modal, .contacts-form-modal, .shipping-locations-modal, .popup-modals-container .video-modal-container, .popup-modals-container .mainSubmit-modal-container,
 .popup-modals-container .remove-planModal-container, .popup-modals-container .addItem-modal {
   position: fixed;
   z-index: 1;
@@ -31,7 +31,7 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.market-partners-container .mp-invite-sent-modal-container .mp-invite-sent-modal, .market-partners-container .mp-add-product-service-modal-container .mp-add-product-service-modal, .market-partners-container .mp-add-product-service-modal-container .mp-invite-modal, .market-partners-container .mp-add-product-service-modal-container .mp-add-note-modal, .market-partners-container .mp-invite-modal-container .mp-add-product-service-modal, .market-partners-container .mp-invite-modal-container .mp-invite-modal, .market-partners-container .mp-invite-modal-container .mp-add-note-modal, .market-partners-container .mp-add-note-modal-container .mp-add-product-service-modal, .market-partners-container .mp-add-note-modal-container .mp-invite-modal, .market-partners-container .mp-add-note-modal-container .mp-add-note-modal, .popup-modals-container .rp-financial-details-modal-container .rp-financial-details-modal, .popup-modals-container .rp-agreement-modal-container .rp-agreement-modal, .popup-modals-container .rp-partner-profile-details-modal-container .rp-partner-profile-details-modal, .oe-cancel-order-conf-modal-container .oe-cancel-order-conf-modal, .oe-cancel-order-conf-modal-container .oe-backorder-warning-modal, .oe-backorder-warning-modal-container .oe-cancel-order-conf-modal, .oe-backorder-warning-modal-container .oe-backorder-warning-modal, .oe-add-item-modal-container .oe-add-item-modal, .editOrder-modal-container .editOrder-modal, .planRegistration-modal-container .planRegistration-modal, .cancel-caution-container .cancel-caution, .cancelation-modal .plan-cancelation-container, .contacts-form-modal .contacts-form, .shipping-locations-modal .shipping-locations-form, .popup-modals-container .video-modal-container .video-modal, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal,
+.su-locations-add-modal-container .su-locations-add-modal, .market-partners-container .mp-invite-sent-modal-container .mp-invite-sent-modal, .market-partners-container .mp-add-product-service-modal-container .mp-add-product-service-modal, .market-partners-container .mp-add-product-service-modal-container .mp-invite-modal, .market-partners-container .mp-add-product-service-modal-container .mp-add-note-modal, .market-partners-container .mp-invite-modal-container .mp-add-product-service-modal, .market-partners-container .mp-invite-modal-container .mp-invite-modal, .market-partners-container .mp-invite-modal-container .mp-add-note-modal, .market-partners-container .mp-add-note-modal-container .mp-add-product-service-modal, .market-partners-container .mp-add-note-modal-container .mp-invite-modal, .market-partners-container .mp-add-note-modal-container .mp-add-note-modal, .popup-modals-container .rp-financial-details-modal-container .rp-financial-details-modal, .popup-modals-container .rp-agreement-modal-container .rp-agreement-modal, .popup-modals-container .rp-partner-profile-details-modal-container .rp-partner-profile-details-modal, .oe-cancel-order-conf-modal-container .oe-cancel-order-conf-modal, .oe-cancel-order-conf-modal-container .oe-backorder-warning-modal, .oe-backorder-warning-modal-container .oe-cancel-order-conf-modal, .oe-backorder-warning-modal-container .oe-backorder-warning-modal, .oe-add-item-modal-container .oe-add-item-modal, .editOrder-modal-container .editOrder-modal, .planRegistration-modal-container .planRegistration-modal, .cancel-caution-container .cancel-caution, .cancelation-modal .plan-cancelation-container, .contacts-form-modal .contacts-form, .shipping-locations-modal .shipping-locations-form, .popup-modals-container .video-modal-container .video-modal, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal,
 .popup-modals-container .mainSubmit-modal-container .remove-planModal,
 .popup-modals-container .remove-planModal-container .mainSubmit-modal,
 .popup-modals-container .remove-planModal-container .remove-planModal, .popup-modals-container .addItem-modal .addItem-form {
@@ -41,7 +41,7 @@ body {
   margin: 15% auto;
 }
 
-.smartShip-container .right-side label, .market-partners-container .partner-data-container .planRegis-form label, .market-partners-container .partner-data-container .planRegis-form dt, .market-partners-container .partner-data-container .planRegis-form span, .market-partners-container .mp-invite-modal .planRegis-form label, .market-partners-container .mp-invite-modal .planRegis-form dt, .market-partners-container .mp-invite-modal .planRegis-form span, .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form label, .contacts-form-modal .contacts-form .planRegis-form label, .shipping-locations-modal .shipping-locations-form .planRegis-form label, .retailer-profile-container .profile-address label, .retailer-profile-container .two-grid-column .retailer-info-form label, .planRegis-form label {
+.smarterPartner-setup-container .profileBox-style .planRegis-form label, .smartShip-container .right-side label, .market-partners-container .partner-data-container .planRegis-form label, .market-partners-container .partner-data-container .planRegis-form dt, .market-partners-container .partner-data-container .planRegis-form span, .market-partners-container .mp-invite-modal .planRegis-form label, .market-partners-container .mp-invite-modal .planRegis-form dt, .market-partners-container .mp-invite-modal .planRegis-form span, .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form label, .contacts-form-modal .contacts-form .planRegis-form label, .shipping-locations-modal .shipping-locations-form .planRegis-form label, .retailer-profile-container .profile-address label, .retailer-profile-container .two-grid-column .retailer-info-form label, .planRegis-form label {
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -69,7 +69,7 @@ body {
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
 }
 
-.planRegis-controls div a, .simple-link {
+.planRegis-controls div a, .simple-link, .smarterPartner-setup-container .su-prev {
   text-transform: uppercase;
   text-decoration: underline;
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
@@ -77,7 +77,7 @@ body {
   color: #36384B;
 }
 
-.market-partners-container .mp-invite-sent-modal-container .mp-invite-sent-modal .close-modal, .market-partners-container .mp-add-product-service-modal-container .close-modal, .market-partners-container .mp-invite-modal-container .close-modal, .market-partners-container .mp-add-note-modal-container .close-modal, .popup-modals-container .rp-financial-details-modal-container .rp-financial-details-modal .purple-background .close-modal, .popup-modals-container .rp-agreement-modal-container .rp-agreement-modal .purple-background .close-modal, .popup-modals-container .rp-partner-profile-details-modal-container .rp-partner-profile-details-modal .purple-background .close-modal, .oe-cancel-order-conf-modal-container .oe-cancel-order-conf-modal .close-modal, .oe-cancel-order-conf-modal-container .oe-backorder-warning-modal .close-modal, .oe-backorder-warning-modal-container .oe-cancel-order-conf-modal .close-modal, .oe-backorder-warning-modal-container .oe-backorder-warning-modal .close-modal, .oe-add-item-modal-container .oe-add-item-modal .purple-background .close-modal, .editOrder-modal-container .editOrder-modal .purple-background h2::after, .planRegistration-modal-container .planRegistration-modal .cross, .cancelation-modal .plan-cancelation-container .cross, .contacts-form-modal .contacts-form .purple-background h2::after, .shipping-locations-modal .shipping-locations-form .purple-background h2::after, .popup-modals-container .video-modal-container .video-modal .cross, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal .cross,
+.su-locations-add-modal-container .su-locations-add-modal .purple-background h2::after, .market-partners-container .mp-invite-sent-modal-container .mp-invite-sent-modal .close-modal, .market-partners-container .mp-add-product-service-modal-container .close-modal, .market-partners-container .mp-invite-modal-container .close-modal, .market-partners-container .mp-add-note-modal-container .close-modal, .popup-modals-container .rp-financial-details-modal-container .rp-financial-details-modal .purple-background .close-modal, .popup-modals-container .rp-agreement-modal-container .rp-agreement-modal .purple-background .close-modal, .popup-modals-container .rp-partner-profile-details-modal-container .rp-partner-profile-details-modal .purple-background .close-modal, .oe-cancel-order-conf-modal-container .oe-cancel-order-conf-modal .close-modal, .oe-cancel-order-conf-modal-container .oe-backorder-warning-modal .close-modal, .oe-backorder-warning-modal-container .oe-cancel-order-conf-modal .close-modal, .oe-backorder-warning-modal-container .oe-backorder-warning-modal .close-modal, .oe-add-item-modal-container .oe-add-item-modal .purple-background .close-modal, .editOrder-modal-container .editOrder-modal .purple-background h2::after, .planRegistration-modal-container .planRegistration-modal .cross, .cancelation-modal .plan-cancelation-container .cross, .contacts-form-modal .contacts-form .purple-background h2::after, .shipping-locations-modal .shipping-locations-form .purple-background h2::after, .popup-modals-container .video-modal-container .video-modal .cross, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal .cross,
 .popup-modals-container .mainSubmit-modal-container .remove-planModal .cross,
 .popup-modals-container .remove-planModal-container .mainSubmit-modal .cross,
 .popup-modals-container .remove-planModal-container .remove-planModal .cross, .popup-modals-container .addItem-modal .addItem-form .purple-background h2::after {
@@ -202,7 +202,7 @@ body {
   font-size: 18px;
 }
 
-.info-container-green, .smarterPartner-setup-container .su-step-3 .su-deposit-payment-pref-info-text-container {
+.info-container-green, .smarterPartner-setup-container .su-credit-cards-info-text-container, .smarterPartner-setup-container .su-step-3 .su-deposit-payment-pref-info-text-container {
   position: absolute;
   /*position: relative;*/
   background-color: #E2FBF0;
@@ -214,7 +214,7 @@ body {
   transition: all 0.5s ease-in;
 }
 
-.info-container-caret, .smarterPartner-setup-container .su-step-3 .su-deposit-payment-pref-info-text-container .fa-caret-up {
+.info-container-caret, .smarterPartner-setup-container .su-credit-cards-info-text-container .fa-caret-up, .smarterPartner-setup-container .su-step-3 .su-deposit-payment-pref-info-text-container .fa-caret-up {
   position: absolute;
   color: #E2FBF0;
   /*left: -15px; */
@@ -2123,7 +2123,7 @@ body {
 }
 .smarterPartner-setup-container .su-step-1 .planRegis-form .form-div, .smarterPartner-setup-container .su-step-2 .planRegis-form .form-div, .smarterPartner-setup-container .su-step-3 .planRegis-form .form-div {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 25% 75%;
   align-items: center;
   justify-content: space-around;
 }
@@ -2166,10 +2166,120 @@ body {
   margin: 5px;
 }
 .smarterPartner-setup-container .profileBox-style label {
-  font-weight: 500 !important;
+  /*font-weight: 500 !important;*/
 }
 .smarterPartner-setup-container .profileBox-style .planRegis-form {
   width: 100%;
+}
+.smarterPartner-setup-container .su-credit-cards-info-text-container {
+  width: 30%;
+  margin-top: 1em;
+}
+.smarterPartner-setup-container .su-credit-cards-info-text-container p {
+  font-size: 14px;
+}
+.smarterPartner-setup-container .su-credit-cards-info-text-container .fa-caret-up {
+  left: 60%;
+}
+.smarterPartner-setup-container .creditCard-details-container.profileBox-style {
+  padding: 0px;
+}
+.smarterPartner-setup-container .creditCard-details-container ul {
+  list-style-type: none;
+}
+.smarterPartner-setup-container .creditCard-details-container ul li {
+  list-style-type: none;
+}
+.smarterPartner-setup-container .creditCard-details-container .su-credit-cards {
+  border: 2px solid #36384B;
+  margin: 10px;
+}
+.smarterPartner-setup-container .creditCard-details-container .credit-card-heading {
+  align-content: center;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  background-color: #C8C8C8;
+  border-bottom: 2px solid #36384B;
+}
+.smarterPartner-setup-container .creditCard-details-container .su-credit-cards-type {
+  font-size: 2.5em;
+  margin: 5px;
+  color: #36384B;
+}
+.smarterPartner-setup-container .creditCard-details-container .su-credit-cards-description {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+  color: #36384B;
+}
+.smarterPartner-setup-container .creditCard-details-container .su-credit-cards-expiry {
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #36384B;
+}
+.smarterPartner-setup-container .creditCard-details-container .su-credit-cards-expand {
+  color: #36384B;
+  margin: 0 5px;
+}
+.smarterPartner-setup-container .creditCard-details-container .su-credit-cards-details {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-content: center;
+  justify-content: center;
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+}
+.smarterPartner-setup-container .creditCard-details-container .su-credit-cards-details h5 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.smarterPartner-setup-container .creditCard-details-container .su-credit-cards-name, .smarterPartner-setup-container .creditCard-details-container .su-credit-cards-billing {
+  padding: 10px;
+}
+.smarterPartner-setup-container .creditCard-details-container .su-credit-cards-name-on-card {
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+  font-size: 18px;
+}
+.smarterPartner-setup-container .creditCard-details-container .su-credit-cards-billing div {
+  margin-bottom: 8px;
+}
+.smarterPartner-setup-container .creditCard-details-container .su-credit-cards-billing button {
+  margin: 5px;
+}
+.smarterPartner-setup-container #su-read-agree-to-terms {
+  width: 25px;
+  height: 25px;
+  margin-top: 0;
+}
+.smarterPartner-setup-container .su-view-terms {
+  color: #70E9B2;
+  text-decoration: underline;
+}
+.su-locations-add-modal-container .su-locations-add-modal .purple-background h2::after {
+  padding: 0;
+  font-weight: 700;
+}
+.su-locations-add-modal-container .su-locations-add-modal .planRegis-form {
+  width: 95%;
+}
+.su-locations-add-modal-container .su-locations-add-modal .planRegis-form .form-div {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  align-items: center;
+  justify-content: center;
+}
+.su-locations-add-modal-container .su-locations-add-modal .planRegis-form .margin-right {
+  margin-right: 5px;
+}
+.su-locations-add-modal-container .su-locations-add-modal .planRegis-form .margin-left {
+  margin-left: 15px;
+}
+.su-locations-add-modal-container .su-locations-add-modal .planRegis-form .two-grid-column {
+  width: 70%;
+  margin: 0 auto;
+}
+.su-locations-add-modal-container .su-locations-add-modal .planRegis-form select {
+  margin: 0.41667vw 0 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -2185,6 +2295,28 @@ body {
     grid-template-columns: 35% 65%;
     word-break: break-word;
   }
+  .smarterPartner-setup-container .creditCard-details-container .su-credit-cards-details {
+    grid-template-columns: 100%;
+  }
+
+  .su-locations-add-modal-container .su-locations-add-modal {
+    width: 95%;
+    margin: 30% auto;
+  }
+  .su-locations-add-modal-container .su-locations-add-modal .planRegis-form .form-div {
+    /*display: flex;*/
+    grid-template-columns: 30% 70%;
+  }
+  .su-locations-add-modal-container .su-locations-add-modal .planRegis-form .two-grid-column {
+    width: 100%;
+    grid-template-columns: 100%;
+  }
+  .su-locations-add-modal-container .su-locations-add-modal .planRegis-form .margin-left {
+    margin-left: 0;
+  }
+  .su-locations-add-modal-container .su-locations-add-modal .planRegis-form input, .su-locations-add-modal-container .su-locations-add-modal .planRegis-form select {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 769px) and (max-width: 980px) {
   .smarterPartner-setup-container .su-step-1, .smarterPartner-setup-container .su-step-2, .smarterPartner-setup-container .su-step-3 {
@@ -2196,6 +2328,14 @@ body {
     width: auto;
     left: 0;
     margin-top: 4em;
+  }
+  .smarterPartner-setup-container .su-credit-cards-info-text-container {
+    width: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .su-locations-add-modal-container .su-locations-add-modal .planRegis-form .two-grid-column {
+    width: 95%;
   }
 }
 /*Media queries */

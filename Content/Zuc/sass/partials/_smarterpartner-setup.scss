@@ -35,7 +35,7 @@
 
 			.form-div{
 				display: grid;
-				grid-template-columns: 20% 80%;
+				grid-template-columns: 25% 75%;
 				align-items: center;
 				justify-content: space-around;
 			}
@@ -94,7 +94,7 @@
 		}
 
 		label{
-			font-weight: 500 !important;
+			/*font-weight: 500 !important;*/
 		}
 
 		.planRegis-form{
@@ -104,8 +104,148 @@
 			}
 		}
 	}
+
+	.su-credit-cards-info-text-container{
+		@extend .info-container-green;
+		width:30%;
+		margin-top:1em;
+		p{
+				font-size: 14px;
+			}
+		.fa-caret-up{
+			@extend .info-container-caret;
+			left:60%;
+		}
+	}
+
+	.creditCard-details-container{
+		&.profileBox-style{
+			padding: 0px;
+		}
+		ul{
+			list-style-type: none;
+			li{
+				list-style-type: none;
+			}
+		}
+
+		.su-credit-cards{
+			border:2px solid $grey-text;
+			margin:10px;
+		}
+
+		.credit-card-heading{
+			align-content: center;
+			display: grid;
+			grid-template-columns: 65% 35%;
+			background-color: #C8C8C8;
+			border-bottom:2px solid $grey-text;
+			
+		}
+
+		.su-credit-cards-type{
+			font-size: 2.5em;
+			margin:5px;
+			color: $grey-text;
+		}
+		.su-credit-cards-description{
+			font-size: 16px;
+			font-weight: 700;
+			font-family: $para-fonts;
+			color: $grey-text;
+		}
+		.su-credit-cards-expiry{
+			font-family: $para-fonts;
+			font-size: 16px;
+			font-weight: 500;
+			color: $grey-text;
+		}
+		.su-credit-cards-expand{
+			color: $grey-text;
+			margin:0 5px;
+		}
+
+		.su-credit-cards-details{
+			display: grid;
+			grid-template-columns: 50% 50%;
+			align-content: center;
+			justify-content: center;
+			font-family: $para-fonts;
+			h5{
+				font-size: 20px;
+				font-weight: 700;
+			}
+		}
+		.su-credit-cards-name,.su-credit-cards-billing{
+			padding:10px;
+		}
+		.su-credit-cards-name-on-card{
+			font-family: $para-fonts;
+			font-size: 18px;
+		}
+		.su-credit-cards-billing{
+			div{
+				margin-bottom: 8px;
+			}
+			button{
+				margin:5px;
+			}
+		}
+	}
+	#su-read-agree-to-terms{
+		width:25px;
+		height: 25px;
+		margin-top:0;
+	}
+
+	.su-view-terms{
+		color: $zucora-mint-green;
+		text-decoration: underline;
+	}
+
+	.su-prev{
+		@extend .simple-link;
+	}
 }
 
+.su-locations-add-modal-container{
+	@extend %modal;
+	.su-locations-add-modal{
+		@extend %modal-background;
+		.purple-background {
+				h2::after {
+					@extend %form-cross;
+					padding: 0;
+					font-weight: 700;
+				}
+			}
+
+			.planRegis-form{
+				width:95%;
+				.form-div{
+					display: grid;
+					grid-template-columns: 25% 75%;
+					align-items: center;
+					justify-content:center;
+				}
+
+				.margin-right{
+					margin-right: 5px;
+				}
+				.margin-left{
+					margin-left:15px;
+				}
+				.two-grid-column{
+					width:70%;
+					margin:0 auto;
+				}
+				select{
+					margin:.41667vw 0 0;
+				}
+
+			}
+	}
+}
 
 @media screen and (max-width:$mobile-width){
 	.smarterPartner-setup-container{
@@ -124,8 +264,37 @@
 				}
 			}
 		}
+		.creditCard-details-container{
+			.su-credit-cards-details{
+				grid-template-columns: 100%;
+			}
+		}
 	}
 
+	.su-locations-add-modal-container{
+		.su-locations-add-modal{
+			width:95%;
+			margin:30% auto;
+
+			.planRegis-form{
+				.form-div{
+					/*display: flex;*/
+					grid-template-columns: 30% 70%;
+				}
+				.two-grid-column{
+					width:100%;
+					grid-template-columns: 100%;
+				}
+
+				.margin-left{
+					margin-left: 0;
+				}
+				input,select{
+					width:100%;
+				}
+			}
+		}
+	}
 	
 }
 
@@ -149,5 +318,14 @@
 				}
 			}
 		}
+		.su-credit-cards-info-text-container{
+			width:auto;
+		}
+	}
+}
+
+@media screen and (max-width: $max-laptop-width){
+	.su-locations-add-modal-container .su-locations-add-modal .planRegis-form .two-grid-column{
+		width:95%;
 	}
 }

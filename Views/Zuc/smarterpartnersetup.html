@@ -436,111 +436,164 @@
     </div>
   </div>
 </div>
-<div class="su-credit-cards-add-modal">
-    <h2>Payment Method</h2>
-    <label for="su-credit-cards-add-name-on-card">Name on Card</label>
-    <input id="su-credit-cards-add-name-on-card" required />
-    <label for="su-credit-cards-add-card-number">Card #</label>
-    <input id="su-credit-cards-add-card-number" pattern="[0-9\s]+" maxlength="24" required />
-    <label>
-        Expiration Date
-        <select id="su-credit-cards-add-expiry-month" required>
-            <option value="">MM</option>
-            <option value="1">01</option>
-            <option value="2">02</option>
-            <option value="3">03</option>
-            <option value="4">04</option>
-            <option value="5">05</option>
-            <option value="6">06</option>
-            <option value="7">07</option>
-            <option value="8">08</option>
-            <option value="9">09</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-        </select>
-        <!-- will be populated via JS with this year and the following 10 years -->
-        <select id="su-credit-cards-add-expiry-year" required>
-            <option value="">YYYY</option>
-        </select>
-    </label>
-    <h4>Billing Address <a class="su-credit-cards-add-billing-address-add">+</a></h4>
+<div class="su-credit-cards-add-modal-container non-visible">
+  <div class="su-credit-cards-add-modal">
+    <div class="purple-background"><h2>Payment Method</h2></div>
+    <div class="flex flex-vert-center flex-hor-start planRegis-form">
+      <div class="flex flex-column flex-hor-center">
+        <label for="su-credit-cards-add-name-on-card">Name on Card</label>
+        <input id="su-credit-cards-add-name-on-card" required type="text" />
+      </div>
+      <div class="flex flex-column flex-hor-center">
+        <label for="su-credit-cards-add-card-number">Card #</label>
+        <input id="su-credit-cards-add-card-number" pattern="[0-9\s]+" maxlength="24" required type="number" />
+      </div>
+      <div class="flex flex-column">
+        <label>Expiration Date</label>
+        <div class="flex flex-vert-center">
+            <select id="su-credit-cards-add-expiry-month" required>
+                <option value="">MM</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <!-- will be populated via JS with this year and the following 10 years -->
+            <select id="su-credit-cards-add-expiry-year" required>
+                <option value="">YYYY</option>
+            </select>
+          </div>
+      </div>
+  </div>
+  <div class="billing-address-container">
+    <h4 class="profileBox-heading">Billing Address <a class="su-credit-cards-add-billing-address-add">+</a></h4>
     <!--
-        the <div> below will be populated with sub-<div>s like
-        <div>
-            <input id="su-credit-cards-add-billing-address-4189812" name="su-credit-cards-add-billing-address" type="checkbox" value="4189812" />
+        the <div> below will be populated with sub-<div>s like-->
+      <div class="grey-border">    
+        <div class="flex flex-vert-center">
+            <input id="su-credit-cards-add-billing-address-4189812" name="su-credit-cards-add-billing-address" type="radio" value="4189812" />
             <label for="su-credit-cards-add-billing-address-4189812">[Name], [Address1], [Address2], [City], [Province], [Country], [Postal]</label>
         </div>
-    -->
-    <div></div>
-    <button class="su-credit-cards-add-done">Add Card</button>
+        <div></div>
+      </div>
+      <div class="flex flex-hor-end margin-top-1">
+        <button class="su-credit-cards-add-done zuc-btn zuc-btn-secondary">Add Card</button>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="su-credit-cards-edit-modal" style="display: none;">
-    <h2>Edit Payment Method</h2>
-    <div>
-        <h4>Payment Method</h4>
-        <div class="su-credit-cards-edit-description"></div>
+<div class="su-credit-cards-edit-modal-container non-visible">
+  <div class="su-credit-cards-edit-modal">
+    <div class="purple-background">
+      <h2>Edit Payment Method</h2>
     </div>
-    <label>
-        Expiration Date
-        <select id="su-credit-cards-edit-expiry-month" required>
-            <option value="">MM</option>
-            <option value="1">01</option>
-            <option value="2">02</option>
-            <option value="3">03</option>
-            <option value="4">04</option>
-            <option value="5">05</option>
-            <option value="6">06</option>
-            <option value="7">07</option>
-            <option value="8">08</option>
-            <option value="9">09</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-        </select>
-        <!-- will be populated via JS with this year and the following 10 years -->
-        <select id="su-credit-cards-edit-expiry-year" required>
-            <option value="">YYYY</option>
-        </select>
-    </label>
-    <div>
-        <input id="su-credit-cards-edit-is-default" type="checkbox" />
-        <label for="su-credit-cards-edit-is-default">Use as Default</label>
+    <div class="two-grid-column planRegis-form">
+      <!-- first section -->
+      <div class="first-section">
+        <div class="flex flex-column flex-hor-start">
+            <h4 class="u-bold" style="margin-bottom:0;">Payment Method</h4>
+            <div class="su-credit-cards-edit-description">
+              <!-- Just for styling purposes added those text -->
+              <i class="su-credit-cards-type fab fa-cc-[cardtype] fa-cc-mastercard"></i>
+              <p class="su-credit-cards-description">[CardType] ending in 4812</p>
+            </div>
+        </div>
+        <div class="flex flex-column margin-top-1">
+        <label class="u-bold">Expiration Date </label>
+          <div class="flex flex-vert-center">
+            <select id="su-credit-cards-edit-expiry-month" required class="margin-right">
+                <option value="">MM</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <!-- will be populated via JS with this year and the following 10 years -->
+            <select id="su-credit-cards-edit-expiry-year" required class="margin-left">
+                <option value="">YYYY</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex flex-vert-center margin-top-1">
+            <input id="su-credit-cards-edit-is-default" type="checkbox" />
+            <label for="su-credit-cards-edit-is-default">Use as Default</label>
+        </div>
+      </div>
+      <!-- second section -->
+      <div class="second-section">
+        <div>
+            <label for="su-credit-cards-edit-name-on-card">Name on Card</label>
+            <input id="su-credit-cards-edit-name-on-card" required type="text" />
+        </div>
+        <div class="margin-top-1">
+            <h4 class="u-bold">Billing Address <a class="su-credit-cards-edit-billing-address-edit"></a></h4>
+            <div class="su-credit-cards-edit-billing-name"></div>
+            <div class="su-credit-cards-edit-billing-address"></div>
+            <div class="su-credit-cards-edit-billing-phone"></div>
+        </div>
+      </div>
+      <!-- two grid column ends -->
+      </div>
+    <div class="flex flex-vert-center flex-hor-center margin-bottom-2">
+      <div><button class="su-credit-cards-edit-cancel zuc-btn zuc-btn-secondary">Cancel</button></div>
+      <div><button class="su-credit-cards-edit-save zuc-btn-secondary zuc-btn">Save</button></div>
     </div>
-    <div>
-        <label for="su-credit-cards-edit-name-on-card">Name on Card</label>
-        <input id="su-credit-cards-edit-name-on-card" required />
-    </div>
-    <div>
-        <h4>Billing Address <a class="su-credit-cards-edit-billing-address-edit"></a></h4>
-        <div class="su-credit-cards-edit-billing-name"></div>
-        <div class="su-credit-cards-edit-billing-address"></div>
-        <div class="su-credit-cards-edit-billing-phone"></div>
-    </div>
-    <button class="su-credit-cards-edit-cancel">Cancel</button>
-    <button class="su-credit-cards-edit-save">Save</button>
+  </div>
 </div>
-<div class="su-banking-details-modal" style="display: none;">
-    <h2>Banking Details</h2>
-    <span class="close-modal">X</span>
+<div class="su-banking-details-modal-container non-visible">
+  <div class="su-banking-details-modal">
+    <div class="purple-background flex flex-vert-center flex-hor-between">
+      <h2>Banking Details</h2>
+      <span class="close-modal">X</span>
+    </div>
     <p>Banking information is required to provide direct deposit of Commissions earned from enrollment of Smarter Living Plans. (If you are not offering the Smarter Living Plan, this information is optional.) Please include the following.</p>
-    <img />
+    <img class="center margin-bottom-1" alt=""/>
+  </div>
 </div>
-<div class="su-agreement-modal" style="display: none;">
-    <h2>Smarter Partner Agreement</h2>
-    <span class="close-modal">X</span>
-    <div class="su-agreement-text"></div>
-    <div>
-        <button class="su-agreement-disagree">I Do Not Agree</button>
-        <button class="su-agreement-agree">I Agree</button>
-        <i class="su-agreement-print"></i>
-        <i class="su-agreement-download"></i>
-    </div>
+<div class="su-agreement-modal-container non-visible">
+  <div class="su-agreement-modal">
+      <div class="purple-background flex flex-vert-center flex-hor-between">
+        <h2>Smarter Partner Agreement</h2>
+        <span class="close-modal">X</span>
+      </div>
+      <div class="padding-1">
+        <div class="su-agreement-text"></div>
+        <div class="flex flex-vert-center flex-hor-between margin-top-1 mobile-column">
+          <div class="agreement-radioButtons">
+            <button class="su-agreement-disagree zuc-btn zuc-btn-secondary">I Do Not Agree</button>
+            <button class="su-agreement-agree zuc-btn-secondary zuc-btn">I Agree</button>
+          </div>
+          <div class="agreement-actions">
+            <i class="su-agreement-print fas fa-print"></i>
+            <i class="su-agreement-download fas fa-download"></i>
+          </div>
+        </div>
+      </div>
+  </div>
 </div>
-<div class="su-submitted-modal" style="display: none;">
-    <h2>Thank you!</h2>
+
+<div class="su-submitted-modal-container non-visible">
+  <div class="su-submitted-modal">
     <span class="close-modal">X</span>
+    <h2 class="u-text-center">Thank you!</h2>
     <p>Thank you for completing the Setup for the Smarter Partner program. We will review your information and advise you by email within 2 business days following our review of the information provided.</p>
+  </div>
 </div>
 </section>
 <!-- main page content ends -->

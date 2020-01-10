@@ -19,7 +19,7 @@ body {
   color: #36384B;
 }
 
-.su-locations-add-modal-container, .market-partners-container .mp-invite-sent-modal-container, .market-partners-container .mp-add-product-service-modal-container, .market-partners-container .mp-invite-modal-container, .market-partners-container .mp-add-note-modal-container, .popup-modals-container .rp-financial-details-modal-container, .popup-modals-container .rp-agreement-modal-container, .popup-modals-container .rp-partner-profile-details-modal-container, .oe-cancel-order-conf-modal-container, .oe-backorder-warning-modal-container, .oe-add-item-modal-container, .editOrder-modal-container, .planRegistration-modal-container, .cancel-caution-container, .cancelation-modal, .contacts-form-modal, .shipping-locations-modal, .popup-modals-container .video-modal-container, .popup-modals-container .mainSubmit-modal-container,
+.su-submitted-modal-container, .su-agreement-modal-container, .su-banking-details-modal-container, .su-credit-cards-edit-modal-container, .su-credit-cards-add-modal-container, .su-locations-add-modal-container, .market-partners-container .mp-invite-sent-modal-container, .market-partners-container .mp-add-product-service-modal-container, .market-partners-container .mp-invite-modal-container, .market-partners-container .mp-add-note-modal-container, .popup-modals-container .rp-financial-details-modal-container, .popup-modals-container .rp-agreement-modal-container, .popup-modals-container .rp-partner-profile-details-modal-container, .oe-cancel-order-conf-modal-container, .oe-backorder-warning-modal-container, .oe-add-item-modal-container, .editOrder-modal-container, .planRegistration-modal-container, .cancel-caution-container, .cancelation-modal, .contacts-form-modal, .shipping-locations-modal, .popup-modals-container .video-modal-container, .popup-modals-container .mainSubmit-modal-container,
 .popup-modals-container .remove-planModal-container, .popup-modals-container .addItem-modal {
   position: fixed;
   z-index: 1;
@@ -31,7 +31,7 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.su-locations-add-modal-container .su-locations-add-modal, .market-partners-container .mp-invite-sent-modal-container .mp-invite-sent-modal, .market-partners-container .mp-add-product-service-modal-container .mp-add-product-service-modal, .market-partners-container .mp-add-product-service-modal-container .mp-invite-modal, .market-partners-container .mp-add-product-service-modal-container .mp-add-note-modal, .market-partners-container .mp-invite-modal-container .mp-add-product-service-modal, .market-partners-container .mp-invite-modal-container .mp-invite-modal, .market-partners-container .mp-invite-modal-container .mp-add-note-modal, .market-partners-container .mp-add-note-modal-container .mp-add-product-service-modal, .market-partners-container .mp-add-note-modal-container .mp-invite-modal, .market-partners-container .mp-add-note-modal-container .mp-add-note-modal, .popup-modals-container .rp-financial-details-modal-container .rp-financial-details-modal, .popup-modals-container .rp-agreement-modal-container .rp-agreement-modal, .popup-modals-container .rp-partner-profile-details-modal-container .rp-partner-profile-details-modal, .oe-cancel-order-conf-modal-container .oe-cancel-order-conf-modal, .oe-cancel-order-conf-modal-container .oe-backorder-warning-modal, .oe-backorder-warning-modal-container .oe-cancel-order-conf-modal, .oe-backorder-warning-modal-container .oe-backorder-warning-modal, .oe-add-item-modal-container .oe-add-item-modal, .editOrder-modal-container .editOrder-modal, .planRegistration-modal-container .planRegistration-modal, .cancel-caution-container .cancel-caution, .cancelation-modal .plan-cancelation-container, .contacts-form-modal .contacts-form, .shipping-locations-modal .shipping-locations-form, .popup-modals-container .video-modal-container .video-modal, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal,
+.su-submitted-modal-container .su-submitted-modal, .su-agreement-modal-container .su-agreement-modal, .su-banking-details-modal-container .su-banking-details-modal, .su-credit-cards-edit-modal-container .su-credit-cards-edit-modal, .su-credit-cards-add-modal-container .su-credit-cards-add-modal, .su-locations-add-modal-container .su-locations-add-modal, .market-partners-container .mp-invite-sent-modal-container .mp-invite-sent-modal, .market-partners-container .mp-add-product-service-modal-container .mp-add-product-service-modal, .market-partners-container .mp-add-product-service-modal-container .mp-invite-modal, .market-partners-container .mp-add-product-service-modal-container .mp-add-note-modal, .market-partners-container .mp-invite-modal-container .mp-add-product-service-modal, .market-partners-container .mp-invite-modal-container .mp-invite-modal, .market-partners-container .mp-invite-modal-container .mp-add-note-modal, .market-partners-container .mp-add-note-modal-container .mp-add-product-service-modal, .market-partners-container .mp-add-note-modal-container .mp-invite-modal, .market-partners-container .mp-add-note-modal-container .mp-add-note-modal, .popup-modals-container .rp-financial-details-modal-container .rp-financial-details-modal, .popup-modals-container .rp-agreement-modal-container .rp-agreement-modal, .popup-modals-container .rp-partner-profile-details-modal-container .rp-partner-profile-details-modal, .oe-cancel-order-conf-modal-container .oe-cancel-order-conf-modal, .oe-cancel-order-conf-modal-container .oe-backorder-warning-modal, .oe-backorder-warning-modal-container .oe-cancel-order-conf-modal, .oe-backorder-warning-modal-container .oe-backorder-warning-modal, .oe-add-item-modal-container .oe-add-item-modal, .editOrder-modal-container .editOrder-modal, .planRegistration-modal-container .planRegistration-modal, .cancel-caution-container .cancel-caution, .cancelation-modal .plan-cancelation-container, .contacts-form-modal .contacts-form, .shipping-locations-modal .shipping-locations-form, .popup-modals-container .video-modal-container .video-modal, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal,
 .popup-modals-container .mainSubmit-modal-container .remove-planModal,
 .popup-modals-container .remove-planModal-container .mainSubmit-modal,
 .popup-modals-container .remove-planModal-container .remove-planModal, .popup-modals-container .addItem-modal .addItem-form {
@@ -77,7 +77,7 @@ body {
   color: #36384B;
 }
 
-.su-locations-add-modal-container .su-locations-add-modal .purple-background h2::after, .market-partners-container .mp-invite-sent-modal-container .mp-invite-sent-modal .close-modal, .market-partners-container .mp-add-product-service-modal-container .close-modal, .market-partners-container .mp-invite-modal-container .close-modal, .market-partners-container .mp-add-note-modal-container .close-modal, .popup-modals-container .rp-financial-details-modal-container .rp-financial-details-modal .purple-background .close-modal, .popup-modals-container .rp-agreement-modal-container .rp-agreement-modal .purple-background .close-modal, .popup-modals-container .rp-partner-profile-details-modal-container .rp-partner-profile-details-modal .purple-background .close-modal, .oe-cancel-order-conf-modal-container .oe-cancel-order-conf-modal .close-modal, .oe-cancel-order-conf-modal-container .oe-backorder-warning-modal .close-modal, .oe-backorder-warning-modal-container .oe-cancel-order-conf-modal .close-modal, .oe-backorder-warning-modal-container .oe-backorder-warning-modal .close-modal, .oe-add-item-modal-container .oe-add-item-modal .purple-background .close-modal, .editOrder-modal-container .editOrder-modal .purple-background h2::after, .planRegistration-modal-container .planRegistration-modal .cross, .cancelation-modal .plan-cancelation-container .cross, .contacts-form-modal .contacts-form .purple-background h2::after, .shipping-locations-modal .shipping-locations-form .purple-background h2::after, .popup-modals-container .video-modal-container .video-modal .cross, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal .cross,
+.su-submitted-modal-container .su-submitted-modal .close-modal, .su-agreement-modal-container .su-agreement-modal .purple-background .close-modal, .su-banking-details-modal-container .su-banking-details-modal .purple-background .close-modal, .su-credit-cards-edit-modal-container .su-credit-cards-edit-modal .purple-background h2::after, .su-credit-cards-add-modal-container .su-credit-cards-add-modal .purple-background h2::after, .su-locations-add-modal-container .su-locations-add-modal .purple-background h2::after, .market-partners-container .mp-invite-sent-modal-container .mp-invite-sent-modal .close-modal, .market-partners-container .mp-add-product-service-modal-container .close-modal, .market-partners-container .mp-invite-modal-container .close-modal, .market-partners-container .mp-add-note-modal-container .close-modal, .popup-modals-container .rp-financial-details-modal-container .rp-financial-details-modal .purple-background .close-modal, .popup-modals-container .rp-agreement-modal-container .rp-agreement-modal .purple-background .close-modal, .popup-modals-container .rp-partner-profile-details-modal-container .rp-partner-profile-details-modal .purple-background .close-modal, .oe-cancel-order-conf-modal-container .oe-cancel-order-conf-modal .close-modal, .oe-cancel-order-conf-modal-container .oe-backorder-warning-modal .close-modal, .oe-backorder-warning-modal-container .oe-cancel-order-conf-modal .close-modal, .oe-backorder-warning-modal-container .oe-backorder-warning-modal .close-modal, .oe-add-item-modal-container .oe-add-item-modal .purple-background .close-modal, .editOrder-modal-container .editOrder-modal .purple-background h2::after, .planRegistration-modal-container .planRegistration-modal .cross, .cancelation-modal .plan-cancelation-container .cross, .contacts-form-modal .contacts-form .purple-background h2::after, .shipping-locations-modal .shipping-locations-form .purple-background h2::after, .popup-modals-container .video-modal-container .video-modal .cross, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal .cross,
 .popup-modals-container .mainSubmit-modal-container .remove-planModal .cross,
 .popup-modals-container .remove-planModal-container .mainSubmit-modal .cross,
 .popup-modals-container .remove-planModal-container .remove-planModal .cross, .popup-modals-container .addItem-modal .addItem-form .purple-background h2::after {
@@ -2282,6 +2282,149 @@ body {
   margin: 0.41667vw 0 0;
 }
 
+.su-credit-cards-add-modal-container .su-credit-cards-add-modal .purple-background h2::after {
+  padding: 0;
+  font-weight: 700;
+}
+.su-credit-cards-add-modal-container .su-credit-cards-add-modal .planRegis-form {
+  width: 100%;
+  padding: 0 1em;
+}
+.su-credit-cards-add-modal-container .su-credit-cards-add-modal .planRegis-form label {
+  text-align: left;
+  margin: 0 0 5px 10px;
+}
+.su-credit-cards-add-modal-container .su-credit-cards-add-modal .planRegis-form input {
+  margin: 0;
+  width: 95%;
+}
+.su-credit-cards-add-modal-container .su-credit-cards-add-modal .planRegis-form select {
+  margin: 0 5px;
+  width: 100px;
+}
+.su-credit-cards-add-modal-container .su-credit-cards-add-modal .billing-address-container {
+  padding: 1em;
+}
+.su-credit-cards-add-modal-container .su-credit-cards-add-modal .billing-address-container .profileBox-heading {
+  color: #36384B;
+}
+.su-credit-cards-add-modal-container .su-credit-cards-add-modal .billing-address-container .grey-border {
+  border: 2px solid #C8C8C8;
+  padding: 14px;
+}
+.su-credit-cards-add-modal-container .su-credit-cards-add-modal .billing-address-container .grey-border input[type=radio] {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.su-credit-cards-edit-modal-container .su-credit-cards-edit-modal .purple-background h2::after {
+  padding: 0;
+  font-weight: 700;
+}
+.su-credit-cards-edit-modal-container .su-credit-cards-edit-modal .two-grid-column {
+  /*width:100%;*/
+  padding: 1em;
+}
+.su-credit-cards-edit-modal-container .su-credit-cards-edit-modal .two-grid-column .su-credit-cards-edit-description {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.su-credit-cards-edit-modal-container .su-credit-cards-edit-modal .two-grid-column .su-credit-cards-edit-description i {
+  color: #36384B;
+  margin: 5px;
+  font-size: 2.5em;
+}
+.su-credit-cards-edit-modal-container .su-credit-cards-edit-modal .two-grid-column.planRegis-form {
+  width: 100%;
+}
+.su-credit-cards-edit-modal-container .su-credit-cards-edit-modal .two-grid-column.planRegis-form label {
+  text-align: left;
+}
+.su-credit-cards-edit-modal-container .su-credit-cards-edit-modal .two-grid-column.planRegis-form .margin-right {
+  margin-right: 5px;
+}
+.su-credit-cards-edit-modal-container .su-credit-cards-edit-modal .two-grid-column.planRegis-form .margin-left {
+  margin-left: 5px;
+}
+.su-credit-cards-edit-modal-container .su-credit-cards-edit-modal .two-grid-column.planRegis-form select {
+  width: 100px;
+  margin-top: 10px;
+}
+.su-credit-cards-edit-modal-container .su-credit-cards-edit-modal .two-grid-column.planRegis-form input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.su-credit-cards-edit-modal-container .su-credit-cards-edit-modal button {
+  margin: 0 5px;
+}
+
+.su-banking-details-modal-container .su-banking-details-modal .purple-background h2 {
+  margin-bottom: 0;
+}
+.su-banking-details-modal-container .su-banking-details-modal .purple-background .close-modal {
+  font-weight: 700;
+  margin-right: 1em;
+  padding: 0;
+}
+.su-banking-details-modal-container .su-banking-details-modal p {
+  padding: 1.5em;
+}
+
+.su-agreement-modal-container .su-agreement-modal .purple-background h2 {
+  margin-bottom: 0;
+}
+.su-agreement-modal-container .su-agreement-modal .purple-background .close-modal {
+  font-weight: 700;
+  margin-right: 1em;
+  padding: 0;
+}
+.su-agreement-modal-container .su-agreement-modal .padding-1 {
+  padding: 1em;
+}
+.su-agreement-modal-container .su-agreement-modal .su-agreement-text {
+  max-width: 100%;
+  padding: 10px 1em;
+  border: 2px solid #d3d3df;
+  overflow-y: scroll;
+  max-height: 300px;
+}
+.su-agreement-modal-container .su-agreement-modal .agreement-radioButtons, .su-agreement-modal-container .su-agreement-modal .agreement-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.su-agreement-modal-container .su-agreement-modal .agreement-radioButtons button, .su-agreement-modal-container .su-agreement-modal .agreement-actions button {
+  margin: 0 5px;
+}
+.su-agreement-modal-container .su-agreement-modal .agreement-actions i {
+  color: #434DA0;
+  font-size: 1.5em;
+  margin: 0 10px;
+}
+
+.su-submitted-modal-container .su-submitted-modal h2 {
+  font-family: "PublicoHeadline", aktiv-grotesk, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 3em;
+  color: #434DA0;
+  text-align: center;
+  padding: 12px;
+}
+.su-submitted-modal-container .su-submitted-modal .close-modal {
+  font-size: 1.5em;
+  padding: 10px;
+}
+.su-submitted-modal-container .su-submitted-modal p {
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.75em;
+  margin-bottom: 2em;
+}
+
 @media screen and (max-width: 768px) {
   .smarterPartner-setup-container .su-step-1, .smarterPartner-setup-container .su-step-2, .smarterPartner-setup-container .su-step-3 {
     width: 95%;
@@ -2316,6 +2459,24 @@ body {
   }
   .su-locations-add-modal-container .su-locations-add-modal .planRegis-form input, .su-locations-add-modal-container .su-locations-add-modal .planRegis-form select {
     width: 100%;
+  }
+
+  .su-credit-cards-add-modal-container .su-credit-cards-add-modal {
+    width: 95%;
+    margin: 30% auto;
+  }
+  .su-credit-cards-add-modal-container .su-credit-cards-add-modal .planRegis-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .su-banking-details-modal-container .su-banking-details-modal, .su-banking-details-modal-container .su-agreement-modal, .su-agreement-modal-container .su-banking-details-modal, .su-agreement-modal-container .su-agreement-modal {
+    width: 95%;
+    margin: 30% auto;
+  }
+
+  .su-agreement-modal-container .su-agreement-modal .agreement-actions {
+    margin-top: 1em;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 980px) {

@@ -1,0 +1,74 @@
+﻿@{
+    Layout = "~/Views/Shared/_ZucSRSLayout.cshtml";
+    ViewBag.Title = "Welcome";
+}
+<section class="videos-container">
+    <div class="video-box">
+        <h3 class="purple-background">Introduction</h3>
+        <!--
+            Please substitute the blank <video> tag below with proper embed code.
+            It is assumed at this moment that the Introduction video will play
+            in-place, not as a modal. Is this correct?
+        -->
+        <video controls class="main-video">
+          <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="margin-top-2">
+        <h3 class="purple-text" style="font-size: 24px;">Learn More</h3>
+        <div class="three-grid-column">
+          <div class="video-box">
+            <p class="purple-background">title</p>
+            <video controls class="main-video">
+              <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-box">
+            <p class="purple-background">title</p>
+            <video controls class="main-video">
+              <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-box">
+            <p class="purple-background">title</p>
+            <video controls class="main-video">
+              <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!--
+            The <div class="as-video"> below is for displaying video information
+            (title, description, play icon, time); please add more <div>s, as necessary.
+            
+            Also, for each <div class="as-video"> below, there should be a corresponding
+            .as-video-modal element, as follows, at the end of the page that will be
+            shown as a modal on clicking an .as-video element. The correct
+            .as-video-modal will be found by index, so please include the modals in the
+            same order as the .as-video elements appear. (Also please substitute the blank
+            <video> tag in .as-video-modal with the proper embed code.-->
+
+              <!-- Note: What I understand is you are going to add video source in below video tag wehn clicked from divs? I am adding 3 more divs for showcasing more videos as per design and then whicher is clicked I am assuming will be changed to it's as-video modal vidoe src -->
+
+        <div class="as-video non-visible">
+            <div class="as-video-modal">
+            
+                  <span class="close-modal">X</span>
+                  <h2>title</h2>
+              
+                <video controls class="modal-video">
+                  <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-vert-center flex-hor-center margin-top-1 margin-bottom-1">
+      <button class="as-register zuc-btn zuc-btn-secondary">Let's Get Started</button>
+    </div>
+  <div class="as-under-review-container non-visible">
+    <div class="as-under-review">
+        <span class="close-modal">X</span>
+        <h2>Under Review</h2>
+        <p>Your Smarter Partner Application is currently under review. You will receive an email notification upon approval. Unfortunately, no further actions can be taken until the approval process is completed. </p>
+    </div>
+  </div>
+</section>

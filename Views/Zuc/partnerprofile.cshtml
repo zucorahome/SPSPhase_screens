@@ -1,0 +1,325 @@
+﻿@using Newtonsoft.Json
+@using Newtonsoft.Json.Serialization
+@{
+    Layout = "~/Views/Shared/_ZucSRSLayout.cshtml";
+    ViewBag.Title = "Partner Profile";
+    var serializerSettings =
+        new JsonSerializerSettings
+        {
+            ContractResolver = new CamelCasePropertyNamesContractResolver()
+        };
+}
+@section styles {
+    <script>
+        window.AvailableRoles = @Html.Raw(JsonConvert.SerializeObject(ViewBag.AvailableRoles, serializerSettings));
+    </script>    
+}
+<h1>@ViewBag.Title</h1>
+<div>
+    <h3>Partner</h3>
+    <div>
+        <input id="pp-company-name" placeholder="Company Name" />
+        <input id="pp-business-legal-name" placeholder="Business Legal Name" />
+    </div>
+</div>
+<div>
+    <label for="pp-lang-pref">Language Pref:</label>
+    <select id="pp-lang-pref">
+        <option value="">Language Preference</option>
+    </select>
+    <label for="pp-tax-number">HST/GST:</label>
+    <input id="pp-tax-number" placeholder="HST/GST Number" />
+    <div>
+        <span>Buying Group:</span>
+        <span class="pp-buying-group"></span>
+    </div>
+</div>
+<div>
+    <h3>Billing Address:</h3>
+    <div>
+        <label for="pp-bill-to-address-1">Address&nbsp;1:</label>
+        <input id="pp-bill-to-address-1" placeholder="Address 1" />
+        <label for="pp-bill-to-address-2">Address&nbsp;2:</label>
+        <input id="pp-bill-to-address-1" placeholder="Address 2" />
+        <label for="pp-bill-to-city">City:</label>
+        <input id="pp-bill-to-city" placeholder="City" />
+        <label for="pp-bill-to-province">Prov/State:</label>
+        <select id="pp-bill-to-province">
+            <option value="">Prov/State</option>
+        </select>
+        <label for="pp-bill-to-postal">Postal:</label>
+        <input id="pp-bill-to-postal" placeholder="Postal" />
+    </div>
+</div>
+<div>
+    <h3>Payment Preferences</h3>
+    <div>
+        <h4>Commission Earnings</h4>
+        <input id="pp-commission-payment-pref-eft" name="pp-commission-payment-pref" type="checkbox" value="EFT" />
+        <label for="pp-commission-payment-pref-eft">EFT (Deposited to Bank Account)</label>
+        <h4>Plan Registrations</h4>
+        <input id="pp-plan-payment-pref-eft" name="pp-plan-payment-pref" type="checkbox" value="EFT" />
+        <label for="pp-plan-payment-pref-eft">EFT (Withdrawn from Bank Account)</label>
+        <input id="pp-plan-payment-pref-credit-card" name="pp-plan-payment-pref" type="checkbox" value="Credit Card" />
+        <label for="pp-plan-payment-pref-credit-card">Credit Card</label>
+        <h4>Product Purchases</h4>
+        <input id="pp-product-payment-pref-eft" name="pp-product-payment-pref" type="checkbox" value="EFT" />
+        <label for="pp-product-payment-pref-eft">EFT (Withdrawn from Bank Account)</label>
+        <input id="pp-product-payment-pref-credit-card" name="pp-product-payment-pref" type="checkbox" value="Credit Card" />
+        <label for="pp-product-payment-pref-credit-card">Credit Card</label>
+        <input id="pp-product-payment-pref-buying-group" name="pp-product-payment-pref" type="checkbox" value="Buying Group" />
+        <label for="pp-product-payment-pref-buying-group">Buying Group</label>
+    </div>
+</div>
+<div>
+    <h3>Our Locations <a class="pp-locations-add">+</a></h3>
+    <table class="pp-locations">
+        <thead>
+            <tr>
+                <th scope="col">Code</th>
+                <th scope="col">Location Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Phone</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <!--
+            <tbody> will be populated with elements like
+            <tr data-lt-id="189538">
+                <td data-label="Code">[Data]</td>
+                <td data-label="Location Name">[Data]</td>
+                <td data-label="Address">[Data]</td>
+                <td data-label="Phone">[Data]</td>
+                <td data-label="Edit"><a class="pp-locations-edit fa fa-pencil-alt"></a></td>
+            </tr>    
+        -->
+        <tbody></tbody>
+    </table>
+</div>
+<div>
+    <h3>Banking Details</h3>
+    <table class="pp-bank-account">
+        <thead>
+            <tr>
+                <th scope="col">Institution</th>
+                <th scope="col">Transit</th>
+                <th scope="col">Account</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <!--
+            <tbody> will be populated with a single record like
+            <tr data-lt-id="58318">
+                <td data-label="Institution">[Data]</td>
+                <td data-label="Transit">[Data]</td>
+                <td data-label="Account">[Data]</td>
+                <td data-label="Edit"><a class="pp-bank-account-edit fa fa-pencil-alt"></a></td>
+            </tr>    
+        -->
+        <tbody></tbody>
+    </table>
+</div>
+<div>
+    <h3>Payment Methods <a class="pp-credit-cards-add">+</a></h3>
+    <!--
+        
+        ul.pp-credit-cards will be populated with elements like:
+        
+        <li data-lt-id="5785379">
+            <i class="pp-credit-cards-type fa fa-cc-[cardtype]"></i>
+            <h4 class="pp-credit-cards-description">[CardType] ending in 4812 <span>(Default)</span></h4>
+            <span class="pp-credit-cards-expiry">Expires 09/2020</span>
+            <i class="pp-credit-cards-expand"></i>
+            <div class="pp-credit-cards-details">
+                <div class="pp-credit-cards-name">
+                    <h5>Name on Card</h5>
+                    <span class="pp-credit-cards-name-on-card">[Data]</span>
+                </div>
+                <div class="pp-credit-cards-bill-to">
+                    <h5>Billing Address</h5>
+                    <div class="pp-credit-cards-bill-to-name">[Data]</div>
+                    <div class="pp-credit-cards-bill-to-address">[Data]</div>
+                    <div class="pp-credit-cards-bill-to-phone">[Data]</div>
+                </div>
+                <div>
+                    <button class="pp-credit-cards-remove">Remove</button>
+                    <button class="pp-credit-cards-edit">Edit</button>
+                </div>
+            </div>
+        </li>
+    
+    -->
+    <ul class="pp-credit-cards"></ul>
+</div>
+<div>
+    <h3>Our People <a class="pp-people-add">+</a></h3>
+    <table class="pp-people">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Username</th>
+                <th scope="col">Status</th>
+                <th scope="col">Role</th>
+                <th scope="col" colspan="1">Order Product</th>
+                <th scope="col" colspan="3">Protection Plans</th>
+                <th scope="col" colspan="1" class="grey">Smarter Living Plans</th>
+                <th scope="col" colspan="3">Inquiry/Reporting</th>
+                <th scope="col">Edit</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th class="u-light">Products</th>
+                <th>Register</th>
+                <th>Modify</th>
+                <th>Cancel</th>
+                <th class="grey">Enroll</th>
+                <th>Orders</th>
+                <th>Plans</th>
+                <th class="grey">Success Tracker</th>
+                <th></th>
+            </tr>
+        </thead>
+        <!--
+
+            <tbody> will be populated with elements as follows (checkbox cells will have <p class="u-transparent">none</p> or <i class="fa fa-check grey-text"></i>):
+            
+            <tr data-lt-id="19858989">
+                <td data-label="Name">[Data]</td>
+                <td data-label="Username">[Data]</td>
+                <td data-label="Status">[Active|Inactive]</td>
+                <td data-label="Role">[Data]</td>
+                <td data-label="Order Products"></td>
+                <td data-label="Plans: Register"></td>
+                <td data-label="Plans: Modify"></td>
+                <td data-label="Plans: Cancel"></td>
+                <td data-label="Smarter Living Plans: Enroll"></td>
+                <td data-label="Inquiry/Reporting: Orders"></td>
+                <td data-label="Inquiry/Reporting: Plans"></td>
+                <td data-label="Inquiry/Reporting: Success Tracker"></td>
+                <td data-label="Edit"><a class="pp-people-edit fa fa-pencil-alt"></a></td>
+            </tr>
+
+        -->
+        <tbody></tbody>
+    </table>
+</div>
+<div>
+    <div>
+        <a href="~/Account/Manage">Change password</a>
+        <i class="fa fa-pencil-alt"></i>
+    </div>
+    <div>
+        <button class="pp-update">Save</button>
+    </div>
+</div>
+<div class="pp-credit-cards-add-modal-container modal non-visible">
+    <h2>Add Payment Method</h2>
+    <label for="pp-credit-cards-add-name-on-card">Name on Card</label>
+    <input id="pp-credit-cards-add-name-on-card" required />
+    <label for="pp-credit-cards-add-card-number">Card #</label>
+    <input id="pp-credit-cards-add-card-number" pattern="[0-9\s]+" maxlength="24" required />
+    <label>
+        Expiration Date
+        <select id="pp-credit-cards-add-expiry-month" required>
+            <option value="">MM</option>
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <!-- will be populated via JS with this year and the following 10 years -->
+        <select id="pp-credit-cards-add-expiry-year" required>
+            <option value="">YYYY</option>
+        </select>
+    </label>
+    <h4>Billing Address <a class="pp-credit-cards-add-bill-to-add">+</a></h4>
+    <!--
+        the <div> below will be populated with sub-<div>s like
+        <div>
+            <input id="pp-credit-cards-add-bill-to-4189812" name="pp-credit-cards-add-bill-to" type="checkbox" value="4189812" />
+            <label for="pp-credit-cards-add-bill-to-4189812">[Name], [Address1], [Address2], [City], [Province], [Country], [Postal]</label>
+        </div>
+    -->
+    <div></div>
+    <button class="pp-credit-cards-add-done">Add Card</button>
+</div>
+<div class="pp-credit-cards-edit-modal-container modal non-visible">
+    <h2>Edit Payment Method</h2>
+    <div>
+        <h4>Payment Method</h4>
+        <div class="pp-credit-cards-edit-description"></div>
+    </div>
+    <label>
+        Expiration Date
+        <select id="pp-credit-cards-edit-expiry-month" required>
+            <option value="">MM</option>
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <!-- will be populated via JS with this year and the following 10 years -->
+        <select id="pp-credit-cards-edit-expiry-year" required>
+            <option value="">YYYY</option>
+        </select>
+    </label>
+    <div>
+        <input id="pp-credit-cards-edit-is-default" type="checkbox" />
+        <label for="pp-credit-cards-edit-is-default">Use as Default</label>
+    </div>
+    <div>
+        <label for="pp-credit-cards-edit-name-on-card">Name on Card</label>
+        <input id="pp-credit-cards-edit-name-on-card" required />
+    </div>
+    <div>
+        <h4>Billing Address <a class="pp-credit-cards-edit-bill-to-edit"></a></h4>
+        <div class="pp-credit-cards-edit-bill-to-name"></div>
+        <div class="pp-credit-cards-edit-bill-to-address"></div>
+        <div class="pp-credit-cards-edit-bill-to-phone"></div>
+    </div>
+    <button class="pp-credit-cards-edit-cancel">Cancel</button>
+    <button class="pp-credit-cards-edit-save">Save</button>
+</div>
+<div class="pp-bill-to-edit-modal-container modal non-visible">
+    <h2>Billing Address</h2>
+    <label for="pp-bill-to-edit-first-name">First Name*:</label>
+    <input id="pp-bill-to-edit-first-name" placeholder="First Name" required />
+    <label for="pp-bill-to-edit-last-name">Last Name*:</label>
+    <input id="pp-bill-to-edit-last-name" placeholder="Last Name" required />
+    <label for="pp-bill-to-edit-address-1">Address 1*:</label>
+    <input id="pp-bill-to-edit-address-1" placeholder="Address 1" required />
+    <label for="pp-bill-to-edit-address-2">Address 2*:</label>
+    <input id="pp-bill-to-edit-address-2" placeholder="Address 2" required />
+    <label for="pp-bill-to-edit-city">City*:</label>
+    <input id="pp-bill-to-edit-city" placeholder="City" type="text" required />
+    <label for="pp-bill-to-edit-province">Prov/State*:</label>
+    <!-- will be populated via JS -->
+    <select id="pp-bill-to-edit-province" required>
+        <option value="">Prov/State</option>
+    </select>
+    <label for="pp-bill-to-edit-postal">Postal Code*:</label>
+    <input id="pp-bill-to-edit-postal" placeholder="Postal Code" type="text" required />
+    <label for="pp-bill-to-edit-phone">Phone*:</label>
+    <input id="pp-bill-to-edit-phone" placeholder="Phone Number" type="text" required />
+    <button class="pp-bill-to-edit-cancel">Cancel</button>
+    <button class="pp-bill-to-edit-save">Save</button>
+</div>

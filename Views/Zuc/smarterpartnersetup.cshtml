@@ -6,70 +6,95 @@
 @section scripts {
     <script src="https://maps.googleapis.com/maps/api/js?key=@Html.Raw(Model.GoogleMapsClientKey)&@Html.Raw(LimeTac.Ethnic.Resources.GoogleMapsAPIBaseLibraryIncludes),drawing"></script>
 }
-<h1>@ViewBag.Title</h1>
+<section class="smarterPartner-setup-container">
+  <h1 class="srs-heading">@ViewBag.Title</h1>
 <div class="su-step-1">
-    <div>
-        <h2>Step 1 of 3.</h2>
-        <p>Tell us about your business.</p>
-        <p>Complete the following information so we can do business together.</p>
+    <div class="step-box">
+        <h2 class="u-bold u-text-center">Step 1 of 3.</h2>
+        <p class="u-text-center">Tell us about your business.</p>
+        <p class="u-text-center">Complete the following information so we can do business together.</p>
     </div>
-    <div>
-        <h3>Partner</h3>
-        <div>
-            <input id="su-company-name" placeholder="Company Name" />
-            <input id="su-business-legal-name" placeholder="Business Legal Name" />
+    <div class="flex flex-column margin-top-1">
+        <h3 class="profileBox-heading">Partner</h3>
+        <div class="profileBox-style">
+            <input id="su-company-name" placeholder="Company Name" type="text" />
+            <input id="su-business-legal-name" placeholder="Business Legal Name" type="text" />
         </div>
     </div>
-    <div>
-        <h3>Billing Address</h3>
-        <div>
+    <div class="flex flex-column margin-top-1">
+        <h3 class="profileBox-heading">Billing Address</h3>
+        <div class="profileBox-style planRegis-form">
+          <div class="form-div">
             <label for="su-address-1">Address&nbsp;1:</label>
-            <input id="su-address-1" placeholder="Address 1" />
+            <input id="su-address-1" placeholder="Address 1" type="text" />
+          </div>
+          <div class="form-div">
             <label for="su-address-2">Address&nbsp;2:</label>
-            <input id="su-address-2" placeholder="Address 2" />
+            <input id="su-address-2" placeholder="Address 2" type="text"/>
+          </div>
+          <div class="form-div">
             <label for="su-city">City:</label>
-            <input id="su-city" placeholder="City" />
-            <label for="su-province">Prov/State:</label>
-            <!-- will be populated via JS -->
-            <select id="su-province">
-                <option value="">Prov/State</option>
-            </select>
-            <label for="su-postal">Postal:</label>
-            <input id="su-postal" placeholder="Postal" />
+            <input id="su-city" placeholder="City" type="text" />
+          </div>
+          <div class="two-grid-column mobile-column">
+            <div class="flex flex-vert-center">
+              <label for="su-province">Prov/State:</label>
+              <!-- will be populated via JS -->
+              <select id="su-province">
+                  <option value="">Prov/State</option>
+              </select>
+            </div>
+            <div class="flex flex-vert-center">
+              <label for="su-postal">Postal:</label>
+              <input id="su-postal" placeholder="Postal" type="text" />
+            </div>
+          </div>
         </div>
     </div>
-    <div>
-        <label for="su-tax-number">HST/GST:</label>
-        <input id="su-tax-number" placeholder="HST/GST Number" />
-        <label for="su-buying-group">Buying Group:</label>
-        <!-- will be populated via JS -->
-        <select id="su-buying-group">
+    <div class="profileBox-style planRegis-form" style="margin-top:2em;">
+        <div class="form-div">
+          <label for="su-tax-number">HST/GST:</label>
+          <input id="su-tax-number" placeholder="HST/GST Number" type="text" />
+        </div>
+        <div class="form-div">
+          <label for="su-buying-group">Buying Group:</label>
+          <!-- will be populated via JS -->
+          <select id="su-buying-group">
             <option value="">Buying Group</option>
-        </select>
-        <label for="su-member-id">Member ID:</label>
-        <input id="su-member-id" placeholder="Member ID" />
-        <label for="su-lang-pref">Language Pref:</label>
-        <!-- will be populated via JS -->
-        <select id="su-lang-pref">
+          </select>
+        </div>
+        <div class="form-div">
+          <label for="su-member-id">Member ID:</label>
+          <input id="su-member-id" placeholder="Member ID" type="text" />
+        </div>
+        <div class="form-div">
+          <label for="su-lang-pref">Language Pref:</label>
+          <!-- will be populated via JS -->
+          <select id="su-lang-pref">
             <option value="">Language Preference</option>
-        </select>
+          </select>
+        </div>
+    </div>
+    <div class="flex flex-hor-end margin-top-1 margin-bottom-1">
+      <button class="zuc-btn zuc-btn-secondary u-soft-shadow su-next">Next</button>
     </div>
 </div>
 <div class="su-step-2">
-    <div>
-        <h2>Step 2 of 3.</h2>
-        <p>Identify each store and warehouse location (including the main location where sales occur and/or product may be delivered).</p>
+    <div class="step-box">
+        <h2 class="u-bold u-text-center">Step 2 of 3.</h2>
+        <p class="u-text-center">Identify each store and warehouse location (including the main location where sales occur and/or product may be delivered).</p>
     </div>
-    <div>
-        <h3>Our Locations <a class="su-locations-add">+</a></h3>
+    <div class="flex flex-column margin-top-1">
+        <h3 class="profileBox-heading">Our Locations <a class="su-locations-add">+</a></h3>
+        <div class="profileBox-style new-planAdd-detail">
         <table class="su-locations">
             <thead>
                 <tr>
-                    <th scope="col">Code</th>
-                    <th scope="col">Location Name</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col"></th>
+                    <th scope="col" style="width:15%">Code</th>
+                    <th scope="col" style="width: 20%;">Location Name</th>
+                    <th scope="col" style="width: 30%;">Address</th>
+                    <th scope="col" style="width: 20%">Phone</th>
+                    <th scope="col" style="width: 15%;">Edit</th>
                 </tr>
             </thead>
             <!--
@@ -84,80 +109,120 @@
             -->
             <tbody></tbody>
         </table>
+      </div>
     </div>
+    <div class="flex flex-vert-center flex-hor-between margin-top-1 margin-bottom-1">
+      <div class="flex flex-hor-start">
+        <a class="su-prev">&lt; Back</a>
+      </div>
+      <div class="flex flex-hor-end">
+        <button class="zuc-btn zuc-btn-secondary u-soft-shadow su-next">Next</button>
+      </div>
+    </div>
+    <!-- maun su-step-2 ends -->
 </div>
 <div class="su-step-3">
-    <div>
-        <h2>Step 2 of 3.</h2>
-        <p>With the following financial details, we will be able to deposit commissions earned for Smarter Living Plans while making it easy to pay for Product Protection Plans and Products.</p>
+    <div class="step-box">
+        <h2 class="u-bold u-text-center">Step 3 of 3.</h2>
+        <p class="u-text-centera">With the following financial details, we will be able to deposit commissions earned for Smarter Living Plans while making it easy to pay for Product Protection Plans and Products.</p>
     </div>
-    <div>
-        <h3>Deposit &amp; Payment Preferences</h3>
-        <i class="su-deposit-payment-pref-info-circle"></i>
-        <div class="su-deposit-payment-pref-info-text-container">
-            <i></i>
+    <div class="flex flex-column margin-top-1">
+        <div class="flex flex-vert-center">
+          <h3 class="profileBox-heading">Deposit &amp; Payment Preferences</h3>
+          <i class="su-deposit-payment-pref-info-circle fa fa-info-circle"></i>
+        </div>
+        <div class="su-deposit-payment-pref-info-text-container non-visible">
+            <i class="fa fa-caret-up"></i>
             <p>
-                <b>Commission Earnings</b><br />
+                <b class="u-bold">Commission Earnings</b><br />
                 Amounts earned from enrollments to Smarter Living Plans are automatically deposited (EFT) to bank account.
             </p>
             <p>
-                <b>Plan Registrations</b>
+                <b class="u-bold">Plan Registrations</b><br/>
                 Payment for Product Protection Plans may be paid by either EFT (withdrawn from bank account) OR by Credit Card.
             </p>
             <p>
-                <b>Product Purchases</b>
+                <b class="u-bold">Product Purchases</b><br>
                 Payment for product purchases may be paid by EFT (withdrawn from bank account) OR by Credit Card used at time of Purchase OR by recognized Buying Group.
             </p>
         </div>
-        <div>
-            <h4>Commission Earnings</h4>
-            <input id="su-commission-payment-pref-eft" name="su-commission-payment-pref" type="checkbox" value="EFT" />
-            <label for="su-commission-payment-pref-eft">EFT (Deposited to Bank Account)</label>
-            <h4>Plan Registrations</h4>
-            <input id="su-plan-payment-pref-eft" name="su-plan-payment-pref" type="checkbox" value="EFT" />
-            <label for="su-plan-payment-pref-eft">EFT (Withdrawn from Bank Account)</label>
-            <input id="su-plan-payment-pref-credit-card" name="su-plan-payment-pref" type="checkbox" value="Credit Card" />
-            <label for="su-plan-payment-pref-credit-card">Credit Card</label>
-            <h4>Product Purchases</h4>
-            <input id="su-product-payment-pref-eft" name="su-product-payment-pref" type="checkbox" value="EFT" />
-            <label for="su-product-payment-pref-eft">EFT (Withdrawn from Bank Account)</label>
-            <input id="su-product-payment-pref-credit-card" name="su-product-payment-pref" type="checkbox" value="Credit Card" />
-            <label for="su-product-payment-pref-credit-card">Credit Card</label>
-            <input id="su-product-payment-pref-buying-group" name="su-product-payment-pref" type="checkbox" value="Buying Group" />
-            <label for="su-product-payment-pref-buying-group">Buying Group</label>
+        <div class="profileBox-style margin-top-1">
+            <p class="u-bold u-uppercase">Commission Earnings</p>
+            <div class="flex flex-vert-center margin-bottom-1">
+              <input id="su-commission-payment-pref-eft" name="su-commission-payment-pref" type="radio" value="EFT" />
+              <label for="su-commission-payment-pref-eft" class="purple-text" style="font-weight: 500 !important;">EFT (Deposited to Bank Account)</label>
+            </div>
+            <p class="u-bold u-uppercase">Plan Registrations</p>
+            <div class="flex flex-vert-center">
+              <input id="su-plan-payment-pref-eft" name="su-plan-payment-pref" type="radio" value="EFT" />
+              <label for="su-plan-payment-pref-eft" class="purple-text" style="font-weight: 500 !important;">EFT (Withdrawn from Bank Account)</label>
+            </div>
+            <div class="flex flex-vert-center margin-bottom-1">
+              <input id="su-plan-payment-pref-credit-card" name="su-plan-payment-pref" type="radio" value="Credit Card" />
+              <label for="su-plan-payment-pref-credit-card" class="purple-text" style="font-weight: 500 !important;">Credit Card</label>
+            </div>
+            <p class="u-bold u-uppercase">Product Purchases</p>
+              <div class="flex flex-vert-center">
+                <input id="su-product-payment-pref-eft" name="su-product-payment-pref" type="radio" value="EFT" />
+                <label for="su-product-payment-pref-eft" class="purple-text" style="font-weight: 500 !important;">EFT (Withdrawn from Bank Account)</label>
+              </div>
+              <div class="flex flex-vert-center">
+                <input id="su-product-payment-pref-credit-card" name="su-product-payment-pref" type="radio" value="Credit Card" />
+                <label for="su-product-payment-pref-credit-card" class="purple-text" style="font-weight: 500 !important;">Credit Card</label>
+              </div>
+              <div class="flex flex-vert-center margin-bottom-1">
+                <input id="su-product-payment-pref-buying-group" name="su-product-payment-pref" type="radio" value="Buying Group" />
+                <label for="su-product-payment-pref-buying-group" class="purple-text" style="font-weight: 500 !important;">Buying Group</label>
+              </div>
         </div>
     </div>
-    <div>
-        <h3>Banking Details</h3>
-        <i class="su-banking-details-info-circle"></i>
-        <div>
+    <div class="margin-top-1 margin-bottom-1">
+      <div class="flex flex-vert-center margin-bottom-1">
+        <h3 class="profileBox-heading">Banking Details</h3>
+        <i class="su-banking-details-info-circle fa fa-info-circle"></i>
+      </div>
+        <div class="profileBox-style planRegis-form">
+          <div class="form-div">
             <label for="su-bank-transit-number">Transit #:</label>
             <input id="su-bank-transit-number" type="number" />
+          </div>
+          <div class="form-div">
             <label for="su-bank-institution-number">Institution #:</label>
             <input id="su-bank-institution-number" type="number" />
+          </div>
+          <div class="form-div">
             <label for="su-bank-account-number">Account #:</label>
             <input id="su-bank-account-number" type="number" />
+          </div>
         </div>
     </div>
     <div>
-        <h3>Credit Card Details <a class="su-credit-cards-add">+</a></h3>
-        <i class="su-credit-cards-info-circle"></i>
-        <div class="su-credit-cards-info-text-container">
-            <i></i>
-            <p>Credit Card information is required to provide payment of Smart3 Plan and Smart5 Plan registrations and online product purchases.</p>
+      <div class="flex flex-vert-center margin-bottom-1">
+        <h3 class="profileBox-heading">Credit Card Details <a class="su-credit-cards-add">+</a></h3>
+        <i class="su-credit-cards-info-circle fa fa-info-circle"></i>
+      </div>
+        <div class="su-credit-cards-info-text-container non-visible">
+            <i class="fa fa-caret-up"></i>
+            <p>Credit Card information is required to provide payment of Smart3 Plan and Smart5 Plan registrations and online product purchases.</p><br>
             <p>If you are a member of a recognized Buying Group, products may be purchased on account through your Group. However, Credit Card payment is required for Smart3 Plan and Smart5 Plan registrations.</p>
         </div>
-        <div>
+        <div class="profileBox-style creditCard-details-container">
             <!--
                 
                 <ul> will be populated with elements like the following. I would appreciate your feedback
-                on any other classes or markup you would like to be output here, so we can add it the JS file.
-
+                on any other classes or markup you would like to be output here, so we can add it the JS file.  -->
+                <ul class="su-credit-cards">
                 <li data-lt-id="5785379">
-                    <i class="su-credit-cards-type fa fa-cc-[cardtype]"></i>
-                    <h4 class="su-credit-cards-description">[CardType] ending in 4812 <span>(Default)</span></h4>
-                    <span class="su-credit-cards-expiry">Expires 09/2020</span>
-                    <i class="su-credit-cards-expand fa fa-chevron-down"></i>
+                  <div class="credit-card-heading">
+                    <div class="flex flex-vert-center flex-hor-start">
+                      <i class="su-credit-cards-type fab fa-cc-[cardtype] fa-cc-mastercard"></i>
+                      <p class="su-credit-cards-description">[CardType] ending in 4812 <span>(Default)</span></p>
+                    </div>
+                    <div class="flex-hor-end flex flex-vert-center">
+                      <span class="su-credit-cards-expiry">Expires 09/2020</span>
+                      <i class="su-credit-cards-expand fa fa-chevron-down"></i>
+                    </div>
+                  </div>
                     <div class="su-credit-cards-details">
                         <div class="su-credit-cards-name">
                             <h5>Name on card</h5>
@@ -168,162 +233,260 @@
                             <div class="su-credit-cards-billing-name">[Name]</div>
                             <div class="su-credit-cards-billing-address">[Address]</div>
                             <div class="su-credit-cards-billing-phone">[Phone Number]</div>
-                        </div>
-                        <div>
-                            <button class="su-credit-cards-remove">Remove</button>
-                            <button class="su-credit-cards-edit">Edit</button>
+                            
+                            <div class="flex flex-vert-center mobile-column">
+                                <button class="su-credit-cards-remove zuc-btn zuc-btn-secondary">Remove</button>
+                                <button class="su-credit-cards-edit zuc-btn zuc-btn-secondary">Edit</button>
+                            </div>
                         </div>
                     </div>
                 </li>
-            -->
+            </ul>
+
             <ul class="su-credit-cards"></ul>
+
         </div>
     </div>
-    <div>
-        <h3>Agreement</h3>
-        <div>
+    <div class="flex flex-column margin-top-1">
+        <h3 class="profileBox-heading">Agreement</h3>
+        <div class="profileBox-style margin-top-1">
             <input id="su-read-agree-to-terms" type="checkbox" />
             <a class="su-view-terms">View Smarter Partner Agreement Terms &amp; Conditions</a>
-            <label for="su-read-agree-to-terms">I have read and accept the Terms &amp; Conditions of the Smarter Partner Agreement.</label>
+            <label for="su-read-agree-to-terms" style="margin-top:10px;">I have read and accept the Terms &amp; Conditions of the Smarter Partner Agreement.</label>
         </div>
     </div>
+
+    <div class="flex flex-hor-end margin-top-1 margin-bottom-1">
+      <button class="su-submit zuc-btn zuc-btn-secondary">Submit</button> <!-- will be visible on step 3 -->  
+    </div>
 </div>
+<!-- Note: I have added below mentions buttons to that related screen divs but still adding classes and div to the below one if you are going to add those through JS  -->
+<!-- Those buttons should be wrapped under div -->
 <div>
-    <a class="su-prev">&lt; Back</a>
-    <button class="su-next">Next</button> <!-- will be visible on steps 1 and 2 -->
-    <button class="su-submit">Submit</button> <!-- will be visible on step 3 -->
+    <div class="flex flex-hor-start margin-top-1 margin-bottom-1"><a class="su-prev">&lt; Back</a></div>
+    <div class="flex flex-hor-end margin-top-1 margin-bottom-1"><button class="su-next zuc-btn zuc-btn-secondary">Next</button> <!-- will be visible on steps 1 and 2 --></div>
+    <div class="flex flex-hor-end margin-top-1 margin-bottom-1"><button class="su-submit zuc-btn zuc-btn-secondary">Submit</button> <!-- will be visible on step 3 --></div>
 </div>
-<div class="su-locations-add-modal modal">
-    <h2>Location</h2>
-    <label for="su-locations-add-name">Name*:</label>
-    <input id="su-locations-add-name" placeholder="Location name" required />
-    <label for="su-locations-add-type">Address Type*:</label>
-    <select id="su-locations-add-type" required>
-        <option value="">Address Type</option>
-        <option value="Residential">Residential</option>
-        <option value="Business">Business</option>
-    </select>
-    <label for="su-locations-add-address-1">Address 1*:</label>
-    <input id="su-locations-add-address-1" placeholder="Address 1" required />
-    <label for="su-locations-add-address-2">Address 2*:</label>
-    <input id="su-locations-add-address-2" placeholder="Address 2" required />
-    <label for="su-locations-add-city">City*:</label>
-    <input id="su-locations-add-city" placeholder="City" type="text" required />
-    <label for="su-locations-add-province">Prov/State*:</label>
-    <!-- will be populated via JS -->
-    <select id="su-locations-add-province" required>
-        <option value="">Prov/State</option>
-    </select>
-    <label for="su-locations-add-postal">Postal Code*:</label>
-    <input id="su-locations-add-postal" placeholder="Postal Code" type="text" required />
-    <label for="su-locations-add-phone">Phone*:</label>
-    <input id="su-locations-add-phone" placeholder="Phone Number" type="text" required />
-    <button class="su-locations-add-save-and-add">Add More</button>
-    <button class="su-locations-add-save">Save</button>
-</div>
-<div class="su-credit-cards-add-modal modal">
-    <h2>Payment Method</h2>
-    <label for="su-credit-cards-add-name-on-card">Name on Card</label>
-    <input id="su-credit-cards-add-name-on-card" required />
-    <label for="su-credit-cards-add-card-number">Card #</label>
-    <input id="su-credit-cards-add-card-number" pattern="[0-9\s]+" maxlength="24" required />
-    <label>
-        Expiration Date
-        <select id="su-credit-cards-add-expiry-month" required>
-            <option value="">MM</option>
-            <option value="1">01</option>
-            <option value="2">02</option>
-            <option value="3">03</option>
-            <option value="4">04</option>
-            <option value="5">05</option>
-            <option value="6">06</option>
-            <option value="7">07</option>
-            <option value="8">08</option>
-            <option value="9">09</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
+</section>
+<section class="popup-modals-container">
+<div class="su-locations-add-modal-container non-visible">
+  <div class="su-locations-add-modal">
+    <div class="purple-background">
+      <h2>Location</h2>
+    </div>
+    <div class="planRegis-form">
+      <div class="form-div">
+        <label for="su-locations-add-name">Name*:</label>
+        <input id="su-locations-add-name" placeholder="Location name" required type="text" />
+      </div>
+      <div class="form-div">
+          <label for="su-locations-add-type">Address Type*:</label>
+        <select id="su-locations-add-type" required>
+          <option value="">Address Type</option>
+          <option value="Residential">Residential</option>
+          <option value="Business">Business</option>
         </select>
-        <!-- will be populated via JS with this year and the following 10 years -->
-        <select id="su-credit-cards-add-expiry-year" required>
-            <option value="">YYYY</option>
-        </select>
-    </label>
-    <h4>Billing Address <a class="su-credit-cards-add-billing-address-add">+</a></h4>
-    <!--
-        the <div> below will be populated with sub-<div>s like
+      </div>
+      <div class="form-div">
+        <label for="su-locations-add-address-1">Address 1*:</label>
+        <input id="su-locations-add-address-1" placeholder="Address 1" required type="text" />
+      </div>
+      <div class="form-div">
+        <label for="su-locations-add-address-2">Address 2*:</label>
+        <input id="su-locations-add-address-2" placeholder="Address 2" required type="text" />
+      </div>
+      <div class="two-grid-column mobile-column">
+        <div class="form-div margin-left">
+          <label for="su-locations-add-city">City*:</label>
+          <input id="su-locations-add-city" placeholder="City" type="text" required type="text" />
+        </div>
+        <div class="flex flex-vert-center flex-hor-center">
+          <label for="su-locations-add-province">Prov/State*:</label>
+          <!-- will be populated via JS -->
+          <select id="su-locations-add-province" required>
+              <option value="">Prov/State</option>
+          </select>
+        </div>
+      </div>
+      <div class="two-grid-column">
+        <div class="form-div margin-left">
+          <label for="su-locations-add-postal">Postal Code*:</label>
+          <input id="su-locations-add-postal" placeholder="Postal Code" type="text" required />
+        </div>
         <div>
-            <input id="su-credit-cards-add-billing-address-4189812" name="su-credit-cards-add-billing-address" type="checkbox" value="4189812" />
+        </div>
+      </div>
+      <div class="two-grid-column mobile-column">
+        <div class="form-div margin-left">
+          <label for="su-locations-add-phone">Phone*:</label>
+          <input id="su-locations-add-phone" placeholder="Phone Number" type="text" required />
+        </div>
+        <div class="flex flex-vert-center flex-hor-around">
+          <div><button class="su-locations-add-save-and-add zuc-btn-secondary zuc-btn">Add More</button></div>
+          <div><button class="su-locations-add-save zuc-btn-secondary zuc-btn">Save</button></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="su-credit-cards-add-modal-container non-visible">
+  <div class="su-credit-cards-add-modal">
+    <div class="purple-background"><h2>Payment Method</h2></div>
+    <div class="flex flex-vert-center flex-hor-start planRegis-form">
+      <div class="flex flex-column flex-hor-center">
+        <label for="su-credit-cards-add-name-on-card">Name on Card</label>
+        <input id="su-credit-cards-add-name-on-card" required type="text" />
+      </div>
+      <div class="flex flex-column flex-hor-center">
+        <label for="su-credit-cards-add-card-number">Card #</label>
+        <input id="su-credit-cards-add-card-number" pattern="[0-9\s]+" maxlength="24" required type="number" />
+      </div>
+      <div class="flex flex-column">
+        <label>Expiration Date</label>
+        <div class="flex flex-vert-center">
+            <select id="su-credit-cards-add-expiry-month" required>
+                <option value="">MM</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <!-- will be populated via JS with this year and the following 10 years -->
+            <select id="su-credit-cards-add-expiry-year" required>
+                <option value="">YYYY</option>
+            </select>
+          </div>
+      </div>
+  </div>
+  <div class="billing-address-container">
+    <h4 class="profileBox-heading">Billing Address <a class="su-credit-cards-add-billing-address-add">+</a></h4>
+    <!--
+        the <div> below will be populated with sub-<div>s like-->
+      <div class="grey-border">    
+        <div class="flex flex-vert-center">
+            <input id="su-credit-cards-add-billing-address-4189812" name="su-credit-cards-add-billing-address" type="radio" value="4189812" />
             <label for="su-credit-cards-add-billing-address-4189812">[Name], [Address1], [Address2], [City], [Province], [Country], [Postal]</label>
         </div>
-    -->
-    <div></div>
-    <button class="su-credit-cards-add-done">Add Card</button>
+        <div></div>
+      </div>
+      <div class="flex flex-hor-end margin-top-1">
+        <button class="su-credit-cards-add-done zuc-btn zuc-btn-secondary">Add Card</button>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="su-credit-cards-edit-modal modal">
-    <h2>Edit Payment Method</h2>
-    <div>
-        <h4>Payment Method</h4>
-        <div class="su-credit-cards-edit-description"></div>
+<div class="su-credit-cards-edit-modal-container non-visible">
+  <div class="su-credit-cards-edit-modal">
+    <div class="purple-background">
+      <h2>Edit Payment Method</h2>
     </div>
-    <label>
-        Expiration Date
-        <select id="su-credit-cards-edit-expiry-month" required>
-            <option value="">MM</option>
-            <option value="1">01</option>
-            <option value="2">02</option>
-            <option value="3">03</option>
-            <option value="4">04</option>
-            <option value="5">05</option>
-            <option value="6">06</option>
-            <option value="7">07</option>
-            <option value="8">08</option>
-            <option value="9">09</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-        </select>
-        <!-- will be populated via JS with this year and the following 10 years -->
-        <select id="su-credit-cards-edit-expiry-year" required>
-            <option value="">YYYY</option>
-        </select>
-    </label>
-    <div>
-        <input id="su-credit-cards-edit-is-default" type="checkbox" />
-        <label for="su-credit-cards-edit-is-default">Use as Default</label>
+    <div class="two-grid-column planRegis-form">
+      <!-- first section -->
+      <div class="first-section">
+        <div class="flex flex-column flex-hor-start">
+            <h4 class="u-bold" style="margin-bottom:0;">Payment Method</h4>
+            <div class="su-credit-cards-edit-description">
+              <!-- Just for styling purposes added those text -->
+              <i class="su-credit-cards-type fab fa-cc-[cardtype] fa-cc-mastercard"></i>
+              <p class="su-credit-cards-description">[CardType] ending in 4812</p>
+            </div>
+        </div>
+        <div class="flex flex-column margin-top-1">
+        <label class="u-bold">Expiration Date </label>
+          <div class="flex flex-vert-center">
+            <select id="su-credit-cards-edit-expiry-month" required class="margin-right">
+                <option value="">MM</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <!-- will be populated via JS with this year and the following 10 years -->
+            <select id="su-credit-cards-edit-expiry-year" required class="margin-left">
+                <option value="">YYYY</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex flex-vert-center margin-top-1">
+            <input id="su-credit-cards-edit-is-default" type="checkbox" />
+            <label for="su-credit-cards-edit-is-default">Use as Default</label>
+        </div>
+      </div>
+      <!-- second section -->
+      <div class="second-section">
+        <div>
+            <label for="su-credit-cards-edit-name-on-card">Name on Card</label>
+            <input id="su-credit-cards-edit-name-on-card" required type="text" />
+        </div>
+        <div class="margin-top-1">
+            <h4 class="u-bold">Billing Address <a class="su-credit-cards-edit-billing-address-edit"></a></h4>
+            <div class="su-credit-cards-edit-billing-name"></div>
+            <div class="su-credit-cards-edit-billing-address"></div>
+            <div class="su-credit-cards-edit-billing-phone"></div>
+        </div>
+      </div>
+      <!-- two grid column ends -->
+      </div>
+    <div class="flex flex-vert-center flex-hor-center margin-bottom-2">
+      <div><button class="su-credit-cards-edit-cancel zuc-btn zuc-btn-secondary">Cancel</button></div>
+      <div><button class="su-credit-cards-edit-save zuc-btn-secondary zuc-btn">Save</button></div>
     </div>
-    <div>
-        <label for="su-credit-cards-edit-name-on-card">Name on Card</label>
-        <input id="su-credit-cards-edit-name-on-card" required />
-    </div>
-    <div>
-        <h4>Billing Address <a class="su-credit-cards-edit-billing-address-edit"></a></h4>
-        <div class="su-credit-cards-edit-billing-name"></div>
-        <div class="su-credit-cards-edit-billing-address"></div>
-        <div class="su-credit-cards-edit-billing-phone"></div>
-    </div>
-    <button class="su-credit-cards-edit-cancel">Cancel</button>
-    <button class="su-credit-cards-edit-save">Save</button>
+  </div>
 </div>
-<div class="su-banking-details-modal modal">
-    <h2>Banking Details</h2>
-    <span class="close-modal">X</span>
+<div class="su-banking-details-modal-container non-visible">
+  <div class="su-banking-details-modal">
+    <div class="purple-background flex flex-vert-center flex-hor-between">
+      <h2>Banking Details</h2>
+      <span class="close-modal">X</span>
+    </div>
     <p>Banking information is required to provide direct deposit of Commissions earned from enrollment of Smarter Living Plans. (If you are not offering the Smarter Living Plan, this information is optional.) Please include the following.</p>
-    <img />
+    <img class="center margin-bottom-1" alt=""/>
+  </div>
 </div>
-<div class="su-agreement-modal modal">
-    <h2>Smarter Partner Agreement</h2>
-    <span class="close-modal">X</span>
-    <div class="su-agreement-text"></div>
-    <div>
-        <button class="su-agreement-disagree">I Do Not Agree</button>
-        <button class="su-agreement-agree">I Agree</button>
-        <i class="su-agreement-print"></i>
-        <i class="su-agreement-download"></i>
-    </div>
+<div class="su-agreement-modal-container non-visible">
+  <div class="su-agreement-modal">
+      <div class="purple-background flex flex-vert-center flex-hor-between">
+        <h2>Smarter Partner Agreement</h2>
+        <span class="close-modal">X</span>
+      </div>
+      <div class="padding-1">
+        <div class="su-agreement-text"></div>
+        <div class="flex flex-vert-center flex-hor-between margin-top-1 mobile-column">
+          <div class="agreement-radioButtons">
+            <button class="su-agreement-disagree zuc-btn zuc-btn-secondary">I Do Not Agree</button>
+            <button class="su-agreement-agree zuc-btn-secondary zuc-btn">I Agree</button>
+          </div>
+          <div class="agreement-actions">
+            <i class="su-agreement-print fas fa-print"></i>
+            <i class="su-agreement-download fas fa-download"></i>
+          </div>
+        </div>
+      </div>
+  </div>
 </div>
-<div class="su-submitted-modal modal">
-    <h2>Thank you!</h2>
+
+<div class="su-submitted-modal-container non-visible">
+  <div class="su-submitted-modal">
     <span class="close-modal">X</span>
+    <h2 class="u-text-center">Thank you!</h2>
     <p>Thank you for completing the Setup for the Smarter Partner program. We will review your information and advise you by email within 2 business days following our review of the information provided.</p>
+  </div>
 </div>
+</section>

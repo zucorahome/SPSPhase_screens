@@ -2,223 +2,429 @@
     Layout = "~/Views/Shared/_ZucSRSLayout.cshtml";
     ViewBag.Title = "Order Entry";
 }
-    <section class="order-entry-container">
-      <h1 class="srs-heading">@ViewBag.Title</h1>
-      <div class="two-grid-column">
+<section class="order-entry-container">
+    <h1 class="srs-heading">@ViewBag.Title</h1>
+    <div class="two-grid-column">
         <div class="add-item-info">
-          <div class="planRegis-form">
-            <div class="flex flex-row flex-vert-center">
-              <label for="oe-location">Location*:</label>
-              <select id="oe-location" required>
-                  <option value="">Location</option>
-              </select>
+            <div class="planRegis-form">
+                <div class="flex flex-row flex-vert-center">
+                    <label for="oe-location">Location*:</label>
+                    <select id="oe-location" required>
+                        <option value="">Location</option>
+                    </select>
+                </div>
+                <div class="flex flex-row flex-vert-center">
+                    <label for="oe-po-ref">PO/Ref*:</label>
+                    <input id="oe-po-ref" required type="text" />
+                </div>
+                <div class="flex flex-row flex-vert-center">
+                    <label for="oe-auth">Buying Group Authorization</label>
+                    <input id="oe-auth" type="text" />
+                </div>
+                <p class="light-grey-text u-text-center">(Required if requested by Buying Group)</p>
+                <div class="flex flex-hor-end">
+                    <button class="oe-add-item zuc-btn zuc-btn-secondary u-soft-shadow">Add Item</button>
+                </div>
             </div>
-            <div class="flex flex-row flex-vert-center">
-              <label for="oe-po-ref">PO/Ref*:</label>
-              <input id="oe-po-ref" required type="text" />
-            </div>
-            <div class="flex flex-row flex-vert-center">
-              <label for="oe-auth">Buying Group Authorization</label>
-              <input id="oe-auth" type="text" />
-            </div>
-            <p class="light-grey-text u-text-center">(Required if requested by Buying Group)</p>
-            <div class="flex flex-hor-end">
-              <button class="oe-add-item zuc-btn zuc-btn-secondary u-soft-shadow">Add Item</button>
-            </div>
-          </div>
         </div>
         <div class="shipping-instructions">
             <div class="flex flex-column">
-              <label for="oe-shipping-instructions" class="profileBox-heading">Shipping Instructions:</label>
-              <textarea id="oe-shipping-instructions" cols="50" rows="10" placeholder="Customer decided they could not wait for special order Sofa and Chair."></textarea>
+                <label for="oe-shipping-instructions" class="profileBox-heading">Shipping Instructions:</label>
+                <textarea id="oe-shipping-instructions" cols="50" rows="10" placeholder="Customer decided they could not wait for special order Sofa and Chair."></textarea>
             </div>
             <p class="light-grey-text">(If not specified, most economical shipping method will be selected.)</p>
             <div class="two-grid-column mobile-column flex-vert-center flex-hor-center">
-              <div class="planRegis-form">
-                <div class="flex flex-row flex-vert-center">              
-                  <label for="oe-ship-after-date">Ship After Date (Optional):</label>
-                  <input id="oe-ship-after-date" type="date" />
+                <div class="planRegis-form">
+                    <div class="flex flex-row flex-vert-center">
+                        <label for="oe-ship-after-date">Ship After Date (Optional):</label>
+                        <input id="oe-ship-after-date" type="date" />
+                    </div>
                 </div>
-              </div>
-              <div class="planRegis-form">
-                <div class="flex flex-row flex-vert-center">
-                  <input id="oe-request-expedited-shipping" type="checkbox" />
-                  <label for="oe-request-expedited-shipping">
-                    <strong>Request Expedited Shipping</strong><br>
-                   <span style="font-size: 12px;font-weight: 300;"> Note: Expedited Shipping incurs additional cost which will be determined at time of order completion.</span>
-                </label>
+                <div class="planRegis-form">
+                    <div class="flex flex-row flex-vert-center">
+                        <input id="oe-request-expedited-shipping" type="checkbox" />
+                        <label for="oe-request-expedited-shipping">
+                            <strong>Request Expedited Shipping</strong><br>
+                            <span style="font-size: 12px;font-weight: 300;"> Note: Expedited Shipping incurs additional cost which will be determined at time of order completion.</span>
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
-      </div>
-      <!-- two grid ends -->
+        <!-- two grid ends -->
     </div>
-        <!-- NOTE: Grouping and subtotals intentionally left out -->
+    <!-- NOTE: Grouping and subtotals intentionally left out -->
     <div class="order-table-container">
-      <div class="order-table">
-          <div class="purple-background">
-                  <h2>@title</h2>
-          </div>
-          <div class="new-planAdd-detail">
-            <table class="oe-items">
+        <div class="order-table">
+            <div class="purple-background">
+                <h2>@title</h2>
+            </div>
+            <div class="new-planAdd-detail">
+                <table class="oe-items">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item Type</th>
+                            <th scope="col">SKU Number</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">QTY</th>
+                            <th scope="col">Unit Price</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Edit</th>
+                        </tr>
+                    </thead>
+                    <!--
+                        <tbody> will be populated via JS with elements as follows:
+                            <tr data-lt-id="389518">
+                                <td data-label="Item Type">[Data]</td>
+                                <td data-label="SKU Number">[Data]</td>
+                                <td data-label="Description">[Data]</td>
+                                <td data-label="QTY">[Data]</td>
+                                <td data-label="Unit Price">[Data]</td>
+                                <td data-label="Total">[Data]</td>
+                                <td><i class="oe-item-edit fa fa-pencil-alt"></i></td>
+                            </tr>
+                    -->
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td style="font-size:22px;">Order total:</td>
+                            <td class="oe-items-total" data-label="Order total:" style="font-size:22px;"></td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <!-- table container ends -->
+    </div>
+
+    <div class="flex flex-vert-center flex-hor-between orderEntry-controls mobile-column">
+        <div><a class="oe-remove-order simple-link">Remove Order</a></div>
+        <div>
+            <p>Final order confirmation including shipping costs and taxes will be emailed once the order has been finalized.</p>
+            <div class="flex flex-hor-end">
+                <button class="oe-submit zuc-btn zuc-btn-secondary u-soft-shadow">Submit</button>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="oe-add-item-modal-container modal non-visible">
+    <div class="oe-add-item-modal">
+        <div class="purple-background flex flex-vert-center flex-hor-between">
+            <h2>Add Item</h2>
+            <span class="close-modal">X</span>
+        </div>
+        <div class="planRegis-form">
+            <div class="flex flex-vert-center">
+                <label for="oe-add-item-item">Item*:</label>
+                <input id="oe-add-item-item" list="oe-add-item-item-options" required type="text" />
+            </div>
+            <!-- <datalist> will be populated via JS with elements like this: <option value="Description (ZFES3050)" data-lt-value="19198"></option> -->
+            <div class="datalist">
+                <datalist id="oe-add-item-item-options"></datalist>
+            </div>
+            <div class="two-grid-column mobile-column margin-top-1">
+                <!-- first side -->
+                <div class="">
+                    <div class="quantity-input">
+                        <!-- Moved datalist above because of two grid stucture -->
+                        <label for="oe-add-item-unit-quantity">Unit Quantity:</label>
+                        <div class="flex flex-vert-center">
+                            <input id="oe-add-item-unit-quantity" type="number" style="margin:0 5px;" />
+                            X
+                            <input id="oe-add-item-unit-quantity-amount" type="number" disabled style="margin:0 5px;" />
+                        </div>
+                    </div>
+                    <div class="quantity-input">
+                        <label for="oe-add-item-case-quantity">Case Quantity:</label>
+                        <div class="flex flex-vert-center">
+                            <input id="oe-add-item-case-quantity" type="number" style="margin:0 5px;" />
+                            X
+                            <input id="oe-add-item-case-quantity-amount" type="number" disabled style="margin:0 5px;" />
+                        </div>
+                    </div>
+                    <div>
+                        <p style="font-size:14px;">Cases contain --<span class="oe-add-item-case-units"></span></p>
+                    </div>
+                </div>
+                <!-- second side -->
+                <div>
+                    <p class="u-bold" style="font-size:22px;">Units to be Added: <span class="oe-add-item-total-units"></span></p>
+                    <p class="u-bold" style="font-size:18px;">Quantity Available: <span class="oe-add-item-available-units"></span></p>
+
+                    <p style="font-size:14px;">Do you wish to Backorder out of stock items?</p>
+                    <div class="flex flex-vert-center">
+                        <div class="flex flex-vert-center">
+                            <input id="oe-add-item-do-backorder" type="checkbox" name="oe-add-item-backorder" value="yes" checked />
+                            <label for="oe-add-item-do-backorder">Yes</label>
+                        </div>
+                        <div class="flex flex-vert-center">
+                            <input id="oe-add-item-do-not-backorder" type="checkbox" name="oe-add-item-backorder" value="no" />
+                            <label for="oe-add-item-do-not-backorder">No</label>
+                        </div>
+                    </div>
+                    <div class="flex flex-vert-center margin-top-1">
+                        <button class="oe-add-item-add-more zuc-btn zuc-btn-secondary" style="margin:0 5px;">Add More</button>
+                        <button class="oe-add-item-add zuc-btn zuc-btn-secondary">Add</button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- two grid ends -->
+        </div>
+        <!-- main form div ends -->
+    </div>
+    <!-- main modal div ends -->
+</div>
+<div class="oe-cancel-order-conf-modal-container modal non-visible">
+    <div class="oe-cancel-order-conf-modal">
+        <span class="close-modal">X</span>
+        <h2>Caution!</h2>
+        <p>Removing Order will remove all data associated with this order including selected Items.</p>
+        <h3>Do you wish to continue?</h3>
+        <div class="flex flex-vert-center flex-hor-center margin-bottom-1">
+            <button class="oe-cancel-order-conf-yes zuc-btn zuc-btn-secondary u-soft-shadow" style="margin:5px;">Yes</button>
+            <button class="oe-cancel-order-conf-no zuc-btn zuc-btn-secondary u-soft-shadow" style="margin:5px;">No</button>
+        </div>
+    </div>
+</div>
+<div class="oe-backorder-warning-modal-container modal non-visible">
+    <div class="oe-backorder-warning-modal">
+        <span class="close-modal">X</span>
+        <h2>Backorder Warning</h2>
+        <p>Please note your order contains Backordered items and will be shipped when they become available.</p>
+        <div class="new-planAdd-detail">
+            <table class="oe-backorder-warning-items">
                 <thead>
                     <tr>
-                        <th scope="col">Item Type</th>
-                        <th scope="col">SKU Number</th>
+                        <th scope="col">SKU</th>
                         <th scope="col">Description</th>
-                        <th scope="col">QTY</th>
-                        <th scope="col">Unit Price</th>
-                        <th scope="col">Total</th>
-                        <th scope="col">Edit</th>
+                        <th scope="col">QTY Ordered</th>
+                        <th scope="col">QTY Available</th>
                     </tr>
                 </thead>
                 <!--
                     <tbody> will be populated via JS with elements as follows:
                         <tr data-lt-id="389518">
-                            <td data-label="Item Type">[Data]</td>
-                            <td data-label="SKU Number">[Data]</td>
+                            <td data-label="SKU">[Data]</td>
                             <td data-label="Description">[Data]</td>
-                            <td data-label="QTY">[Data]</td>
-                            <td data-label="Unit Price">[Data]</td>
-                            <td data-label="Total">[Data]</td>
-                            <td><i class="oe-item-edit fa fa-pencil-alt"></i></td>
+                            <td data-label="QTY Ordered">[Data]</td>
+                            <td data-label="QTY Available">[Data]</td>
                         </tr>
                 -->
                 <tbody></tbody>
-                <tfoot>
-                    <tr>
-                      <td colspan="4" ></td>
-                        <td style="font-size:22px;">Order total:</td>
-                        <td class="oe-items-total" data-label="Order total:" style="font-size:22px;"></td>
-                        <td></td>
-                    </tr>
-                </tfoot>
             </table>
-          </div>
-      </div>
-        <!-- table container ends -->
-      </div>
 
-        <div class="flex flex-vert-center flex-hor-between orderEntry-controls mobile-column">
-            <div><a class="oe-remove-order simple-link">Remove Order</a></div>
-            <div>
-              <p>Final order confirmation including shipping costs and taxes will be emailed once the order has been finalized.</p>
-               <div class="flex flex-hor-end">
-                <button class="oe-submit zuc-btn zuc-btn-secondary u-soft-shadow">Submit</button>
-                </div>
-            </div>
         </div>
-</section>
-      <div class="oe-add-item-modal-container non-visible">
-        <div class="oe-add-item-modal">
-            <div class="purple-background flex flex-vert-center flex-hor-between">
-              <h2>Add Item</h2>
-              <span class="close-modal">X</span>
-            </div>
-          <div class="planRegis-form">
-            <div class="flex flex-vert-center"> 
-              <label for="oe-add-item-item">Item*:</label>
-              <input id="oe-add-item-item" list="oe-add-item-item-options" required type="text" />
-            </div>
-            <!-- <datalist> will be populated via JS with elements like this: <option value="Description (ZFES3050)" data-lt-value="19198"></option> -->
-              <div class="datalist">
-                <datalist id="oe-add-item-item-options"></datalist>
-              </div>
-            <div class="two-grid-column mobile-column margin-top-1">
-              <!-- first side -->
-            <div class="">  
-              <div class="quantity-input">
-                <!-- Moved datalist above because of two grid stucture -->
-                <label for="oe-add-item-unit-quantity">Unit Quantity:</label>
-                <div class="flex flex-vert-center">
-                  <input id="oe-add-item-unit-quantity" type="number" style="margin:0 5px;" />
-                  X
-                  <input id="oe-add-item-unit-quantity-amount" type="number" disabled  style="margin:0 5px;" />
-                </div>
-              </div>
-              <div class="quantity-input">
-                <label for="oe-add-item-case-quantity">Case Quantity:</label>
-                <div class="flex flex-vert-center">
-                    <input id="oe-add-item-case-quantity" type="number" style="margin:0 5px;" />
-                    X
-                    <input id="oe-add-item-case-quantity-amount" type="number" disabled style="margin:0 5px;" />
-                </div>
-              </div>
-            <div>
-              <p style="font-size:14px;">Cases contain --<span class="oe-add-item-case-units"></span></p>
-            </div>
-          </div>
-          <!-- second side -->
-          <div>
-            <p class="u-bold" style="font-size:22px;">Units to be Added: <span class="oe-add-item-total-units"></span></p>
-            <p class="u-bold" style="font-size:18px;">Quantity Available: <span class="oe-add-item-available-units"></span></p>
-            
-            <p style="font-size:14px;">Do you wish to Backorder out of stock items?</p>
-            <div class="flex flex-vert-center">
-              <div class="flex flex-vert-center">
-                <input id="oe-add-item-do-backorder" type="checkbox" name="oe-add-item-backorder" value="yes" checked />
-                <label for="oe-add-item-do-backorder">Yes</label>
-              </div>
-              <div class="flex flex-vert-center">
-                <input id="oe-add-item-do-not-backorder" type="checkbox" name="oe-add-item-backorder" value="no" />
-                <label for="oe-add-item-do-not-backorder">No</label>
-              </div>
-            </div>
-            <div class="flex flex-vert-center margin-top-1">
-              <button class="oe-add-item-add-more zuc-btn zuc-btn-secondary" style="margin:0 5px;">Add More</button>
-              <button class="oe-add-item-add zuc-btn zuc-btn-secondary">Add</button>
-            </div>
-          </div>
+        <div class="flex-vert-center flex-hor-center flex margin-bottom-1 margin-top-2">
+            <button class="oe-backorder-warning-proceed zuc-btn zuc-btn-secondary u-soft-shadow">Proceed with Backorder</button>
+        </div>
+    </div>
+</div>
+<div class="oe-summary-modal-container modal non-visible">
+    <h2>Your Order Summary</h2>
+    <span class="close-modal">X</span>
+    <table>
+        <tbody>
+            <tr>
+                <td data-label="Line">Items</td>
+                <td class="oe-summary-items" data-label="Amount"></td>
+            </tr>
+            <tr>
+                <td data-label="Line">Shipping and Freight</td>
+                <td class="oe-summary-shipping" data-label="Amount"></td>
+            </tr>
+            <tr>
+                <td data-label="Line">Total Before Tax</td>
+                <td class="oe-summary-subtotal" data-label="Amount"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td data-label="Line">Order Total</td>
+                <td class="oe-summary-total" data-label="Amount"></td>
+            </tr>
+            <tr>
+                <td data-label="Line">
+                    This order has the potential to earn Smarter Reward Points
+                    <i class="oe-summary-srp-info-circle"></i>
+                    <div class="oe-summary-srp-info-text-container">
+                        <i></i>
+                        <p>Smarter Reward Points are earned on the value of items purchased through your recognized Buying Group or when items are purchased by credit card. Smarter Reward Points are not eligible to be earned with "On Account" orders.</p>
+                    </div>
+                </td>
+                <td class="oe-summary-srp" data-label="Amount"></td>
+            </tr>
+        </tfoot>
+    </table>
+    <div class="oe-summary-use-buying-group-container">
+        <p>It appears you are a member of <span class="oe-summary-buying-group"></span>. Do you wish to purchase through your Group?</p>
+        <input id="oe-summary-use-buying-group-yes" name="oe-summary-use-buying-group" type="checkbox" />
+        <label for="oe-summary-use-buying-group-yes">Yes</label>
+        <input id="oe-summary-use-buying-group-no" name="oe-summary-use-buying-group" type="checkbox" />
+        <label for="oe-summary-use-buying-group-no">No</label>
+    </div>
+    <button class="oe-summary-done">Next</button>
+</div>
+<div class="oe-on-account-summary-modal-container modal non-visible">
+    <h2>Your "On Account" Order Summary</h2>
+    <span class="close-modal">X</span>
+    <table>
+        <tbody>
+            <tr>
+                <td data-label="Line">Items</td>
+                <td class="oe-on-account-summary-items" data-label="Amount"></td>
+            </tr>
+            <tr>
+                <td data-label="Line">Shipping</td>
+                <td data-label="Amount">TBD</td>
+            </tr>
+            <tr>
+                <td data-label="Line">Total Before Tax</td>
+                <td data-label="Amount">TBD</td>
+            </tr>
+            <tr>
+                <td data-label="Line">GST/HST/PST/QST</td>
+                <td data-label="Amount">TBD</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td data-label="Line">Estimated Order Total (Items Only)</td>
+                <td class="oe-on-account-summary-total" data-label="Amount"></td>
+            </tr>
+            <tr>
+                <td data-label="Line">
+                    Smarter Reward Points
+                    <i class="oe-on-account-summary-srp-info-circle"></i>
+                    <div class="oe-on-account-summary-srp-info-text-container">
+                        <i></i>
+                        <p>Smarter Reward Points are earned on the value of items purchased through your recognized Buying Group or when items are purchased by credit card. Smarter Reward Points are not eligible to be earned with "On Account" orders.</p>
+                    </div>
+                    <p>Please note "On Account" orders do not qualify for Free Shipping or Smarter Reward Points.</p>
+                </td>
+                <td data-label="Amount">0</td>
+            </tr>
+        </tfoot>
+    </table>
+    <button class="oe-on-account-summary-done">Submit</button>
+</div>
+<div class="oe-redeem-modal-container modal non-visible">
+    <h2>Redeem Smarter Reward Points</h2>
+    <span class="close-modal">X</span>
+    <h3>Additional Savings</h3>
+    <p>As a member of <span class="oe-redeem-buying-group"></span> you have the potential to earn and redeem Smarter Retailer Rewards with registration of Product Protection Plans and products purchased with the order. Enter the amount you wish to redeem below.</p>
+    <table>
+        <tbody>
+            <tr>
+                <td data-label="Info"></td>
+                <td data-label="Line">Order Total:</td>
+                <td class="oe-redeem-order-total" data-label="Amount"></td>
+            </tr>
+            <tr>
+                <td data-label="Info">You have <span class="oe-redeem-srp-count"></span> Smarter Reward Points Available for Redemption (Value: <span class="oe-redeem-srp-value"></span>)</td>
+                <td data-label="Line">Smarter Rewards Redemption:</td>
+                <td class="oe-redeem-srp-redeemed" data-label="Amount" contenteditable="true"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td data-label="Info"></td>
+                <td data-label="Line">Net Amount:</td>
+                <td class="oe-redeem-order-net" data-label="Amount"></td>
+            </tr>
+        </tfoot>
+    </table>
+    <button class="oe-redeem-done">Next</button>
+</div>
+<div class="oe-thank-you-modal-container modal non-visible">
+    <h2>
+        Thank you!
+        <span class="oe-thank-you-heading-credit-card">Your Order has been placed.</span>
+        <span class="oe-thank-you-heading-on-account">Your "On Account" Order has been Submitted.</span>
+    </h2>
+    <span class="close-modal">X</span>
+    <div class="oe-thank-you-buying-group-container">
+        <p>Your order has been submitted to <span classs="oe-thank-you-buying-group"></span> for purchase approval.</p>
+        <p>Please check your email for Order Acknowledgment. Upon approval, you will receive an Order Confirmation by email.</p>
+    </div>
+    <div class="oe-thank-you-credit-card-container">
+        <p>Your order has been accepted and will be processed as quickly as possible.</p>
+        <p>Please check your email for Order Confirmation and delivery information.</p>
+    </div>
+    <div class="oe-thank-you-on-account-container">
+        <p>Your order has been submitted and will be processed as quickly as possible.</p>
+        <p>Please check your email for Order Confirmation of Shipping Costs and Taxes with additional delivery information.</p>
+    </div>
+    <p>Order Number: <span oe="oe-thank-you-order-number"></span></p>
+</div>
+<div class="oe-sorry-modal-container modal non-visible">
+    <h2>We're sorry. Your Order has not been accepted.</h2>
+    <span class="close-modal">X</span>
+    <p>Either your credit card has been declined for payment or the order amount exceeds your available credit limit for an "On Account" order.</p>
+    <p>Please select an alternative Payment Option or contact us at (519) 452-0101 Ext. 123 for assistance.</p>
+    <p>Order Number: <span oe="oe-sorry-order-number"></span></p>
+    <button class="oe-sorry-back">Payment Options</button>
+    <button class="oe-sorry-cancel-order">Cancel Order</button>
+</div>
+<div class="oe-payment-modal-container modal non-visible">
+    <h2>Payment</h2>
+    <span class="close-modal">X</span>
+    <table>
+        <tbody>
+            <tr>
+                <td data-label="Info"></td>
+                <td data-label="Line">Order Total:</td>
+                <td class="oe-payment-order-total" data-label="Amount"></td>
+            </tr>
+            <tr>
+                <td data-label="Info">You have <span class="oe-payment-srp-count"></span> Smarter Reward Points Available for Redemption (Value: <span class="oe-payment-srp-value"></span>)</td>
+                <td data-label="Line">Smarter Rewards Redemption:</td>
+                <td class="oe-payment-srp-redeemed" data-label="Amount" contenteditable="true"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td data-label="Info"></td>
+                <td data-label="Line">Net Amount:</td>
+                <td class="oe-payment-order-net" data-label="Amount"></td>
+            </tr>
+        </tfoot>
+    </table>
+    <h3>Choose your payment option:</h3>
+    <!--
 
-          </div>
-            <!-- two grid ends -->
-            </div>
-            <!-- main form div ends -->
-        </div>
-        <!-- main modal div ends -->
-      </div>
-      <div class="oe-cancel-order-conf-modal-container non-visible">
-        <div class="oe-cancel-order-conf-modal">
-          <span class="close-modal">X</span>
-            <h2>Caution!</h2>
-            <p>Removing Order will remove all data associated with this order including selected Items.</p>
-            <h3>Do you wish to continue?</h3>
-            <div class="flex flex-vert-center flex-hor-center margin-bottom-1">
-              <button class="oe-cancel-order-conf-yes zuc-btn zuc-btn-secondary u-soft-shadow" style="margin:5px;">Yes</button>
-              <button class="oe-cancel-order-conf-no zuc-btn zuc-btn-secondary u-soft-shadow" style="margin:5px;">No</button>
-            </div>
-        </div>
-      </div>
-      <div class="oe-backorder-warning-modal-container">
-        <div class="oe-backorder-warning-modal">
-          <span class="close-modal">X</span>
-            <h2>Backorder Warning</h2>
-            <p>Please note your order contains Backordered items and will be shipped when they become available.</p>
-            <div class="new-planAdd-detail">
-              <table class="oe-backorder-warning-items">
-                  <thead>
-                      <tr>
-                          <th scope="col">SKU</th>
-                          <th scope="col">Description</th>
-                          <th scope="col">QTY Ordered</th>
-                          <th scope="col">QTY Available</th>
-                      </tr>
-                  </thead>
-                  <!--
-                      <tbody> will be populated via JS with elements as follows:
-                          <tr data-lt-id="389518">
-                              <td data-label="SKU">[Data]</td>
-                              <td data-label="Description">[Data]</td>
-                              <td data-label="QTY Ordered">[Data]</td>
-                              <td data-label="QTY Available">[Data]</td>
-                          </tr>
-                  -->
-                  <tbody></tbody>
-              </table>
-              
-            </div>
-            <div class="flex-vert-center flex-hor-center flex margin-bottom-1 margin-top-2">
-              <button class="oe-backorder-warning-proceed zuc-btn zuc-btn-secondary u-soft-shadow">Proceed with Backorder</button>
-            </div>
-        </div>
-      </div>
+        <ul> will be populated with elements like the following. I would appreciate your feedback
+        on any other classes or markup you would like to be output here, so we can add it the JS file.
+
+        <li data-lt-id="5785379">
+            <i class="oe-payment-options-type fa fa-cc-[cardtype]"></i>
+            <h4 class="oe-payment-options-description">[CardType] ending in 4812 <span>(Default)</span></h4>
+            <span class="oe-payment-options-name-on-card">J. Smith</span>
+            <span class="oe-payment-options-expiry">Expires 09/2020</span>
+        </li>
+
+        OR
+
+        <li>
+            <h4 class="oe-payment-options-description">
+                Payment "On Account"
+                <i class="oe-payment-options-info-circle"></i>
+                <div class="oe-payment-options-info-text-container">
+                    <i></i>
+                    <p>Payment "On Account" is available to credit-approved Retailer Partners and may be subject to minimum order quantities and amounts. <b>On Account orders are not eligible for Free Shipping or earning of Smarter Reward Points. (Previously earned Smarter Rewards may be redeemed.)</p>
+                </div>
+            </h4>
+        </li>
+
+    -->
+    <ul class="oe-payment-options"></ul>
+    <div>
+        <h3>More payment options:</h3>
+        <p>ZucoraHome accepts all major credit cards.</p>
+        <img />
+        <a class="oe-payment-add-card">+ Add Card</a>
+    </div>
+    <button class="oe-payment-done">Place Order</button>
+</div>

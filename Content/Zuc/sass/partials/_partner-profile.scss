@@ -1,3 +1,124 @@
 .partner-profile-container{
-	
+	width:85%;
+	margin:0 auto;
+	display: block;
+
+	.profileBox-heading{
+
+	}
+
+	.profileBox-style{
+		
+	}
+
+	.planRegis-form{
+		width:100%;
+		padding:10px;
+
+		.form-div{
+			display: grid;
+			grid-template-columns: 25% 75%;
+			align-items: center;
+			justify-content: space-around;
+		}
+
+		input,select{
+			width:95%;
+		}
+		.two-grid-column{
+			margin-top:5px;
+		}
+	}
+
+	.pp-buying-group{
+		max-width: 100%;
+    	font-weight: bold;
+    	font-size: 18px;
+    	/*margin-top:5px;*/
+	}
+
+	input[type=radio]{
+		width:25px;
+		height: 25px;
+		margin-right:5px;
+	}
+
+	.margin-leftRight{
+		margin:0 10px;
+	}
+
+	.payment-references-container{
+
+	}
+
+.our-locations-container{
+		
+	}
+
+	.new-planAdd-detail{
+			display: block;
+			margin:0;
+			border-width: 2px;
+		}
+
+	.payment-methods-container{
+		margin-top:14px;
+		ul,li{
+			list-style-type: none;
+		}
+		.pp-credit-cards{
+			@extend .profileBox-style;
+		}
+
+		.pp-credit-card-heading{
+
+		}
+	}
+}
+
+.our-people-container{
+	.new-planAdd-detail{
+		table{
+			thead{
+				tr{
+					th{
+						border-right: 1px solid $light-grey;
+						text-align: center;
+					}
+					th:last-child{
+						border-right: none;
+					}
+				}
+			}
+			tbody{
+					tr{
+						td{
+								border-right:1px solid #d3d3df;
+								text-align: center;
+
+								i{
+									color: $zucora-purple;
+								}
+							}
+						}
+				}
+				.pp-people-edit{
+					color: $zucora-purple;
+				}
+			}
+	}
+}
+
+
+@media screen and(max-width: $mobile-width){
+	.partner-profile-container{
+		width:95%;
+		display: block;
+		margin:0 auto;
+
+
+		.payment-references-container{
+			margin-top:1em;
+		}
+	}
 }

@@ -1,0 +1,124 @@
+﻿@{
+    Layout = "~/Views/Shared/_ZucSRSLayout.cshtml";
+    ViewBag.Title = "Welcome";
+}
+<section class="advisor-welcome-container">
+  <div class="two-grid-column mobile-colummn">
+    <!-- First section -->
+  <div class="first-section">
+    <div>
+      <img class="aw-promo-graphic" src="../../Images/Zuc/images/blocker-image.png" alt=""/>
+    </div>
+
+    <div class="margin-top-1">
+    <h3 class="profileBox-heading">Plan Activity</h3>
+    <div class="new-planAdd-detail">
+    <table class="aw-plan-activity">
+        <thead>
+            <tr>
+                <th scope="col" style="width: 20%;">EFF Date</th>
+                <th scope="col" style="width: 20%;">Customer</th>
+                <th scope="col" style="width: 15%;">Plan</th>
+                <th scope="col" style="width: 15%;">Price</th>
+                <th scope="col" style="width: 20%;">Status</th>
+                <th scope="col" style="width: 10%;">Points</th>
+            </tr>
+        </thead>
+        <!--
+
+            <tbody> will be populated via JS with elements as follows:
+                
+            <tr data-lt-id="389518">
+                <td data-label="EFF Date">[Data]</td>
+                <td data-label="Customer">[Data]</td>
+                <td data-label="Plan">[Data]</td>
+                <td data-label="Price">[Data]</td>
+                <td data-label="Status">[Data]</td>
+                <td data-label="Points">[Data]</td>
+            </tr>
+
+        -->
+        <tbody></tbody>
+    </table>
+  </div>
+    <div class="flex flex-hor-end margin-top-1 margin-bottom-2"><a class="aw-plan-activity-view-all simple-link">See All</a></div>
+</div>
+<!-- first section ends -->
+</div>
+    <!-- Second section -->
+  <div class="second-section">
+    <div class="new-planAdd-detail">  
+    <table class="aw-leaderboard">
+        <thead>
+            <tr>
+                <th scole="col" style="width: 15%;"></th>
+                <th scole="col" style="width: 40%;">Advisor</th>
+                <th scole="col" style="width: 30%;">Smart Plans</th>
+                <th scole="col" style="width: 15%;">SLP</th>
+            </tr>
+        </thead>
+        <!--
+        
+            <tbody> will be populated with elements like this:
+            
+            <tr data-lt-id="1272177">
+                <td data-label="Position">[Data]</td>
+                <td data-label="Advisor" class="flex flex-vert-center"><img class="aw-leader-profile-image" src="[Path]" alt="Profile Image" /> [Data]</td>
+                <td data-label="Smart Plans">[Data]</td>
+                <td data-label="SLP">[Data]</td>
+            </tr>    
+        
+        -->
+        <tbody>
+          <tr data-lt-id="1272177">
+                <td data-label="Position">[Data]</td>
+                <td data-label="Advisor" class="flex flex-vert-center"><img class="aw-leader-profile-image" src="[Path]" alt="Profile Image" /> [Data]</td>
+                <td data-label="Smart Plans">[Data]</td>
+                <td data-label="SLP">[Data]</td>
+            </tr>
+            <tr data-lt-id="1272177">
+                <td data-label="Position">[Data]</td>
+                <td data-label="Advisor" class="flex flex-vert-center"><img class="aw-leader-profile-image" src="[Path]" alt="Profile Image" /> [Data]</td>
+                <td data-label="Smart Plans">[Data]</td>
+                <td data-label="SLP">[Data]</td>
+            </tr>        
+        </tbody>
+    </table>
+  </div>
+
+  <div class="margin-top-1">
+      <h3 class="profileBox-heading">Statement of Account</h3>
+      <div class="new-planAdd-detail">
+      <table class="aw-transactions">
+          <thead>
+              <tr>
+                  <th scope="col" style="width:20%;">Trx Date</th>
+                  <th scope="col" style="width:20%;">Trx</th>
+                  <th scope="col" style="width:20%;">Due Date</th>
+                  <th scope="col" style="width:20%;">Amount</th>
+                  <th scope="col" style="width:20%;">Balance</th>
+              </tr>
+          </thead>
+          <!--
+
+              <tbody> will be populated via JS with elements as follows:
+
+              <tr data-lt-id="278198">
+                  <td data-label="Trx Date">[Data]</td>
+                  <td data-label="Trx">[Data]</td>
+                  <td data-label="Due Date">[Data]</td>
+                  <td data-label="Amount">[Data]</td>
+                  <td data-label="Balance">[Data]</td>
+              </tr>
+          
+          -->
+          <tbody></tbody>
+      </table>
+    </div>
+      <div class="flex flex-hor-end margin-top-1 margin-bottom-2"><a class="aw-transactions-view-all simple-link">See All</a></div>
+  </div>
+<!-- Second section ends -->
+</div>
+<!-- two grid colum ends -->
+</div>
+</section>

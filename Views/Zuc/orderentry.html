@@ -332,7 +332,7 @@
         </div>
     </div>
 </div>
-<div class="oe-summary-modal-container">
+<div class="oe-summary-modal-container non-visible">
   <div class="oe-summary-modal">
     <div class="purple-background flex flex-vert-center flex-hor-between">
       <h2>Your Order Summary</h2>
@@ -349,7 +349,7 @@
                     <td data-label="Line">Shipping and Freight</td>
                     <td class="oe-summary-shipping" data-label="Amount">$1234,11</td>
                 </tr>
-                <tr style="margin-bottom: 2em;">
+                <tr>
                     <td data-label="Line">Total Before Tax</td>
                     <td class="oe-summary-subtotal" data-label="Amount">$1234,11</td>
                 </tr>
@@ -357,7 +357,7 @@
             <tfoot style="border-top:1px solid #36384B;">
                 <tr>
                     <td data-label="Line" style="font-size: 22px;">Order Total</td>
-                    <td class="oe-summary-total" data-label="Amount">$1234,11</td>
+                    <td class="oe-summary-total" data-label="Amount" style="font-size: 22px;">$1234,11</td>
                 </tr>
                 <tr>
                     <td data-label="Line" class="purple-text">
@@ -390,10 +390,14 @@
   </div>
 </div>
 <!--  -->
-<div class="oe-on-account-summary-modal-container non-visible">
-    <h2>Your "On Account" Order Summary</h2>
-    <span class="close-modal">X</span>
-    <table>
+<div class="oe-on-account-summary-modal-container">
+  <div class="oe-on-account-summary-modal">
+    <div class="purple-background flex flex-vert-center flex-hor-between">
+      <h2>Your "On Account" Order Summary</h2>
+      <span class="close-modal">X</span>
+    </div>
+    <div class="oe-summary-modal-table">
+      <table>
         <tbody>
             <tr>
                 <td data-label="Line">Items</td>
@@ -412,15 +416,15 @@
                 <td data-label="Amount">TBD</td>
             </tr>
         </tbody>
-        <tfoot>
+        <tfoot style="border-top:1px solid #36384B;">
             <tr>
-                <td data-label="Line">Estimated Order Total (Items Only)</td>
-                <td class="oe-on-account-summary-total" data-label="Amount"></td>
+                <td data-label="Line" style="font-size: 22px;">Estimated Order Total (Items Only)</td>
+                <td class="oe-on-account-summary-total" data-label="Amount" style="font-size: 22px;"></td>
             </tr>
             <tr>
-                <td data-label="Line">
+                <td data-label="Line" class="purple-text">
                     Smarter Reward Points
-                    <i class="oe-on-account-summary-srp-info-circle"></i>
+                    <i class="oe-on-account-summary-srp-info-circle fa fa-info-circle"></i>
                     <div class="oe-on-account-summary-srp-info-text-container">
                         <i></i>
                         <p>Smarter Reward Points are earned on the value of items purchased through your recognized Buying Group or when items are purchased by credit card. Smarter Reward Points are not eligible to be earned with "On Account" orders.</p>
@@ -430,8 +434,10 @@
                 <td data-label="Amount">0</td>
             </tr>
         </tfoot>
-    </table>
-    <button class="oe-on-account-summary-done">Submit</button>
+      </table>
+      <button class="oe-on-account-summary-done">Submit</button>
+    </div>
+  </div>
 </div>
 <div class="oe-redeem-modal-container non-visible">
     <h2>Redeem Smarter Reward Points</h2>

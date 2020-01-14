@@ -1,231 +1,285 @@
-﻿@{
+﻿@model LimeTac.WebUi.Models.GoogleMapsClientKeyViewModel
+@{
     Layout = "~/Views/Shared/_ZucSRSLayout.cshtml";
     ViewBag.Title = "Market Partners";
 }
+@section scripts {
+    <script src="https://maps.googleapis.com/maps/api/js?key=@Html.Raw(Model.GoogleMapsClientKey)&@Html.Raw(LimeTac.Ethnic.Resources.GoogleMapsAPIBaseLibraryIncludes),drawing"></script>
+}
 <h1 class="srs-heading">@ViewBag.Title</h1>
-<!-- [name="mp-list-filter"] will be populated via JS with elements like this: <option value="332">LEGACY</option> -->
 <section class="market-partners-container">
     <!-- filter -->
     <form class="planRegis-form first-filter">
-      <div class="flex flex-row flex-vert-center">
-        <label for="mp-list-filter">Filter:</label>
-        <select name="mp-list-filter">
-            <option value="">ALL</option>
-        </select>
-      </div>
+        <div class="flex flex-row flex-vert-center">
+            <label for="mp-list-filter">Filter:</label>
+            <!-- will be populated via JS with elements like this: <option value="332">LEGACY</option> -->
+            <select id="mp-list-filter">
+                <option value="">ALL</option>
+            </select>
+        </div>
     </form>
-  <div class="two-grid-column mobile-column">
-    <div class="border-box">
-      <div class="purple-background">
-        <h3>Market Partners <a class="mp-add">+</a></h3>
-      </div>
-      <div class="new-planAdd-detail">
-        <table class="mp-list">
-            <thead>
-                <tr>
-                    <th scope="col">Status</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Date Invited</th>
-                </tr>
-            </thead>
-            <tbody>
-              <!-- Need to specify <td data-label="column name"> for mobile-->
-            </tbody>
-        </table>
-      </div>
-
-    </div>
-    <div class="border-box partner-data-container">
-        <div class="purple-background flex flex-vert-center flex-hor-between">
-          <h3 style="margin-bottom:0;">Partner Details</h3>
-          <button class="mp-details-invite zuc-btn zuc-btn-primary u-soft-shadow">Invite</button>
-        </div>
-        <form class="planRegis-form">
-            <dl>
-              <div class="planRegis-divStyle flex-vert-center">
-                <dt>Buying Group:</dt>
-                <dd class="mp-details-buying-group"></dd>
-              </div>
-              <div class="planRegis-divStyle flex-vert-center">
-                <dt>Primary Contact:</dt>
-                <dd class="mp-details-contact">
-                    <div class="mp-details-contact-name"></div>
-                    <div class="mp-details-contact-email"></div>
-                    <div class="mp-details-contact-phone"></div>
-                </dd>
-              </div>
-            </dl>
-            <div class="planRegis-divStyle flex-vert-center">
-              <label for="mp-details-loc-count">Number Locations:</label>
-              <input name="mp-details-loc-count" type="text" />
+    <div class="two-grid-column mobile-column">
+        <div class="border-box">
+            <div class="purple-background">
+                <h3>Market Partners <a class="mp-add">+</a></h3>
             </div>
-            <div class="planRegis-divStyle flex-vert-center">
-              <label for="mp-details-annual-sales">Annual Sales Volume:</label>
-              <input name="mp-details-annual-sales" type="text" />
-            </div>
-            <div class="planRegis-divStyle flex-vert-center">
-              <label for="mp-details-current-plan-provider">Current Plan Provider:</label>
-              <!-- As per design it shows dropdown select input type -->
-              <input name="mp-details-current-plan-provider" type="text"/>
-            </div>
-            <div class="planRegis-divStyle flex-vert-center">
-              <span>Products/Services <a class="mp-details-add-product-service">+</a></span>
-            </div>
-            <!--
-                .mp-details-products-services will be populated via JS with elements as follows:
-                <li data-lt-value="332">The Product/Service <a class="mp-details-remove-product-service"></a></li>
-            -->
-            <!-- NOTE: Map and manual address checkbox is missing. -->
-            <ul class="mp-details-products-services"></ul>
-            <div class="planRegis-divStyle flex-vert-center">
-              <label for="mp-details-address-1">Address 1*:</label>
-              <input name="mp-details-address-1" type="text" required />
-            </div>
-            <div class="planRegis-divStyle flex-vert-center">
-              <label for="mp-details-address-2">Address 2:</label>
-              <input name="mp-details-address-2" type="text"/>
-            </div>
-            <div class="planRegis-divStyle flex-vert-center">
-              <label for="mp-details-city">City*:</label>
-              <input name="mp-details-city" required type="text"/>
-            </div>
-            <!-- [name="mp-details-province"] will be populated via JS with elements like this: <option value="332">Ontario</option> -->
-            <div class="two-grid-column">
-              <div class="planRegis-divStyle flex-vert-center">
-                <label for="mp-details-province">Prov/State*:</label>
-                <select name="mp-details-province" required>
-                   <option value="">Province/State</option>
-                </select>
-              </div>
-              <div class="flex-vert-center planRegis-divStyle">
-                <label for="mp-details-postal">Postal Code*:</label>
-                <input name="mp-details-postal" required type="text"/>
-              </div>
+            <div class="new-planAdd-detail">
+                <table class="mp-list">
+                    <thead>
+                        <tr>
+                            <th scope="col">Status</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Date Invited</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Need to specify <td data-label="column name"> for mobile-->
+                    </tbody>
+                </table>
             </div>
 
-            <div class="flex flex-vert-center flex-hor-center margin-top-1">
-              <button class="mp-details-save zuc-btn zuc-btn-secondary">Save</button>
-              <button class="mp-details-cancel zuc-btn zuc-btn-secondary">Cancel</button>
-            </div>
-        </form>
-    </div>
-
-  </div><!-- 50 50 column ends -->
-  <!-- Another 50 50 column -->
-  <div class="two-grid-column mobile-column margin-top-2">
-    <div class="border-box">
-        <h3 class="profileBox-heading">Partner Type Status:</h3>
-        <!--
-            .mp-status-descriptions will be populated via JS with elements as follows:
-            <li data-lt-value="332"><strong>"EXAMPLE"</strong> - The description</li>
-        -->
-        <ul class="mp-status-descriptions"></ul>
-    </div>
-    <div class="border-box">
-        <div class="purple-background"><h3>Activity Notes <a class="mp-add-note">+</a></h3></div>
-        <div class="new-planAdd-detail">
-          <table class="mp-notes">
-              <thead>
-                  <tr>
-                    <!-- Missing some columns compare to design -->
-                      <th scope="col">Created</th>
-                      <th scope="col">Note</th>
-                      <th scope="col">Follow-Up</th>
-                  </tr>
-              </thead>
-              <tbody></tbody>
-          </table>
         </div>
-    </div>
-  </div><!--50 50 column ends-->
-  <div class="mp-invite-modal-container non-visible">
-    <div class="mp-invite-modal">
-         <div class="purple-background flex flex-hor-between">
-          <h2 style="margin-bottom:0;">Invite</h2>
-          <span class="close-modal">X</span>
-        </div>
-      <form class="planRegis-form">
-        <!-- Missing store name field -->
-        <h3 class="purple-text u-uppercase">Primary Contact</h3>
-        <div class="planRegis-divStyle flex-vert-center">
-        <label for="mp-invite-first-name">First Name*:</label>
-        <input name="mp-invite-first-name" required type="text"/>
-      </div>
-      <div class="planRegis-divStyle flex-vert-center">
-        <label for="mp-invite-last-name">Last Name*:</label>
-        <input name="mp-invite-last-name" required type="text"/>
-      </div>
-      <div class="planRegis-divStyle flex-vert-center">
-        <label for="mp-invite-email">Email*:</label>
-        <input name="mp-invite-email" type="email" required />
-      </div>
-        <!-- [name="mp-invite-profile"] will be populated via JS with elements like this: <option value="332">Profile Example</option> -->
-        <div class="planRegis-divStyle flex-vert-center">
-        <label for="mp-invite-profile">Partner Profile*:</label>
-        <select name="mp-invite-profile" required>
-            <option value="">Partner Profile</option>
-        </select>
-      </div>
-      <div class="planRegis-divStyle flex-vert-center">
-        <label for="mp-invite-message">Personal Message*:</label>
-        <textarea name="mp-invite-message" required type=""></textarea>
-      </div>
-      <div class="flex flex-hor-center margin-top-1">
-        <button class="mp-invite-send zuc-btn zuc-btn-secondary">Send</button>
-      </div>
-      </form>
-    </div>
-  </div>
-
-    <div class="mp-add-product-service-modal-container non-visible">
-        <div class="mp-add-product-service-modal">
-          <div class="purple-background flex flex-hor-between">
-            <h2>Add Product/Service</h2>
-            <span class="close-modal">X</span>
-          </div>
-          <form class="planRegis-form">
-            <div class="flex flex-hor-center flex-vert-center">
-              <input name="mp-add-product-service-selection" list="mp-add-product-service-options" type="text"/>
-              <!-- <datalist> will be populated via JS with elements like this: <option value="Retailer - Appliances" data-lt-value="19198"></option> -->
-              <datalist id="mp-add-product-service-options"></datalist>
-              <button class="mp-add-product-service-save zuc-btn zuc-btn-secondary">Save</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="mp-add-note-modal-container non-visible">
-        <div class="mp-add-note-modal">
-            <div class="purple-background flex flex-hor-between">
-              <h2 style="margin-bottom:0;">Add Note</h2>
-              <span class="close-modal">X</span>
+        <div class="border-box partner-data-container">
+            <div class="purple-background flex flex-vert-center flex-hor-between">
+                <h3 style="margin-bottom:0;">Partner Details</h3>
+                <button class="mp-details-approve zuc-btn zuc-btn-primary u-soft-shadow">Approve</button>
+                <button class="mp-details-invite zuc-btn zuc-btn-primary u-soft-shadow">Invite</button>
             </div>
             <form class="planRegis-form">
-              <div class="planRegis-divStyle flex-vert-center">
-                <label for="mp-add-note-activity">Activity</label>
-                <input name="mp-add-note-activity" type="text"/>
-              </div>
-              <div class="">
-                <textarea name="mp-add-note-text" required cols="50" rows="10"></textarea>
-              </div>
-              <div class="flex flex-vert-center flex-hor-between">
-                <div class="flex flex-vert-center">
-                  <label for="mp-add-note-follow-up-date">Follow up date:</label>
-                  <input name="mp-add-note-follow-up-date" type="date" />
+                <label for="mp-details-buying-group">Buying Group:</label>
+                <input id="mp-details-buying-group" list="mp-details-buying-group-options" />
+                <!-- <datalist> will be populated via JS with elements like this: <option value="Cantrax" data-lt-value="19198"></option> -->
+                <datalist id="mp-details-buying-group-options"></datalist>
+                <label for="mp-details-contact">Primary Contact:</label>
+                <input id="mp-details-contact" list="mp-details-contact-options" />
+                <!-- <datalist> will be populated via JS with elements like this: <option value="Cantrax" data-lt-value="19198"></option> -->
+                <datalist id="mp-details-contact-options"></datalist>
+                <a class="mp-details-contact-add">+</a>
+                <label for="mp-details-contact-email">Primary Contact Email:</label>
+                <input id="mp-details-contact-email" disabled />
+                <label for="mp-details-contact-phone">Primary Contact Phone:</label>
+                <input id="mp-details-contact-phone" disabled />
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-details-loc-count">Number Locations:</label>
+                    <input id="mp-details-loc-count" type="text" />
                 </div>
-                <div><button class="mp-add-note-save zuc-btn-secondary zuc-btn">Save</button></div>
-              </div>
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-details-annual-sales">Annual Sales Volume:</label>
+                    <input id="mp-details-annual-sales" type="text" />
+                </div>
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-details-current-plan-provider">Current Plan Provider:</label>
+                    <!-- will be populated via JS -->
+                    <select id="mp-details-current-plan-provider">
+                        <option value="">Current Plan Provider</option>
+                    </select>
+                </div>
+                <label for="mp-details-products-services">Products/Services</label>
+                <!-- will be populated via JS with elements as follows: <option value="332">Product/Service</option> -->
+                <select id="mp-details-products-services" required multiple></select>
+                <!-- NOTE: Map and manual address checkbox is missing. -->
+                <ul class="mp-details-products-services"></ul>
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-details-address-1">Address 1*:</label>
+                    <input id="mp-details-address-1" type="text" required />
+                </div>
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-details-address-2">Address 2:</label>
+                    <input id="mp-details-address-2" type="text"/>
+                </div>
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-details-city">City*:</label>
+                    <input id="mp-details-city" required type="text"/>
+                </div>
+                <div class="two-grid-column">
+                    <div class="planRegis-divStyle flex-vert-center">
+                        <label for="mp-details-province">Prov/State*:</label>
+                        <!-- will be populated via JS with elements like this: <option value="332">Ontario</option> -->
+                        <select id="mp-details-province" required>
+                            <option value="">Province/State</option>
+                        </select>
+                    </div>
+                    <div class="flex-vert-center planRegis-divStyle">
+                        <label for="mp-details-postal">Postal Code*:</label>
+                        <input id="mp-details-postal" required type="text"/>
+                    </div>
+                </div>
+
+                <div class="flex flex-vert-center flex-hor-center margin-top-1">
+                    <button class="mp-details-save zuc-btn zuc-btn-secondary">Save</button>
+                    <button class="mp-details-cancel zuc-btn zuc-btn-secondary">Cancel</button>
+                </div>
+            </form>
         </div>
-      </div>
-      <div class="mp-invite-sent-modal-container non-visible">
+
+    </div><!-- 50 50 column ends -->
+    <!-- Another 50 50 column -->
+    <div class="two-grid-column mobile-column margin-top-2">
+        <div class="border-box">
+            <h3 class="profileBox-heading">Partner Type Status:</h3>
+            <!-- PLEASE FILL IN ANY DESCRIPTIONS ZUCORA WOULD LIKE TO SHOW TO THE USER -->
+            <ul class="mp-status-descriptions">
+                <li><strong>Restricted</strong> - </li>
+                <li><strong>Partner</strong> - </li>
+                <li><strong>UnderReview</strong> - </li>
+                <li><strong>Rejected</strong> - </li>
+                <li><strong>OnHold</strong> - </li>
+                <li><strong>Invited</strong> - </li>
+                <li><strong>Prospect</strong> - </li>
+                <li><strong>Legacy</strong> - </li>
+            </ul>
+        </div>
+        <div class="border-box">
+            <div class="purple-background"><h3>Activity Notes <a class="mp-add-note">+</a></h3></div>
+            <div class="new-planAdd-detail">
+                <table class="mp-notes">
+                    <thead>
+                        <tr>
+                            <th scope="col">Activity</th>
+                            <th scope="col">Created</th>
+                            <th scope="col">Note</th>
+                            <th scope="col">Follow-Up</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div><!--50 50 column ends-->
+    <div class="mp-invite-modal-container non-visible">
+        <div class="mp-invite-modal">
+            <div class="purple-background flex flex-hor-between">
+                <h2 style="margin-bottom:0;">Invite</h2>
+                <span class="close-modal">X</span>
+            </div>
+            <form class="planRegis-form">
+                <!-- Missing store name field -->
+                <h3 class="purple-text u-uppercase">Primary Contact</h3>
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-invite-first-name">First Name*:</label>
+                    <input id="mp-invite-first-name" required type="text"/>
+                </div>
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-invite-last-name">Last Name*:</label>
+                    <input id="mp-invite-last-name" required type="text"/>
+                </div>
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-invite-email">Email*:</label>
+                    <input id="mp-invite-email" type="email" required />
+                </div>
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-invite-profile">Partner Profile*:</label>
+                    <!-- will be populated via JS with elements like this: <option value="332">Profile Example</option> -->
+                    <select id="mp-invite-profile" required>
+                        <option value="">Partner Profile</option>
+                    </select>
+                </div>
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-invite-message">Personal Message*:</label>
+                    <textarea id="mp-invite-message" required type=""></textarea>
+                </div>
+                <div class="flex flex-hor-center margin-top-1">
+                    <button class="mp-invite-send zuc-btn zuc-btn-secondary">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="mp-add-note-modal-container non-visible">
+        <div class="mp-add-note-modal">
+            <div class="purple-background flex flex-hor-between">
+                <h2 style="margin-bottom:0;">Add Note</h2>
+                <span class="close-modal">X</span>
+            </div>
+            <form class="planRegis-form">
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-add-note-activity">Activity</label>
+                    <!-- will be populated via JS -->
+                    <select id="mp-add-note-activity">
+                        <option value="">Activity</option>
+                    </select>
+                </div>
+                <div class="">
+                    <textarea id="mp-add-note-text" required cols="50" rows="10"></textarea>
+                </div>
+                <div class="flex flex-vert-center flex-hor-between">
+                    <div class="flex flex-vert-center">
+                        <label for="mp-add-note-follow-up-date">Follow up date:</label>
+                        <input id="mp-add-note-follow-up-date" type="date" />
+                    </div>
+                    <div><button class="mp-add-note-save zuc-btn-secondary zuc-btn">Save</button></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="mp-invite-sent-modal-container non-visible">
         <div class="mp-invite-sent-modal">
-              <span class="close-modal">X</span>
-              <h2>Your email has been sent to: <br><span class="mp-invite-sent-to"></span></h2>
+            <span class="close-modal">X</span>
+            <h2>Your email has been sent to: <br><span class="mp-invite-sent-to"></span></h2>
             <div class="border-box">
                 <h3>Your Personal Message:</h3>
                 <div class="mp-invite-sent-message">
-                  
+
                 </div>
             </div>
         </div>
-      </div>
+    </div>
+    <div class="mp-add-modal-container">
+        <h2>Add Market Partner</h2>
+        <span class="close-modal">X</span>
+        <label for="mp-add-full-name">Full Name*:</label>
+        <input id="mp-add-full-name" required placeholder="Full Name" />
+        <label for="mp-add-currency">Currency*:</label>
+        <!-- will be populated via JS -->
+        <select id="mp-add-currency" required>
+            <option value="">Currency</option>
+        </select>
+        <label for="mp-add-time-zone">Time Zone*:</label>
+        <!-- will be populated via JS -->
+        <select id="mp-add-time-zone" required>
+            <option value="">Time Zone</option>
+        </select>
+        <label for="mp-add-lang-pref">Language Pref*:</label>
+        <!-- will be populated via JS -->
+        <select id="mp-add-lang-pref" required>
+            <option value="">Language Pref</option>
+        </select>
+        <label for="mp-add-market-segment">Market Segment*:</label>
+        <!-- will be populated via JS -->
+        <select id="mp-add-market-segment" required>
+            <option value="">Market Segment</option>
+        </select>
+        <div class="flex flex-hor-center margin-top-1">
+            <button class="mp-add-save zuc-btn zuc-btn-secondary">Done</button>
+        </div>
+    </div>
+    <div class="mp-details-contact-add-modal-container">
+        <h2>Add Primary Contact</h2>
+        <span class="close-modal">X</span>
+        <label for="mp-details-contact-add-first-name">First Name*:</label>
+        <input id="mp-details-contact-add-first-name" required placeholder="First Name" />
+        <label for="mp-details-contact-add-last-name">Last Name*:</label>
+        <input id="mp-details-contact-add-last-name" required placeholder="Last Name" />
+        <label for="mp-details-contact-add-email">Email*:</label>
+        <input id="mp-details-contact-add-email" required placeholder="Email" />
+        <label for="mp-details-contact-add-phone">Phone*:</label>
+        <input id="mp-details-contact-add-phone" required placeholder="Phone" />
+        <label for="mp-details-contact-add-currency">Currency*:</label>
+        <!-- will be populated via JS -->
+        <select id="mp-details-contact-add-currency" required>
+            <option value="">Currency</option>
+        </select>
+        <label for="mp-details-contact-add-time-zone">Time Zone*:</label>
+        <!-- will be populated via JS -->
+        <select id="mp-details-contact-add-time-zone" required>
+            <option value="">Time Zone</option>
+        </select>
+        <label for="mp-details-contact-add-lang-pref">Language Pref*:</label>
+        <!-- will be populated via JS -->
+        <select id="mp-details-contact-add-lang-pref" required>
+            <option value="">Language Pref</option>
+        </select>
+        <div class="flex flex-hor-center margin-top-1">
+            <button class="mp-details-contact-add-save zuc-btn zuc-btn-secondary">Done</button>
+        </div>
+    </div>
 </section>

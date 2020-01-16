@@ -390,7 +390,7 @@
   </div>
 </div>
 <!--  -->
-<div class="oe-on-account-summary-modal-container">
+<div class="oe-on-account-summary-modal-container non-visible">
   <div class="oe-on-account-summary-modal">
     <div class="purple-background flex flex-vert-center flex-hor-between">
       <h2>Your "On Account" Order Summary</h2>
@@ -425,49 +425,70 @@
                 <td data-label="Line" class="purple-text">
                     Smarter Reward Points
                     <i class="oe-on-account-summary-srp-info-circle fa fa-info-circle"></i>
-                    <div class="oe-on-account-summary-srp-info-text-container">
-                        <i></i>
-                        <p>Smarter Reward Points are earned on the value of items purchased through your recognized Buying Group or when items are purchased by credit card. Smarter Reward Points are not eligible to be earned with "On Account" orders.</p>
+                    <div class="oe-on-account-summary-srp-info-text-container non-visible">
+                        <i class="fa fa-caret-up"></i>
+                        <p class="info-text">Smarter Reward Points are earned on the value of items purchased through your recognized Buying Group or when items are purchased by credit card. Smarter Reward Points are not eligible to be earned with "On Account" orders.</p>
                     </div>
-                    <p>Please note "On Account" orders do not qualify for Free Shipping or Smarter Reward Points.</p>
+                    <p class="u-bold" style="font-size: 14px; margin:10px 0;">Please note "On Account" orders do not qualify for Free Shipping or Smarter Reward Points.</p>
                 </td>
                 <td data-label="Amount">0</td>
             </tr>
         </tfoot>
       </table>
-      <button class="oe-on-account-summary-done">Submit</button>
+      <div class="flex flex-hor-end"><button class="oe-on-account-summary-done zuc-btn-secondary zuc-btn">Submit</button></div>
     </div>
   </div>
 </div>
 <div class="oe-redeem-modal-container non-visible">
-    <h2>Redeem Smarter Reward Points</h2>
-    <span class="close-modal">X</span>
-    <h3>Additional Savings</h3>
-    <p>As a member of <span class="oe-redeem-buying-group"></span> you have the potential to earn and redeem Smarter Retailer Rewards with registration of Product Protection Plans and products purchased with the order. Enter the amount you wish to redeem below.</p>
-    <table>
-        <tbody>
-            <tr>
-                <td data-label="Info"></td>
-                <td data-label="Line">Order Total:</td>
-                <td class="oe-redeem-order-total" data-label="Amount"></td>
-            </tr>
-            <tr>
-                <td data-label="Info">You have <span class="oe-redeem-srp-count"></span> Smarter Reward Points Available for Redemption (Value: <span class="oe-redeem-srp-value"></span>)</td>
-                <td data-label="Line">Smarter Rewards Redemption:</td>
-                <td class="oe-redeem-srp-redeemed" data-label="Amount" contenteditable="true"></td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td data-label="Info"></td>
-                <td data-label="Line">Net Amount:</td>
-                <td class="oe-redeem-order-net" data-label="Amount"></td>
-            </tr>
-        </tfoot>
-    </table>
-    <button class="oe-redeem-done">Next</button>
+    <div class="oe-redeem-modal">
+        <div class="purple-background flex flex-vert-center flex-hor-between">
+            <h2>Redeem Smarter Reward Points</h2>
+            <span class="close-modal">X</span>
+        </div>
+        <div class="modal-padding">
+            <h3 class="u-bold">Additional Savings</h3>
+            <p style="font-weight: 500;font-size: 16px;">As a member of <span class="oe-redeem-buying-group"></span> you have the potential to earn and redeem Smarter Retailer Rewards with registration of Product Protection Plans and products purchased with the order. Enter the amount you wish to redeem below.</p>
+            <!-- <div class="margin-top-1">
+                <table>
+                    <tbody>
+                            <tr>
+                            <td data-label="Info"></td>
+                            <td data-label="Line">Order Total:</td>
+                            <td class="oe-redeem-order-total" data-label="Amount"></td>
+                    
+                        <tr>
+                            <td data-label="Info">You have <span class="oe-redeem-srp-count"></span> Smarter Reward Points Available for Redemption (Value: <span class="oe-redeem-srp-value"></span>)</td>
+                            <td data-label="Line">Smarter Rewards Redemption:</td>
+                            <td class="oe-redeem-srp-redeemed" data-label="Amount" contenteditable="true"></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td data-label="Info"></td>
+                            <td data-label="Line">Net Amount:</td>
+                            <td class="oe-redeem-order-net" data-label="Amount"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div> -->
+                <div class="total-information">
+                    <div>
+                        <p class="u-bold purple-text">You have <span class="total-rewards-point"></span> Smarter Rewards points Available for Redemption (Value: <span class="rewards-money"></span>)</p>
+                    </div>
+                    <div class="margin-bottom-1">
+                        <p class="u-bold flex flex-vert-center">Order Total: <span class="total-order-amount"></span></p>
+                        <p class="purple-text u-bold flex flex-vert-center">Smarter Rewards Redemption: <span class="rewards-redemption-amount"></span></p>
+                    </div>
+                </div>
+                <div class="margin-top-1 flex flex-hor-end">
+                        <p class="u-bold">Net Amount:</p>
+                    </div>
+                <div class="flex flex-hor-end"><button class="oe-redeem-done zuc-btn-secondary zuc-btn">Next</button></div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="oe-thank-you-modal-container non-visible">
+<div class="oe-thank-you-modal-container">
     <h2>
         Thank you!
         <span class="oe-thank-you-heading-credit-card">Your Order has been placed.</span>

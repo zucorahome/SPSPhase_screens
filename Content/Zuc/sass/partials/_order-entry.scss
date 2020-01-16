@@ -280,7 +280,7 @@
 		cursor: pointer;
 	}
 
-	.oe-summary-srp-info-text-container{
+	.oe-summary-srp-info-text-container,.oe-on-account-summary-srp-info-text-container{
 		@extend .info-container-green;
 		width: 30%;
 		left:48%;
@@ -295,6 +295,10 @@
 		.info-text{
 			font-size: 14px;
 		}
+	}
+
+	.oe-on-account-summary-srp-info-text-container{
+		left:25%;
 	}
 
 	.oe-summary-use-buying-group-container{
@@ -312,9 +316,9 @@
 	}
 }
 
-.oe-on-account-summary-modal-container{
+.oe-on-account-summary-modal-container, .oe-redeem-modal-container{
 	@extend %modal;
-	.oe-on-account-summary-modal{
+	.oe-on-account-summary-modal, .oe-redeem-modal{
 		@extend %modal-background;
 
 		.purple-background {
@@ -328,11 +332,33 @@
             	margin-right:1em;
           		}
 			}
-
 	}
 }
 
+.modal-padding{
+	padding:2em 3em;
+}
+.oe-redeem-modal-container{
+	.oe-redeem-modal{
+		h3{
+			font-size: 20px;
+			margin-bottom: 0;
+		}
+		p{
+			font-size: 16px;
+		}
 
+		.total-information{
+			width: 100%;
+			max-width: 100%;
+			margin:1em 0;
+
+			display: grid;
+			grid-template-columns: 60% 40%;
+			border-bottom: 1px solid #36384B;
+		}
+	}
+}
 @media screen and (max-width:$mobile-width){
 	.order-entry-container{
 			margin-top:10%;
@@ -383,8 +409,8 @@
 			}	
 	}
 
-.oe-add-item-modal-container, .oe-cancel-order-conf-modal-container,.oe-summary-modal-container{
-	.oe-add-item-modal, .oe-cancel-order-conf-modal, .oe-summary-modal{
+.oe-add-item-modal-container, .oe-cancel-order-conf-modal-container,.oe-summary-modal-container,.oe-on-account-summary-modal-container,.oe-redeem-modal-container{
+	.oe-add-item-modal, .oe-cancel-order-conf-modal, .oe-summary-modal,.oe-on-account-summary-modal,.oe-redeem-modal{
 			width:95%;
         	margin:35% auto;
 		}
@@ -395,12 +421,17 @@
 
 @media screen and(max-width:$laptop-width){
 	.oe-summary-modal-table{
-		.oe-summary-srp-info-text-container{
+		.oe-summary-srp-info-text-container,.oe-on-account-summary-srp-info-text-container{
 			width: auto;
 			left:0;
 			margin-top:0;
 		}
+		.oe-on-account-summary-srp-info-text-container{
+			margin-top: 1em;
+		}
 	}
+
+
 }
 
 

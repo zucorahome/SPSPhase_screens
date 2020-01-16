@@ -476,107 +476,175 @@
                         <p class="u-bold purple-text">You have <span class="total-rewards-point"></span> Smarter Rewards points Available for Redemption (Value: <span class="rewards-money"></span>)</p>
                     </div>
                     <div class="margin-bottom-1">
-                        <p class="u-bold flex flex-vert-center">Order Total: <span class="total-order-amount"></span></p>
+                        <p class="u-bold flex flex-vert-center" style="font-size: 22px;">Order Total: <span class="total-order-amount"></span></p>
                         <p class="purple-text u-bold flex flex-vert-center">Smarter Rewards Redemption: <span class="rewards-redemption-amount"></span></p>
                     </div>
                 </div>
                 <div class="margin-top-1 flex flex-hor-end">
-                        <p class="u-bold">Net Amount:</p>
-                    </div>
+                        <p class="u-bold" style="font-size: 22px;">Net Amount:</p>
+                </div>
                 <div class="flex flex-hor-end"><button class="oe-redeem-done zuc-btn-secondary zuc-btn">Next</button></div>
             </div>
         </div>
     </div>
 </div>
-<div class="oe-thank-you-modal-container">
-    <h2>
-        Thank you!
-        <span class="oe-thank-you-heading-credit-card">Your Order has been placed.</span>
-        <span class="oe-thank-you-heading-on-account">Your "On Account" Order has been Submitted.</span>
-    </h2>
-    <span class="close-modal">X</span>
-    <div class="oe-thank-you-buying-group-container">
-        <p>Your order has been submitted to <span classs="oe-thank-you-buying-group"></span> for purchase approval.</p>
-        <p>Please check your email for Order Acknowledgment. Upon approval, you will receive an Order Confirmation by email.</p>
+<div class="oe-thank-you-modal-container non-visible">
+    <div class="oe-thank-you-modal">
+        <div class="purple-background flex-vert-center flex flex-hor-between">
+            <h2>Thank you!</h2>
+            <span class="close-modal">X</span>
+        </div>
+        <div class="modal-padding">
+            <p class="oe-thank-you-heading-credit-card">Your Order has been placed.</p>
+            <p class="oe-thank-you-heading-on-account">Your "On Account" Order has been Submitted.</p>
+            <div class="oe-thank-you-buying-group-container">
+                <p>Your order has been submitted to <span classs="oe-thank-you-buying-group"></span> for purchase approval.</p>
+                <p>Please check your email for Order Acknowledgment. Upon approval, you will receive an Order Confirmation by email.</p>
+            </div>
+            <div class="oe-thank-you-credit-card-container">
+                <p>Your order has been accepted and will be processed as quickly as possible.</p>
+                <p>Please check your email for Order Confirmation and delivery information.</p>
+            </div>
+            <div class="oe-thank-you-on-account-container">
+                <p>Your order has been submitted and will be processed as quickly as possible.</p>
+                <p>Please check your email for Order Confirmation of Shipping Costs and Taxes with additional delivery information.</p>
+                <p style="font-size: 22px" class="u-bold">Order Number: <span oe="oe-thank-you-order-number"></span></p>
+            </div>
+            <div class="flex flex-hor-end"><button class="zuc-btn-secondary zuc-btn">Close</button></div>
+        </div>
     </div>
-    <div class="oe-thank-you-credit-card-container">
-        <p>Your order has been accepted and will be processed as quickly as possible.</p>
-        <p>Please check your email for Order Confirmation and delivery information.</p>
-    </div>
-    <div class="oe-thank-you-on-account-container">
-        <p>Your order has been submitted and will be processed as quickly as possible.</p>
-        <p>Please check your email for Order Confirmation of Shipping Costs and Taxes with additional delivery information.</p>
-    </div>
-    <p>Order Number: <span oe="oe-thank-you-order-number"></span></p>
 </div>
 <div class="oe-sorry-modal-container non-visible">
-    <h2>We're sorry. Your Order has not been accepted.</h2>
-    <span class="close-modal">X</span>
-    <p>Either your credit card has been declined for payment or the order amount exceeds your available credit limit for an "On Account" order.</p>
-    <p>Please select an alternative Payment Option or contact us at (519) 452-0101 Ext. 123 for assistance.</p>
-    <p>Order Number: <span oe="oe-sorry-order-number"></span></p>
-    <button class="oe-sorry-back">Payment Options</button>
-    <button class="oe-sorry-cancel-order">Cancel Order</button>
+    <div class="oe-sorry-modal">
+        <div class="purple-background flex flex-vert-center flex-hor-between">
+            <h2>We're sorry. Your Order has not been accepted.</h2>
+            <span class="close-modal">X</span>
+        </div>
+        <div class="modal-padding">
+            <p>Either your credit card has been declined for payment or the order amount exceeds your available credit limit for an "On Account" order.</p>
+            <p>Please select an alternative Payment Option or contact us at (519) 452-0101 Ext. 123 for assistance.</p>
+            <p class="u-bold" style="font-size:22px;">Order Number: <span oe="oe-sorry-order-number"></span></p>
+            <div class="flex flex-vert-center flex-hor-end">
+                <button class="oe-sorry-back zuc-btn zuc-btn-secondary">Payment Options</button>
+                <button class="oe-sorry-cancel-order zuc-btn zuc-btn-secondary">Cancel Order</button>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="oe-payment-modal-container non-visible">
-    <h2>Payment</h2>
-    <span class="close-modal">X</span>
-    <table>
-        <tbody>
-            <tr>
-                <td data-label="Info"></td>
-                <td data-label="Line">Order Total:</td>
-                <td class="oe-payment-order-total" data-label="Amount"></td>
-            </tr>
-            <tr>
-                <td data-label="Info">You have <span class="oe-payment-srp-count"></span> Smarter Reward Points Available for Redemption (Value: <span class="oe-payment-srp-value"></span>)</td>
-                <td data-label="Line">Smarter Rewards Redemption:</td>
-                <td class="oe-payment-srp-redeemed" data-label="Amount" contenteditable="true"></td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td data-label="Info"></td>
-                <td data-label="Line">Net Amount:</td>
-                <td class="oe-payment-order-net" data-label="Amount"></td>
-            </tr>
-        </tfoot>
-    </table>
-    <h3>Choose your payment option:</h3>
-    <!--
-
-        <ul> will be populated with elements like the following. I would appreciate your feedback
-        on any other classes or markup you would like to be output here, so we can add it the JS file.
-
-        <li data-lt-id="5785379">
-            <i class="oe-payment-options-type fa fa-cc-[cardtype]"></i>
-            <h4 class="oe-payment-options-description">[CardType] ending in 4812 <span>(Default)</span></h4>
-            <span class="oe-payment-options-name-on-card">J. Smith</span>
-            <span class="oe-payment-options-expiry">Expires 09/2020</span>
-        </li>
-
-        OR
-
-        <li>
-            <h4 class="oe-payment-options-description">
-                Payment "On Account"
-                <i class="oe-payment-options-info-circle"></i>
-                <div class="oe-payment-options-info-text-container">
-                    <i></i>
-                    <p>Payment "On Account" is available to credit-approved Retailer Partners and may be subject to minimum order quantities and amounts. <b>On Account orders are not eligible for Free Shipping or earning of Smarter Reward Points. (Previously earned Smarter Rewards may be redeemed.)</p>
+    <div class="oe-payment-modal">
+        <div class="purple-background flex flex-vert-center flex-hor-between">
+            <h2>Payment</h2>
+            <span class="close-modal">X</span>
+        </div>
+        <div class="modal-padding">
+            <!-- <table>
+                <tbody>
+                    <tr>
+                        <td data-label="Info"></td>
+                        <td data-label="Line">Order Total:</td>
+                        <td class="oe-payment-order-total" data-label="Amount"></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Info">You have <span class="oe-payment-srp-count"></span> Smarter Reward Points Available for Redemption (Value: <span class="oe-payment-srp-value"></span>)</td>
+                        <td data-label="Line">Smarter Rewards Redemption:</td>
+                        <td class="oe-payment-srp-redeemed" data-label="Amount" contenteditable="true"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td data-label="Info"></td>
+                        <td data-label="Line">Net Amount:</td>
+                        <td class="oe-payment-order-net" data-label="Amount"></td>
+                    </tr>
+                </tfoot>
+            </table> -->
+            <div class="total-information mobile-column">
+                    <div>
+                        <p class="u-bold purple-text">You have <span class="total-rewards-point"></span> Smarter Rewards points Available for Redemption (Value: <span class="rewards-money"></span>)</p>
+                    </div>
+                    <div class="margin-bottom-1">
+                        <p class="u-bold flex flex-vert-center" style="font-size: 22px;">Order Total: <span class="total-order-amount"></span></p>
+                        <p class="purple-text u-bold flex flex-vert-center">Smarter Rewards Redemption: <span class="rewards-redemption-amount">$100</span></p>
+                    </div>
                 </div>
-            </h4>
-        </li>
+                <div class="margin-top-1 two-grid-column reverse-mobile">
+                    <div class="">
+                        <p style="font-size: 20px;font-weight: 500;">Choose your payment option:</p>
+                    </div>
+                    <div class="">
+                        <p class="u-bold" style="font-size: 22px;">Net Amount: <span class="reward-amount"></span></p>  
+                    </div>
+                </div>
+            <!--
 
-    -->
-    <ul class="oe-payment-options"></ul>
-    <div>
-        <h3>More payment options:</h3>
-        <p>ZucoraHome accepts all major credit cards.</p>
-        <img />
-        <a class="oe-payment-add-card">+ Add Card</a>
+                <ul> will be populated with elements like the following. I would appreciate your feedback
+                on any other classes or markup you would like to be output here, so we can add it the JS file.
+
+                <li data-lt-id="5785379">
+                    <i class="oe-payment-options-type fa fa-cc-[cardtype]"></i>
+                    <h4 class="oe-payment-options-description">[CardType] ending in 4812 <span>(Default)</span></h4>
+                    <span class="oe-payment-options-name-on-card">J. Smith</span>
+                    <span class="oe-payment-options-expiry">Expires 09/2020</span>
+                </li>
+
+                OR
+
+                <li>
+                    <h4 class="oe-payment-options-description">
+                        Payment "On Account"
+                        <i class="oe-payment-options-info-circle"></i>
+                        <div class="oe-payment-options-info-text-container">
+                            <i></i>
+                            <p>Payment "On Account" is available to credit-approved Retailer Partners and may be subject to minimum order quantities and amounts. <b>On Account orders are not eligible for Free Shipping or earning of Smarter Reward Points. (Previously earned Smarter Rewards may be redeemed.)</p>
+                        </div>
+                    </h4>
+                </li>
+
+            -->
+            <ul class="oe-payment-options">
+                <li class="flex flex-vert-center">
+                        <input type="radio" name="" for="" value="">
+                    <div class="payment-card-info">
+                        <div class="flex flex-vert-center">
+                            <i class="fab fa-cc-visa" style="color: #1a1f71;"></i>
+                            <p class="u-bold"><span class="card-type">Visa</span> ending in <span class="ending-numbers"> 9900</span></p>
+                        </div>
+                        <div>First initial.Last Name</div>
+                        <div>mm/yy</div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="oe-payment-options">
+                <li class="flex flex-vert-center">
+                    <input type="radio" name="" for="" value="">
+                    <div class="flex flex-vert-center">
+                        <p class="u-bold">Payment "On Account"</p>
+                        <i class="fa fa-info-circle"></i>
+                        <div class="onAccount-info-container non-visible">
+                            <i class="fa fa-caret-up"></i>
+                            <p class="info-text">Payment "On Account" is available to credit-approved Retail Partners and may be subjected to minimum order qunatities and amounts.<span class="u-bold"> On Account orders are not eligible for Free Shipping or earning of Smarter Reward Pints. (Previously earned Smarter Rewards may be redeemed.)</span> </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="two-grid-column flex-hor-between flex-vert-center margin-top-1 mobile-column">
+                <div class="flex flex-column">
+                    <p style="font-size: 20px;font-weight: 500;">More payment options:</p>
+                    <p>ZucoraHome accepts all major credit cards.</p>
+                </div>
+                <div class="flex flex-vert-center flex-hor-center payment-icons">
+                    <i class="fab fa-cc-visa" style="color: #1a1f71;"></i>
+                    <i class="fab fa-cc-mastercard" style="color: #ff9900;"></i>
+                    <i class="fab fa-cc-amex" style="color: #002663;"></i>
+                </div>
+            </div>
+            <div class="flex flex-vert-center flex-hor-between margin-top-1 margin-bottom-1 mobile-column">
+                <a class="oe-payment-add-card simple-link">+ Add Card</a>
+                <button class="oe-payment-done zuc-btn-secondary zuc-btn">Place Order</button>
+            </div>
+        </div>
     </div>
-    <button class="oe-payment-done">Place Order</button>
 </div>
 <!-- main page content ends -->
     <!-- Site Footer -->

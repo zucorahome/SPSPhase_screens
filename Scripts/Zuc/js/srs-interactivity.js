@@ -1,12 +1,13 @@
 $(document).ready(function(){
 
+// console.log('ready function called');
 
 $('.addPlanButton').click(function(){
 	$('.plan-registration-box').show(1000);
 	$(this).css("background","#D9D8D6");
 	$("html, body").animate({ scrollTop: 640 }, "slow");
 	$('.planRegis-controls').css("visibility","visible");
-})
+});
 
 
 $('.new-planAdd-title p').click(function(){
@@ -163,6 +164,23 @@ let agreementText = $('.agreement-text');
     $('.video-modal .cross').bind('click',{key:'.video-modal-container'},closeModal);
     //addItem modal seriel info
     $('.serial-info').click(function(){
-    $('.serial-text-container').toggle(500);
+    	$('.serial-text-container').toggle(500);
+	});
+
+$('.three-grid-column .video-box').click(function(){
+	// console.log($(this).find('p').text());
+
+	$('.as-video').removeClass('non-visible');
+	let videoModal = $('.as-video-modal');
+	let title = $(this).find('p').text();
+	videoModal.find('h2').text(title);
+	// videoModal.find('.modal-video source').attr('src','https://www.youtube.com/watch?v=bqgVB6Vl-lI');
+	// console.log(videoModal.find('.modal-video source').attr('src'));
+	$('#clicked-video').src = "https://www.w3schools.com/tags/mov_bbb.mp4";
 });
+
+$('.as-video-modal .close-modal').click(function(){
+
+});
+
 });

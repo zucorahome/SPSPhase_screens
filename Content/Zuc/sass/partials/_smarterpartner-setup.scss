@@ -50,6 +50,15 @@
 			.two-grid-column{
 				margin-top:5px;
 			}
+			.province-grid-column{
+				display: grid;
+				grid-template-columns: 65% 35%;
+		    	align-items: center;
+		    	justify-content: space-between;
+		    	width: 80%;
+		    	margin: 0 auto;
+		    	grid-column-gap: 1em;
+			}
 		}
 	}
 
@@ -470,6 +479,10 @@
 				.form-div{
 					grid-template-columns: 35% 65%;
 					word-break: break-word;
+				}
+				.province-grid-column{
+					grid-template-columns: 100%;
+					width: 100%;
 				}
 			}
 		}

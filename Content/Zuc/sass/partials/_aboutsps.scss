@@ -1,5 +1,5 @@
 .videos-container{
-	width:60%;
+	width:70%;
 	margin:0 auto;
 	display: block;
 	margin-top:12%;
@@ -60,16 +60,19 @@
 
 	.three-grid-column{
 		display: grid;
-		grid-template-columns: 33% 33% 33%;
 		align-items: center;
 		justify-content: center;
+		grid-gap: 14px 1em;
 
 		.video-box{
-			padding:10px;
+			/*padding:10px;*/
+			box-shadow: 0 0 80px rgba(0,0,0,.3);
+			-webkit-box-shadow:0 0 80px rgba(0,0,0,.3);
+			cursor: pointer;
 		}
 
 		.purple-background{
-			font-size:18px;
+			font-size:1em;
 			padding:10px;
 		}
 	}
@@ -119,8 +122,19 @@
 
 @media screen and (max-width: $laptop-width){
 .videos-container{
-
 		margin-top:20%;
+
+		.three-grid-column{
+			grid-template-columns: 50% 50%;
+			padding:0 10px;
 		}
-		
+	}		
+}
+
+@media screen and(min-width:981px){
+	.videos-container{
+		.three-grid-column{
+			grid-template-columns: 25% 25% 25% 25%;
+		}
+	}
 }

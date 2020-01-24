@@ -16,7 +16,6 @@
     <!-- [ FONTS ]-->
     <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
     <link href="https://use.typekit.net/ovc0ozw.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 <!-- Site Navigation-->
@@ -76,7 +75,7 @@
         <!-- Top Branding CTA-->
         <div class="zuc-mobile-nav-content">
           <a href="https://zucorahome.com/" title="Zucora Home">
-            <img src="../../Images/Zuc/images/ZucoraHome-brand-white.svg" alt="Zucora Home">
+            <img src="~/Images/Zuc/images/ZucoraHome-brand-white.svg" alt="Zucora Home">
           </a>
         </div>
         <div class="zuc-accordion-nav" role="menu" aria-role="menu">
@@ -113,70 +112,87 @@
       </div>
     </div>
     <!-- Main page content-->
-<section class="videos-container">
-    <div class="video-box">
-        <h3 class="purple-background">Introduction</h3>
-        <!--
-            Please substitute the blank <video> tag below with proper embed code.
-            It is assumed at this moment that the Introduction video will play
-            in-place, not as a modal. Is this correct?
-        -->
-        <video controls class="main-video" autoplay="">
-          <source src="https://zuchomelimetacstorage.blob.core.windows.net/docs/ZUCORA_01_INTRO_200117C_720.mp4_baba1717-30fa-450b-a130-af01638a572a.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div class="margin-top-2">
-        <h3 class="purple-text" style="font-size: 24px;">Learn More</h3>
-        <div class="three-grid-column">
-          <div class="video-box">
-            <p class="purple-background">Smarter Partner</p>
-            <div class="u-screenreader video-link">
-              https://zuchomelimetacstorage.blob.core.windows.net/docs/ZUCORA_02_SMARTERPARTNER_200117_720.mp4_2f0ad564-e39d-4c5c-a7cc-c3448c75d9ee.mp4
-            </div>
-            <img src="../../Images/Zuc/images/ZH_Icon_Colour.png" alt="ZucoraHome shield icon in brand purple colour.">
-          </div>
-          <div class="video-box">
-            <p class="purple-background">Smart Plans</p>
-            <div class="u-screenreader video-link">https://zuchomelimetacstorage.blob.core.windows.net/docs/ZUCORA_03_SMARTPLANS_200117_720.mp4_f5fad800-ae41-4014-9b1b-2f342fbdc499.mp4</div>
-            <img src="../../Images/Zuc/images/ZH_Icon_Colour.png" alt="ZucoraHome shield icon in brand purple colour.">
-          </div>
-          <div class="video-box">
-            <p class="purple-background">Smarter Living</p>
-            <div class="u-screenreader video-link">https://zuchomelimetacstorage.blob.core.windows.net/docs/ZUCORA_04_SMARTERLIVING_200117_720.mp4_8f497a89-2865-41e8-b104-dcd0da805228.mp4</div>
-            <img src="../../Images/Zuc/images/ZH_Icon_Colour.png" alt="ZucoraHome shield icon in brand purple colour.">
-          </div>
-          <div class="video-box">
-            <p class="purple-background">Smarter Products</p>
-            <div class="u-screenreader video-link">https://zuchomelimetacstorage.blob.core.windows.net/docs/ZUCORA_05_SMARTERPRODUCTS_200117_720.mp4_67e163f1-6456-4ec7-ab95-9bb9e1eb5770.mp4</div>
-            <img src="../../Images/Zuc/images/ZH_Icon_Colour.png" alt="ZucoraHome shield icon in brand purple colour.">
-          </div>
-        </div>
+<section class="order-history-container">
+    <h1 class="srs-heading">Order History Report</h1>
 
-        <div class="as-video non-visible">
-            <div class="as-video-modal">
-                  <span class="close-modal">X</span>
-                  <h2></h2>
-                <video controls class="modal-video" autoplay="" id="clicked-video">
-                  <source src="" type="video/mp4">
-                </video>
+    <div class="search-container">
+        <div class="inquiry-date-filter planRegis-form">
+          <div class="date-filter">
+            <div class="">
+                <p class="u-bold u-uppercase"><span>Order Date</span></p>
             </div>
+            <div class="flex flex-row flex-vert-center">
+                    <label for="ohr-from-date">
+                        <span>From</span>
+                        <div class="flex flex-row flex-vert-center">
+                            <input id="ohr-from-date" type="date" />
+                        </div>
+                    </label>
+                    <label for="ohr-to-date">
+                        <span>To</span>
+                        <div class="flex flex-row flex-vert-center">
+                            <input id="ohr-to-date" type="date" />
+                        </div>
+                    </label>
+              </div>
+          </div>
+
+          <div class="filter-param-box">
+              <div class="flex flex-vert-center">
+                  <label for="ohr-partner">Partner:</label>
+                  <select id="ohr-partner">
+                      <option value="">ALL</option>
+                  </select>
+              </div>
+              <div class="flex flex-vert-center">
+                  <label for="ohr-location">Location:</label>
+                  <select id="ohr-location">
+                      <option value="">ALL</option>
+                  </select>
+              </div>
+          </div>
+
+          <div class="flex flex-hor-end">
+              <button class="zuc-btn zuc-btn-secondary filterConditions-query-button filter" style="margin:10px;">Filter</button>
+          </div>
+
+      </div>
+    </div>
+
+    <div class="allPlans-container order-history-table-container">
+        <div class="purple-background">
+            <h2>Orders</h2>
+        </div>
+        <div class="new-planAdd-detail">
+
+            <table class="ohr-orders">
+                <thead>
+                    <tr>
+                        <th scope="col">Order Date</th>
+                        <th scope="col">Customer</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Order ID</th>
+                        <th scope="col">PO Ref</th>
+                        <th scope="col">Tracking #</th>
+                        <th scope="col">Order Value</th>
+                        <th scope="col">Ship Via</th>
+                        <th scope="col">Freight</th>
+                        <th scope="col">Tax</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+          
+                </tbody>
+            </table>
         </div>
     </div>
-    <div class="flex flex-vert-center flex-hor-center margin-top-1 margin-bottom-1">
-      <button class="as-register zuc-btn zuc-btn-secondary">Let's Get Started</button>
-    </div>
-  <div class="as-under-review-container non-visible">
-    <div class="as-under-review">
-        <span class="close-modal">X</span>
-        <h2>Under Review</h2>
-        <p>Your Smarter Partner Application is currently under review. You will receive an email notification upon approval. Unfortunately, no further actions can be taken until the approval process is completed. </p>
-    </div>
-  </div>
 </section>
+
 <!-- main page content ends -->
     <!-- Site Footer -->
     <footer class=""></footer>  
-    <script type="text/javascript" src="../../Content/Zuc/js/build9d66868d59cc90dfcd5c.js"></script>
-    <script type="text/javascript" src="../../Scripts/Zuc/js/srs-interactivity.js"></script>
+    <script type="text/javascript" src="~/Content/Zuc/js/build9d66868d59cc90dfcd5c.js"></script>
+    <script type="text/javascript" src="~/Scripts/Zuc/js/srs-interactivity.js"></script>
 </body>
 </html>

@@ -3,17 +3,17 @@
     max-width:100%;
 	margin:0 auto;
 
-    .filter-box{
+    .filter-box, .search-container{
         border:2px solid $grey-text;
         height:auto;
-        width:85%;
+        width:90%;
         margin:3em auto;
 
 
         .planRegis-form{
             width:100%;
             display: grid;
-            grid-template-columns: 40% 40% 20%;
+            grid-template-columns: 50% 30% 20%;
             padding:10px;
             align-items: center;
             div{justify-content: center;}
@@ -37,14 +37,22 @@
                     }
                 }
             }
+            input{
+                width:70%;
+            }
             label{
                 text-align: center;
+            }
+            select{
+                margin-bottom:10px;
+                width:70%;
             }
 
             .select-location{
                     width:100%;
                     padding:0 10px;
                 }
+
         }
     }
 
@@ -65,15 +73,23 @@
 
 @media screen and(max-width:$laptop-width){
     .order-history-container{
-        width:100%;
+        width:95%;
 
-        .filter-box{
+        .filter-box, .search-container{
             width:100%;
+            max-width: 100%;
             .planRegis-form{
-                grid-template-columns: auto;
+                grid-template-columns: 100%;
 
                 .select-location{
                     margin:1em 0;
+                }
+
+                .filter-param-box{
+                    div{
+                        display: flex;
+                        flex-direction: column;
+                    }
                 }
             }
         }

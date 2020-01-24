@@ -127,11 +127,11 @@
                     <label for="oe-po-ref">PO/Ref*:</label>
                     <input id="oe-po-ref" required type="text" />
                 </div>
-                <div class="flex flex-row flex-vert-center">
+                <div class="flex flex-row flex-vert-center non-visible" >
                     <label for="oe-auth">Buying Group Authorization</label>
                     <input id="oe-auth" type="text" />
                 </div>
-                <p class="light-grey-text u-text-center">(Required if requested by Buying Group)</p>
+                <p class="light-grey-text u-text-center  "></p>
                 <div class="flex flex-hor-end">
                     <button class="oe-add-item zuc-btn zuc-btn-secondary u-soft-shadow">Add Item</button>
                 </div>
@@ -140,7 +140,7 @@
         <div class="shipping-instructions">
             <div class="flex flex-column">
                 <label for="oe-shipping-instructions" class="profileBox-heading">Shipping Instructions:</label>
-                <textarea id="oe-shipping-instructions" cols="50" rows="10" placeholder="Customer decided they could not wait for special order Sofa and Chair."></textarea>
+                <textarea id="oe-shipping-instructions" cols="50" rows="10" placeholder=""></textarea>
             </div>
             <p class="light-grey-text">(If not specified, most economical shipping method will be selected.)</p>
             <div class="two-grid-column mobile-column flex-vert-center flex-hor-center">
@@ -166,9 +166,6 @@
     <!-- NOTE: Grouping and subtotals intentionally left out -->
     <div class="order-table-container">
         <div class="order-table">
-            <div class="purple-background">
-                <h2>@title</h2>
-            </div>
             <div class="new-planAdd-detail">
                 <table class="oe-items">
                     <thead>
@@ -180,6 +177,7 @@
                             <th scope="col">Unit Price</th>
                             <th scope="col">Total</th>
                             <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
                         </tr>
                     </thead>
                     <!--
@@ -263,15 +261,17 @@
                     <p class="u-bold" style="font-size:22px;">Units to be Added: <span class="oe-add-item-total-units"></span></p>
                     <p class="u-bold" style="font-size:18px;">Quantity Available: <span class="oe-add-item-available-units"></span></p>
 
-                    <p style="font-size:14px;">Do you wish to Backorder out of stock items?</p>
-                    <div class="flex flex-vert-center">
+                    <div class="oe-add-item-backorder-container">
+                        <p style="font-size:14px;">Do you wish to Backorder out of stock items?</p>
                         <div class="flex flex-vert-center">
-                            <input id="oe-add-item-do-backorder" type="checkbox" name="oe-add-item-backorder" value="yes" checked />
-                            <label for="oe-add-item-do-backorder">Yes</label>
-                        </div>
-                        <div class="flex flex-vert-center">
-                            <input id="oe-add-item-do-not-backorder" type="checkbox" name="oe-add-item-backorder" value="no" />
-                            <label for="oe-add-item-do-not-backorder">No</label>
+                            <div class="flex flex-vert-center">
+                                <input id="oe-add-item-do-backorder" type="checkbox" name="oe-add-item-backorder" value="yes" checked />
+                                <label for="oe-add-item-do-backorder">Yes</label>
+                            </div>
+                            <div class="flex flex-vert-center">
+                                <input id="oe-add-item-do-not-backorder" type="checkbox" name="oe-add-item-backorder" value="no" />
+                                <label for="oe-add-item-do-not-backorder">No</label>
+                            </div>
                         </div>
                     </div>
                     <div class="flex flex-vert-center margin-top-1">
@@ -382,7 +382,7 @@
               <input id="oe-summary-use-buying-group-no" name="oe-summary-use-buying-group" type="radio" />
               <label for="oe-summary-use-buying-group-no">No</label>
             </div>
-            <div class=" flex flex-hor-center">
+            <div class="flex flex-hor-center">
               <button class="oe-summary-done zuc-btn zuc-btn-secondary">Next</button>
             </div>
         </div>
@@ -471,20 +471,19 @@
                     </tfoot>
                 </table>
             </div> -->
-                <div class="total-information">
-                    <div>
-                        <p class="u-bold purple-text">You have <span class="total-rewards-point"></span> Smarter Rewards points Available for Redemption (Value: <span class="rewards-money"></span>)</p>
-                    </div>
-                    <div class="margin-bottom-1">
-                        <p class="u-bold flex flex-vert-center" style="font-size: 22px;">Order Total: <span class="total-order-amount"></span></p>
-                        <p class="purple-text u-bold flex flex-vert-center">Smarter Rewards Redemption: <span class="rewards-redemption-amount"></span></p>
-                    </div>
+            <div class="total-information">
+                <div>
+                    <p class="u-bold purple-text">You have <span class="total-rewards-point"></span> Smarter Rewards points Available for Redemption (Value: <span class="rewards-money"></span>)</p>
                 </div>
-                <div class="margin-top-1 flex flex-hor-end">
-                        <p class="u-bold" style="font-size: 22px;">Net Amount:</p>
+                <div class="margin-bottom-1">
+                    <p class="u-bold flex flex-vert-center" style="font-size: 22px;">Order Total: <span class="total-order-amount"></span></p>
+                    <p class="purple-text u-bold flex flex-vert-center">Smarter Rewards Redemption: <span class="rewards-redemption-amount"></span></p>
                 </div>
-                <div class="flex flex-hor-end"><button class="oe-redeem-done zuc-btn-secondary zuc-btn">Next</button></div>
             </div>
+            <div class="margin-top-1 flex flex-hor-end">
+                <p class="u-bold" style="font-size: 22px;">Net Amount:</p>
+            </div>
+            <div class="flex flex-hor-end"><button class="oe-redeem-done zuc-btn-secondary zuc-btn">Next</button></div>
         </div>
     </div>
 </div>
@@ -498,7 +497,7 @@
             <p class="oe-thank-you-heading-credit-card">Your Order has been placed.</p>
             <p class="oe-thank-you-heading-on-account">Your "On Account" Order has been Submitted.</p>
             <div class="oe-thank-you-buying-group-container">
-                <p>Your order has been submitted to <span classs="oe-thank-you-buying-group"></span> for purchase approval.</p>
+                <p>Your order has been submitted to <span class="oe-thank-you-buying-group"></span> for purchase approval.</p>
                 <p>Please check your email for Order Acknowledgment. Upon approval, you will receive an Order Confirmation by email.</p>
             </div>
             <div class="oe-thank-you-credit-card-container">
@@ -538,110 +537,123 @@
             <span class="close-modal">X</span>
         </div>
         <div class="modal-padding">
-            <!-- <table>
-                <tbody>
-                    <tr>
-                        <td data-label="Info"></td>
-                        <td data-label="Line">Order Total:</td>
-                        <td class="oe-payment-order-total" data-label="Amount"></td>
-                    </tr>
-                    <tr>
-                        <td data-label="Info">You have <span class="oe-payment-srp-count"></span> Smarter Reward Points Available for Redemption (Value: <span class="oe-payment-srp-value"></span>)</td>
-                        <td data-label="Line">Smarter Rewards Redemption:</td>
-                        <td class="oe-payment-srp-redeemed" data-label="Amount" contenteditable="true"></td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td data-label="Info"></td>
-                        <td data-label="Line">Net Amount:</td>
-                        <td class="oe-payment-order-net" data-label="Amount"></td>
-                    </tr>
-                </tfoot>
-            </table> -->
             <div class="total-information mobile-column">
-                    <div>
-                        <p class="u-bold purple-text">You have <span class="total-rewards-point"></span> Smarter Rewards points Available for Redemption (Value: <span class="rewards-money"></span>)</p>
-                    </div>
-                    <div class="margin-bottom-1">
-                        <p class="u-bold flex flex-vert-center" style="font-size: 22px;">Order Total: <span class="total-order-amount"></span></p>
-                        <p class="purple-text u-bold flex flex-vert-center">Smarter Rewards Redemption: <span class="rewards-redemption-amount">$100</span></p>
-                    </div>
+                <div>
+                    <p class="u-bold purple-text">You have <span class="total-rewards-point">0</span> Smarter Rewards points Available for Redemption (Value: <span class="rewards-money">0</span>)</p>
                 </div>
-                <div class="margin-top-1 two-grid-column reverse-mobile">
-                    <div class="">
-                        <p style="font-size: 20px;font-weight: 500;">Choose your payment option:</p>
-                    </div>
-                    <div class="">
-                        <p class="u-bold" style="font-size: 22px;">Net Amount: <span class="reward-amount"></span></p>  
-                    </div>
+                <div class="margin-bottom-1">
+                    <p class="u-bold flex flex-vert-center" style="font-size: 22px;">Order Total: <span class="total-order-amount"></span></p>
+                    <p class="u-bold flex flex-vert-center" style="font-size: 22px;">Shipping &amp; Freight: <span class="total-freight-amount"></span></p>
+                    <p class="u-bold flex flex-vert-center" style="font-size: 22px;">HST/PST: <span class="total-tax1-tax2-amount"></span></p>
+                    <p class="u-bold flex flex-vert-center" style="font-size: 22px;">Grand Total: <span class="grand-total-amount"></span></p>
+                    <p class="purple-text u-bold flex flex-vert-center">Smarter Rewards Redemption: <span class="rewards-redemption-amount">$0.00</span></p>
                 </div>
+            </div>
+            <div class="margin-top-1 two-grid-column reverse-mobile">
+                <div class="">
+                    <p style="font-size: 20px;font-weight: 500;">Choose your payment option:</p>
+                </div>
+                <div class="">
+                    <p class="u-bold" style="font-size: 22px;">Amount Due: <span class="net-amount"></span></p>
+                </div>
+            </div>
             <!--
 
                 <ul> will be populated with elements like the following. I would appreciate your feedback
                 on any other classes or markup you would like to be output here, so we can add it the JS file.
 
-                <li data-lt-id="5785379">
-                    <i class="oe-payment-options-type fa fa-cc-[cardtype]"></i>
-                    <h4 class="oe-payment-options-description">[CardType] ending in 4812 <span>(Default)</span></h4>
-                    <span class="oe-payment-options-name-on-card">J. Smith</span>
-                    <span class="oe-payment-options-expiry">Expires 09/2020</span>
+                <li class="flex flex-vert-center">
+                    <input type="radio" name="oe-payment-option" value="[Data:Id]">
+                    <div class="payment-card-info">
+                        <div class="flex flex-vert-center">
+                            <i class="fab fa-cc-[cardtype]" style="color: #1a1f71;"></i>
+                            <p class="u-bold"><span class="card-type">[CardType]</span> ending in <span class="ending-numbers">[Data]</span> <span>(Default)</span></p>
+                        </div>
+                        <div>[Data:NameOnCard]</div>
+                        <div>Expires [Data:MM]/[Data:YYYY]</div>
+                    </div>
                 </li>
 
                 OR
 
-                <li>
-                    <h4 class="oe-payment-options-description">
-                        Payment "On Account"
-                        <i class="oe-payment-options-info-circle"></i>
-                        <div class="oe-payment-options-info-text-container">
-                            <i></i>
-                            <p>Payment "On Account" is available to credit-approved Retailer Partners and may be subject to minimum order quantities and amounts. <b>On Account orders are not eligible for Free Shipping or earning of Smarter Reward Points. (Previously earned Smarter Rewards may be redeemed.)</p>
+                <li class="flex flex-vert-center">
+                    <input type="radio" name="oe-payment-option" value="[Data:Id]">
+                    <div class="flex flex-vert-center">
+                        <p class="u-bold">Use Buying Group</p>
+                        <i class="fa fa-info-circle"></i>
+                        <div class="oe-buying-group-info-container non-visible">
+                            <i class="fa fa-caret-up"></i>
+                            <p class="info-text">It appears you are a member of <span class="oe-payment-options-buying-group-name">[buying Group]</span>. Do you wish to purchase through your Group?</p>
                         </div>
-                    </h4>
+                    </div>
                 </li>
 
             -->
-            <ul class="oe-payment-options">
-                <li class="flex flex-vert-center">
-                        <input type="radio" name="" for="" value="">
-                    <div class="payment-card-info">
-                        <div class="flex flex-vert-center">
-                            <i class="fab fa-cc-visa" style="color: #1a1f71;"></i>
-                            <p class="u-bold"><span class="card-type">Visa</span> ending in <span class="ending-numbers"> 9900</span></p>
-                        </div>
-                        <div>First initial.Last Name</div>
-                        <div>mm/yy</div>
-                    </div>
-                </li>
-            </ul>
-            <ul class="oe-payment-options">
-                <li class="flex flex-vert-center">
-                    <input type="radio" name="" for="" value="">
-                    <div class="flex flex-vert-center">
-                        <p class="u-bold">Payment "On Account"</p>
-                        <i class="fa fa-info-circle"></i>
-                        <div class="onAccount-info-container non-visible">
-                            <i class="fa fa-caret-up"></i>
-                            <p class="info-text">Payment "On Account" is available to credit-approved Retail Partners and may be subjected to minimum order qunatities and amounts.<span class="u-bold"> On Account orders are not eligible for Free Shipping or earning of Smarter Reward Pints. (Previously earned Smarter Rewards may be redeemed.)</span> </p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+            <ul class="oe-payment-options"></ul>
             <div class="two-grid-column flex-hor-between flex-vert-center margin-top-1 mobile-column">
                 <div class="flex flex-column">
                     <p style="font-size: 20px;font-weight: 500;">More payment options:</p>
                     <p>ZucoraHome accepts all major credit cards.</p>
                 </div>
                 <div class="flex flex-vert-center flex-hor-center payment-icons">
-                    <i class="fab fa-cc-visa" style="color: #1a1f71;"></i>
-                    <i class="fab fa-cc-mastercard" style="color: #ff9900;"></i>
-                    <i class="fab fa-cc-amex" style="color: #002663;"></i>
+                    <img src="~/Images/creditcards_poster.png" />
                 </div>
             </div>
             <div class="flex flex-vert-center flex-hor-between margin-top-1 margin-bottom-1 mobile-column">
                 <a class="oe-payment-add-card simple-link">+ Add Card</a>
                 <button class="oe-payment-done zuc-btn-secondary zuc-btn">Place Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="oe-credit-cards-add-modal-container non-visible">
+    <div class="oe-credit-cards-add-modal">
+        <div class="purple-background flex flex-vert-center flex-hor-between">
+            <h2>Payment Method</h2>
+            <span class="close-modal">X</span>
+        </div>
+        <div class="flex flex-vert-center flex-hor-center planRegis-form">
+            <div class="flex flex-column flex-hor-center flex-vert-center">
+                <label for="oe-credit-cards-add-name-on-card">Name on Card</label>
+                <input id="oe-credit-cards-add-name-on-card" required type="text" />
+            </div>
+            <div class="flex flex-column flex-hor-center flex-vert-center">
+                <label for="oe-credit-cards-add-card-number">Card #</label>
+                <input id="oe-credit-cards-add-card-number" pattern="[0-9\s]+" maxlength="24" required type="number" />
+            </div>
+            <div class="flex flex-column">
+                <label>Expiration Date</label>
+                <div class="flex flex-vert-center" style="margin-top:5px;">
+                    <select id="oe-credit-cards-add-expiry-month" required>
+                        <option value="">MM</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <select id="oe-credit-cards-add-expiry-year" required>
+                        <option value="">YYYY</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex flex-column flex-hor-center flex-vert-center">
+                <label for="oe-credit-cards-add-cvv">CVV/CID</label>
+                <input id="oe-credit-cards-add-cvv" required type="number" />
+            </div>
+        </div>
+        <div class="billing-address-container">
+            <h4 class="profileBox-heading">Billing Address <a class="oe-credit-cards-add-billing-address-add">+</a></h4>
+            <div class="oe-credit-cards-add-billing-addresses grey-border"></div>
+            <div class="flex flex-hor-end margin-top-1">
+                <button class="oe-credit-cards-add-done zuc-btn zuc-btn-secondary">Add Card</button>
             </div>
         </div>
     </div>

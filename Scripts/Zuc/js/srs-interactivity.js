@@ -171,16 +171,22 @@ $('.three-grid-column .video-box').click(function(){
 	// console.log($(this).find('p').text());
 
 	$('.as-video').removeClass('non-visible');
+	$('.modal-video').empty();
 	let videoModal = $('.as-video-modal');
 	let title = $(this).find('p').text();
 	videoModal.find('h2').text(title);
-	// videoModal.find('.modal-video source').attr('src','https://www.youtube.com/watch?v=bqgVB6Vl-lI');
-	// console.log(videoModal.find('.modal-video source').attr('src'));
-	$('#clicked-video').src = "https://www.w3schools.com/tags/mov_bbb.mp4";
+	let videoLink = $(this).find('.video-link').text();
+	$('.modal-video').append('<source src="'+videoLink+'" type="video/mp4">');
+
+
 });
 
 $('.as-video-modal .close-modal').click(function(){
+	$('.as-video').addClass('non-visible');
+	let vid = document.getElementById('clicked-video');
+	vid.load();
+	$('.modal-video').empty();
 
-});
+	});
 
 });

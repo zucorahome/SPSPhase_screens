@@ -1,7 +1,7 @@
 .smarterPartner-setup-container{
 	
 	/*first step*/
-	.su-step-1,.su-step-2,.su-step-3{
+	.su-step-1,.su-step-2,.su-step-3,.su-nav{
 		width:40%;
 		margin:0 auto;
 		display: block;
@@ -467,7 +467,7 @@
 
 @media screen and (max-width:$mobile-width){
 	.smarterPartner-setup-container{
-		.su-step-1,.su-step-2,.su-step-3{
+		.su-step-1,.su-step-2,.su-step-3, .su-nav{
 			width:95%;
 			margin:0 auto;
 			display: block;
@@ -544,7 +544,7 @@
 
 @media screen and (min-width:$tablet-width) and (max-width: $laptop-width){
 	.smarterPartner-setup-container{
-		.su-step-1,.su-step-2,.su-step-3{
+		.su-step-1,.su-step-2,.su-step-3, .su-nav{
 			width:80%;
 		}
 	}

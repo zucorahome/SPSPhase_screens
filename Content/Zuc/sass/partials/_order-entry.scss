@@ -466,6 +466,45 @@
 
 }
 
+.oe-credit-cards-add-modal-container{
+	@extend %modal;
+
+	.oe-credit-cards-add-modal{
+		@extend %modal-background;
+
+		.purple-background {
+				h2{
+            	margin-bottom: 0;
+          	}
+          .close-modal{
+            @extend %form-cross;
+            	padding:0;
+            	font-weight: 700;
+            	margin-right:1em;
+          		}
+			}
+		.planRegis-form{
+			width:100%;
+			padding:10px;
+
+			input[type="number"]{
+				margin:5px 0 0 0;
+			}
+			#oe-credit-cards-add-expiry-month{
+				margin-right:5px;
+			}
+			#oe-credit-cards-add-expiry-year{
+				margin-left:5px;
+			}
+		}
+
+		.billing-address-container{
+			width:80%;
+			margin:1em auto;
+		}
+	}
+}
+
 @media screen and (max-width:$mobile-width){
 	.order-entry-container{
 			margin-top:10%;
@@ -516,8 +555,8 @@
 			}	
 	}
 
-.oe-add-item-modal-container, .oe-cancel-order-conf-modal-container,.oe-summary-modal-container,.oe-on-account-summary-modal-container,.oe-redeem-modal-container, .oe-thank-you-modal-container, .oe-sorry-modal-container,.oe-payment-modal-container{
-	.oe-add-item-modal, .oe-cancel-order-conf-modal, .oe-summary-modal,.oe-on-account-summary-modal,.oe-redeem-modal, .oe-thank-you-modal, .oe-sorry-modal, .oe-payment-modal{
+.oe-add-item-modal-container, .oe-cancel-order-conf-modal-container,.oe-summary-modal-container,.oe-on-account-summary-modal-container,.oe-redeem-modal-container, .oe-thank-you-modal-container, .oe-sorry-modal-container,.oe-payment-modal-container,.oe-credit-cards-add-modal-container{
+	.oe-add-item-modal, .oe-cancel-order-conf-modal, .oe-summary-modal,.oe-on-account-summary-modal,.oe-redeem-modal, .oe-thank-you-modal, .oe-sorry-modal, .oe-payment-modal,.oe-credit-cards-add-modal{
 			width:95%;
         	margin:35% auto;
 		}
@@ -543,6 +582,16 @@
 	margin-top: 6em;
 }
 
+.oe-credit-cards-add-modal-container{
+	.oe-credit-cards-add-modal{
+		.planRegis-form{
+			display: flex;
+			flex-direction: column;
+			width:100%;
+		}
+	}
+}
+
 }
 
 
@@ -556,6 +605,10 @@
 		}
 		.oe-on-account-summary-srp-info-text-container{
 			margin-top: 1em;
+		}
+		.oe-summary-use-buying-group-container{
+			grid-template-columns: 100%;
+			width: 100%;
 		}
 	}
 

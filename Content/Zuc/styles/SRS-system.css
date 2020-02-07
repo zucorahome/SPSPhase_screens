@@ -127,7 +127,8 @@ body {
 
 /*Header*/
 .srs-nav-container .zuc-main-nav {
-  padding: 1em 8%; }
+  /* padding: 1em 8%;  */
+}
 
 .dotted-line-text p {
   width: 100%;

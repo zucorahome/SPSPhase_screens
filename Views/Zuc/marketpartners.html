@@ -128,7 +128,7 @@
     <div class="two-grid-column mobile-column">
         <div class="border-box">
             <div class="purple-background">
-                <h3>Market Partners <a class="mp-add">+</a></h3>
+                <h3>My Market Partners <a class="mp-add">+</a></h3>
             </div>
             <div class="new-planAdd-detail">
                 <table class="mp-list">
@@ -148,11 +148,11 @@
         </div>
         <div class="border-box partner-data-container">
             <div class="purple-background flex flex-vert-center flex-hor-between">
-                <h3 style="margin-bottom:0;">Partner Details</h3>
+                <h3 style="margin-bottom:0;">Market Partner Details</h3>
                 <button class="mp-details-approve zuc-btn zuc-btn-primary u-soft-shadow">Approve</button>
                 <button class="mp-details-invite zuc-btn zuc-btn-primary u-soft-shadow">Invite</button>
             </div>
-            <form class="planRegis-form">
+            <div class="planRegis-form">
               <div class="planRegis-divStyle flex-vert-center">
                 <label for="mp-details-buying-group">Buying Group:</label>
                 <input id="mp-details-buying-group" list="mp-details-buying-group-options" type="text" />
@@ -179,11 +179,11 @@
                 </div>
                 <div class="planRegis-divStyle flex-vert-center">
                     <label for="mp-details-loc-count">Number Locations:</label>
-                    <input id="mp-details-loc-count" type="text" />
+                    <input id="mp-details-loc-count" type="number" />
                 </div>
                 <div class="planRegis-divStyle flex-vert-center">
                     <label for="mp-details-annual-sales">Annual Sales Volume:</label>
-                    <input id="mp-details-annual-sales" type="text" />
+                    <input id="mp-details-annual-sales" type="number" />
                 </div>
                 <div class="planRegis-divStyle flex-vert-center">
                     <label for="mp-details-current-plan-provider">Current Plan Provider:</label>
@@ -229,14 +229,14 @@
                     <button class="mp-details-save zuc-btn zuc-btn-secondary">Save</button>
                     <button class="mp-details-cancel zuc-btn zuc-btn-secondary">Cancel</button>
                 </div>
-            </form>
+            </div>
         </div>
 
     </div><!-- 50 50 column ends -->
     <!-- Another 50 50 column -->
     <div class="two-grid-column mobile-column margin-top-2 margin-bottom-2">
         <div class="border-box">
-            <h3 class="profileBox-heading">Partner Type Status:</h3>
+            <h3 class="profileBox-heading">Market Partner Type Status:</h3>
             <!-- PLEASE FILL IN ANY DESCRIPTIONS ZUCORA WOULD LIKE TO SHOW TO THE USER -->
             <ul class="mp-status-descriptions">
                 <li><span class="u-uppercase u-bold">"Legacy"</span>- Partners who have not yet transitioned to the Smarter Partner program</li>
@@ -267,20 +267,11 @@
     <div class="mp-invite-modal-container non-visible">
         <div class="mp-invite-modal">
             <div class="purple-background flex flex-hor-between">
-                <h2 style="margin-bottom:0;">Invite</h2>
+                <h2 style="margin-bottom:0;">Invite Primary Contact</h2>
                 <span class="close-modal">X</span>
             </div>
             <div class="planRegis-form">
                 <!-- Missing store name field -->
-                <h3 class="purple-text u-uppercase">Primary Contact</h3>
-           
-                <div class="planRegis-divStyle flex-vert-center">
-                    <label for="mp-invite-profile">Partner Profile*:</label>
-                    <!-- will be populated via JS with elements like this: <option value="332">Profile Example</option> -->
-                    <select id="mp-invite-profile" required>
-                        <option value="">Partner Profile</option>
-                    </select>
-                </div>
                 <div class="planRegis-divStyle flex-vert-center">
                     <label for="mp-invite-message">Personal Message*:</label>
                     <textarea id="mp-invite-message" required type=""></textarea>

@@ -34,7 +34,6 @@
 	font-family: $header-fonts;
 	font-weight: 700;
 	color: $zucora-purple;
-	// font-size:3.2em;
 	font-size: 5vh;
 	margin-top:10%;
 	text-align: center;
@@ -58,9 +57,12 @@
 
 /*Header*/
 .srs-nav-container .zuc-main-nav{
-	// padding:1em 8%;
+	//padding:1em 8%;
 }
 
+.srs-nav-container>.zuc-main-nav>.zuc-nav-links>.zuc-nav-dropdown{
+	padding:3vw 1.5vw;
+}
 .dotted-line-text{
 
 	p{

@@ -113,375 +113,609 @@
     </div>
     <!-- Main page content-->
 <section class="partner-profile-container">
-  <h1 class="srs-heading">@ViewBag.Title</h1>
+    <h1 class="srs-heading">@ViewBag.Title</h1>
 
-<div class="two-grid-column margin-top-2 flex-vert-center mobile-column">  
-  <div class="margin-leftRight">
-      <h3 class="profileBox-heading">Partner</h3>
-      <div class="profileBox-style">
-          <input id="pp-company-name" placeholder="Company Name" type="text" />
-          <input id="pp-business-legal-name" placeholder="Business Legal Name" type="text" />
-      </div>
-  </div>
-  <div class="planRegis-form">
-    <div class="form-div flex-vert-center">
-      <label for="pp-lang-pref">Language Pref:</label>
-      <select id="pp-lang-pref">
-          <option value="">Language Preference</option>
-      </select>
+    <div class="margin-top-2 flex-vert-center mobile-column">
+        <div class="margin-leftRight">
+            <h3 class="profileBox-heading">Market Partner</h3>
+            <div class="profileBox-style new-planAdd-detail">
+                <table class="pp-header">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width:30%;">Name</th>
+                            <th scope="col" style="width:15%;">Lang Pref</th>
+                            <th scope="col" style="width: 20%;">HST/GST#</th>
+                            <th scope="col" style="width: 25%;">Buying Group</th>
+                            <th scope="col" style="width: 10%;"></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
     </div>
-    <div class="form-div flex-vert-center">
-      <label for="pp-tax-number">HST/GST:</label>
-      <input id="pp-tax-number" placeholder="HST/GST Number" type="text" />
+    <!-- first two-grid column ends -->
+    <div class="two-grid-column margin-top-1 mobile-column">
+        <div class="margin-leftRight">
+            <h3 class="profileBox-heading">Billing Address</h3>
+            <div class="profileBox-style new-planAdd-detail">
+                <table class="pp-billing-address">
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="margin-leftRight payment-references-container">
+            <h3 class="profileBox-heading">Payment Preferences</h3>
+            <div class="profileBox-style new-planAdd-detail">
+                <table class="pp-payment-prefs">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width:30%;">Comm Earnings</th>
+                            <th scope="col" style="width:30%;">Plan Registrations</th>
+                            <th scope="col" style="width:30%;">Prod Purchases</th>
+                            <th scope="col" style="width:10%;"></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <!-- second two grid column eneded -->
     </div>
-      <div class="form-div flex-vert-center" style="margin-top:7px;">
-          <!-- <span>Buying Group:</span> -->
-          <!-- Just for styling purpose changin the tag to label -->
-          <label>Buying Group:</label>
-          <span class="pp-buying-group"></span>
+    <!-- 3rd two grid column -->
+    <!-- first section -->
+    <div class="two-grid-column mobile-column margin-top-1">
+        <div class="margin-leftRight our-locations-container">
+            <h3 class="profileBox-heading">Our Locations <a class="pp-locations-add">+</a></h3>
+            <div class="profileBox-style new-planAdd-detail">
+                <table class="pp-locations">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width:15%;">Code</th>
+                            <th scope="col" style="width:30%;">Location Name</th>
+                            <th scope="col" style="width: 30%;">Address</th>
+                            <th scope="col" style="width: 15%;">Phone</th>
+                            <th scope="col" style="width: 10%;"></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <!-- second section -->
+        <div class="margin-leftRight">
+            <div class="">
+                <h3 class="profileBox-heading">Banking Details</h3>
+                <div class="profileBox-style new-planAdd-detail">
+                    <table class="pp-bank-account">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width:30%;">Transit #</th>
+                                <th scope="col" style="width:30%;">Institution #</th>
+                                <th scope="col" style="width:30%;">Account #</th>
+                                <th scope="col" style="width:10%;"></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="payment-methods-container">
+                <h3 class="profileBox-heading">Payment Methods <a class="pp-credit-cards-add">+</a></h3>
+                <!-- NOTE: See smarterpartnersetup.js:440-470 for the <li> code -->
+                <ul class="pp-credit-cards"></ul>
+            </div>
+        </div>
+    </div><!--second two grid column ends-->
+    <!--  -->
+    <div class="our-people-container margin-top-1">
+        <h3 class="profileBox-heading">Our People <a class="pp-people-add">+</a></h3>
+        <div class="profileBox-style new-planAdd-detail">
+            <table class="pp-people">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Role</th>
+                        <th scope="col" colspan="1">Order Product</th>
+                        <th scope="col" colspan="3">Protection Plans</th>
+                        <th scope="col" colspan="1">Smarter Living Plans</th>
+                        <th scope="col" colspan="3">Inquiry/Reporting</th>
+                        <th scope="col">Edit</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>Products</th>
+                        <th>Register</th>
+                        <th>Modify</th>
+                        <th>Cancel</th>
+                        <th>Enroll</th>
+                        <th>Orders</th>
+                        <th>Plans</th>
+                        <th>Success Tracker</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <!--
+
+                    <tbody> will be populated with elements as follows (checkbox cells will have <p class="u-transparent">none</p> or <i class="fa fa-check grey-text"></i>):
+
+                    <tr data-lt-id="19858989">
+                        <td data-label="Name">[Data]</td>
+                        <td data-label="Username">[Data]</td>
+                        <td data-label="Status">[Active|Inactive]</td>
+                        <td data-label="Role">[Data]</td>
+                        <td data-label="Order Products"></td>
+                        <td data-label="Plans: Register"></td>
+                        <td data-label="Plans: Modify"></td>
+                        <td data-label="Plans: Cancel"></td>
+                        <td data-label="Smarter Living Plans: Enroll"></td>
+                        <td data-label="Inquiry/Reporting: Orders"></td>
+                        <td data-label="Inquiry/Reporting: Plans"></td>
+                        <td data-label="Inquiry/Reporting: Success Tracker"></td>
+                        <td data-label="Edit"><a class="pp-people-edit fa fa-pencil-alt"></a></td>
+                    </tr>
+
+                -->
+                <tbody></tbody>
+            </table>
+        </div><!---new planAdd div ends-->
+    </div>
+    <div class="flex flex-vert-center flex-hor-between margin-bottom-2">
+        <div class="margin-top-1">
+            <a href="~/Account/Manage" class="simple-link u-uppercase">Change password</a>
+            <i class="fa fa-pencil-alt purple-text"></i>
+        </div>
+        <div class="flex flex-vert-center flex-hor-center margin-top-1">
+            <button class="pp-update zuc-btn zuc-btn-secondary u-soft-shadow">Save</button>
+        </div>
+    </div>
+</section>
+
+<div class="pp-credit-card-edit-modal-container non-visible">
+  <div class="pp-credit-card-edit-modal">
+    <div class="purple-background flex flex-vert-center flex-hor-between">
+          <h2>Edit Payment Method</h2>
+          <span class="close-modal">X</span>
       </div>
+  <!-- tw grid column -->
+  <div class="two-grid-column">
+    <!-- first -->
+    <div class="first-section planRegis-form">
+      <div class="">
+        <h4 class="u-bold">Payment Method</h4>
+        <div class="flex flex-vert-center flex-hor-start">
+          <img src="https://www.visa.ca/dam/VCOM/regional/na/canada/global-elements/icon-logos/vbyvisa-blu.png" alt="" style="width:15%;" class="">&nbsp;
+          <p>&nbsp;Visa ending in <span>1234</span></p>
+        </div>
+      </div>
+    
+      <div class="label-margin">
+            <label>Expiration Date</label>
+            <div class="flex flex-hor-around flex-vert-center">
+                <select id="pp-credit-card-edit-expiry-month" required class="margin-right margin-top">
+                    <option value="">MM</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <!-- will be populated via JS with this year and the following 10 years -->
+                <select id="pp-credit-card-edit-expiry-year" required class="margin-left">
+                    <option value="">YYYY</option>
+                </select>
+              </div>
+          </div>
+      <div class="flex flex-vert-center flex-hor-start">
+            <label for="pp-credit-card-edit-is-default">Use as Default:</label>
+            <input id="pp-credit-card-edit-is-default" placeholder="Use as Default" type="checkbox" />
+      </div>
+
+    </div>
+    <!-- second -->
+    <div class="second-section planRegis-form">
+       <div class="">
+            <label for="pp-credit-card-edit-name-on-card">Name on Card</label>
+            <input id="pp-credit-card-edit-name-on-card" required type="text" />
+          </div>
+         
+          <div class="label-margin">
+            <label for="pp-credit-card-edit-security-code">CVC/CVV*:</label>
+            <input id="pp-credit-card-edit-security-code" placeholder="CVC/CVV" maxlength="4" pattern="[0-9]+" required type="text" />
+          </div>
+          
+      </div>
+    </div>
+    <div class="two-grid-column planRegis-form flex-vert-center flex-hor-start" style="padding:0;width: 95%;">
+        <div class="margin-top-1 margin-bottom-1">
+                <label for="pp-credit-card-edit-billing-helper">Existing Address</label>
+                <select id="pp-credit-card-edit-billing-helper" class="label-margin">
+                    <option value="">Existing Address</option>
+                </select>
+        </div>
+      <div class="flex margin-top-1 margin-bottom-1"><h4 class="u-bold">Billing Address</h4><a href="#"><i class="fa fa-pencil-alt purple-text" style="margin:0 5px;font-size: 18px;"></i></a>
+      </div>
+    </div>
+    <!-- Billing address edit forms -->
+    <div class="edit-billing-address-form margin-bottom-1">
+      <div class="planRegis-form">
+         <div class="two-grid-column">
+              <div>
+                <label for="pp-credit-card-edit-billing-address-1">Address 1*:</label>
+                <input id="pp-credit-card-edit-billing-address-1" placeholder="Address 1" required type="text" />
+              </div>
+               <div class="">
+                <label for="pp-credit-card-edit-billing-address-2">Address 2:</label>
+                <input id="pp-credit-card-edit-billing-address-2" placeholder="Address 2" type="text" />
+              </div>
+          </div>
+           <div class="two-grid-column">
+               <div class="label-margin">
+                <label for="pp-credit-card-edit-billing-city">City*:</label>
+                <input id="pp-credit-card-edit-billing-city" placeholder="City" type="text" required type="text" />
+              </div>
+              <div class="label-margin">
+                <label for="pp-credit-card-edit-billing-province">Prov/State*:</label>
+                <select id="pp-credit-card-edit-billing-province" required>
+                  <option value="">Prov/State</option>
+                </select>
+              </div>
+            </div>
+            <div class="two-grid-column">
+               <div class="label-margin">
+                <label for="pp-credit-card-edit-billing-postal">Postal Code*:</label>
+                <input id="pp-credit-card-edit-billing-postal" placeholder="Postal Code" type="text" required type="text" />
+              </div>
+              <div class="label-margin">
+                <label for="pp-credit-card-edit-billing-phone">Phone*:</label>
+                <input id="pp-credit-card-edit-billing-phone" placeholder="Phone Number" type="text" required />
+              </div>
+            </div>
+            <div class="two-grid-column margin-top-1">
+              <div class="flex flex-hor-center">
+                <button class="pp-credit-card-edit-cancel zuc-btn zuc-btn-secondary">Cancel</button></div>
+                <div class="flex flex-hor-center">
+                <button class="pp-credit-card-edit-save zuc-btn zuc-btn-secondary">Save</button></div>
+              
+            </div>
+        </div>
+    </div>
   </div>
 </div>
-<!-- first two-grid column ends -->
-  <div class="two-grid-column margin-top-1 mobile-column">
-  <div class="margin-leftRight">
-      <h3 class="profileBox-heading">Billing Address:</h3>
-      <div class="profileBox-style planRegis-form">
-        <div class="form-div">
-          <label for="pp-bill-to-address-1">Address&nbsp;1:</label>
-          <input id="pp-bill-to-address-1" placeholder="Address 1" type="text" />
+
+<div class="pp-header-edit-modal-container non-visible">
+    <div class="pp-header-edit-modal">
+        <div class="purple-background flex flex-vert-center flex-hor-between">
+            <h2>Market Partner</h2>
+            <span class="close-modal">X</span>
         </div>
-        <div class="form-div">
-          <label for="pp-bill-to-address-2">Address&nbsp;2:</label>
-          <input id="pp-bill-to-address-1" placeholder="Address 2" type="text" />
-        </div>
-        <div class="form-div">
-          <label for="pp-bill-to-city">City:</label>
-          <input id="pp-bill-to-city" placeholder="City" type="text" />
-        </div>
-        <div class="two-grid-column mobile-column">
-          <div class="flex flex-vert-center">
-            <label for="pp-bill-to-province">Prov/State:</label>
-            <select id="pp-bill-to-province">
-                <option value="">Prov/State</option>
-            </select>
+        <div class="planRegis-form">
+          <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+              <label for="pp-header-edit-company-name">Company Name*:</label>
+              <input id="pp-header-edit-company-name" placeholder="Company Name" required type="text" />
           </div>
-          <div class="flex flex-vert-center">
-            <label for="pp-bill-to-postal">Postal:</label>
-            <input id="pp-bill-to-postal" placeholder="Postal" type="text" />
+          <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+              <label for="pp-header-edit-business-legal-name">Business Legal Name*:</label>
+              <input id="pp-header-edit-business-legal-name" placeholder="Business Legal Name" required type="text" />
           </div>
-        </div>
+          <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+              <label for="pp-header-edit-lang-pref">Lang Pref*:</label>
+              <select id="pp-header-edit-lang-pref" required>
+                  <option value="">Select Lang Pref</option>
+              </select>
+          </div>
+          <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+              <label for="pp-header-edit-tax-number">HST/GST#*:</label>
+              <input id="pp-header-edit-tax-number" placeholder="HST/GST#" required  type="text" />
+          </div>
+          <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+              <label for="pp-header-edit-buying-group">Buying Group:</label>
+              <select id="pp-header-edit-buying-group">
+                  <option value="">Select Buying Group</option>
+              </select>
+          </div>
+          <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+              <label for="pp-header-edit-member-id">Member Id*:</label>
+              <input id="pp-header-edit-member-id" placeholder="Member Id" required type="text" />
+          </div>
+          <div class="flex flex-row flex-hor-around margin-top-1">
+              <button class="pp-header-edit-cancel zuc-btn zuc-btn-secondary">Cancel</button>
+              <button class="pp-header-edit-save zuc-btn zuc-btn-secondary">Save</button>
+          </div>
       </div>
+    </div>
+</div>
+<div class="pp-billing-address-edit-modal-container non-visible">
+  <div class="pp-billing-address-edit-modal">
+    <div class="purple-background flex flex-vert-center flex-hor-between">
+        <h2>Billing Address</h2>
+        <span class="close-modal">X</span>
+    </div>
+    <div class="planRegis-form">
+      <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+        <label for="pp-billing-address-edit-address-1">Address 1*:</label>
+        <input id="pp-billing-address-edit-address-1" placeholder="Address 1" required type="text" />
+      </div>
+      <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+        <label for="pp-billing-address-edit-address-2">Address 2:</label>
+        <input id="pp-billing-address-edit-address-2" placeholder="Address 2" type="text" />
+      </div>
+      <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+        <label for="pp-billing-address-edit-city">City*:</label>
+        <input id="pp-billing-address-edit-city" placeholder="City" type="text" required />
+      </div>
+      <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+        <label for="pp-billing-address-edit-province">Prov/State*:</label>
+        <select id="pp-billing-address-edit-province" required>
+            <option value="">Prov/State</option>
+        </select>
+      </div>
+      <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+        <label for="pp-billing-address-edit-postal">Postal Code*:</label>
+        <input id="pp-billing-address-edit-postal" placeholder="Postal Code" type="text" required />
+      </div>
+      <div class="flex flex-row flex-hor-around margin-top-1">
+        <button class="pp-billing-address-edit-cancel zuc-btn zuc-btn-secondary">Cancel</button>
+        <button class="pp-billing-address-edit-save zuc-btn-secondary zuc-btn">Save</button>
+      </div>
+    </div>
   </div>
-  <div class="margin-leftRight payment-references-container">
-      <h3 class="profileBox-heading">Payment Preferences</h3>
-      <div class="profileBox-style">
-          <h4 class="u-bold u-uppercase">Commission Earnings</h4>
-          <div class="flex flex-vert-center margin-bottom-1">
+</div>
+<div class="pp-payment-prefs-edit-modal-container non-visible">
+    <div class="pp-payment-prefs-edit-modal">
+        <div class="purple-background flex flex-vert-center flex-hor-between">
+            <h2>Payment Prefs</h2>
+            <span class="close-modal">X</span>
+        </div>
+        <div class="padding-box">
+        <h4 class="u-bold u-uppercase">Commission Earnings</h4>
+        <div class="flex flex-vert-center margin-bottom-1">
             <input id="pp-commission-payment-pref-eft" name="pp-commission-payment-pref" type="radio" value="EFT" />
             <label for="pp-commission-payment-pref-eft" class="purple-text">EFT (Deposited to Bank Account)</label>
-          </div>
-          <h4 class="u-uppercase u-bold">Plan Registrations</h4>
-          <div class="flex flex-vert-center">
+        </div>
+        <h4 class="u-uppercase u-bold">Plan Registrations</h4>
+        <div class="flex flex-vert-center">
             <input id="pp-plan-payment-pref-eft" name="pp-plan-payment-pref" type="radio" value="EFT" />
             <label for="pp-plan-payment-pref-eft" class="purple-text">EFT (Withdrawn from Bank Account)</label>
-          </div>
-          <div class="flex-vert-center flex margin-bottom-1">
-            <input id="pp-plan-payment-pref-credit-card" name="pp-plan-payment-pref" type="radio" value="Credit Card" />
+        </div>
+        <div class="flex-vert-center flex">
+            <input id="pp-plan-payment-pref-credit-card" name="pp-plan-payment-pref" type="radio" value="CreditCard" />
             <label for="pp-plan-payment-pref-credit-card" class="purple-text">Credit Card</label>
-          </div>
-          <h4 class="u-uppercase u-bold">Product Purchases</h4>
-          <div class="flex flex-vert-center">
+        </div>
+        <div class="flex-vert-center flex margin-bottom-1">
+            <input id="pp-plan-payment-pref-buying-group" name="pp-plan-payment-pref" type="radio" value="BuyingGroup" />
+            <label for="pp-plan-payment-pref-buying-group" class="purple-text">Buying Group</label>
+        </div>
+        <h4 class="u-uppercase u-bold">Product Purchases</h4>
+        <div class="flex flex-vert-center">
             <input id="pp-product-payment-pref-eft" name="pp-product-payment-pref" type="radio" value="EFT" />
             <label for="pp-product-payment-pref-eft" class="purple-text">EFT (Withdrawn from Bank Account)</label>
-          </div>
-          <div class="flex flex-vert-center">
-            <input id="pp-product-payment-pref-credit-card" name="pp-product-payment-pref" type="radio" value="Credit Card" />
+        </div>
+        <div class="flex flex-vert-center">
+            <input id="pp-product-payment-pref-credit-card" name="pp-product-payment-pref" type="radio" value="CreditCard" />
             <label for="pp-product-payment-pref-credit-card" class="purple-text">Credit Card</label>
-          </div>
-          <div class="flex-vert-center flex">
-          <input id="pp-product-payment-pref-buying-group" name="pp-product-payment-pref" type="radio" value="Buying Group" />
-          <label for="pp-product-payment-pref-buying-group" class="purple-text">Buying Group</label>
+        </div>
+        <div class="flex-vert-center flex">
+            <input id="pp-product-payment-pref-buying-group" name="pp-product-payment-pref" type="radio" value="BuyingGroup" />
+            <label for="pp-product-payment-pref-buying-group" class="purple-text">Buying Group</label>
+        </div>
+        <div class="margin-top-1">
+          <button class="pp-payment-prefs-edit-cancel zuc-btn zuc-btn-secondary u-soft-shadow">Cancel</button>
+          <button class="pp-payment-prefs-edit-save zuc-btn zuc-btn-secondary u-soft-shadow">Save</button>
         </div>
       </div>
-  </div>
-  <!-- second two grid column eneded -->
+    </div>
 </div>
-<!-- 3rd two grid column -->
-<div>
-  <!-- first section -->
-  <div class="two-grid-column mobile-column margin-top-1">
-    <div class="margin-leftRight our-locations-container">
-        <h3 class="profileBox-heading">Our Locations <a class="pp-locations-add">+</a></h3>
-        <div class="profileBox-style new-planAdd-detail">
-          <table class="pp-locations">
-              <thead>
-                  <tr>
-                      <th scope="col" style="width:15%;">Code</th>
-                      <th scope="col" style="width:30%;">Location Name</th>
-                      <th scope="col" style="width: 30%;">Address</th>
-                      <th scope="col" style="width: 15%;">Phone</th>
-                      <th scope="col" style="width: 10%;"></th>
-                  </tr>
-              </thead>
-              <!--
-                  <tbody> will be populated with elements like
-                  <tr data-lt-id="189538">
-                      <td data-label="Code">[Data]</td>
-                      <td data-label="Location Name">[Data]</td>
-                      <td data-label="Address">[Data]</td>
-                      <td data-label="Phone">[Data]</td>
-                      <td data-label="Edit"><a class="pp-locations-edit fa fa-pencil-alt"></a></td>
-                  </tr>    
-              -->
-              <tbody></tbody>
-          </table>
+<div class="pp-ship-to-modal-container non-visible">
+    <div class="pp-ship-to-modal">
+        <div class="purple-background flex flex-vert-center flex-hor-between">
+            <h2>Location</h2>
+            <span class="close-modal">X</span>
+        </div>
+        <div class="planRegis-form">
+            <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+                <label for="pp-ship-to-name">Name*:</label>
+                <input id="pp-ship-to-name" placeholder="Name" required type="text" />
+            </div>
+            <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+                <label for="pp-ship-to-type">Address Type*:</label>
+                <select id="pp-ship-to-type" required>
+                    <option value="">Address Type*:</option>
+                    <option value="Residential">Residential</option>
+                    <option value="Commercial">Business</option>
+                </select>
+            </div>
+            <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+                <label for="pp-ship-to-address-1">Address 1*:</label>
+                <input id="pp-ship-to-address-1" placeholder="Address 1" required type="text" />
+            </div>
+            <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+                <label for="pp-ship-to-address-2">Address 2:</label>
+                <input id="pp-ship-to-address-2" placeholder="Address 2" type="text" />
+            </div>
+            <div class="formField-data-controller">
+                <div class="flex flex-vert-center margin-right">
+                    <label for="pp-ship-to-city">City*:</label>
+                    <input id="pp-ship-to-city" placeholder="City" required type="text" />
+                </div>
+                <div class="flex flex-vert-center flex-hor-center profileLocation-province">
+                    <label for="pp-ship-to-province">Prov/State*:</label>
+                    <select id="pp-ship-to-province" required>
+                        <option value="">Prov/State</option>
+                    </select>
+                </div>
+            </div>
+            <div class="formField-data-controller">
+                <div class="flex flex-vert-center margin-right">
+                    <label for="pp-ship-to-postal">Postal Code*:</label>
+                    <input id="pp-ship-to-postal" placeholder="Postal Code" required type="text" />
+                </div>
+                <div class="flex flex-vert-center">
+                    <label for="pp-ship-to-phone">Phone*:</label>
+                    <input id="pp-ship-to-phone" placeholder="Phone Number" required type="text" />
+                </div>
+            </div>
+            <div class="flex flex-row flex-hor-around margin-top-1">
+                <button class="pp-ship-to-cancel zuc-btn zuc-btn-secondary u-soft-shadow">Cancel</button>
+                <button class="pp-ship-to-save zuc-btn zuc-btn-secondary u-soft-shadow">Save</button>
+            </div>
+            
         </div>
     </div>
-
-    <!-- second section -->
-  <div class="margin-leftRight">
-    <div class="">
-        <h3 class="profileBox-heading">Banking Details</h3>
-        <div class="profileBox-style new-planAdd-detail">
-          <table class="pp-bank-account">
-              <thead>
-                  <tr>
-                      <th scope="col">Institution</th>
-                      <th scope="col">Transit</th>
-                      <th scope="col">Account</th>
-                      <th scope="col"></th>
-                  </tr>
-              </thead>
-              <!--
-                  <tbody> will be populated with a single record like
-                  <tr data-lt-id="58318">
-                      <td data-label="Institution">[Data]</td>
-                      <td data-label="Transit">[Data]</td>
-                      <td data-label="Account">[Data]</td>
-                      <td data-label="Edit"><a class="pp-bank-account-edit fa fa-pencil-alt"></a></td>
-                  </tr>    
-              -->
-              <tbody></tbody>
-          </table>
+</div>
+<div class="pp-bank-account-edit-modal-container non-visible">
+    <div class="pp-bank-account-edit-modal">
+        <div class="purple-background flex flex-vert-center flex-hor-between">
+            <h2>Bank Account</h2>
+            <span class="close-modal">X</span>
+        </div>
+        <div class="planRegis-form flex-vert-center flex-hor-center">
+          <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+              <label for="pp-bank-account-edit-transit">Transit #*:</label>
+              <input id="pp-bank-account-edit-transit" placeholder="Transit #" required type="text" />
+          </div>
+          <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+              <label for="pp-bank-account-edit-institution">Institution #*:</label>
+              <input id="pp-bank-account-edit-institution" placeholder="Institution #" required type="text" />
+          </div>
+          <div class="planRegis-divStyle flex-vert-center flex-hor-center">
+              <label for="pp-bank-account-edit-account">Account #*:</label>
+              <input id="pp-bank-account-edit-account" placeholder="Account #" required type="text" />
+          </div>
+          <div class="flex flex-vert-center flex-hor-around margin-top-1">
+              <button class="pp-bank-account-edit-cancel zuc-btn zuc-btn-secondary">Cancel</button>
+              <button class="pp-bank-account-edit-save zuc-btn zuc-btn-secondary">Save</button>
+          </div>
       </div>
     </div>
-
-    <div class="payment-methods-container">
-        <h3 class="profileBox-heading">Payment Methods <a class="pp-credit-cards-add">+</a></h3>
-        <!--
-            
-            ul.pp-credit-cards will be populated with elements like:
-            
-            <li data-lt-id="5785379">
-                <i class="pp-credit-cards-type fa fa-cc-[cardtype]"></i>
-                <h4 class="pp-credit-cards-description">[CardType] ending in 4812 <span>(Default)</span></h4>
-                <span class="pp-credit-cards-expiry">Expires 09/2020</span>
-                <i class="pp-credit-cards-expand"></i>
-                <div class="pp-credit-cards-details">
-                    <div class="pp-credit-cards-name">
-                        <h5>Name on Card</h5>
-                        <span class="pp-credit-cards-name-on-card">[Data]</span>
-                    </div>
-                    <div class="pp-credit-cards-bill-to">
-                        <h5>Billing Address</h5>
-                        <div class="pp-credit-cards-bill-to-name">[Data]</div>
-                        <div class="pp-credit-cards-bill-to-address">[Data]</div>
-                        <div class="pp-credit-cards-bill-to-phone">[Data]</div>
-                    </div>
-                    <div>
-                        <button class="pp-credit-cards-remove">Remove</button>
-                        <button class="pp-credit-cards-edit">Edit</button>
+</div>
+<div class="contacts-form-modal non-visible">
+    <div class="contacts-form">
+        <div class="purple-background">
+            <h2>Person</h2>
+        </div>
+        <div class="planRegis-form flex flex-column">
+            <div class="flex-vert-center flex flex-row mobile-column">
+                <div class="flex flex-row flex-vert-center">
+                    <label for="pp-person-edit-first-name">First Name*:</label>
+                    <input id="pp-person-edit-first-name" placeholder="First Name" required type="text" />
+                </div>
+                <div class="flex flex-row flex-vert-center">
+                    <label for="pp-person-edit-last-name">Last Name*:</label>
+                    <input id="pp-person-edit-last-name" placeholder="Last Name" required type="text" />
+                </div>
+            </div>
+            <div class="flex-vert-center flex flex-row mobile-column">
+                <div class="flex flex-row flex-vert-center">
+                    <label for="pp-person-edit-email">Email*:</label>
+                    <input id="pp-person-edit-email" placeholder="Email Address" required type="text" />
+                </div>
+                <div class="flex flex-row flex-vert-center">
+                    <label for="pp-person-edit-phone">Phone*:</label>
+                    <input id="pp-person-edit-phone" placeholder="Phone Number" required type="text" />
+                </div>
+            </div>
+            <div class="flex-vert-center flex flex-row mobile-column">
+                <div class="flex flex-row flex-vert-center">
+                    <label for="pp-person-edit-username">Username*:</label>
+                    <input id="pp-person-edit-username" placeholder="Username" required type="text" />
+                </div>
+                <div class="flex flex-row flex-vert-center">
+                    <label for="pp-person-edit-is-active">Active:</label>
+                    <input id="pp-person-edit-is-active" type="checkbox" checked />
+                </div>
+            </div>
+            <div class="flex flex-row flex-vert-center">
+                <label for="pp-person-edit-locations">Location(s)*:</label>
+                <select id="pp-person-edit-locations" multiple required></select>
+            </div>
+            <div class="flex flex-row flex-vert-center">
+                <label for="pp-person-edit-job-title">Role*:</label>
+                <select id="pp-person-edit-job-title" required>
+                    <option value="">Select role</option>
+                    <option value="Advisor">Advisor</option>
+                    <option value="Buyer">Buyer</option>
+                    <option value="Manager">Manager</option>
+                </select>
+            </div>
+            <div class="flex flex-row flex-vert-center">
+                <label for="pp-person-edit-lang-pref">Lang Pref*:</label>
+                <select id="pp-person-edit-lang-pref" placeholder="Language Preference" required>
+                    <option value="">Select Language</option>
+                </select>
+            </div>
+            <!-- permission table -->
+            <p class="margin-top-1 purple-text">Permissions</p>
+            <div class="permissions">
+                <div>
+                    <p class="purple-text u-bold grey">Order Product</p>
+                    <div class="flex flex-column flex-vert-center">
+                        <label style="color:grey;">Products</label>
+                        <input name="pp-person-edit-permission" type="checkbox" data-lt-role-name="M-Order Entry" />
                     </div>
                 </div>
-            </li>
-        NOTE:Can we use  the same ul with classes from "smarterpartnersetup screen? It is the same code and styling.
-
-        -->
-        <ul class="pp-credit-cards"></ul>
-
-
-    </div>
-  </div>
-</div><!--second two grid column ends-->
-<!--  -->
-<div class="our-people-container">
-    <h3 class="profileBox-heading">Our People <a class="pp-people-add">+</a></h3>
-    <div class="profileBox-style new-planAdd-detail">
-    <table class="pp-people">
-        <thead>
-            <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Username</th>
-                <th scope="col">Status</th>
-                <th scope="col">Role</th>
-                <th scope="col" colspan="1">Order Product</th>
-                <th scope="col" colspan="3">Protection Plans</th>
-                <th scope="col" colspan="1">Smarter Living Plans</th>
-                <th scope="col" colspan="3">Inquiry/Reporting</th>
-                <th scope="col">Edit</th>
-            </tr>
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th>Products</th>
-                <th>Register</th>
-                <th>Modify</th>
-                <th>Cancel</th>
-                <th>Enroll</th>
-                <th>Orders</th>
-                <th>Plans</th>
-                <th>Success Tracker</th>
-                <th></th>
-            </tr>
-        </thead>
-        <!--
-
-            <tbody> will be populated with elements as follows (checkbox cells will have <p class="u-transparent">none</p> or <i class="fa fa-check grey-text"></i>):
-            
-            <tr data-lt-id="19858989">
-                <td data-label="Name">[Data]</td>
-                <td data-label="Username">[Data]</td>
-                <td data-label="Status">[Active|Inactive]</td>
-                <td data-label="Role">[Data]</td>
-                <td data-label="Order Products"></td>
-                <td data-label="Plans: Register"></td>
-                <td data-label="Plans: Modify"></td>
-                <td data-label="Plans: Cancel"></td>
-                <td data-label="Smarter Living Plans: Enroll"></td>
-                <td data-label="Inquiry/Reporting: Orders"></td>
-                <td data-label="Inquiry/Reporting: Plans"></td>
-                <td data-label="Inquiry/Reporting: Success Tracker"></td>
-                <td data-label="Edit"><a class="pp-people-edit fa fa-pencil-alt"></a></td>
-            </tr>
-
-        -->
-        <tbody>
-          
-        </tbody>
-    </table>
-  </div><!---new planAdd div ends-->
-</div>
-<div class="flex flex-vert-center flex-hor-between margin-bottom-2">
-    <div class="margin-top-1">
-        <a href="~/Account/Manage" class="simple-link u-uppercase">Change password</a>
-        <i class="fa fa-pencil-alt purple-text"></i>
-    </div>
-    <div class="flex flex-vert-center flex-hor-center margin-top-1">
-        <button class="pp-update zuc-btn zuc-btn-secondary u-soft-shadow">Save</button>
-    </div>
-</div>
-<div class="pp-credit-cards-add-modal-container modal non-visible">
-    <h2>Add Payment Method</h2>
-    <label for="pp-credit-cards-add-name-on-card">Name on Card</label>
-    <input id="pp-credit-cards-add-name-on-card" required />
-    <label for="pp-credit-cards-add-card-number">Card #</label>
-    <input id="pp-credit-cards-add-card-number" pattern="[0-9\s]+" maxlength="24" required />
-    <label>
-        Expiration Date
-        <select id="pp-credit-cards-add-expiry-month" required>
-            <option value="">MM</option>
-            <option value="1">01</option>
-            <option value="2">02</option>
-            <option value="3">03</option>
-            <option value="4">04</option>
-            <option value="5">05</option>
-            <option value="6">06</option>
-            <option value="7">07</option>
-            <option value="8">08</option>
-            <option value="9">09</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-        </select>
-        <!-- will be populated via JS with this year and the following 10 years -->
-        <select id="pp-credit-cards-add-expiry-year" required>
-            <option value="">YYYY</option>
-        </select>
-    </label>
-    <h4>Billing Address <a class="pp-credit-cards-add-bill-to-add">+</a></h4>
-    <!--
-        the <div> below will be populated with sub-<div>s like
-        <div>
-            <input id="pp-credit-cards-add-bill-to-4189812" name="pp-credit-cards-add-bill-to" type="checkbox" value="4189812" />
-            <label for="pp-credit-cards-add-bill-to-4189812">[Name], [Address1], [Address2], [City], [Province], [Country], [Postal]</label>
+                <div>
+                    <p class="purple-text u-bold">Protection Plan</p>
+                    <div class="flex flex-row flex-hor-center flex-vert-center">
+                        <div class="flex flex-column flex-vert-center">
+                            <label>Register</label>
+                            <input name="pp-person-edit-permission" type="checkbox" data-lt-role-name="M-Plan Registration" />
+                        </div>
+                        <div class="flex flex-column flex-vert-center">
+                            <label>Modify</label>
+                            <input name="pp-person-edit-permission" type="checkbox" data-lt-role-name="C-Plan Inquiry-Modify Plan" />
+                        </div>
+                        <div class="flex flex-column flex-vert-center">
+                            <label>Cancel</label>
+                            <input name="pp-person-edit-permission" type="checkbox" data-lt-role-name="C-Plan Inquiry-Cancel Plan" />
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="purple-text u-bold grey">Smarter Living Plans</p>
+                    <div class="flex flex-column flex-vert-center flex-hor-center">
+                        <label style="color:grey;">Enroll</label>
+                        <input name="pp-person-edit-permission" type="checkbox" data-lt-role-name="M-Ecom Plan" />
+                    </div>
+                </div>
+                <div>
+                    <p class="purple-text">Inquiry/Reporting</p>
+                    <div class="flex flex-row flex-hor-center flex-vert-end">
+                        <div class="flex flex-column flex-vert-center">
+                            <label style="color:grey;">Orders</label>
+                            <input name="pp-person-edit-permission" type="checkbox" data-lt-role-name="M-Order History Report" />
+                        </div>
+                        <div class="flex flex-column flex-vert-center">
+                            <label>Plans</label>
+                            <input name="pp-person-edit-permission" type="checkbox" data-lt-role-name="M-Plan Inquiry" />
+                        </div>
+                        <div class="flex flex-column flex-vert-center">
+                            <label style="color:grey;">Success Tracker</label>
+                            <input name="pp-person-edit-permission" type="checkbox" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-hor-center flex-row">
+                <a class="person-save-btn zuc-btn zuc-btn-secondary u-soft-shadow margin-top-1 margin-bottom-1">Save</a>
+                <a class="person-cancel-btn zuc-btn zuc-btn-secondary u-soft-shadow margin-top-1 margin-bottom-1">Cancel</a>
+            </div>
         </div>
-    -->
-    <div></div>
-    <button class="pp-credit-cards-add-done">Add Card</button>
+    </div>
 </div>
-<div class="pp-credit-cards-edit-modal-container modal non-visible">
-    <h2>Edit Payment Method</h2>
-    <div>
-        <h4>Payment Method</h4>
-        <div class="pp-credit-cards-edit-description"></div>
-    </div>
-    <label>
-        Expiration Date
-        <select id="pp-credit-cards-edit-expiry-month" required>
-            <option value="">MM</option>
-            <option value="1">01</option>
-            <option value="2">02</option>
-            <option value="3">03</option>
-            <option value="4">04</option>
-            <option value="5">05</option>
-            <option value="6">06</option>
-            <option value="7">07</option>
-            <option value="8">08</option>
-            <option value="9">09</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-        </select>
-        <!-- will be populated via JS with this year and the following 10 years -->
-        <select id="pp-credit-cards-edit-expiry-year" required>
-            <option value="">YYYY</option>
-        </select>
-    </label>
-    <div>
-        <input id="pp-credit-cards-edit-is-default" type="checkbox" />
-        <label for="pp-credit-cards-edit-is-default">Use as Default</label>
-    </div>
-    <div>
-        <label for="pp-credit-cards-edit-name-on-card">Name on Card</label>
-        <input id="pp-credit-cards-edit-name-on-card" required />
-    </div>
-    <div>
-        <h4>Billing Address <a class="pp-credit-cards-edit-bill-to-edit"></a></h4>
-        <div class="pp-credit-cards-edit-bill-to-name"></div>
-        <div class="pp-credit-cards-edit-bill-to-address"></div>
-        <div class="pp-credit-cards-edit-bill-to-phone"></div>
-    </div>
-    <button class="pp-credit-cards-edit-cancel">Cancel</button>
-    <button class="pp-credit-cards-edit-save">Save</button>
-</div>
-<div class="pp-bill-to-edit-modal-container modal non-visible">
-    <h2>Billing Address</h2>
-    <label for="pp-bill-to-edit-first-name">First Name*:</label>
-    <input id="pp-bill-to-edit-first-name" placeholder="First Name" required />
-    <label for="pp-bill-to-edit-last-name">Last Name*:</label>
-    <input id="pp-bill-to-edit-last-name" placeholder="Last Name" required />
-    <label for="pp-bill-to-edit-address-1">Address 1*:</label>
-    <input id="pp-bill-to-edit-address-1" placeholder="Address 1" required />
-    <label for="pp-bill-to-edit-address-2">Address 2*:</label>
-    <input id="pp-bill-to-edit-address-2" placeholder="Address 2" required />
-    <label for="pp-bill-to-edit-city">City*:</label>
-    <input id="pp-bill-to-edit-city" placeholder="City" type="text" required />
-    <label for="pp-bill-to-edit-province">Prov/State*:</label>
-    <!-- will be populated via JS -->
-    <select id="pp-bill-to-edit-province" required>
-        <option value="">Prov/State</option>
-    </select>
-    <label for="pp-bill-to-edit-postal">Postal Code*:</label>
-    <input id="pp-bill-to-edit-postal" placeholder="Postal Code" type="text" required />
-    <label for="pp-bill-to-edit-phone">Phone*:</label>
-    <input id="pp-bill-to-edit-phone" placeholder="Phone Number" type="text" required />
-    <button class="pp-bill-to-edit-cancel">Cancel</button>
-    <button class="pp-bill-to-edit-save">Save</button>
-</div>
-</section>
 <!-- main page content ends -->
     <!-- Site Footer -->
     <footer class=""></footer>  

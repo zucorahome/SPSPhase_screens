@@ -1,0 +1,46 @@
+.rep-landingPage-container{
+  width:85%;
+  margin:0 auto;
+  padding:0;
+  margin-top:15%;
+
+  .rw-promo-graphic{
+    width: 100%;
+  }
+  .two-grid-column{
+    justify-content: center;
+    align-content: flex-start;
+    grid-gap:1.5em 1.5em;
+  }
+
+  .new-planAdd-detail{
+    display: block;
+    margin:0;
+    padding:10px;
+    border:2px solid $grey-text;
+  }
+
+  .border-box{
+    width:100%;
+    height: auto;
+    border: 2px solid #36384B;
+    padding:10px;
+  }
+
+  dl{
+    dt{
+      color:$zucora-purple;
+      font-family: $para-fonts;
+      font-size: 16px;
+      font-weight: bold;
+      /*margin-bottom:5px;*/
+      line-height: 32px;
+    }
+  }
+}
+
+@media screen and (max-width:$mobile-width){
+  .rep-landingPage-container{
+    margin-top:20%;
+  }
+}

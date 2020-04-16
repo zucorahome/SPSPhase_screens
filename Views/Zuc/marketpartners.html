@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zucora Home: Event page</title>
+    <meta content="" name="description">
+   	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="../../Content/Zuc/styles/bootstrap.min.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/styles9d66868d59cc90dfcd5c.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/new_styles.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/SRS-system.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- [ FONTS ]-->
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <link href="https://use.typekit.net/ovc0ozw.css" rel="stylesheet">
+</head>
+<body>
+<!-- Site Navigation-->
+    <div class="zuc-nav-wrapper srs-nav-container" data-nav-height>
+      <!-- Main Navigation-->
+      <nav class="zuc-main-nav flex flex-hor-start flex-hor-between flex-vert-center u-uppercase" data-main-navigation>
+        <!-- Nav Branding-->
+        <a class="zuc-nav-brand" href="#"><img src="../../Images/Zuc/images/SmarterPartner_Logo.png"></a>
+        <!-- Nav Links-->
+        <div class="zuc-nav-links flex flex-hor-end flex-hor-between flex-no-wrap flex-vert-center">
+          <!-- First -->
+          <div class="zuc-nav-dropdown"><span class="u-uppercase">Plans</span>
+             <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+                <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                  <!-- Dropdown links -->
+                  <div class="zuc-dropdown-column">
+                    <a href="~/zuc/planregistration" title="Plan Registration" aria-role="menu-item">Plan Registration</a>
+                    <a href="~/zuc/planinquiry" title="Plan Registration Inquiry" aria-role="menu-item">Plan Inquiry</a>
+                    <a href="plan-pending-registrations.html" title="Registration History" aria-role="menu-item">Registration History</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="zuc-nav-dropdown"><span class="u-uppercase">Orders</span>
+            <!-- Drop Down-->
+            <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+              <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                <!-- Dropdown links -->
+                <div class="zuc-dropdown-column">
+                  <a href="order-entry.html" title="Order Entry" aria-role="menuitem">Entry</a>
+                  <a href="order-history.html" title="Order History" aria-role="menuitem">Order History</a>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div class="zuc-nav-dropdown "><i class="fa fa-user-alt"></i><span class="u-uppercase"> @User.Identity.Name</span><i class="fas fa-bell"></i><span>1</span>
+            <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+              <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                <!-- Dropdown links -->
+                <div class="zuc-dropdown-column">
+                  <a href="~/zuc/retailerprofile">Profile</a>
+                  <a href="~/Account/Manage">Change Password</a>
+                  <a href="javascript:document.getElementById('logoutForm').submit()">Log out</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile Nav Button-->
+        <div class="zuc-menu">
+          <div class="zuc-menu-open" role="button" data-open-menu aria-label="Mobile Navigation"><span class="hidden" aria-hidden="true" aria-label="Open mobile menu">Mobile Menu</span>
+          </div>
+        </div>
+      </nav>
+      <!-- Mobile Navigation-->
+      <div class="zuc-mobile-nav" data-mobile-menu>
+        <!-- Top Branding CTA-->
+        <div class="zuc-mobile-nav-content">
+          <a href="https://zucorahome.com/" title="Zucora Home">
+            <img src="~/Images/Zuc/images/ZucoraHome-brand-white.svg" alt="Zucora Home">
+            <img src="~/Images/Zuc/images/ZucoraHome-brand-white.svg" alt="Zucora Home">
+          </a>
+        </div>
+        <div class="zuc-accordion-nav" role="menu" aria-role="menu">
+          <!--Plans Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title">Plans<i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="~/zuc/planregistration" title="Plan Registration" aria-role="menuitem">Plan Registration</a>
+                <a class="zuc-accordion-link" href="~/zuc/planinquiry" title="Plan Registration Inquiry" aria-role="menuitem">Plan Registration Inquiry</a>
+                <a class="zuc-accordion-link" href="plan-reporting.html" title="Registration History" aria-role="menuitem">Registration History/a>
+              </div>
+            </div>
+            <!--Orders Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title">Orders<i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="order-entry.html" title="Order Entry" aria-role="menuitem">Order Entry</a>
+                <a class="zuc-accordion-link" href="order-history.html" title="Order History" aria-role="menuitem">Order History</a>
+              </div>
+            </div>
+              <!--Username Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title"><i class="fa fa-user-alt"></i><i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="~/zuc/retailerprofile" title="Profile" aria-role="menuitem">Profile</a>
+                <a class="zuc-accordion-link" href="~/Account/Manage" title="Change Password" aria-role="menuitem">Change Password</a>
+                <a class="zuc-accordion-link" href="javascript:document.getElementById('logoutForm').submit()" title="Log Out" aria-role="menuitem">Log Out</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main page content-->
+<h1 class="srs-heading">@ViewBag.Title</h1>
+<section class="market-partners-container">
+    <!-- filter -->
+    <form class="planRegis-form first-filter">
+        <div class="flex flex-row flex-vert-center">
+            <label for="mp-list-filter">Filter:</label>
+            <!-- will be populated via JS with elements like this: <option value="332">LEGACY</option> -->
+            <select id="mp-list-filter">
+                <option value="">ALL</option>
+            </select>
+        </div>
+    </form>
+    <div class="two-grid-column mobile-column">
+        <div class="border-box">
+            <div class="purple-background">
+                <h3>My Market Partners <a class="mp-add">+</a></h3>
+            </div>
+            <div class="new-planAdd-detail">
+                <table class="mp-list">
+                    <thead>
+                        <tr>
+                            <th scope="col">Status</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Date Invited</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Need to specify <td data-label="column name"> for mobile-->
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="border-box partner-data-container">
+            <div class="purple-background flex flex-vert-center flex-hor-between">
+                <h3 style="margin-bottom:0;">Market Partner Details</h3>
+                <button class="mp-details-approve zuc-btn zuc-btn-primary u-soft-shadow">Approve</button>
+                <button class="mp-details-invite zuc-btn zuc-btn-primary u-soft-shadow">Invite</button>
+            </div>
+            <div class="planRegis-form">
+              <div class="planRegis-divStyle flex-vert-center">
+                <label for="mp-details-buying-group">Buying Group:</label>
+                <input id="mp-details-buying-group" list="mp-details-buying-group-options" type="text" />
+              </div>
+                <!-- <datalist> will be populated via JS with elements like this: <option value="Cantrax" data-lt-value="19198"></option> -->
+                <div class="planRegis-divStyle flex-vert-center">
+                  <datalist id="mp-details-buying-group-options"></datalist>
+                  <div class="flex flex-vert-center">
+                    <label for="mp-details-contact">Primary Contact:</label>
+                    <a class="mp-details-contact-add">+</a>
+                  </div>
+                  <input id="mp-details-contact" list="mp-details-contact-options" type="text" />
+                </div>
+                <!-- <datalist> will be populated via JS with elements like this: <option value="Cantrax" data-lt-value="19198"></option> -->
+
+                <datalist id="mp-details-contact-options"></datalist>
+                <div class="planRegis-divStyle flex-vert-center">
+                  <label for="mp-details-contact-email">Primary Contact Email:</label>
+                  <input id="mp-details-contact-email" disabled type="text" />
+                </div>
+                <div class="planRegis-divStyle flex-vert-center">
+                  <label for="mp-details-contact-phone">Primary Contact Phone:</label>
+                  <input id="mp-details-contact-phone" disabled type="text" />
+                </div>
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-details-loc-count">Number Locations:</label>
+                    <input id="mp-details-loc-count" type="number" />
+                </div>
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-details-annual-sales">Annual Sales Volume:</label>
+                    <input id="mp-details-annual-sales" type="number" />
+                </div>
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-details-current-plan-provider">Current Plan Provider:</label>
+                    <!-- will be populated via JS -->
+                    <select id="mp-details-current-plan-provider">
+                        <option value="">Current Plan Provider</option>
+                    </select>
+                </div>
+                <div class="planRegis-divStyle flex-vert-center">
+                  <label for="mp-details-products-services">Products/Services</label>
+                  <!-- will be populated via JS with elements as follows: <option value="332">Product/Service</option> -->
+                  <select id="mp-details-products-services" required multiple></select>
+                </div>
+                <!-- NOTE: Map and manual address checkbox is missing. -->
+                <ul class="mp-details-products-services"></ul>
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-details-address-1">Address 1*:</label>
+                    <input id="mp-details-address-1" type="text" required />
+                </div>
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-details-address-2">Address 2:</label>
+                    <input id="mp-details-address-2" type="text"/>
+                </div>
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-details-city">City*:</label>
+                    <input id="mp-details-city" required type="text"/>
+                </div>
+                <div class="two-grid-column">
+                    <div class="planRegis-divStyle flex-vert-center">
+                        <label for="mp-details-province">Prov/State*:</label>
+                        <!-- will be populated via JS with elements like this: <option value="332">Ontario</option> -->
+                        <select id="mp-details-province" required>
+                            <option value="">Province/State</option>
+                        </select>
+                    </div>
+                    <div class="flex-vert-center planRegis-divStyle">
+                        <label for="mp-details-postal">Postal Code*:</label>
+                        <input id="mp-details-postal" required type="text"/>
+                    </div>
+                </div>
+
+                <div class="flex flex-vert-center flex-hor-center margin-top-1">
+                    <button class="mp-details-save zuc-btn zuc-btn-secondary">Save</button>
+                    <button class="mp-details-cancel zuc-btn zuc-btn-secondary">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- 50 50 column ends -->
+    <!-- Another 50 50 column -->
+    <div class="two-grid-column mobile-column margin-top-2 margin-bottom-2">
+        <div class="border-box">
+            <h3 class="profileBox-heading">Market Partner Type Status:</h3>
+            <!-- PLEASE FILL IN ANY DESCRIPTIONS ZUCORA WOULD LIKE TO SHOW TO THE USER -->
+            <ul class="mp-status-descriptions">
+                <li><span class="u-uppercase u-bold">"Legacy"</span>- Partners who have not yet transitioned to the Smarter Partner program</li>
+                <li><span class="u-uppercase u-bold">"Invited"</span>- Partners who have been invited to join the Smarter Partner program</li>
+                <li><span class="u-uppercase u-bold">"Smarter Partner"</span> - A partner that has joined the Smarter Partner program</li>
+                <li><span class="u-uppercase u-bold">"Review" </span>- Setup currently being reviewed</li>
+                <li><span class="u-uppercase u-bold">"Restricted"</span> - A partner that is not eligible to join the Smarter Partner program</li>
+                <li><span class="u-uppercase u-bold">"Prospect" </span>- Potential Partner</li>
+            </ul>
+        </div>
+        <div class="border-box">
+            <div class="purple-background"><h3>Activity Notes <a class="mp-add-note">+</a></h3></div>
+            <div class="new-planAdd-detail">
+                <table class="mp-notes">
+                    <thead>
+                        <tr>
+                            <th scope="col">Activity</th>
+                            <th scope="col">Created</th>
+                            <th scope="col">Note</th>
+                            <th scope="col">Follow-Up</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div><!--50 50 column ends-->
+    <div class="mp-invite-modal-container non-visible">
+        <div class="mp-invite-modal">
+            <div class="purple-background flex flex-hor-between">
+                <h2 style="margin-bottom:0;">Invite Primary Contact</h2>
+                <span class="close-modal">X</span>
+            </div>
+            <div class="planRegis-form">
+                <!-- Missing store name field -->
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-invite-message">Personal Message*:</label>
+                    <textarea id="mp-invite-message" required type=""></textarea>
+                </div>
+                <div class="flex flex-hor-center margin-top-1">
+                    <button class="mp-invite-send zuc-btn zuc-btn-secondary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- NOTE: This is called Primary contact and so does "mp-details-contact-add-modal-container" too! not sure which one is correct one, still I have styled both. -->
+    <div class="mp-add-note-modal-container non-visible">
+        <div class="mp-add-note-modal">
+            <div class="purple-background flex flex-hor-between">
+                <h2 style="margin-bottom:0;">Add Note</h2>
+                <span class="close-modal">X</span>
+            </div>
+            <div class="planRegis-form">
+                <div class="planRegis-divStyle flex-vert-center">
+                    <label for="mp-add-note-activity">Activity</label>
+                    <!-- will be populated via JS -->
+                    <select id="mp-add-note-activity">
+                        <option value="">Activity</option>
+                    </select>
+                </div>
+                <div class="">
+                    <textarea id="mp-add-note-text" required cols="50" rows="10"></textarea>
+                </div>
+                <div class="flex flex-vert-center flex-hor-between">
+                    <div class="flex flex-vert-center">
+                        <label for="mp-add-note-follow-up-date">Follow up date:</label>
+                        <input id="mp-add-note-follow-up-date" type="date" />
+                    </div>
+                    <div><button class="mp-add-note-save zuc-btn-secondary zuc-btn">Save</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mp-invite-sent-modal-container non-visible">
+        <div class="mp-invite-sent-modal">
+            <span class="close-modal">X</span>
+            <h2>Your email has been sent to: <br><span class="mp-invite-sent-to"></span></h2>
+            <div class="border-box">
+                <h3>Your Personal Message:</h3>
+                <div class="mp-invite-sent-message">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- New form -->
+    <div class="mp-add-modal-container non-visible">
+      <div class="mp-add-modal">
+        <div class="purple-background flex flex-hor-between">
+          <h2>Add Market Partner</h2>
+          <span class="close-modal">X</span>
+        </div>
+        <div class="planRegis-form">
+          <div class="planRegis-divStyle flex-vert-center">
+            <label for="mp-add-full-name">Full Name*:</label>
+            <input id="mp-add-full-name" required placeholder="Full Name" type="text" />
+          </div>
+          <div class="planRegis-divStyle flex-vert-center">
+            <label for="mp-add-currency">Currency*:</label>
+            <!-- will be populated via JS -->
+            <select id="mp-add-currency" required>
+                <option value="">Currency</option>
+            </select>
+          </div>
+          <div class="planRegis-divStyle flex-vert-center">
+            <label for="mp-add-time-zone">Time Zone*:</label>
+            <!-- will be populated via JS -->
+            <select id="mp-add-time-zone" required>
+                <option value="">Time Zone</option>
+            </select>
+          </div>
+          <div class="planRegis-divStyle flex-vert-center">
+            <label for="mp-add-lang-pref">Language Pref*:</label>
+            <!-- will be populated via JS -->
+            <select id="mp-add-lang-pref" required>
+                <option value="">Language Pref</option>
+            </select>
+          </div>
+          <div class="planRegis-divStyle flex-vert-center">
+            <label for="mp-add-market-segment">Market Segment*:</label>
+            <!-- will be populated via JS -->
+            <select id="mp-add-market-segment" required>
+                <option value="">Market Segment</option>
+            </select>
+          </div>
+        </div>
+          <div class="flex flex-hor-center margin-top-1 margin-bottom-1">
+              <button class="mp-add-save zuc-btn zuc-btn-secondary">Done</button>
+          </div>
+        </div>
+    </div>
+    <!-- New form -->
+    <div class="mp-details-contact-add-modal-container non-visible">
+      <div class="mp-details-contact-add-modal">
+        <div class="purple-background flex flex-hor-between">
+          <h2>Add Primary Contact</h2>
+          <span class="close-modal">X</span>
+        </div>
+        <div class="planRegis-form">
+          <div class="planRegis-divStyle flex-vert-center">
+              <label for="mp-details-contact-add-first-name">First Name*:</label>
+              <input id="mp-details-contact-add-first-name" required placeholder="First Name" type="text" />
+            </div>
+            <div class="planRegis-divStyle flex-vert-center">
+              <label for="mp-details-contact-add-last-name">Last Name*:</label>
+              <input id="mp-details-contact-add-last-name" required placeholder="Last Name" type="text" />
+            </div>
+            <div class="planRegis-divStyle flex-vert-center">
+              <label for="mp-details-contact-add-email">Email*:</label>
+              <input id="mp-details-contact-add-email" required placeholder="Email" type="text" />
+            </div>
+            <div class="planRegis-divStyle flex-vert-center">
+              <label for="mp-details-contact-add-phone">Phone*:</label>
+              <input id="mp-details-contact-add-phone" required placeholder="Phone" type="text" />
+            </div>
+            <div class="planRegis-divStyle flex-vert-center">
+              <label for="mp-details-contact-add-currency">Currency*:</label>
+              <!-- will be populated via JS -->
+               <select id="mp-details-contact-add-currency" required>
+                  <option value="">Currency</option>
+              </select>
+            </div>
+            <div class="planRegis-divStyle flex-vert-center">
+              <label for="mp-details-contact-add-time-zone">Time Zone*:</label>
+              <!-- will be populated via JS -->
+               <select id="mp-details-contact-add-time-zone" required>
+                  <option value="">Time Zone</option>
+              </select>
+            </div>
+            <div class="planRegis-divStyle flex-vert-center">
+                <label for="mp-details-contact-add-lang-pref">Language Pref*:</label>
+                <!-- will be populated via JS -->
+                <select id="mp-details-contact-add-lang-pref" required>
+                    <option value="">Language Pref</option>
+                </select>
+            </div>
+          </div>
+        <div class="flex flex-hor-center margin-top-1 margin-bottom-1">
+            <button class="mp-details-contact-add-save zuc-btn zuc-btn-secondary">Done</button>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- main page content ends -->
+    <!-- Site Footer -->
+    <footer class=""></footer>  
+    <script type="text/javascript" src="~/Content/Zuc/js/build9d66868d59cc90dfcd5c.js"></script>
+    <script type="text/javascript" src="~/Scripts/Zuc/js/srs-interactivity.js"></script>
+</body>
+</html>

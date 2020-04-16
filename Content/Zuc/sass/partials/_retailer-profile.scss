@@ -146,8 +146,16 @@
 
 				select{
 					width:100%;
+					@extend %select;
 				}
 
+				label{
+					@extend %label;
+				}
+
+				input{
+					@extend %input;
+				}
 				.formField-data-controller{
 					
 					

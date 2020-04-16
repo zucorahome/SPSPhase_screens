@@ -1,0 +1,140 @@
+.smartShip-container{
+	width:85%;
+	margin:0 auto;
+	display: block;
+
+	.profile-box{
+		border:2px solid $grey-text;
+		margin:2em 0;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-column-gap: 1.5em;
+		padding:1em 3em;
+		/*align-items: center;*/
+		/*justify-content: flex-start;*/
+	}
+
+	.customer-details-container{
+			width:100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			max-width: 100%;
+
+			.purple-text{
+				font-weight: 700;
+				margin-top:10px;
+				margin-bottom: 0;
+			}
+
+			.planRegis-form{
+				width: auto;
+    			padding: 0;
+			}	
+		}
+
+		.profile-boxStyle{
+			border:2px solid $grey-text;
+			padding: 15px;
+		}
+
+		.margin-right{
+			margin-right: 5px;
+		}
+
+		.margin-left{
+			margin-left:5px;
+		}
+
+		.margin-top{
+			margin-top:5px;
+		}
+
+		.right-side{
+			.planRegis-form{
+				width:100%;
+				padding:0;
+			}
+
+			label{
+				@extend %label;
+				text-align: left;
+				margin-right: 0;
+			}
+
+			.itemNumber{
+				display: grid;
+				grid-template-columns: 60% 30% 10%;
+				align-items: center;
+				justify-content: space-between;
+
+				input{
+					margin:0;
+				}
+
+				input[type="text"]{
+					width:90%;
+				}
+
+				input[type="number"]{
+					width:70%;
+				}
+
+				a{
+					text-align: center;
+					border-radius: 50%;
+				    width: 35px;
+				    font-size: 2em;
+				    vertical-align: middle;
+				    text-align: center;
+				    border:2px solid $grey-text;
+				}
+			}
+
+			.new-planAdd-detail{
+				display: block;
+
+				thead{
+					background-color: $zucora-purple;
+					tr th{
+						color: white;
+					}
+				}
+			}
+
+			.total-bill{
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				margin:10px;
+
+				td{
+					padding:10px;
+					font-weight: 700;
+					font-family: $para-fonts;
+
+				}
+				tr:first-child{
+					border-bottom:1px solid $grey-text;
+				}
+			}
+		}
+}
+
+
+@media screen and (max-width:$mobile-width){
+	.smartShip-container{
+		width:100%;
+		margin:0 auto;
+
+		.profile-box{
+			grid-template-columns: 100%;
+			padding:1em;
+			border:none;
+		}
+
+		.right-side{
+			margin-top:2em;
+		}
+	}
+}

@@ -1,0 +1,141 @@
+.videos-container{
+	width:70%;
+	margin:0 auto;
+	display: block;
+	margin-top:12%;
+
+	.video-box{
+		width:100%;
+		height:auto;
+		max-width: 100%;
+		margin:0;
+		padding:0;
+		h3{
+			margin-bottom: 0;
+		}
+		.purple-background{
+			color: white;
+			font-size: 22px;
+			font-weight: 700;
+			font-family: $para-fonts;
+			padding:13px;
+		}
+
+		video{
+			width:100%;
+			height: auto;
+		}
+	}
+
+	.as-video{
+		@extend %modal;
+		.as-video-modal{
+			@extend %modal-background;
+			padding: 2em;
+			width:70%;
+			.close-modal{
+				@extend %form-cross;
+				font-size: 1.5em;
+				padding: 14px;
+				color:$zucora-mint-green;
+			}
+			h2{
+				font-family: $header-fonts;
+			    font-weight: 900;
+			    font-size: 3em;
+			    color: #434DA0;
+			    text-align: center;
+			    padding: 12px;
+			}
+
+			.modal-video{
+				position: relative;
+				width:100%;
+				max-width: 100%;
+				height: auto;
+			}
+
+		}
+	}
+
+	.three-grid-column{
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		grid-gap: 14px 1em;
+		align-items: inherit;
+
+		.video-box{
+			/*padding:10px;*/
+			box-shadow: 0 0 80px rgba(0,0,0,.3);
+			-webkit-box-shadow:0 0 80px rgba(0,0,0,.3);
+			cursor: pointer;
+		}
+
+		.purple-background{
+			font-size:1em;
+			padding:10px;
+		}
+	}
+
+	.as-under-review-container{
+		@extend %modal;
+		.as-under-review{
+			@extend %modal-background;
+			.close-modal{
+				@extend %form-cross;
+				font-size: 1.5em;
+				padding: 14px;
+				color:$zucora-mint-green;
+			}
+			h2{
+				font-family: $header-fonts;
+			    font-weight: 900;
+			    font-size: 3em;
+			    color: #434DA0;
+			    text-align: center;
+			    padding: 12px;
+			}
+
+			p{
+				width: 75%;
+			    text-align: center;
+			    margin: 0 auto;
+			    font-size: 1.75em;
+			    margin-bottom: 2em;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile-width){
+	.videos-container{
+		width:95%;
+		.as-video{
+			.as-video-modal{
+				width:95%;
+				margin: 35% auto;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: $laptop-width){
+.videos-container{
+		margin-top:20%;
+
+		.three-grid-column{
+			grid-template-columns: 50% 50%;
+			padding:0 10px;
+		}
+	}		
+}
+
+@media screen and(min-width:981px){
+	.videos-container{
+		.three-grid-column{
+			grid-template-columns: 25% 25% 25% 25%;
+		}
+	}
+}

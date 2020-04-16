@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zucora Home: Event page</title>
+    <meta content="" name="description">
+   	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="../../Content/Zuc/styles/bootstrap.min.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/styles9d66868d59cc90dfcd5c.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/new_styles.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/SRS-system.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- [ FONTS ]-->
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <link href="https://use.typekit.net/ovc0ozw.css" rel="stylesheet">
+</head>
+<body>
+<!-- Site Navigation-->
+    <div class="zuc-nav-wrapper srs-nav-container" data-nav-height>
+      <!-- Main Navigation-->
+      <nav class="zuc-main-nav flex flex-hor-start flex-hor-between flex-vert-center u-uppercase" data-main-navigation>
+        <!-- Nav Branding-->
+        <a class="zuc-nav-brand" href="#"><img src="../../Images/Zuc/images/ZucoraHome-brand-white.svg"></a>
+        <!-- Nav Links-->
+        <div class="zuc-nav-links flex flex-hor-end flex-hor-between flex-no-wrap flex-vert-center">
+          <!-- First -->
+          <div class="zuc-nav-dropdown"><span class="u-uppercase">Plans</span>
+             <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+                <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                  <!-- Dropdown links -->
+                  <div class="zuc-dropdown-column">
+                    <a href="~/zuc/planregistration" title="Plan Registration" aria-role="menu-item">Plan Registration</a>
+                    <a href="~/zuc/planinquiry" title="Plan Registration Inquiry" aria-role="menu-item">Plan Inquiry</a>
+                    <a href="plan-pending-registrations.html" title="Registration History" aria-role="menu-item">Registration History</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="zuc-nav-dropdown"><span class="u-uppercase">Orders</span>
+            <!-- Drop Down-->
+            <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+              <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                <!-- Dropdown links -->
+                <div class="zuc-dropdown-column">
+                  <a href="order-entry.html" title="Order Entry" aria-role="menuitem">Entry</a>
+                  <a href="order-history.html" title="Order History" aria-role="menuitem">Order History</a>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div class="zuc-nav-dropdown "><i class="fa fa-user-alt"></i><span class="u-uppercase"> @User.Identity.Name</span>
+            <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+              <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                <!-- Dropdown links -->
+                <div class="zuc-dropdown-column">
+                  <a href="~/zuc/retailerprofile">Profile</a>
+                  <a href="~/Account/Manage">Change Password</a>
+                  <a href="javascript:document.getElementById('logoutForm').submit()">Log out</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile Nav Button-->
+        <div class="zuc-menu">
+          <div class="zuc-menu-open" role="button" data-open-menu aria-label="Mobile Navigation"><span class="hidden" aria-hidden="true" aria-label="Open mobile menu">Mobile Menu</span>
+          </div>
+        </div>
+      </nav>
+      <!-- Mobile Navigation-->
+      <div class="zuc-mobile-nav" data-mobile-menu>
+        <!-- Top Branding CTA-->
+        <div class="zuc-mobile-nav-content">
+          <a href="https://zucorahome.com/" title="Zucora Home">
+            <img src="~/Images/Zuc/images/ZucoraHome-brand-white.svg" alt="Zucora Home">
+          </a>
+        </div>
+        <div class="zuc-accordion-nav" role="menu" aria-role="menu">
+          <!--Plans Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title">Plans<i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="~/zuc/planregistration" title="Plan Registration" aria-role="menuitem">Plan Registration</a>
+                <a class="zuc-accordion-link" href="~/zuc/planinquiry" title="Plan Registration Inquiry" aria-role="menuitem">Plan Registration Inquiry</a>
+                <a class="zuc-accordion-link" href="plan-reporting.html" title="Registration History" aria-role="menuitem">Registration History/a>
+              </div>
+            </div>
+            <!--Orders Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title">Orders<i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="order-entry.html" title="Order Entry" aria-role="menuitem">Order Entry</a>
+                <a class="zuc-accordion-link" href="order-history.html" title="Order History" aria-role="menuitem">Order History</a>
+              </div>
+            </div>
+              <!--Username Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title"><i class="fa fa-user-alt"></i><i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="~/zuc/retailerprofile" title="Profile" aria-role="menuitem">Profile</a>
+                <a class="zuc-accordion-link" href="~/Account/Manage" title="Change Password" aria-role="menuitem">Change Password</a>
+                <a class="zuc-accordion-link" href="javascript:document.getElementById('logoutForm').submit()" title="Log Out" aria-role="menuitem">Log Out</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main page content-->
+<section class="smarterPartner-setup-container">
+    <h1 class="srs-heading">@ViewBag.Title</h1>
+    <div class="su-step-1">
+        <div class="step-box">
+            <h2 class="u-bold u-text-center">Step 1 of 3.</h2>
+            <p class="u-text-center">Tell us about your business.</p>
+            <p class="u-text-center">Complete the following information so we can do business together.</p>
+        </div>
+        <div class="flex flex-column margin-top-1">
+            <h3 class="profileBox-heading">Partner</h3>
+            <div class="profileBox-style">
+                <input id="su-company-name" placeholder="Company Name" type="text" />
+                <input id="su-business-legal-name" placeholder="Business Legal Name" type="text" />
+            </div>
+        </div>
+        <div class="flex flex-column margin-top-1">
+            <h3 class="profileBox-heading">Billing Address</h3>
+            <div class="profileBox-style planRegis-form">
+                <div class="form-div">
+                    <label for="su-address-1">Address&nbsp;1:</label>
+                    <input id="su-address-1" placeholder="Address 1" type="text" />
+                </div>
+                <div class="form-div">
+                    <label for="su-address-2">Address&nbsp;2:</label>
+                    <input id="su-address-2" placeholder="Address 2" type="text" />
+                </div>
+                <div class="form-div">
+                    <label for="su-city">City:</label>
+                    <input id="su-city" placeholder="City" type="text" />
+                </div>
+                <div class="province-grid-column mobile-column">
+                    <div class="flex flex-vert-center">
+                        <label for="su-province">Prov/State:</label>
+                        <select id="su-province">
+                            <option value="">Prov/State</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-vert-center">
+                        <label for="su-postal">Postal:</label>
+                        <input id="su-postal" placeholder="Postal" type="text" />
+                    </div>
+                </div>
+                <div class="form-div">
+                    <label for="su-phone">Phone:</label>
+                    <input id="su-phone" placeholder="Phone" type="text" />
+                </div>
+            </div>
+        </div>
+        <div class="profileBox-style planRegis-form" style="margin-top:2em;">
+            <div class="form-div">
+                <label for="su-tax-number">HST/GST:</label>
+                <input id="su-tax-number" placeholder="HST/GST Number" type="text" />
+            </div>
+            <div class="form-div">
+                <label for="su-buying-group">Buying Group:</label>
+                <select id="su-buying-group">
+                    <option value="">Buying Group</option>
+                </select>
+            </div>
+            <div class="form-div">
+                <label for="su-member-id">Member ID:</label>
+                <input id="su-member-id" placeholder="Member ID" type="text" />
+            </div>
+            <div class="form-div">
+                <label for="su-lang-pref">Language Pref:</label>
+                <select id="su-lang-pref">
+                    <option value="">Language Preference</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="su-step-2">
+        <div class="step-box">
+            <h2 class="u-bold u-text-center">Step 2 of 3.</h2>
+            <p class="u-text-center">Identify each store and warehouse location (including the main location where sales occur and/or product may be delivered).</p>
+        </div>
+        <div class="flex flex-column margin-top-1">
+            <h3 class="profileBox-heading">Our Locations <a class="su-locations-add">+</a></h3>
+            <div class="profileBox-style new-planAdd-detail">
+                <table class="su-locations">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width:15%">Code</th>
+                            <th scope="col" style="width: 20%;">Location Name</th>
+                            <th scope="col" style="width: 30%;">Address</th>
+                            <th scope="col" style="width: 20%">Phone</th>
+                            <th scope="col" style="width: 15%;">Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <!-- maun su-step-2 ends -->
+    </div>
+    <div class="su-step-3">
+        <div class="step-box">
+            <h2 class="u-bold u-text-center">Step 3 of 3.</h2>
+            <p class="u-text-centera">With the following financial details, we will be able to deposit commissions earned for Smarter Living Plans while making it easy to pay for Product Protection Plans and Products.</p>
+        </div>
+        <div class="flex flex-column margin-top-1">
+            <div class="flex flex-vert-center">
+                <h3 class="profileBox-heading">Deposit &amp; Payment Preferences</h3>
+                <i class="su-deposit-payment-pref-info-circle fa fa-info-circle"></i>
+            </div>
+            <div class="su-deposit-payment-pref-info-text-container non-visible">
+                <i class="fa fa-caret-up"></i>
+                <p>
+                    <b class="u-bold">Commission Earnings</b><br />
+                    Amounts earned from enrollments to Smarter Living Plans are automatically deposited (EFT) to bank account.
+                </p>
+                <p>
+                    <b class="u-bold">Plan Registrations</b><br />
+                    Payment for Product Protection Plans may be paid by either EFT (withdrawn from bank account) OR by Credit Card.
+                </p>
+                <p>
+                    <b class="u-bold">Product Purchases</b><br>
+                    Payment for product purchases may be paid by EFT (withdrawn from bank account) OR by Credit Card used at time of Purchase OR by recognized Buying Group.
+                </p>
+            </div>
+            <div class="profileBox-style margin-top-1">
+                <p class="u-bold u-uppercase">Commission Earnings</p>
+                <div class="flex flex-vert-center margin-bottom-1">
+                    <input id="su-commission-payment-pref-eft" name="su-commission-payment-pref" type="radio" checked value="EFT" />
+                    <label for="su-commission-payment-pref-eft" class="purple-text" style="font-weight: 500 !important;">EFT (Deposited to Bank Account)</label>
+                </div>
+                <p class="u-bold u-uppercase">Plan Registrations</p>
+                <div class="flex flex-vert-center">
+                    <input id="su-plan-payment-pref-eft" name="su-plan-payment-pref" type="radio" value="EFT" />
+                    <label for="su-plan-payment-pref-eft" class="purple-text" style="font-weight: 500 !important;">EFT (Withdrawn from Bank Account)</label>
+                </div>
+                <div class="flex flex-vert-center margin-bottom-1">
+                    <input id="su-plan-payment-pref-credit-card" name="su-plan-payment-pref" type="radio" value="CreditCard" />
+                    <label for="su-plan-payment-pref-credit-card" class="purple-text" style="font-weight: 500 !important;">Credit Card</label>
+                </div>
+                <p class="u-bold u-uppercase">Product Purchases</p>
+                <div class="flex flex-vert-center">
+                    <input id="su-product-payment-pref-eft" name="su-product-payment-pref" type="radio" value="EFT" />
+                    <label for="su-product-payment-pref-eft" class="purple-text" style="font-weight: 500 !important;">EFT (Withdrawn from Bank Account)</label>
+                </div>
+                <div class="flex flex-vert-center">
+                    <input id="su-product-payment-pref-credit-card" name="su-product-payment-pref" type="radio" value="CreditCard" />
+                    <label for="su-product-payment-pref-credit-card" class="purple-text" style="font-weight: 500 !important;">Credit Card</label>
+                </div>
+                <div class="flex flex-vert-center margin-bottom-1">
+                    <input id="su-product-payment-pref-buying-group" name="su-product-payment-pref" type="radio" value="BuyingGroup" />
+                    <label for="su-product-payment-pref-buying-group" class="purple-text" style="font-weight: 500 !important;">Buying Group</label>
+                </div>
+            </div>
+        </div>
+        <div class="margin-top-1 margin-bottom-1">
+            <div class="flex flex-vert-center margin-bottom-1">
+                <h3 class="profileBox-heading">Banking Details</h3>
+                <i class="su-banking-details-info-circle fa fa-info-circle"></i>
+            </div>
+            <div class="profileBox-style planRegis-form">
+                <div class="form-div">
+                    <label for="su-bank-transit-number">Transit #:</label>
+                    <input id="su-bank-transit-number" type="number" />
+                </div>
+                <div class="form-div">
+                    <label for="su-bank-institution-number">Institution #:</label>
+                    <input id="su-bank-institution-number" type="number" />
+                </div>
+                <div class="form-div">
+                    <label for="su-bank-account-number">Account #:</label>
+                    <input id="su-bank-account-number" type="number" />
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="flex flex-vert-center margin-bottom-1">
+                <h3 class="profileBox-heading">Credit Card Details <a class="su-credit-cards-add">+</a></h3>
+                <i class="su-credit-cards-info-circle fa fa-info-circle"></i>
+            </div>
+            <div class="su-credit-cards-info-text-container non-visible">
+                <i class="fa fa-caret-up"></i>
+                <p>Credit Card information is required to provide payment of Smart3 Plan and Smart5 Plan registrations and online product purchases.</p><br>
+                <p>If you are a member of a recognized Buying Group, products may be purchased on account through your Group. However, Credit Card payment is required for Smart3 Plan and Smart5 Plan registrations.</p>
+            </div>
+            <div class="profileBox-style creditCard-details-container">
+                <ul class="su-credit-cards"></ul>
+            </div>
+        </div>
+        <div class="flex flex-column margin-top-1">
+            <h3 class="profileBox-heading">Agreement</h3>
+            <div class="profileBox-style margin-top-1">
+                <input id="su-read-agree-to-terms" type="checkbox" />
+                <a class="su-view-terms">View Smarter Partner Agreement Terms &amp; Conditions</a>
+                <label for="su-read-agree-to-terms" style="margin-top:10px;">I have read and accept the Terms &amp; Conditions of the Smarter Partner Agreement.</label>
+            </div>
+        </div>
+    </div>
+    <div class="su-nav">
+        <div class="flex flex-hor-start margin-top-1 margin-bottom-1"><a class="su-prev">&lt; Back</a></div>
+        <div class="flex flex-hor-end margin-top-1 margin-bottom-1"><button class="su-next zuc-btn zuc-btn-secondary">Next</button> <!-- will be visible on steps 1 and 2 --></div>
+        <div class="flex flex-hor-end margin-top-1 margin-bottom-1"><button class="su-submit zuc-btn zuc-btn-secondary">Submit</button> <!-- will be visible on step 3 --></div>
+    </div>
+</section>
+<section class="popup-modals-container">
+    <div class="su-locations-add-modal-container non-visible">
+        <div class="su-locations-add-modal">
+            <div class="purple-background">
+                <h2>Location</h2>
+            </div>
+            <div class="planRegis-form">
+                <div class="form-div">
+                    <label for="su-locations-add-name">Name*:</label>
+                    <input id="su-locations-add-name" placeholder="Location name" required type="text" />
+                </div>
+                <div class="form-div">
+                    <label for="su-locations-add-type">Address Type*:</label>
+                    <select id="su-locations-add-type" required>
+                        <option value="">Address Type</option>
+                        <option value="Residential">Residential</option>
+                        <option value="Commercial">Business</option>
+                    </select>
+                </div>
+                <div class="form-div">
+                    <label for="su-locations-add-address-1">Address 1*:</label>
+                    <input id="su-locations-add-address-1" placeholder="Address 1" required type="text" />
+                </div>
+                <div class="form-div">
+                    <label for="su-locations-add-address-2">Address 2*:</label>
+                    <input id="su-locations-add-address-2" placeholder="Address 2" required type="text" />
+                </div>
+                <div class="two-grid-column mobile-column">
+                    <div class="form-div margin-left">
+                        <label for="su-locations-add-city">City*:</label>
+                        <input id="su-locations-add-city" placeholder="City" type="text" required type="text" />
+                    </div>
+                    <div class="flex flex-vert-center flex-hor-center">
+                        <label for="su-locations-add-province">Prov/State*:</label>
+                        <select id="su-locations-add-province" required>
+                            <option value="">Prov/State</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="two-grid-column">
+                    <div class="form-div margin-left">
+                        <label for="su-locations-add-postal">Postal Code*:</label>
+                        <input id="su-locations-add-postal" placeholder="Postal Code" type="text" required />
+                    </div>
+                    <div>
+                    </div>
+                </div>
+                <div class="two-grid-column mobile-column">
+                    <div class="form-div margin-left">
+                        <label for="su-locations-add-phone">Phone*:</label>
+                        <input id="su-locations-add-phone" placeholder="Phone Number" type="text" required />
+                    </div>
+                    <div class="flex flex-vert-center flex-hor-around">
+                        <div><button class="su-locations-add-save-and-add zuc-btn-secondary zuc-btn">Add More</button></div>
+                        <div><button class="su-locations-add-save zuc-btn-secondary zuc-btn">Save</button></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="su-credit-cards-add-modal-container non-visible">
+        <div class="su-credit-cards-add-modal">
+            <div class="purple-background"><h2>Payment Method</h2></div>
+            <div class="flex flex-vert-center flex-hor-start planRegis-form">
+                <div class="flex flex-column flex-hor-center">
+                    <label for="su-credit-cards-add-name-on-card">Name on Card</label>
+                    <input id="su-credit-cards-add-name-on-card" required type="text" />
+                </div>
+                <div class="flex flex-column flex-hor-center">
+                    <label for="su-credit-cards-add-card-number">Card #</label>
+                    <input id="su-credit-cards-add-card-number" pattern="[0-9\s]+" maxlength="24" required type="number" />
+                </div>
+                <div class="flex flex-column">
+                    <label>Expiration Date</label>
+                    <div class="flex flex-vert-center">
+                        <select id="su-credit-cards-add-expiry-month" required>
+                            <option value="">MM</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select id="su-credit-cards-add-expiry-year" required>
+                            <option value="">YYYY</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex flex-column flex-hor-center">
+                    <label for="su-credit-cards-add-cvv">CVV/CID</label>
+                    <input id="su-credit-cards-add-cvv" required type="number" />
+                </div>
+            </div>
+            <div class="billing-address-container">
+                <h4 class="profileBox-heading">Billing Address <a class="su-credit-cards-add-billing-address-add">+</a></h4>
+                <div class="su-credit-cards-add-billing-addresses grey-border"></div>
+                <div class="flex flex-hor-end margin-top-1">
+                    <button class="su-credit-cards-add-done zuc-btn zuc-btn-secondary">Add Card</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="su-credit-cards-edit-modal-container non-visible">
+        <div class="su-credit-cards-edit-modal">
+            <div class="purple-background">
+                <h2>Edit Payment Method</h2>
+            </div>
+            <div class="two-grid-column planRegis-form">
+                <!-- first section -->
+                <div class="first-section">
+                    <div class="flex flex-column flex-hor-start">
+                        <h4 class="u-bold" style="margin-bottom:0;">Payment Method</h4>
+                        <div class="su-credit-cards-edit-description"></div>
+                    </div>
+                    <div class="flex flex-column margin-top-1">
+                        <label class="u-bold">Expiration Date </label>
+                        <div class="flex flex-vert-center">
+                            <select id="su-credit-cards-edit-expiry-month" required class="margin-right">
+                                <option value="">MM</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <select id="su-credit-cards-edit-expiry-year" required class="margin-left">
+                                <option value="">YYYY</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex flex-vert-center margin-top-1">
+                        <input id="su-credit-cards-edit-is-default" type="checkbox" />
+                        <label for="su-credit-cards-edit-is-default">Use as Default</label>
+                    </div>
+                </div>
+                <!-- second section -->
+                <div class="second-section">
+                    <div>
+                        <label for="su-credit-cards-edit-name-on-card">Name on Card</label>
+                        <input id="su-credit-cards-edit-name-on-card" required type="text" />
+                    </div>
+                    <div class="margin-top-1">
+                        <h4 class="u-bold">Billing Address <a class="su-credit-cards-edit-billing-address-edit fas fa-pencil-alt"></a></h4>
+                        <div class="su-credit-cards-edit-billing-name"></div>
+                        <div class="su-credit-cards-edit-billing-address"></div>
+                        <div class="su-credit-cards-edit-billing-phone"></div>
+                    </div>
+                </div>
+                <!-- two grid column ends -->
+            </div>
+            <div class="flex flex-vert-center flex-hor-center margin-bottom-2">
+                <div><button class="su-credit-cards-edit-cancel zuc-btn zuc-btn-secondary">Cancel</button></div>
+                <div><button class="su-credit-cards-edit-save zuc-btn-secondary zuc-btn">Save</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="su-banking-details-modal-container non-visible">
+        <div class="su-banking-details-modal">
+            <div class="purple-background flex flex-vert-center flex-hor-between">
+                <h2>Banking Details</h2>
+                <span class="close-modal">X</span>
+            </div>
+            <p>Banking information is required to provide direct deposit of Commissions earned from enrollment of Smarter Living Plans. (If you are not offering the Smarter Living Plan, this information is optional.) Please include the following.</p>
+            <img class="center margin-bottom-1" alt="" />
+        </div>
+    </div>
+    <div class="su-agreement-modal-container non-visible">
+        <div class="su-agreement-modal">
+            <div class="purple-background flex flex-vert-center flex-hor-between">
+                <h2>Smarter Partner Agreement</h2>
+                <span class="close-modal">X</span>
+            </div>
+            <div class="padding-1">
+                <div class="su-agreement-text"></div>
+                <div class="flex flex-vert-center flex-hor-between margin-top-1 mobile-column">
+                    <div class="agreement-radioButtons">
+                        <button class="su-agreement-disagree zuc-btn zuc-btn-secondary">I Do Not Agree</button>
+                        <button class="su-agreement-agree zuc-btn-secondary zuc-btn">I Agree</button>
+                    </div>
+                    <div class="agreement-actions">
+                        <i class="su-agreement-print fas fa-print"></i>
+                        <i class="su-agreement-download fas fa-download"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="su-submitted-modal-container non-visible">
+        <div class="su-submitted-modal">
+            <span class="close-modal">X</span>
+            <h2 class="u-text-center">Thank you!</h2>
+            <p>Thank you for completing the Setup for the Smarter Partner program. We will review your information and advise you by email within 2 business days following our review of the information provided.</p>
+        </div>
+    </div>
+</section>
+<!-- main page content ends -->
+    <!-- Site Footer -->
+    <footer class=""></footer>  
+    <script type="text/javascript" src="~/Content/Zuc/js/build9d66868d59cc90dfcd5c.js"></script>
+    <script type="text/javascript" src="~/Scripts/Zuc/js/srs-interactivity.js"></script>
+</body>
+</html>

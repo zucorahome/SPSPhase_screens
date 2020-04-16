@@ -4,6 +4,14 @@
 	height: auto;
 }
 
+.videoLink{
+	position: absolute;
+	top:2.25em;
+	left:80%;
+	a{
+		cursor: pointer;
+	}
+}
 .planRegis-form {
 	width: 60%;
 	margin: 0 auto;
@@ -35,8 +43,8 @@
 		position: absolute;
 		background-color: #E2FBF0;
 		padding: 10px 15px;
-		top: 42%;
-		left: 81%;
+		top: 40%;
+		left: 56%;
 		width: 30%;
 		z-index: 1000;
 
@@ -62,7 +70,7 @@
 		}
 
 		input:nth-of-type(2) {
-			
+
 		}
 	}
 
@@ -80,7 +88,7 @@
 		grid-template-columns: 20% 64% 0;
 
 		i {
-			
+
 		}
 
 		input {
@@ -141,8 +149,13 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
 	}
 
 	input[type="checkbox"] {
-		width: 50px;
-		height: 50px;
+		width: 30px;
+		height: 30px;
+	}
+
+	input[type="date"]{
+		height:50px;
+		border-radius: 10px;
 	}
 
 	.planRegis-button{
@@ -249,7 +262,7 @@ tbody{
 	display: flex;
 	width: 80%;
 	margin: 0 auto;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
 	padding: 2em 0;
 
@@ -282,6 +295,46 @@ tbody{
 				div {
 					/*padding:0;*/
 				}
+				.planRegis-divStyle{
+					grid-template-columns: 20% 65% 0;
+				}
+				select{
+					width:100%;
+					
+				}
+				input{
+					width:100%;
+				}
+
+				.serial-info {
+						color: #70E9B2;
+						margin:0 0 0 10px;
+						cursor: pointer;
+					}
+
+					.serial-text-container {
+						display: none;
+						position: absolute;
+						background-color: #E2FBF0;
+						padding: 10px 15px;
+						top: 75%;
+						left: 78%;
+						width: 30%;
+						z-index: 1000;
+
+						p {
+							font-size: 13px;
+							color: $grey-text;
+						}
+
+						i {
+							position: absolute;
+							color: #E2FBF0;
+							left: 50%;
+							top: -30px;
+							font-size: 3em;
+						}
+					}
 
 				.addItem-quantity {
 					.label {
@@ -396,4 +449,23 @@ tbody{
 			}
 		}
 	}
+
+	.video-modal-container{
+		@extend %modal;
+		.video-modal{
+			@extend %modal-background;
+			.cross{
+				@extend %form-cross;
+				font-size: 2em;
+				font-weight: 900;
+				padding:0 10px;
+			}
+
+			iframe{
+				width:100%;
+				height:600px;
+			}
+		}
+	}
 }
+

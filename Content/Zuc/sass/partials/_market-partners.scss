@@ -1,0 +1,234 @@
+.market-partners-container{
+	width:85%;
+	margin:0 auto;
+	display: block;
+
+	.first-filter.planRegis-form{
+
+		width:25%;
+		margin:0;
+	}
+	
+	.two-grid-column{
+		justify-content: center;
+		align-content: flex-start;
+		grid-gap:1.5em 1.5em;
+		align-items: start;
+	}
+
+.border-box{
+	width:100%;
+    height: auto;
+    border: 2px solid #36384B;
+}
+
+.purple-background{
+	color:white;
+	h3{
+		font-family:$para-fonts;
+		font-size: 18px;
+    	padding: 1em;
+    	font-weight: 700;
+	}
+}
+
+.mp-details-invite{
+	margin:0 20px;
+}
+
+.new-planAdd-detail{
+	display: block;
+	margin:0 auto;
+	border:0;
+
+	table{
+		overflow-y: scroll;
+	}
+}
+
+.partner-data-container, .mp-invite-modal{
+	.planRegis-form{
+		width:95%;
+		padding:1em 0;
+
+		label,dt,span{
+					@extend %label;
+				}
+
+				input{
+					@extend %input;
+					width:100%;
+				}
+
+				select{
+					@extend %select;
+					width:100%;
+				}
+
+				textarea{
+					border:2px solid #36384B;
+				}
+		.planRegis-divStyle{
+			grid-template-columns: 30% 70%;
+			label{
+				margin-right: 10px;
+				word-break: break-word;
+			}
+		}
+
+		.zuc-btn{
+			margin:0 10px;
+
+		}
+
+		.two-grid-column{
+			grid-gap:0;
+			align-items: start;
+		}
+
+	}
+}
+
+.mp-invite-modal .planRegis-form{
+	.planRegis-divStyle{
+		grid-template-columns: 30% 70%;
+	}
+}
+
+.profileBox-heading{
+	font-size:18px;
+	padding:1em;
+}
+
+.mp-add-product-service-modal-container, .mp-invite-modal-container,.mp-add-note-modal-container{
+	@extend %modal;
+
+	.mp-add-product-service-modal, .mp-invite-modal, .mp-add-note-modal{
+		@extend %modal-background;
+
+		.planRegis-form{
+			width:90%;
+			.zuc-btn{
+				/*padding:15px 30px;*/
+				margin:0 10px;
+			}
+
+			input{
+				width:100%;
+			}
+			textarea{
+					border:2px solid #36384B;
+					border-radius: 10px;
+				}
+				input[type="date"]{
+					border-radius: 10px;
+				}
+		}
+	}
+
+	.close-modal{
+		@extend %form-cross;
+		font-size: 1.5em;
+		padding: 14px;
+		color:$zucora-mint-green;
+	}
+}
+
+.mp-invite-sent-modal-container{
+	@extend %modal;
+
+	.mp-invite-sent-modal{
+		@extend %modal-background;
+
+		h2 {
+				font-family: $header-fonts;
+				font-weight: 900;
+				font-size: 3em;
+				color: $zucora-purple;
+				text-align: center;
+				padding: 15px;
+			}
+
+			.close-modal{
+				@extend %form-cross;
+				font-size: 1.5em;
+				padding: 10px;
+			}
+
+			.border-box{
+				width:90%;
+				margin:2em auto;
+				padding:10px;
+
+				h3{
+					font-family: $para-fonts;
+					font-size: 20px;
+					font-weight: 500;
+				}
+			}
+	}
+}
+
+.mp-details-contact-add{
+		font-size: 22px;
+		color: $zucora-purple;
+		padding:0 7px;
+		font-weight: 700;
+	}
+}
+
+.mp-status-descriptions{
+	padding:10px;
+	li{
+		list-style-type: none;
+		font-family: $para-fonts;
+		color: $grey-text;
+	}
+}
+
+.mp-details-contact-add-modal-container,.mp-add-modal-container{
+	@extend %modal;
+	.mp-details-contact-add-modal, .mp-add-modal{
+		@extend %modal-background;
+
+		.purple-background{
+			h2{
+				margin-bottom: 0;
+			}
+			.close-modal{
+				@extend %form-cross;
+				font-size: 1.5em;
+				padding: 10px;
+			}
+		}
+
+		.planRegis-form{
+			width:90%;
+			padding: 1em 0;
+			.planRegis-divStyle{
+				grid-template-columns: 30% 70%;
+			}
+
+			input,select{
+				width: 100%;
+			}
+		}
+	}
+}
+@media screen and (max-width:$mobile-width){
+	.market-partners-container{
+		width:95%;
+	
+		.first-filter.planRegis-form{
+			width:100%;
+		}
+
+	}
+
+	.mp-details-contact-add-modal-container,.mp-add-modal-container{
+		.mp-details-contact-add-modal, .mp-add-modal{
+			width: 95%;
+			margin:35% auto;
+		}
+	}
+}

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zucora Home: Event page</title>
+    <meta content="" name="description">
+   	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="../../Content/Zuc/styles/bootstrap.min.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/styles9d66868d59cc90dfcd5c.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/new_styles.css" rel="stylesheet">
+    <link href="../../Content/Zuc/styles/SRS-system.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- [ FONTS ]-->
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <link href="https://use.typekit.net/ovc0ozw.css" rel="stylesheet">
+</head>
+<body>
+<!-- Site Navigation-->
+    <div class="zuc-nav-wrapper srs-nav-container" data-nav-height>
+      <!-- Main Navigation-->
+      <nav class="zuc-main-nav flex flex-hor-start flex-hor-between flex-vert-center u-uppercase" data-main-navigation>
+        <!-- Nav Branding-->
+        <a class="zuc-nav-brand" href="#"><img src="../../Images/Zuc/images/ZucoraHome-brand-white.svg"></a>
+        <!-- Nav Links-->
+        <div class="zuc-nav-links flex flex-hor-end flex-hor-between flex-no-wrap flex-vert-center">
+          <!-- First -->
+          <div class="zuc-nav-dropdown"><span class="u-uppercase">Plans</span>
+             <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+                <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                  <!-- Dropdown links -->
+                  <div class="zuc-dropdown-column">
+                    <a href="~/zuc/planregistration" title="Plan Registration" aria-role="menu-item">Plan Registration</a>
+                    <a href="~/zuc/planinquiry" title="Plan Registration Inquiry" aria-role="menu-item">Plan Inquiry</a>
+                    <a href="plan-pending-registrations.html" title="Registration History" aria-role="menu-item">Registration History</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="zuc-nav-dropdown"><span class="u-uppercase">Orders</span>
+            <!-- Drop Down-->
+            <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+              <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                <!-- Dropdown links -->
+                <div class="zuc-dropdown-column">
+                  <a href="order-entry.html" title="Order Entry" aria-role="menuitem">Entry</a>
+                  <a href="order-history.html" title="Order History" aria-role="menuitem">Order History</a>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div class="zuc-nav-dropdown "><i class="fa fa-user-alt"></i><span class="u-uppercase"> @User.Identity.Name</span>
+            <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+              <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                <!-- Dropdown links -->
+                <div class="zuc-dropdown-column">
+                  <a href="~/zuc/retailerprofile">Profile</a>
+                  <a href="~/Account/Manage">Change Password</a>
+                  <a href="javascript:document.getElementById('logoutForm').submit()">Log out</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile Nav Button-->
+        <div class="zuc-menu">
+          <div class="zuc-menu-open" role="button" data-open-menu aria-label="Mobile Navigation"><span class="hidden" aria-hidden="true" aria-label="Open mobile menu">Mobile Menu</span>
+          </div>
+        </div>
+      </nav>
+      <!-- Mobile Navigation-->
+      <div class="zuc-mobile-nav" data-mobile-menu>
+        <!-- Top Branding CTA-->
+        <div class="zuc-mobile-nav-content">
+          <a href="https://zucorahome.com/" title="Zucora Home">
+            <img src="~/Images/Zuc/images/ZucoraHome-brand-white.svg" alt="Zucora Home">
+          </a>
+        </div>
+        <div class="zuc-accordion-nav" role="menu" aria-role="menu">
+          <!--Plans Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title">Plans<i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="~/zuc/planregistration" title="Plan Registration" aria-role="menuitem">Plan Registration</a>
+                <a class="zuc-accordion-link" href="~/zuc/planinquiry" title="Plan Registration Inquiry" aria-role="menuitem">Plan Registration Inquiry</a>
+                <a class="zuc-accordion-link" href="plan-reporting.html" title="Registration History" aria-role="menuitem">Registration History/a>
+              </div>
+            </div>
+            <!--Orders Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title">Orders<i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="order-entry.html" title="Order Entry" aria-role="menuitem">Order Entry</a>
+                <a class="zuc-accordion-link" href="order-history.html" title="Order History" aria-role="menuitem">Order History</a>
+              </div>
+            </div>
+              <!--Username Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title"><i class="fa fa-user-alt"></i><i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="~/zuc/retailerprofile" title="Profile" aria-role="menuitem">Profile</a>
+                <a class="zuc-accordion-link" href="~/Account/Manage" title="Change Password" aria-role="menuitem">Change Password</a>
+                <a class="zuc-accordion-link" href="javascript:document.getElementById('logoutForm').submit()" title="Log Out" aria-role="menuitem">Log Out</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main page content-->
+@{
+    Layout = "~/Views/Shared/_ZucSRSLayout.cshtml";
+    ViewBag.Title = "Smart Ship";
+}
+<section class="smartShip-container">
+  <h1 class="srs-heading">@ViewBag.Title</h1>
+<div class="profile-box">
+  <!-- left side -->
+    <div class="customer-details-container">
+        <h3 class="profileBox-heading">Customer Details</h3>
+        <div class="profile-boxStyle">
+            <h4 class="purple-text">Name:</h4>
+            <div class="flex flex-row flex-vert-center flex-hor-center">
+                <input id="ss-first-name" placeholder="First" type="text" class="margin-right" required/>
+                <input id="ss-last-name" placeholder="Last" type="text" class="margin-left" required />
+            </div>
+            <input id="ss-phone" placeholder="Phone Number" type="text" />
+            <input id="ss-email" placeholder="Email" type="text" />
+
+                <h4 class="purple-text">Ship to Address:</h4>
+                <input id="ss-address-1" placeholder="Address 1" type="text" required/>
+                <input id="ss-address-2" placeholder="Address 2" type="text" />
+                <input id="ss-city" placeholder="City" type="text" required/>
+                <!-- will be populated via JS with elements like this: <option value="332">Ontario</option> -->
+                <div class="flex flex-row flex-vert-center flex-hor-center planRegis-form">
+                    <select id="ss-province" class="margin-right margin-top" required>
+                        <option value="">Province</option>
+                    </select>
+                    <input id="ss-postal" placeholder="Postal Code" type="text" class="margin-left" required/>
+                </div>
+            </div>
+        </div>
+
+        <!-- right side -->
+        <div class="right-side">
+            <label for="ss-item">Item*:</label>
+            <div class="itemNumber">
+                <input id="ss-item" list="ss-item-options"  type="text" />
+                <input id="ss-item-quantity" type="number" />
+                <a class="ss-item-save">+</a>
+            </div>
+            <!-- will be populated via JS -->
+            <datalist id="ss-item-options"></datalist>
+            <div class="new-planAdd-detail">
+                <table class="ss-item-list">
+
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width: 20%;">Product</th>
+                            <th scope="col" style="width:20%;">Quantity</th>
+                            <th scope="col" style="width:20%;">Unit Price</th>
+                            <th scope="col" style="width:20%;">Subtotal</th>
+                            <th scope="col" style="width: 5%;"></th>
+                            <th scope="col" style="width: 5%;"></th>
+                        </tr>
+                    </thead>
+                    <!--
+                        will be populated via JS with elements like:
+                        <tr data-lt-id="1980912">
+                            <td data-label="Product">[Data]</td>
+                            <td data-label="Quantity">[Data]</td>
+                            <td data-label="Unit Price">[Data]</td>
+                            <td data-label="Subtotal">[Data]</td>
+                            <td data-label="Edit"><a class="ss-item-edit"><i class="fa fa-pencil-alt"></i></a></td>
+                            <td data-label="Remove"><a class="ss-item-remove"><i class="fa fa-trash-alt"></i></a></td>
+                        </tr>
+                    -->
+
+                    <tbody></tbody>
+
+                </table>
+            </div>
+            <table class="total-bill">
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Taxes:</td>
+                        <td></td>
+                        <td></td>
+                        <td class="ss-item-list-taxes">123</td>
+                    </tr>
+                    <span class="bottom-border"></span>
+                    <tr>
+                        <td colspan="3">Total:</td>
+                        <td></td>
+                        <td></td>
+                        <td class="ss-item-list-total">123</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="flex flex-hor-end">
+                <button class="ss-checkout zuc-btn zuc-btn-secondary u-soft-shadow">Checkout</button>
+            </div>
+            <!-- border div ends -->
+        </div>
+    </div>
+</section>
+<div class="oe-cancel-order-conf-modal-container non-visible">
+    <div class="oe-cancel-order-conf-modal">
+        <span class="close-modal">X</span>
+        <h2>Caution!</h2>
+        <p>Removing Order will remove all data associated with this order including selected Items.</p>
+        <h3>Do you wish to continue?</h3>
+        <div class="flex flex-vert-center flex-hor-center margin-bottom-1">
+            <button class="oe-cancel-order-conf-yes zuc-btn zuc-btn-secondary u-soft-shadow" style="margin:5px;">Yes</button>
+            <button class="oe-cancel-order-conf-no zuc-btn zuc-btn-secondary u-soft-shadow" style="margin:5px;">No</button>
+        </div>
+    </div>
+</div>
+<div class="oe-backorder-warning-modal-container non-visible">
+    <div class="oe-backorder-warning-modal">
+        <span class="close-modal">X</span>
+        <h2>Backorder Warning</h2>
+        <p>Please note your order contains Backordered items and will be shipped when they become available.</p>
+        <div class="new-planAdd-detail">
+            <table class="oe-backorder-warning-items">
+                <thead>
+                    <tr>
+                        <th scope="col">SKU</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">QTY Ordered</th>
+                        <th scope="col">QTY Available</th>
+                    </tr>
+                </thead>
+                <!--
+                    <tbody> will be populated via JS with elements as follows:
+                        <tr data-lt-id="389518">
+                            <td data-label="SKU">[Data]</td>
+                            <td data-label="Description">[Data]</td>
+                            <td data-label="QTY Ordered">[Data]</td>
+                            <td data-label="QTY Available">[Data]</td>
+                        </tr>
+                -->
+                <tbody></tbody>
+            </table>
+
+        </div>
+        <div class="flex-vert-center flex-hor-center flex margin-bottom-1 margin-top-2">
+            <button class="oe-backorder-warning-proceed zuc-btn zuc-btn-secondary u-soft-shadow">Proceed with Backorder</button>
+        </div>
+    </div>
+</div>
+<div class="oe-summary-modal-container non-visible">
+    <div class="oe-summary-modal">
+        <div class="purple-background flex flex-vert-center flex-hor-between">
+            <h2>Your Order Summary</h2>
+            <span class="close-modal">X</span>
+        </div>
+        <div class="oe-summary-modal-table">
+            <table class="">
+                <tbody>
+                    <tr>
+                        <td data-label="Line">Items</td>
+                        <td class="oe-summary-items" data-label="Amount">$1234,11</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Line">Shipping and Freight</td>
+                        <td class="oe-summary-shipping" data-label="Amount">$1234,11</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Line">Total Before Tax</td>
+                        <td class="oe-summary-subtotal" data-label="Amount">$1234,11</td>
+                    </tr>
+                </tbody>
+                <tfoot style="border-top:1px solid #36384B;">
+                    <tr>
+                        <td data-label="Line" style="font-size: 22px;">Order Total</td>
+                        <td class="oe-summary-total" data-label="Amount" style="font-size: 22px;">$1234,11</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Line" class="purple-text">
+                            This order has the potential to earn Smarter Reward Points
+                            <i class="oe-summary-srp-info-circle fa fa-info-circle"></i>
+                            <div class="oe-summary-srp-info-text-container non-visible">
+                                <i class="fa fa-caret-up"></i>
+                                <p class="info-text">Smarter Reward Points are earned on the value of items purchased through your recognized Buying Group or when items are purchased by credit card. Smarter Reward Points are not eligible to be earned with "On Account" orders.</p>
+                            </div>
+                        </td>
+                        <td class="oe-summary-srp purple-text" data-label="Amount"></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="oe-summary-use-buying-group-container">
+                <div>
+                    <p class="u-bold">It appears you are a member of <span class="oe-summary-buying-group"></span>. Do you wish to purchase through your Group?</p>
+                </div>
+                <div class="flex flex-vert-center">
+                    <input id="oe-summary-use-buying-group-yes" name="oe-summary-use-buying-group" type="radio" />
+                    <label for="oe-summary-use-buying-group-yes">Yes</label>
+                    <input id="oe-summary-use-buying-group-no" name="oe-summary-use-buying-group" type="radio" />
+                    <label for="oe-summary-use-buying-group-no">No</label>
+                </div>
+                <div class="flex flex-hor-center">
+                    <button class="oe-summary-done zuc-btn zuc-btn-secondary">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  -->
+<div class="oe-on-account-summary-modal-container non-visible">
+    <div class="oe-on-account-summary-modal">
+        <div class="purple-background flex flex-vert-center flex-hor-between">
+            <h2>Your "On Account" Order Summary</h2>
+            <span class="close-modal">X</span>
+        </div>
+        <div class="oe-summary-modal-table">
+            <table>
+                <tbody>
+                    <tr>
+                        <td data-label="Line">Items</td>
+                        <td class="oe-on-account-summary-items" data-label="Amount"></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Line">Shipping</td>
+                        <td data-label="Amount">TBD</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Line">Total Before Tax</td>
+                        <td data-label="Amount">TBD</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Line">GST/HST/PST/QST</td>
+                        <td data-label="Amount">TBD</td>
+                    </tr>
+                </tbody>
+                <tfoot style="border-top:1px solid #36384B;">
+                    <tr>
+                        <td data-label="Line" style="font-size: 22px;">Estimated Order Total (Items Only)</td>
+                        <td class="oe-on-account-summary-total" data-label="Amount" style="font-size: 22px;"></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Line" class="purple-text">
+                            Smarter Reward Points
+                            <i class="oe-on-account-summary-srp-info-circle fa fa-info-circle"></i>
+                            <div class="oe-on-account-summary-srp-info-text-container non-visible">
+                                <i class="fa fa-caret-up"></i>
+                                <p class="info-text">Smarter Reward Points are earned on the value of items purchased through your recognized Buying Group or when items are purchased by credit card. Smarter Reward Points are not eligible to be earned with "On Account" orders.</p>
+                            </div>
+                            <p class="u-bold" style="font-size: 14px; margin:10px 0;">Please note "On Account" orders do not qualify for Free Shipping or Smarter Reward Points.</p>
+                        </td>
+                        <td data-label="Amount">0</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="flex flex-hor-end"><button class="oe-on-account-summary-done zuc-btn-secondary zuc-btn">Submit</button></div>
+        </div>
+    </div>
+</div>
+<div class="oe-redeem-modal-container non-visible">
+    <div class="oe-redeem-modal">
+        <div class="purple-background flex flex-vert-center flex-hor-between">
+            <h2>Redeem Smarter Reward Points</h2>
+            <span class="close-modal">X</span>
+        </div>
+        <div class="modal-padding">
+            <h3 class="u-bold">Additional Savings</h3>
+            <p style="font-weight: 500;font-size: 16px;">As a member of <span class="oe-redeem-buying-group"></span> you have the potential to earn and redeem Smarter Retailer Rewards with registration of Product Protection Plans and products purchased with the order. Enter the amount you wish to redeem below.</p>
+            <!-- <div class="margin-top-1">
+                <table>
+                    <tbody>
+                            <tr>
+                            <td data-label="Info"></td>
+                            <td data-label="Line">Order Total:</td>
+                            <td class="oe-redeem-order-total" data-label="Amount"></td>
+
+                        <tr>
+                            <td data-label="Info">You have <span class="oe-redeem-srp-count"></span> Smarter Reward Points Available for Redemption (Value: <span class="oe-redeem-srp-value"></span>)</td>
+                            <td data-label="Line">Smarter Rewards Redemption:</td>
+                            <td class="oe-redeem-srp-redeemed" data-label="Amount" contenteditable="true"></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td data-label="Info"></td>
+                            <td data-label="Line">Net Amount:</td>
+                            <td class="oe-redeem-order-net" data-label="Amount"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div> -->
+            <div class="total-information">
+                <div>
+                    <p class="u-bold purple-text">You have <span class="total-rewards-point"></span> Smarter Rewards points Available for Redemption (Value: <span class="rewards-money"></span>)</p>
+                </div>
+                <div class="margin-bottom-1">
+                    <p class="u-bold flex flex-vert-center" style="font-size: 22px;">Order Total: <span class="total-order-amount"></span></p>
+                    <p class="purple-text u-bold flex flex-vert-center">Smarter Rewards Redemption: <span class="rewards-redemption-amount"></span></p>
+                </div>
+            </div>
+            <div class="margin-top-1 flex flex-hor-end">
+                <p class="u-bold" style="font-size: 22px;">Net Amount:</p>
+            </div>
+            <div class="flex flex-hor-end"><button class="oe-redeem-done zuc-btn-secondary zuc-btn">Next</button></div>
+        </div>
+    </div>
+</div>
+<div class="oe-thank-you-modal-container non-visible">
+    <div class="oe-thank-you-modal">
+        <div class="purple-background flex-vert-center flex flex-hor-between">
+            <h2>Thank you!</h2>
+            <span class="close-modal">X</span>
+        </div>
+        <div class="modal-padding">
+            <p class="oe-thank-you-heading-credit-card">Your Order has been placed.</p>
+            <p class="oe-thank-you-heading-on-account">Your "On Account" Order has been Submitted.</p>
+            <div class="oe-thank-you-buying-group-container">
+                <p>Your order has been submitted to <span class="oe-thank-you-buying-group"></span> for purchase approval.</p>
+                <p>Please check your email for Order Acknowledgment. Upon approval, you will receive an Order Confirmation by email.</p>
+            </div>
+            <div class="oe-thank-you-credit-card-container">
+                <p>Your order has been accepted and will be processed as quickly as possible.</p>
+                <p>Please check your email for Order Confirmation and delivery information.</p>
+            </div>
+            <div class="oe-thank-you-on-account-container">
+                <p>Your order has been submitted and will be processed as quickly as possible.</p>
+                <p>Please check your email for Order Confirmation of Shipping Costs and Taxes with additional delivery information.</p>
+                <p style="font-size: 22px" class="u-bold">Order Number: <span oe="oe-thank-you-order-number"></span></p>
+            </div>
+            <div class="flex flex-hor-end"><button class="zuc-btn-secondary zuc-btn">Close</button></div>
+        </div>
+    </div>
+</div>
+<div class="oe-sorry-modal-container non-visible">
+    <div class="oe-sorry-modal">
+        <div class="purple-background flex flex-vert-center flex-hor-between">
+            <h2>We're sorry. Your Order has not been accepted.</h2>
+            <span class="close-modal">X</span>
+        </div>
+        <div class="modal-padding">
+            <p>Either your credit card has been declined for payment or the order amount exceeds your available credit limit for an "On Account" order.</p>
+            <p>Please select an alternative Payment Option or contact us at (519) 452-0101 Ext. 123 for assistance.</p>
+            <p class="u-bold" style="font-size:22px;">Order Number: <span oe="oe-sorry-order-number"></span></p>
+            <div class="flex flex-vert-center flex-hor-end">
+                <button class="oe-sorry-back zuc-btn zuc-btn-secondary">Payment Options</button>
+                <button class="oe-sorry-cancel-order zuc-btn zuc-btn-secondary">Cancel Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="oe-payment-modal-container non-visible">
+    <div class="oe-payment-modal">
+        <div class="purple-background flex flex-vert-center flex-hor-between">
+            <h2>Payment</h2>
+            <span class="close-modal">X</span>
+        </div>
+        <div class="modal-padding">
+            <div class="total-information mobile-column">
+                <div>
+                    <p class="u-bold purple-text">You have <span class="total-rewards-point">0</span> Smarter Rewards points Available for Redemption (Value: <span class="rewards-money">0</span>)</p>
+                </div>
+                <div class="margin-bottom-1">
+                    <p class="u-bold flex flex-vert-center" style="font-size: 22px;">Order Total: <span class="total-order-amount"></span></p>
+                    <p class="u-bold flex flex-vert-center" style="font-size: 22px;">Shipping &amp; Freight: <span class="total-freight-amount"></span></p>
+                    <p class="u-bold flex flex-vert-center" style="font-size: 22px;">HST/PST: <span class="total-tax1-tax2-amount"></span></p>
+                    <p class="u-bold flex flex-vert-center" style="font-size: 22px;">Grand Total: <span class="grand-total-amount"></span></p>
+                    <p class="purple-text u-bold flex flex-vert-center">Smarter Rewards Redemption: <span class="rewards-redemption-amount">$0.00</span></p>
+                </div>
+            </div>
+            <div class="margin-top-1 two-grid-column reverse-mobile">
+                <div class="">
+                    <p style="font-size: 20px;font-weight: 500;">Choose your payment option:</p>
+                </div>
+                <div class="">
+                    <p class="u-bold" style="font-size: 22px;">Amount Due: <span class="net-amount"></span></p>
+                </div>
+            </div>
+            <!--
+
+                <ul> will be populated with elements like the following. I would appreciate your feedback
+                on any other classes or markup you would like to be output here, so we can add it the JS file.
+
+                <li class="flex flex-vert-center">
+                    <input type="radio" name="oe-payment-option" value="[Data:Id]">
+                    <div class="payment-card-info">
+                        <div class="flex flex-vert-center">
+                            <i class="fab fa-cc-[cardtype]" style="color: #1a1f71;"></i>
+                            <p class="u-bold"><span class="card-type">[CardType]</span> ending in <span class="ending-numbers">[Data]</span> <span>(Default)</span></p>
+                        </div>
+                        <div>[Data:NameOnCard]</div>
+                        <div>Expires [Data:MM]/[Data:YYYY]</div>
+                    </div>
+                </li>
+
+                OR
+
+                <li class="flex flex-vert-center">
+                    <input type="radio" name="oe-payment-option" value="[Data:Id]">
+                    <div class="flex flex-vert-center">
+                        <p class="u-bold">Use Buying Group</p>
+                        <i class="fa fa-info-circle"></i>
+                        <div class="oe-buying-group-info-container non-visible">
+                            <i class="fa fa-caret-up"></i>
+                            <p class="info-text">It appears you are a member of <span class="oe-payment-options-buying-group-name">[buying Group]</span>. Do you wish to purchase through your Group?</p>
+                        </div>
+                    </div>
+                </li>
+
+            -->
+            <ul class="oe-payment-options"></ul>
+            <div class="two-grid-column flex-hor-between flex-vert-center margin-top-1 mobile-column">
+                <div class="flex flex-column">
+                    <p style="font-size: 20px;font-weight: 500;">More payment options:</p>
+                    <p>ZucoraHome accepts all major credit cards.</p>
+                </div>
+                <div class="flex flex-vert-center flex-hor-center payment-icons">
+                    <img src="~/Images/creditcards_poster.png" />
+                </div>
+            </div>
+            <div class="flex flex-vert-center flex-hor-between margin-top-1 margin-bottom-1 mobile-column">
+                <a class="oe-payment-add-card simple-link">+ Add Card</a>
+                <button class="oe-payment-done zuc-btn-secondary zuc-btn">Place Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="oe-credit-cards-add-modal-container non-visible">
+    <div class="oe-credit-cards-add-modal">
+        <div class="purple-background flex flex-vert-center flex-hor-between">
+            <h2>Payment Method</h2>
+            <span class="close-modal">X</span>
+        </div>
+        <div class="flex flex-vert-center flex-hor-center planRegis-form">
+            <div class="flex flex-column flex-hor-center flex-vert-center">
+                <label for="oe-credit-cards-add-name-on-card">Name on Card</label>
+                <input id="oe-credit-cards-add-name-on-card" required type="text" />
+            </div>
+            <div class="flex flex-column flex-hor-center flex-vert-center">
+                <label for="oe-credit-cards-add-card-number">Card #</label>
+                <input id="oe-credit-cards-add-card-number" pattern="[0-9\s]+" maxlength="24" required type="number" />
+            </div>
+            <div class="flex flex-column">
+                <label>Expiration Date</label>
+                <div class="flex flex-vert-center" style="margin-top:5px;">
+                    <select id="oe-credit-cards-add-expiry-month" required>
+                        <option value="">MM</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <select id="oe-credit-cards-add-expiry-year" required>
+                        <option value="">YYYY</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex flex-column flex-hor-center flex-vert-center">
+                <label for="oe-credit-cards-add-cvv">CVV/CID</label>
+                <input id="oe-credit-cards-add-cvv" required type="number" />
+            </div>
+        </div>
+        <div class="billing-address-container">
+            <h4 class="profileBox-heading">Billing Address <a class="oe-credit-cards-add-billing-address-add">+</a></h4>
+            <div class="oe-credit-cards-add-billing-addresses grey-border"></div>
+            <div class="flex flex-hor-end margin-top-1">
+                <button class="oe-credit-cards-add-done zuc-btn zuc-btn-secondary">Add Card</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main page content ends -->
+    <!-- Site Footer -->
+    <footer class=""></footer>  
+    <script type="text/javascript" src="~/Content/Zuc/js/build9d66868d59cc90dfcd5c.js"></script>
+    <script type="text/javascript" src="~/Scripts/Zuc/js/srs-interactivity.js"></script>
+</body>
+</html>

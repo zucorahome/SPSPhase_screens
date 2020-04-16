@@ -1,0 +1,237 @@
+.partner-profile-container{
+	width:85%;
+	margin:0 auto;
+	display: block;
+
+	.profileBox-heading{
+
+	}
+
+	.profileBox-style{
+		
+	}
+
+	.planRegis-form{
+		width:100%;
+		padding:10px;
+
+		.form-div{
+			display: grid;
+			grid-template-columns: 25% 75%;
+			align-items: center;
+			justify-content: space-around;
+		}
+
+		input,select{
+			width:95%;
+		}
+		.two-grid-column{
+			margin-top:5px;
+		}
+	}
+
+	.pp-buying-group{
+		max-width: 100%;
+    	font-weight: bold;
+    	font-size: 18px;
+    	/*margin-top:5px;*/
+	}
+
+	input[type=radio]{
+		width:25px;
+		height: 25px;
+		margin-right:5px;
+	}
+
+	.margin-leftRight{
+		margin:0 10px;
+	}
+
+
+	.new-planAdd-detail{
+			display: block;
+			margin:0;
+			border-width: 2px;
+		}
+
+	.payment-methods-container{
+		margin-top:14px;
+		ul,li{
+			list-style-type: none;
+		}
+		.pp-credit-cards{
+			@extend .profileBox-style;
+		}
+
+		.pp-credit-card-heading{
+
+		}
+	}
+}
+
+.our-people-container{
+	.new-planAdd-detail{
+		table{
+			thead{
+				tr{
+					th{
+						border-right: 1px solid $light-grey;
+						text-align: center;
+					}
+					th:last-child{
+						border-right: none;
+					}
+				}
+			}
+			tbody{
+					tr{
+						td{
+								border-right:1px solid #d3d3df;
+								text-align: center;
+
+								i{
+									color: $zucora-purple;
+								}
+							}
+						}
+				}
+				.pp-people-edit{
+					color: $zucora-purple;
+				}
+			}
+	}
+}
+
+.pp-payment-prefs-edit-modal-container, .pp-header-edit-modal-container,.pp-billing-address-edit-modal-container, .pp-ship-to-modal-container, .pp-credit-card-edit-modal-container,.pp-bank-account-edit-modal-container{
+	@extend %modal;
+	.pp-payment-prefs-edit-modal, .pp-header-edit-modal, .pp-billing-address-edit-modal, .pp-ship-to-modal,.pp-credit-card-edit-modal,.pp-bank-account-edit-modal{
+		@extend %modal-background;
+      .purple-background {
+			h2{
+        		margin-bottom: 0;
+          	}
+          .close-modal{
+            @extend %form-cross;
+            padding:0;
+            font-weight: 700;
+            margin-right:1em;
+      		}
+		}
+
+		.padding-box{
+			padding:1em;
+		}
+
+		input[type=radio]{
+		    width: 25px;
+    		height: 25px;
+		    margin-right: 5px;
+		}
+	}
+}
+
+.pp-header-edit-modal-container,.pp-billing-address-edit-modal-container, .pp-ship-to-modal-container,.pp-credit-card-edit-modal-container,.pp-bank-account-edit-modal-container{
+	.pp-header-edit-modal, .pp-billing-address-edit-modal,.pp-ship-to-modal,.pp-credit-card-edit-modal,.pp-bank-account-edit-modal{
+		.planRegis-form{
+			width:90%;
+			.plaRegis-divStyle{
+				grid-template-columns: 30% 70%;
+			}
+
+			input[type=text]{
+				/*width: 80%;*/
+			}
+
+			.margin-right{
+				margin-right: 10px;
+			}
+			.margin-left{
+				margin-left:10px;
+			}
+
+			.two-grid-column{
+				grid-column-gap: 10px;
+				/*grid-template-columns: 50% 40%;*/
+			}
+		}
+	}
+
+}
+
+.pp-credit-card-edit-modal-container{
+	.pp-credit-card-edit-modal{
+		.planRegis-form{
+			label{
+				text-align: left;
+			}
+		}
+
+		.two-grid-column{
+			padding:1em;
+			/*grid-column-gap: 10px;*/
+			.planRegis-form{
+				padding:0;
+				width: 95%;
+
+				select{
+					margin-top:.41667vw;
+				}
+			}
+
+			.label-margin{
+				margin:10px 0;
+			}
+		}
+		.edit-billing-address-form{
+			.planRegis-form{
+				padding:0;
+				width: 90%;
+
+				.two-grid-column{
+					padding:0;
+				}
+
+				select{
+					margin-top:10px;
+				}
+			}	
+		}
+	}
+}
+
+@media screen and(max-width: $mobile-width){
+	.partner-profile-container{
+		width:95%;
+		display: block;
+		margin:0 auto;
+
+
+		.payment-references-container{
+			margin-top:1em;
+		}
+	}
+	.pp-payment-prefs-edit-modal-container, .pp-header-edit-modal-container, .pp-billing-address-edit-modal-container,.pp-ship-to-modal-container,.pp-credit-card-edit-modal-container{
+		.pp-payment-prefs-edit-modal, .pp-header-edit-modal, .pp-billing-address-edit-modal,.pp-ship-to-modal,.pp-credit-card-edit-modal{
+			width:90%;
+       		 margin:35% auto;
+
+       		 .planRegis-form{
+       		 	.planRegis-divStyle{
+       		 		width:100%;
+       		 	}
+
+       		 	.formField-data-controller{
+       		 		grid-template-columns: 100%;
+       		 	}
+       		 }
+		}
+	}
+
+	.pp-credit-card-edit-modal-container{
+		.pp-credit-card-edit-modal{
+			.two-grid-column{
+				grid-template-columns: 100%;
+			}
+		}
+	}
+}

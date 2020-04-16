@@ -34,8 +34,8 @@
 	font-family: $header-fonts;
 	font-weight: 700;
 	color: $zucora-purple;
-	font-size:3.2em;
-	margin-top:7%;
+	font-size: 5vh;
+	margin-top:10%;
 	text-align: center;
 	margin-bottom:1%;
 }
@@ -57,9 +57,12 @@
 
 /*Header*/
 .srs-nav-container .zuc-main-nav{
-	padding:1em 8%;
+	//padding:1em 8%;
 }
 
+.srs-nav-container>.zuc-main-nav>.zuc-nav-links>.zuc-nav-dropdown{
+	padding:3vw 1.5vw;
+}
 .dotted-line-text{
 
 	p{
@@ -87,4 +90,56 @@
 
 .width-80{
 	margin:0 auto;
+}
+
+.info-text-container{
+	display: none;
+    position: absolute;
+    background-color: #E2FBF0;
+    padding: 10px 15px;
+    top: 42%;
+    left: 81%;
+    width: 30%;
+    z-index: 1000;
+}
+
+.zuc-btn{
+	padding:15px 30px;
+}
+
+.profileBox-style{
+	border:2px solid $grey-text;
+	padding:10px;
+}
+
+.purple-text{
+	font-weight:700;
+	color:$zucora-purple;
+	font-family:$para-fonts;
+	font-size:18px;
+}
+
+.info-container-green{
+     position: absolute;
+     /*position: relative;*/
+    background-color: #E2FBF0;
+    padding: 10px 15px;
+    /* top: 41%; */
+    /* left: 64%; */
+    /* width: 25%; */
+    z-index: 1000;
+    transition: all 0.5s ease-in;
+}
+
+.info-container-caret{
+    position: absolute;
+    color: #E2FBF0;
+    /*left: -15px; */
+     top: -30px;
+    font-size: 3em;
+}
+
+.fa-bell{
+	font-size:18px;
+	padding:0 5px;
 }

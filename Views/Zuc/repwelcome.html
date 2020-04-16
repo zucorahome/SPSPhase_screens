@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zucora Home: Event page</title>
+  <meta content="" name="description">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="../../Content/Zuc/styles/bootstrap.min.css" rel="stylesheet">
+  <link href="../../Content/Zuc/styles/bootstrap-responsive.min.css" rel="stylesheet">
+  <link href="../../Content/Zuc/styles/styles9d66868d59cc90dfcd5c.css" rel="stylesheet">
+  <link href="../../Content/Zuc/styles/new_styles.css" rel="stylesheet">
+  <link href="../../Content/Zuc/styles/SRS-system.css" rel="stylesheet"><!--[if lt IE 9]>
+    <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  <!-- [ FONTS ]-->
+  <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+  <link href="https://use.typekit.net/ovc0ozw.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Site Navigation-->
+  <div class="zuc-nav-wrapper srs-nav-container" data-nav-height="">
+    <!-- Main Navigation-->
+    <nav class="zuc-main-nav flex flex-hor-start flex-hor-between flex-vert-center u-uppercase" data-main-navigation="">
+      <!-- Nav Branding-->
+      <a class="zuc-nav-brand" href="#"><img src="../../Images/Zuc/images/ZucoraHome-brand-white.svg"></a> <!-- Nav Links-->
+      <div class="zuc-nav-links flex flex-hor-end flex-hor-between flex-no-wrap flex-vert-center">
+        <!-- First -->
+        <div class="zuc-nav-dropdown">
+          <span class="u-uppercase">Plans</span>
+          <div aria-hidden="true" class="zuc-hidden-menu" data-hidden-menu="">
+            <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+              <!-- Dropdown links -->
+              <div class="zuc-dropdown-column">
+                <a href="~/zuc/planregistration" title="Plan Registration">Plan Registration</a> <a href="~/zuc/planinquiry" title="Plan Registration Inquiry">Plan Inquiry</a> <a href="plan-pending-registrations.html" title="Registration History">Registration History</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="zuc-nav-dropdown">
+          <span class="u-uppercase">Orders</span> <!-- Drop Down-->
+          <div aria-hidden="true" class="zuc-hidden-menu" data-hidden-menu="">
+            <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+              <!-- Dropdown links -->
+              <div class="zuc-dropdown-column">
+                <a href="order-entry.html" title="Order Entry">Entry</a> <a href="order-history.html" title="Order History">Order History</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="zuc-nav-dropdown">
+          <i class="fa fa-user-alt"></i> <span class="u-uppercase">@User.Identity.Name</span>
+          <div aria-hidden="true" class="zuc-hidden-menu" data-hidden-menu="">
+            <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+              <!-- Dropdown links -->
+              <div class="zuc-dropdown-column">
+                <a href="~/zuc/retailerprofile">Profile</a> <a href="~/Account/Manage">Change Password</a> <a href="javascript:document.getElementById('logoutForm').submit()">Log out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- Mobile Nav Button-->
+      <div class="zuc-menu">
+        <div aria-label="Mobile Navigation" class="zuc-menu-open" data-open-menu="" role="button">
+          <span aria-hidden="true" aria-label="Open mobile menu" class="hidden">Mobile Menu</span>
+        </div>
+      </div>
+    </nav><!-- Mobile Navigation-->
+    <div class="zuc-mobile-nav" data-mobile-menu="">
+      <!-- Top Branding CTA-->
+      <div class="zuc-mobile-nav-content">
+        <a href="https://zucorahome.com/" title="Zucora Home"><img alt="Zucora Home" src="~/Images/Zuc/images/ZucoraHome-brand-white.svg"></a>
+      </div>
+      <div class="zuc-accordion-nav" role="menu">
+        <!--Plans Links ================================-->
+        <div class="zuc-accordion-item" data-accordion-item="">
+          <div class="zuc-accordion-title">
+            Plans<i class="zuc-accordion-arrow fas fa-angle-right"></i>
+          </div><!-- Hidden Content-->
+          <div aria-hidden="true" class="zuc-accordion-hidden">
+            <a class="zuc-accordion-link" href="~/zuc/planregistration" title="Plan Registration">Plan Registration</a> <a class="zuc-accordion-link" href="~/zuc/planinquiry" title="Plan Registration Inquiry">Plan Registration Inquiry</a> <a class="zuc-accordion-link" href="plan-reporting.html" title="Registration History">Registration History/a&gt;</a>
+          </div>
+        </div><!--Orders Links ================================-->
+        <div class="zuc-accordion-item" data-accordion-item="">
+          <div class="zuc-accordion-title">
+            Orders<i class="zuc-accordion-arrow fas fa-angle-right"></i>
+          </div><!-- Hidden Content-->
+          <div aria-hidden="true" class="zuc-accordion-hidden">
+            <a class="zuc-accordion-link" href="order-entry.html" title="Order Entry">Order Entry</a> <a class="zuc-accordion-link" href="order-history.html" title="Order History">Order History</a>
+          </div>
+        </div><!--Username Links ================================-->
+        <div class="zuc-accordion-item" data-accordion-item="">
+          <div class="zuc-accordion-title">
+            <i class="fa fa-user-alt"></i><i class="zuc-accordion-arrow fas fa-angle-right"></i>
+          </div><!-- Hidden Content-->
+          <div aria-hidden="true" class="zuc-accordion-hidden">
+            <a class="zuc-accordion-link" href="~/zuc/retailerprofile" title="Profile">Profile</a> <a class="zuc-accordion-link" href="~/Account/Manage" title="Change Password">Change Password</a> <a class="zuc-accordion-link" href="javascript:document.getElementById('logoutForm').submit()" title="Log Out">Log Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- Main page content-->
+  <section class="rep-landingPage-container">
+    <div class="two-grid-column mobile-column">
+      <div><img alt="" class="rw-promo-graphic" src="../../Images/Zuc/images/blocker-image.png"></div>
+      <div>
+        <h3 class="profileBox-heading">Product Orders</h3>
+        <div class="new-planAdd-detail">
+          <table class="rw-orders">
+            <thead>
+              <tr>
+                <th scope="col" style="width:10%;">Date</th>
+                <th scope="col" style="width:10%;">PO Ref</th>
+                <th scope="col" style="width:8%;">Units</th>
+                <th scope="col" style="width:10%;">Value</th>
+                <th scope="col" style="width:15%;">Tracking #</th>
+                <th scope="col" style="width:10%;">Status</th>
+                <th scope="col" style="width:8%;">Conf.</th>
+              </tr>
+            </thead><!--
+                      <tbody> will be populated via JS with elements as follows:
+                          <tr data-lt-id="389518">
+                              <td>[Data]</td>
+                              <td>[Data]</td>
+                              <td>[Data]</td>
+                              <td>[Data]</td>
+                              <td>[Data]</td>
+                              <td>[Data]</td>
+                              <td><a class="rw-orders-view-conf"></a></td>
+                          </tr>
+                  -->
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="flex flex-hor-end simple-link margin-top-1">
+          <a class="rw-orders-view-all">See All</a>
+        </div>
+        <div>
+          <h3 class="profileBox-heading">Product Protection Plans</h3>
+          <div class="new-planAdd-detail">
+            <table class="rw-plans">
+              <thead>
+                <tr>
+                  <th scope="col">Invoice #</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Invoice Date</th>
+                  <th scope="col">Payment Date</th>
+                </tr>
+              </thead><!--
+                      <tbody> will be populated via JS with elements as follows:
+                          <tr data-lt-id="278198">
+                              <td>[Data]</td>
+                              <td>[Data]</td>
+                              <td>[Data]</td>
+                              <td>[Data]</td>
+                              <td>[Data]</td>
+                          </tr>
+                  -->
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="flex flex-hor-end simple-link margin-top-1"><a class="rw-plans-view-all">See All</a></div>
+        </div>
+      </div>
+    </div><!--50 50 div ends-->
+    <!-- Second 50 50 column -->
+  <div class="two-grid-column mobile-column margin-top-2">
+    <div>
+      <h3 class="profileBox-heading">Statement of Account</h3>
+      <div class="new-planAdd-detail">
+        <table class="rw-transactions">
+          <thead>
+            <tr>
+              <th scope="col" style="width:20%;">Trx Date</th>
+              <th scope="col" style="width:20%;">Trx</th>
+              <th scope="col" style="width:20%;">Due Date</th>
+              <th scope="col" style="width:20%;">Amount</th>
+              <th scope="col" style="width:20%;">Balance</th>
+            </tr>
+          </thead><!--
+                    <tbody> will be populated via JS with elements as follows:
+                        <tr data-lt-id="278198">
+                            <td>[Data]</td>
+                            <td>[Data]</td>
+                            <td>[Data]</td>
+                            <td>[Data]</td>
+                            <td>[Data]</td>
+                        </tr>
+                -->
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="flex flex-hor-end simple-link margin-top-1"><a class="rw-transactions-view-all">See All</a></div>
+    </div>
+    <div>
+      <h3 class="profileBox-heading">Smarter Living Plan Statistics</h3>
+      <div class="border-box">
+        <dl>
+          <dt>New Members added this Month:</dt>
+          <dd class="rw-slp-stats-count-sold-this-month"></dd>
+          <dt>Total Number of Active Members:</dt>
+          <dd class="rw-slp-stats-count-sold-all-time"></dd>
+          <dt>Total Number of SmartPoints:</dt>
+          <dd class="rw-slp-stats-smartpoints"></dd>
+          <dt style="margin-top:15px;">Forecast:</dt>
+          <dd class="rw-slp-stats-forecast"></dd>
+          <dt>Potential Commission Earnings:</dt>
+          <dd class="rw-slp-stats-potential-earnings"></dd>
+        </dl>
+      </div>
+    </div>
+    <!-- 50 50 column ends -->
+  </div>
+  </section><!-- main page content ends -->
+  <!-- Site Footer -->
+  <footer class=""></footer>
+  <script src="~/Content/Zuc/js/build9d66868d59cc90dfcd5c.js" type="text/javascript">
+  </script> 
+  <script src="~/Scripts/Zuc/js/srs-interactivity.js" type="text/javascript">
+  </script>
+</body>
+</html>

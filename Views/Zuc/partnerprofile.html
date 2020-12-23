@@ -277,123 +277,127 @@
     </div>
 </section>
 
-<div class="pp-credit-card-edit-modal-container non-visible">
-  <div class="pp-credit-card-edit-modal">
-    <div class="purple-background flex flex-vert-center flex-hor-between">
-          <h2>Edit Payment Method</h2>
-          <span class="close-modal">X</span>
-      </div>
-  <!-- tw grid column -->
-  <div class="two-grid-column">
-    <!-- first -->
-    <div class="first-section planRegis-form">
-      <div class="">
-        <h4 class="u-bold">Payment Method</h4>
-        <div class="flex flex-vert-center flex-hor-start">
-          <img src="https://www.visa.ca/dam/VCOM/regional/na/canada/global-elements/icon-logos/vbyvisa-blu.png" alt="" style="width:15%;" class="">&nbsp;
-          <p>&nbsp;Visa ending in <span>1234</span></p>
+<div class="pp-credit-card-edit-modal-container">
+    <div class="pp-credit-card-edit-modal">
+        <div class="purple-background flex flex-vert-center flex-hor-between">
+            <h2>Payment Method</h2>
+            <span class="close-modal">X</span>
         </div>
-      </div>
-    
-      <div class="label-margin">
-            <label>Expiration Date</label>
-            <div class="flex flex-hor-around flex-vert-center">
-                <select id="pp-credit-card-edit-expiry-month" required class="margin-right margin-top">
-                    <option value="">MM</option>
-                    <option value="1">01</option>
-                    <option value="2">02</option>
-                    <option value="3">03</option>
-                    <option value="4">04</option>
-                    <option value="5">05</option>
-                    <option value="6">06</option>
-                    <option value="7">07</option>
-                    <option value="8">08</option>
-                    <option value="9">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                </select>
-                <!-- will be populated via JS with this year and the following 10 years -->
-                <select id="pp-credit-card-edit-expiry-year" required class="margin-left">
-                    <option value="">YYYY</option>
-                </select>
-              </div>
-          </div>
-      <div class="flex flex-vert-center flex-hor-start">
-            <label for="pp-credit-card-edit-is-default">Use as Default:</label>
-            <input id="pp-credit-card-edit-is-default" placeholder="Use as Default" type="checkbox" />
-      </div>
+        <!-- tw grid column -->
+        <div class="two-grid-column">
+            <!-- first -->
+            <div class="first-section planRegis-form">
+                <div class="label-margin">
+                    <label for="pp-credit-card-edit-card-number">Card # (no spaces)</label>
+                    <input id="pp-credit-card-edit-card-number" maxlength="19" pattern="[0-9]+" required type="text" />
+                </div>
+                <div class="label-margin">
+                    <label>Expiration Date</label>
+                    <div class="flex flex-hor-around flex-vert-center">
+                        <select id="pp-credit-card-edit-expiry-month" required class="margin-right margin-top">
+                            <option value="">MM</option>
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">06</option>
+                            <option value="7">07</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <!-- will be populated via JS with this year and the following 10 years -->
+                        <select id="pp-credit-card-edit-expiry-year" required class="margin-left">
+                            <option value="">YYYY</option>
+                        </select>
+                    </div>
+                </div>
+                <!--<div class="flex flex-vert-center flex-hor-start">
+                      <label for="pp-credit-card-edit-is-default">Use as Default:</label>
+                      <input id="pp-credit-card-edit-is-default" placeholder="Use as Default" type="checkbox" />
+                </div>-->
 
-    </div>
-    <!-- second -->
-    <div class="second-section planRegis-form">
-       <div class="">
-            <label for="pp-credit-card-edit-name-on-card">Name on Card</label>
-            <input id="pp-credit-card-edit-name-on-card" required type="text" />
-          </div>
-         
-          <div class="label-margin">
-            <label for="pp-credit-card-edit-security-code">CVC/CVV*:</label>
-            <input id="pp-credit-card-edit-security-code" placeholder="CVC/CVV" maxlength="4" pattern="[0-9]+" required type="text" />
-          </div>
-          
-      </div>
-    </div>
-    <div class="two-grid-column planRegis-form flex-vert-center flex-hor-start" style="padding:0;width: 95%;">
-        <div class="margin-top-1 margin-bottom-1">
+            </div>
+            <!-- second -->
+            <div class="second-section planRegis-form">
+                <div class="">
+                    <label for="pp-credit-card-edit-name-on-card">Name on Card</label>
+                    <input id="pp-credit-card-edit-name-on-card" required type="text" />
+                </div>
+
+                <div class="label-margin">
+                    <label for="pp-credit-card-edit-security-code">CVC/CVV*:</label>
+                    <input id="pp-credit-card-edit-security-code" placeholder="CVC/CVV" maxlength="4" pattern="[0-9]+" required type="text" />
+                </div>
+
+            </div>
+        </div>
+        <div class="planRegis-form flex-vert-center flex-hor-start" style="padding:0;">
+            <div class="flex margin-top-1 margin-bottom-1">
+                <h4 class="u-bold">Billing Address</h4>
+            </div>
+            <div class="margin-top-1 margin-bottom-1">
                 <label for="pp-credit-card-edit-billing-helper">Existing Address</label>
                 <select id="pp-credit-card-edit-billing-helper" class="label-margin">
                     <option value="">Existing Address</option>
                 </select>
+            </div>
+            
         </div>
-      <div class="flex margin-top-1 margin-bottom-1"><h4 class="u-bold">Billing Address</h4><a href="#"><i class="fa fa-pencil-alt purple-text" style="margin:0 5px;font-size: 18px;"></i></a>
-      </div>
-    </div>
-    <!-- Billing address edit forms -->
-    <div class="edit-billing-address-form margin-bottom-1">
-      <div class="planRegis-form">
-         <div class="two-grid-column">
-              <div>
-                <label for="pp-credit-card-edit-billing-address-1">Address 1*:</label>
-                <input id="pp-credit-card-edit-billing-address-1" placeholder="Address 1" required type="text" />
-              </div>
-               <div class="">
-                <label for="pp-credit-card-edit-billing-address-2">Address 2:</label>
-                <input id="pp-credit-card-edit-billing-address-2" placeholder="Address 2" type="text" />
-              </div>
-          </div>
-           <div class="two-grid-column">
-               <div class="label-margin">
-                <label for="pp-credit-card-edit-billing-city">City*:</label>
-                <input id="pp-credit-card-edit-billing-city" placeholder="City" type="text" required type="text" />
-              </div>
-              <div class="label-margin">
-                <label for="pp-credit-card-edit-billing-province">Prov/State*:</label>
-                <select id="pp-credit-card-edit-billing-province" required>
-                  <option value="">Prov/State</option>
-                </select>
-              </div>
-            </div>
-            <div class="two-grid-column">
-               <div class="label-margin">
-                <label for="pp-credit-card-edit-billing-postal">Postal Code*:</label>
-                <input id="pp-credit-card-edit-billing-postal" placeholder="Postal Code" type="text" required type="text" />
-              </div>
-              <div class="label-margin">
-                <label for="pp-credit-card-edit-billing-phone">Phone*:</label>
-                <input id="pp-credit-card-edit-billing-phone" placeholder="Phone Number" type="text" required />
-              </div>
-            </div>
-            <div class="two-grid-column margin-top-1">
-              <div class="flex flex-hor-center">
-                <button class="pp-credit-card-edit-cancel zuc-btn zuc-btn-secondary">Cancel</button></div>
-                <div class="flex flex-hor-center">
-                <button class="pp-credit-card-edit-save zuc-btn zuc-btn-secondary">Save</button></div>
-              
+        <!-- Billing address edit forms -->
+        <div class="edit-billing-address-form margin-bottom-1">
+            <div class="planRegis-form">
+                <div class="two-grid-column">
+                    <div>
+                        <label for="pp-credit-card-edit-billing-address-1">Address 1*:</label>
+                        <input id="pp-credit-card-edit-billing-address-1" placeholder="Address 1" required type="text" />
+                    </div>
+                    <div class="">
+                        <label for="pp-credit-card-edit-billing-address-2">Address 2:</label>
+                        <input id="pp-credit-card-edit-billing-address-2" placeholder="Address 2" type="text" />
+                    </div>
+                </div>
+                <div class="two-grid-column">
+                    <div class="label-margin">
+                        <label for="pp-credit-card-edit-billing-city">City*:</label>
+                        <input id="pp-credit-card-edit-billing-city" placeholder="City" type="text" required />
+                    </div>
+                    <div class="label-margin">
+                        <label for="pp-credit-card-edit-billing-province">Prov/State*:</label>
+                        <select id="pp-credit-card-edit-billing-province" required>
+                            <option value="">Prov/State</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="two-grid-column">
+                    <div class="label-margin">
+                        <label for="pp-credit-card-edit-billing-postal">Postal Code*:</label>
+                        <input id="pp-credit-card-edit-billing-postal" placeholder="Postal Code" type="text" required />
+                    </div>
+                    <div class="label-margin">
+                        <label for="pp-credit-card-edit-billing-phone">Phone*:</label>
+                        <input id="pp-credit-card-edit-billing-phone" placeholder="Phone Number" type="text" required />
+                    </div>
+                </div>
+                <div class="label-margin">
+                    <label for="pp-credit-card-edit-billing-email">Email:</label>
+                    <input id="pp-credit-card-edit-billing-email" placeholder="Email" type="email" />
+                </div>
+                <div class="two-grid-column margin-top-1">
+                    <div class="flex flex-hor-center">
+                        <button class="pp-credit-card-edit-cancel zuc-btn zuc-btn-secondary">Cancel</button>
+                    </div>
+                    <div class="flex flex-hor-center">
+                        <button class="pp-credit-card-edit-save zuc-btn zuc-btn-secondary">Save</button>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
-  </div>
 </div>
 
 <div class="pp-header-edit-modal-container non-visible">
